@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+    <defs>
+        <filter id="prefix__a" width="128.8%" height="124.4%" x="-10.3%" y="-10.3%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dx="1.2" dy=".5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".05"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.377786276 0"/>
+        </filter>
+        <filter id="prefix__c" width="158.6%" height="172.9%" x="-16.7%" y="-27.6%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dx="1.2" dy=".5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dx="1.2" dy=".5" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".05"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.377786276 0"/>
+        </filter>
+        <circle id="prefix__b" cx="8" cy="8" r="8"/>
+        <path id="prefix__d" d="M4 8L7.2 11 12 5"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-472 -1211)">
+        <path fill="#C38B47" d="M496 1257c-11.046 0-20-8.954-20-20s8.954-20 20-20 20 8.954 20 20-8.954 20-20 20z"/>
+        <path fill="#FFF" d="M506 1236.487l-8.511 9.513 2.834-9.513H506zm-15.403 0l2.837 9.425-8.434-9.425h5.597zm7.331 0l-2.455 8.24-2.48-8.24h4.935zm.824-7.487c1.716 0 2.335.008 2.555.014l4.693 5.245h-5.68zm-6.523.014l-1.621 5.245h-5.606l4.684-5.235 2.543-.01zm4.13-.012l1.566 5.256h-4.914l1.623-5.252 1.724-.004z"/>
+        <path fill="#FFF" d="M486 1236L494 1246 491.309 1236zM495.513 1244L498 1236 493 1236zM500.664 1236L498 1246 506 1236z"/>
+        <circle cx="496" cy="1237" r="23" stroke="#F0E4D4" stroke-width="2"/>
+        <g fill-rule="nonzero" transform="translate(507 1246)">
+            <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+            <use fill="#FFF" stroke="#F0E4D4" stroke-width="2" xlink:href="#prefix__b"/>
+            <g>
+                <use fill="#000" filter="url(#prefix__c)" xlink:href="#prefix__d"/>
+                <use stroke="#D2AF80" stroke-width="2" xlink:href="#prefix__d"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+    <defs>
+        <filter id="prefix__b" width="128.8%" height="124.4%" x="-10.3%" y="-10.3%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dx="1.2" dy=".5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".05"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.377786276 0"/>
+        </filter>
+        <filter id="prefix__d" width="158.6%" height="172.9%" x="-16.7%" y="-27.6%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dx="1.2" dy=".5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dx="1.2" dy=".5" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".05"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.377786276 0"/>
+        </filter>
+        <path id="prefix__a" d="M15.927.294c2.996 0 5.425 2.428 5.425 5.424 0 5.032-4.595 9.276-8.238 11.89-.744.534-1.526 1.02-2.324 1.47l-.13.057-.097-.057c-.798-.45-1.58-.936-2.325-1.47C4.596 14.993 0 10.75 0 5.717 0 2.722 2.428.294 5.424.294c2.538 0 4.66 1.747 5.252 4.103C11.269 2.04 13.39.294 15.927.294zm-5.229 6.514c-.552 0-1 .448-1 1v1.197H8.5l-.117.008c-.497.057-.883.48-.883.993 0 .552.448 1 1 1h1.197v1.197l.007.116c.058.498.48.884.993.884.552 0 1-.448 1-1v-1.198h1.198l.116-.006c.498-.058.884-.48.884-.993 0-.552-.448-1-1-1h-1.198V7.807l-.007-.117c-.057-.497-.48-.883-.993-.883z"/>
+        <path id="prefix__e" d="M4 8L7.2 11 12 5"/>
+        <circle id="prefix__c" cx="8" cy="8" r="8"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-347 -1212)">
+        <g>
+            <path fill="#C38B47" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20z" transform="translate(351 1218)"/>
+            <g transform="translate(351 1218) translate(9 11)">
+                <use fill="#FFF" xlink:href="#prefix__a"/>
+            </g>
+        </g>
+        <circle cx="371" cy="1238" r="23" stroke="#F0E4D4" stroke-width="2"/>
+        <g fill-rule="nonzero" transform="translate(382 1247)">
+            <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__c"/>
+            <use fill="#FFF" stroke="#F0E4D4" stroke-width="2" xlink:href="#prefix__c"/>
+            <g>
+                <use fill="#000" filter="url(#prefix__d)" xlink:href="#prefix__e"/>
+                <use stroke="#D2AF80" stroke-width="2" xlink:href="#prefix__e"/>
+            </g>
+        </g>
+    </g>
+</svg>

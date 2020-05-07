@@ -1,17 +1,23 @@
 extends ../includes/_layout.pug
 
 block title
-    title index
+    title 升級攻略
 
 block scss
-    link(rel='stylesheet', href='/assets/styles/index.css')
+    link(rel='stylesheet', href='/assets/styles/upgrade.css')
 
 block js
-    script(src='/assets/js/index.bundle.js' defer)
+    script(src='/assets/js/upgrade.bundle.js' defer)
 
 block main
-    div#appIndex
-        p {{message}}
-    p.index_p #{greet}, #{index.msg}
-    img(src="/assets/images/sample.svg", alt="")
+    div#appUpgrade
+        h1.header.close 升級攻略
+        p.f_grey_01.f16 目前等級
+        img(src="/assets/images/badge/dahu.png", alt="")
+        hr.hr_black
+        .choose
+            | 選擇一種最適合自己的升級攻略輕鬆當大戶
+
+
+
 

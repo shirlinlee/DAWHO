@@ -1,0 +1,23 @@
+@import 'library/_test';
+
+body {
+    background: linear-gradient(to bottom, #36363b 15%, #1f1f23);
+    padding-top: 45px;
+}
+
+#appUpgrade {
+    > p {
+        margin: 32px auto 24px;
+    }
+    > img {
+        width: 100px;
+    }
+    > hr {
+        margin: 24px 0;
+    }
+}
+
+.choose {
+    padding-bottom: 30px;
+    background-image: url(/assets/images/icon/dropdown.svg);
+}

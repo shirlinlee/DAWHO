@@ -1,0 +1,24 @@
+extends ../includes/_layout_substitute.pug
+
+block title
+    title 開戶進度查詢
+
+block scss
+    
+
+block js
+    script(src='/assets/js/substitute.bundle.js' defer)
+
+block main
+    .view
+        .status
+            .status-image
+                img(src="/assets/images/substitute/steps/step-6@2x.png", alt="")
+            .status-title 審核不通過
+            .status-content 
+                | 很抱歉，您未於7日內完成線上補件，申請案件
+                br
+                | 已取消，如仍需申請大戶，請重新申請
+        
+        .center.align-bottom
+            button.btn.btn-primary(type="submit") 了解大戶優惠

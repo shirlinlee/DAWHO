@@ -4,13 +4,8 @@ block title
     title 升級攻略
 
 block scss
-    link(rel='stylesheet', href='/lib/styles/slick.css')
+    link(rel='stylesheet', href='/lib/styles/swiper.min.css')
     link(rel='stylesheet', href='/assets/styles/upgrade.css')
-
-block js
-    script(src='/lib/js/jquery-2.2.0.min.js' defer)
-    script(src='/lib/js/slick.min.js' defer)
-    script(src='/assets/js/upgrade.bundle.js' defer)
 
 block main
     div#appUpgrade
@@ -22,48 +17,53 @@ block main
         hr.hr_black
         .choose.f_grey_02.f14
             | 選擇一種最適合自己的升級攻略輕鬆當大戶
-        .strateg.slider_wrapper
-            .slider
-                //- 「未達成」in_progress、「已達成」done
-                h6.f_b.in_progress 攻略ㄧ
-                hr.hr_grey
-                p.f14 每月平均財富超過
-                    font 10萬
-                    | 元
-                .proportion
-                    span(v-for="index in 6", :class="'deposit_0'+index")
-                    .proportion_tag
-                        //- 下方寫入百分比減去(金額的寬度/2)
-                        font.percent(style="width: calc(90% - 22px)")
-                        font.price 80,395
+        .swiper-container
+            .strateg.swiper-wrapper
+                .swiper-slide
+                    .bg_white
+                        //- 「未達成」in_progress、「已達成」done
+                        h6.f_b.in_progress 攻略ㄧ
+                        hr.hr_grey
+                        p.f14 每月平均財富超過
+                            font 10萬
+                            | 元
+                        .proportion
+                            span(v-for="index in 6", :class="'deposit_0'+index")
+                            .proportion_tag
+                                //- 下方寫入百分比減去(金額的寬度/2)
+                                font.percent(style="width: calc(90% - 22px)")
+                                font.price 80,395
 
-                p.f12.f_grey_03 更新時間
-                    font 2020/03/11 13:00
-                p.f14.tooltip 平均財富累計管道
-                .deposit_wrapper
-                    div.W33(v-for="(item, index) in ways", :key="index")
-                        img(:src="'/assets/images/icon/person_0'+(index+1)+'.svg'", alt="")
-                        p.f14 {{item.title}}
-                        a(:href="item.btn_href")  {{item.btn_txt}}
+                        p.f12.f_grey_03 更新時間
+                            font 2020/03/11 13:00
+                        p.f14.tooltip_btn 平均財富累計管道
+                        .deposit_wrapper
+                            div.W33(v-for="(item, index) in ways", :key="index")
+                                img(:src="'/assets/images/icon/person_0'+(index+1)+'.svg'", alt="")
+                                p.f14 {{item.title}}
+                                a(:href="item.btn_href")  {{item.btn_txt}}
 
-                hr.hr_grey
-                p.cheer 🙄還差一點就快達到每月目標了～
+                        hr.hr_grey
+                        p.cheer 🙄還差一點就快達到每月目標了～
 
 
-            .slider
-                //- 「未達成」in_progress、「已達成」done
-                h6.f_b.done 攻略二
-                hr.hr_grey
-                p.f14 完成下列任一服務申請
+                .swiper-slide
+                    .bg_white
+                        //- 「未達成」in_progress、「已達成」done
+                        h6.f_b.done 攻略二
+                        hr.hr_grey
+                        p.f14 完成下列任一服務申請
 
-                .deposit_wrapper
-                    div.W50(v-for="(item, index) in loans", :key="index")
-                        img(:src="'/assets/images/icon/person_0'+(index+6)+'.svg'", alt="")
-                        p.f14 {{item.title}}
-                        a(:href="item.btn_href")  {{item.btn_txt}}
+                        .deposit_wrapper
+                            div.W50(v-for="(item, index) in loans", :key="index")
+                                img(:src="'/assets/images/icon/person_0'+(index+6)+'.svg'", alt="")
+                                p.f14 {{item.title}}
+                                a(:href="item.btn_href")  {{item.btn_txt}}
 
-                hr.hr_grey
-                p.cheer 🎉  持續維持到月底，下月還能享有同樣優惠喔
+                        hr.hr_grey
+                        p.cheer 🎉  持續維持到月底，下月還能享有同樣優惠喔
+
+            .swiper-pagination
 
         p.f_white.f12
             | —— 我是底線 ——
@@ -71,8 +71,13 @@ block main
             | 都知道升級攻略了，還在等什麼
 
 
+        .tooltips_content
+            | 每個營業日下午1點結算資產餘額(含台外幣活存、台外幣定存、基金庫存淨值、ibrAin庫存淨值)，每月第一個營業日計算每日平均加總值，作為平均財富最後計算結果，超過10萬元即可於次月提升等級。
 
 
 
 
+block js
+    script(src='/lib/js/swiper.min.js' defer)
+    script(src='/assets/js/upgrade.bundle.js' defer)
 

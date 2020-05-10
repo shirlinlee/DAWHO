@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <filter id="prefix__b" width="163.6%" height="486%" x="-27.3%" y="-137.9%" filterUnits="objectBoundingBox">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.604867788 0"/>
+        </filter>
+        <filter id="prefix__d" width="163.7%" height="251.8%" x="-27.3%" y="-54.2%" filterUnits="objectBoundingBox">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.604867788 0"/>
+        </filter>
+        <path id="prefix__c" d="M22.018 1.073c0-.588-.473-1.066-1.06-1.073H1.073C.48 0 0 .48 0 1.073v2.554h22.018V1.073z"/>
+        <path id="prefix__e" d="M0 5.747v8.148c0 .593.48 1.073 1.073 1.073H20.92c.587-.007 1.06-.485 1.06-1.073V5.747H0z"/>
+        <linearGradient id="prefix__a" x1="100%" x2="0%" y1="94.074%" y2="26.242%">
+            <stop offset="0%" stop-color="#A16B28"/>
+            <stop offset="100%" stop-color="#F2CB91"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="url(#prefix__a)" d="M44 22c0 12.15-9.85 22-22 22S0 34.15 0 22 9.85 0 22 0s22 9.85 22 22"/>
+        <g fill-rule="nonzero" transform="translate(11 14)">
+            <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__c"/>
+            <use fill="#FFF" xlink:href="#prefix__c"/>
+            <g>
+                <use fill="#000" filter="url(#prefix__d)" xlink:href="#prefix__e"/>
+                <use fill="#FFF" xlink:href="#prefix__e"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -21,10 +21,13 @@ new Vue({
     mounted: function () {
         mode();
         this.$nextTick(() => {
-            $('.slider_wrapper').slick({
-                dots: true,
-                arrows: false,
-                centerPadding: '40px',
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1.1,
+                centeredSlides: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
             });
         });
     },

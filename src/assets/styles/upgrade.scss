@@ -25,34 +25,24 @@ body {
     @extend %icon_position_bottom;
     margin-bottom: 5px;
 }
-.slider_wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100vw - 60px);
-    @include maxW-320 {
-        width: calc(100vw - 40px);
+
+.swiper-slide {
+    > div {
+        > p {
+            margin-top: 24px;
+            margin-bottom: 12px;
+            &.cheer {
+                margin-top: 16px;
+                margin-bottom: 0;
+                font-size: 12px;
+            }
+        }
     }
-}
-.slider {
-    padding: 16px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    display: inline-block;
-    // margin: 0 6px;
     h6 {
         margin-bottom: 16px;
         line-height: 1.4;
     }
 
-    > p {
-        margin-top: 24px;
-        margin-bottom: 12px;
-        &.cheer {
-            margin-top: 16px;
-            margin-bottom: 0;
-            font-size: 12px;
-        }
-    }
     .tooltip {
         margin-top: 4px;
     }

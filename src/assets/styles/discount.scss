@@ -1,0 +1,43 @@
+@import 'library/_mediaQuery';
+@import 'library/_styleSetting';
+
+body {
+    background: linear-gradient(to bottom, #36363b 15%, #1f1f23);
+    padding-top: 45px;
+}
+
+.rights_content {
+    background: #fff;
+    display: inline-block;
+    li {
+        float: left;
+        font-size: 14px;
+        &:nth-child(2n + 1) {
+            border-right: 1px solid #e3e3e3;
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+            border-bottom: 1px solid #e3e3e3;
+            h6 {
+                margin-bottom: 20px;
+            }
+        }
+        &:nth-child(3),
+        &:nth-child(4) {
+            img {
+                margin-top: 20px;
+            }
+        }
+        h6 {
+            margin-top: 10px;
+            color: #c38b47;
+        }
+        p {
+            margin-top: 8px;
+        }
+        font {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+}

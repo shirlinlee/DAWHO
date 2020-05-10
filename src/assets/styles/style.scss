@@ -31,6 +31,10 @@ p {
     font-size: 18px;
 }
 
+.f24 {
+    font-size: 24px;
+}
+
 .f_b {
     font-weight: bold;
 }
@@ -57,6 +61,18 @@ p {
 
 .f_black {
     color: #111111;
+}
+
+.f_pink {
+    color: #ff6767;
+}
+
+.f_gold {
+    color: #c38b47;
+}
+
+.f_gold_light {
+    color: #f5c790;
 }
 
 .W100 {
@@ -91,6 +107,14 @@ p {
     background-color: #fdd8c0;
 }
 
+.bg_white {
+    background-color: #fff;
+}
+
+.bg_grey {
+    background-color: #f5f5f5;
+}
+
 .bg_grey_gra {
     background-image: linear-gradient(215deg, #4c4c51 100%, #383838 2%);
 }
@@ -99,6 +123,7 @@ p {
     background-image: linear-gradient(to bottom, #36363b 15%, #1f1f23);
 }
 
+// 金色邊按鈕
 .btn_gold_light {
     width: 100%;
     height: 38px;
@@ -106,6 +131,7 @@ p {
     border: solid 1px #f1cb91;
 }
 
+// 金色底按鈕
 .btn_gold {
     width: 100%;
     height: 38px;
@@ -175,28 +201,44 @@ main {
     @extend %icon_position_right;
 }
 
-.slick-dots {
-    li {
-        display: inline-block;
-        margin: 0 3px;
-        button {
-            background: #e3e3e3;
-            text-indent: -99999px;
-            -webkit-appearance: none;
-            padding: 0;
-            width: 6px;
-            height: 6px;
-            border: none;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-        }
-        &.slick-active {
-            button {
-                background: #d4b572;
-            }
-        }
+.slider_wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+    width: calc(100vw - 60px);
+    @include maxW-320 {
+        width: calc(100vw - 40px);
     }
+}
+.swiper-slide {
+    display: inline-block;
+    padding: 0 7px;
+    > div {
+        border-radius: 10px;
+        padding: 16px;
+    }
+}
+
+.swiper-pagination-bullet {
+    background: #e3e3e3 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #d4b572 !important;
+}
+
+.tooltips_content {
+    width: 218px;
+    height: 140px;
+    opacity: 0.85;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 16px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    z-index: 99;
 }

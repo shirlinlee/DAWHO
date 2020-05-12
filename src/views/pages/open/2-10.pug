@@ -1,0 +1,57 @@
+extends ../../includes/_layout_substitute.pug
+
+block title
+    title 開戶進度查詢
+
+block scss
+    link(rel='stylesheet', href='/assets/styles/open.css')
+block js
+
+
+block main
+    .view.form-wrapper
+        h1.main-title 你是否同意以下條款？
+        form
+            .form-check.form-group
+                input.styled-checkbox(id="defaultCheck1",type="checkbox", checked="checked")
+                label.styled-label(for="defaultCheck1") 共同行銷/合作推廣個人資料同意條款
+                a(href="",alt="")
+                    img.arrow(src="/assets/images/open/icon/arrow-right@3x.png", alt="arrow")
+            .form-check.form-group
+                input.styled-checkbox(id="defaultCheck2",type="checkbox", checked="checked")
+                label.styled-label(for="defaultCheck2") 同意開立臺幣、外幣帳戶，並於臺幣、外幣帳戶開立完成後，續開立信託帳戶
+                a(href="",alt="")
+                    img.arrow(src="/assets/images/open/icon/arrow-right@3x.png", alt="arrow")
+            .form-check.form-group
+                input.styled-checkbox(id="defaultCheck3",type="checkbox", checked="checked")
+                label.styled-label(for="defaultCheck3") 
+                    | 開立帳戶總約定書
+                    span.small 審閱期間至少五日
+                a(href="",alt="")
+                    img.arrow(src="/assets/images/open/icon/arrow-right@3x.png", alt="arrow")
+            .form-check.form-group
+                input.styled-checkbox(id="defaultCheck4",type="checkbox", checked="checked")
+                label.styled-label(for="defaultCheck4") 
+                    | 數位存款帳戶約定
+                    span.small 審閱期間至少五日
+                a(href="",alt="")
+                    img.arrow(src="/assets/images/open/icon/arrow-right@3x.png", alt="arrow")
+            .form-check.form-group
+                input.styled-checkbox(id="defaultCheck5",type="checkbox", checked="checked")
+                label.styled-label(for="defaultCheck5") 永豐銀行履行個人資料保護法第八條第一項告知義務內容
+                a(href="",alt="")
+                    img.arrow(src="/assets/images/open/icon/arrow-right@3x.png", alt="arrow")
+            .form-check.form-group
+                input.styled-checkbox(id="defaultCheck6",type="checkbox", checked="checked")
+                label.styled-label(for="defaultCheck6") 同意永豐銀行於本人「申請數位帳戶」業務之目的範圍內得蒐集、處理及利用我的個人資料並向財團法人金融聯合徵信中心查詢國民身分證領補換資料查詢驗證(Z21)及通報案件紀錄、補充註記資訊(Z22)。
+              
+            hr
+            
+            .form-check.form-group
+                input.styled-checkbox(id="defaultCheck7",type="checkbox", checked="checked")
+                label.styled-label(for="defaultCheck7") 我已詳閱並同意以上條款
+
+         
+        .center.align-bottom
+            button.btn.btn-primary(type="submit") 下一步
+                

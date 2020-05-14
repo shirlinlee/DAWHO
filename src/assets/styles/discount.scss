@@ -6,12 +6,84 @@ body {
     padding-top: 45px;
 }
 
+#appUpgrade {
+    padding-bottom: 25px;
+}
+
+.badge {
+    margin: 20px auto 0;
+}
+
+.swiper-slide {
+    position: relative;
+    padding-top: 48px;
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 50%;
+        left: 0;
+        top: 17px;
+        background: #c39657;
+    }
+    &:after {
+        left: 50%;
+    }
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+    > .bg_white {
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fecc87;
+            border-radius: 50%;
+            left: 50%;
+            top: -35px;
+            transform: translate(-50%, 0);
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -41px;
+            transform: translate(-50%, 0);
+            width: 22px;
+            height: 22px;
+            opacity: 0.4;
+            border-radius: 50%;
+            background-image: radial-gradient(
+                circle at 53% 50%,
+                #000000,
+                #ba9665 69%
+            );
+        }
+    }
+}
+
 .rights_content {
     background: #fff;
     display: inline-block;
     li {
         float: left;
         font-size: 14px;
+        img {
+            margin-top: 10px;
+        }
         &:nth-child(2n + 1) {
             border-right: 1px solid #e3e3e3;
         }
@@ -25,7 +97,7 @@ body {
         &:nth-child(3),
         &:nth-child(4) {
             img {
-                margin-top: 20px;
+                margin-top: 30px;
             }
         }
         h6 {
@@ -40,4 +112,8 @@ body {
             font-weight: bold;
         }
     }
+}
+
+.btn_wrapper {
+    margin-top: 32px;
 }

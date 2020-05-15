@@ -6,11 +6,13 @@ let detectResize = false;
 
 
 $(document).ready(function() {
-    cardSlick()
+    //cardSlick()
     $(window).resize(function () {
-        cardSlick()
+        //cardSlick()
     });
 });
+
+
 
 function cardSlick() {
     $('#card-slider-slick').slick({
@@ -34,43 +36,35 @@ function cardSlick() {
             }
         ]
     });
-
-        // $('#card-slider-slick').slick({
-        //     dots: true,
-        //     infinite: false,
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1
-        // });
- 
-      
 }
+
+
+
 
 new Vue({
     el: '#appOpen',
     data: {
-       
+        bankArray: []
     },
     mounted: function () {
         mode();
         this.$nextTick(() => {
-            // $('#card-slider-slick').slick({
-            //     dots: true,
-            //     infinite: false,
-            //     speed: 200,
-            //     slidesToShow: 1,
-            //     mobileFirst: true,
-            //     responsive: [
-            //         {
-            //             breakpoint: 768,
-            //             settings: 'unslick'
-            //         }
-            //     ]
-            // });
-            
+          
         });
     },
-    methods: {
+    computed: {
        
+    },
+    methods: {
+        openModal(id){
+            console.log(id)
+            $('.modal-backdrop').addClass('show');
+            $(id).addClass('show');
+        },
+        closeModal(id) {
+            $('.modal-backdrop').removeClass('show');
+            $(id).removeClass('show');
+        }
     }
 });
 

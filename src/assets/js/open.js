@@ -40,11 +40,18 @@ function cardSlick() {
 
 
 
-
+ 
 new Vue({
     el: '#appOpen',
     data: {
-        bankArray: []
+        bankArray: [],
+        financial: [
+            { from: '薪資所得', status: false },
+            { from: '租金收入', status: false },
+            { from: '退休金', status: false },
+            { from: '營業收入', status: false },
+            { from: '利息收入', status: false }
+        ]
     },
     mounted: function () {
         mode();
@@ -56,6 +63,9 @@ new Vue({
        
     },
     methods: {
+        toggleBubble(i) {
+            this.financial[i].status = !this.financial[i].status
+        },
         openModal(id){
             console.log(id)
             $('.modal-backdrop').addClass('show');

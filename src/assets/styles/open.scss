@@ -4,26 +4,7 @@
 
 
 
-.d-flex{
-    display: flex;
-    width: 100%;
-}
-.align-center{
-    align-items: center;
-}
-.justify-between{
-    justify-content: space-between;
-}
 
-.view{
-    padding: 0 20px;
-}
-.w50 {
-    width: 50%;
-    @include maxW-768 {
-        width: 100%;
-    }
-}
 .open-wrapper{
     height: 100%;
     padding: 10vh 0 0;
@@ -539,5 +520,45 @@
         font-weight: normal;
         line-height: 1.71;
         color: #818181;
+    }
+}
+
+
+/* 編輯 */
+.editable-info-wrap{
+    padding: 0 5rem 1.6rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    &:last-child {
+        border-bottom: none;
+    }
+    .info-title{
+        padding: .5rem 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.5;
+        color: #111111;
+        .edited-icon{
+            display: inline-block;
+            margin-left: 20px;
+            width: 24px;
+        }
+    }
+    .editable-info {
+        padding: .5rem 0.5rem;
+        color: #111111;
+        &:nth-child(even) {
+            background: rgba(0, 0, 0, 0.03);
+        }
+        .info-label{
+            font-size: 1rem;
+        }
+        .info-reply{
+            margin-top: .2rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            line-height: 1.5;
+        }
     }
 }

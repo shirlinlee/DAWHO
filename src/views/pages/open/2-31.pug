@@ -1,0 +1,77 @@
+extends ../../includes/_layout_substitute.pug
+
+block title
+    title 開戶進度查詢
+
+block scss
+
+block js
+    script(src='/assets/js/open.bundle.js' defer)
+
+block main
+    .view-992#appOpen
+        h1.main-title 工作資訊
+        form
+            .form-group.form-disabled
+                label.form-label(for="") 教育程度
+                select.custom-select(name="")
+                    option(value="") 大專/大學
+                    option(value="") 高中
+                    option(value="") 國中
+            
+            .mt-1.mb-1
+                hr.bg-grey
+
+            .form-group
+                label.form-label(for="") 職業類型
+                select.custom-select(name="")
+                    option(value="") 批發及零售業 中古商品
+            .form-group
+                label.form-label(for="") 職稱
+                select.custom-select(name="")
+                    option(value="") 一般職員
+            .form-group
+                label.form-label(for="") 年收入
+                input.form-control(id="", type="text",aria-describedby="idHelp") 
+            .form-group
+                label.form-label(for="") 服務機構
+                input.form-control(id="", type="text", value="臺灣新北地方檢察署", aria-describedby="idHelp") 
+            .form-group
+                label.form-label(for="") 公司電話  (選填)
+                input.form-control(id="", type="tel", value="02-23183752", aria-describedby="telHelp") 
+       
+            .form-group.sm
+                label.form-label(for="") 公司地址 (選填)
+                select.custom-select(name="")
+                    option(value="") 台北市中正區
+                    option(value="") 新北市汐止區
+            .form-group
+                input.form-control(id="", type="text", value="中正路一號" ,aria-describedby="idHelp") 
+                .bg-yellow 如需將金融卡寄送到公司地址，請於此階段填寫
+
+            .mt-1.mb-1
+                hr.bg-grey
+
+            .form-group
+                label.form-label(for="") 開戶目的
+                select.custom-select(name="")
+                    option(value="") 儲蓄
+
+            .form-group
+                label.form-label(for="") 財富/資金來源 (最多複選5項)
+            .toggle
+                .bubble(v-for="(item, i) in financial", :key="i", @click.prevent="toggleBubble(i)", :class="{'active': item.status == true}") 
+                    span.icon
+                    span.text {{item.from}}    
+
+            .mt-1.mb-1
+                hr.bg-grey
+
+            .form-group 
+                label.form-label(for="") 推薦人代碼 (選填)
+                input.form-control(id="", type="text" ,aria-describedby="idHelp") 
+                
+
+        .center.align-bottom.mt-2
+            button.btn.btn-primary.disabled(type="submit") 下一步
+                

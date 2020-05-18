@@ -1,5 +1,5 @@
 import mode from './modules/mode';
-
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const media = window.matchMedia("(max-width: 768px)");
 let detectResize = false;
 
@@ -7,6 +7,16 @@ let detectResize = false;
 
 $(document).ready(function() {
     //cardSlick()
+
+    if (!isMobile) {
+        $('.custom-select').select2({
+            //hide search
+            minimumResultsForSearch: Infinity
+        });
+    } 
+
+ 
+    
     $(window).resize(function () {
         //cardSlick()
     });
@@ -46,10 +56,10 @@ new Vue({
     data: {
         bankArray: [],
         financial: [
-            { from: '薪資所得', status: false },
+            { from: '薪資所得', status: true },
             { from: '租金收入', status: false },
-            { from: '退休金', status: false },
-            { from: '營業收入', status: false },
+            { from: '退休金', status: true },
+            { from: '營業收入', status: true },
             { from: '利息收入', status: false }
         ]
     },
@@ -60,7 +70,9 @@ new Vue({
         });
     },
     computed: {
-       
+        financialFrom() {
+            return [...this.financial].filter((item) => item.status)
+        }
     },
     methods: {
         toggleBubble(i) {

@@ -1,7 +1,8 @@
+
+@import 'plugins/_slick';
+@import 'plugins/_select2';
 @import 'base/_common';
 @import 'base/_modal';
-@import 'base/_plugins';
-
 
 
 
@@ -529,6 +530,9 @@
     padding: 0 5rem 1.6rem;
     margin-bottom: 1.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    @include maxW-768 {
+        padding: 0 0 1.6rem;
+    }
     &:last-child {
         border-bottom: none;
     }
@@ -562,3 +566,12 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+

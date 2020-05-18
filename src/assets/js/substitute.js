@@ -4,10 +4,10 @@ new Vue({
     el: '#appSubstitute',
     data: {
         financial: [
-            { from: '薪資所得', status: false },
+            { from: '薪資所得', status: true },
             { from: '租金收入', status: false },
-            { from: '退休金', status: false },
-            { from: '營業收入', status: false },
+            { from: '退休金', status: true },
+            { from: '營業收入', status: true },
             { from: '利息收入', status: false }
         ]
     },
@@ -25,6 +25,8 @@ new Vue({
                 }
             });
         });
+    },
+    computed: {
     },
     methods: {
         toggleBubble(i) {

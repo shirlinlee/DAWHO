@@ -22,6 +22,12 @@
     }
 }
 
+@mixin maxW-device-768() {
+    @media screen and (max-device-width: 768px) {
+        @content;
+    }
+}
+
 @mixin maxW-992() {
     @media screen and (max-width: 992px) {
         @content;

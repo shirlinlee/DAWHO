@@ -1,0 +1,30 @@
+extends ../../includes/_layout_oas.pug
+
+block title
+    title 開戶進度查詢
+
+block scss
+
+block js
+
+block main
+    .view#appSubstitute
+        .form-check.form-group
+            input.styled-checkbox(id="defaultCheck1",type="checkbox", checked="checked")
+            label.styled-label(for="defaultCheck1") 請重新上傳以下證件請重新上傳以下證件請重新上傳以下證件請重新上傳以下證件請重新上傳以下證件請重新上傳以下證件
+
+
+        .form-radio.form-group
+            input.styled-radio(id="defaultRadio1",type="radio", name="radio-group", checked="checked")
+            label.styled-label(for="defaultRadio1") apple
+        .form-radio.form-group
+            input.styled-radio(id="defaultRadio2",type="radio", name="radio-group")
+            label.styled-label(for="defaultRadio2") AAAA
+        .form-radio.form-group
+            input.styled-radio(id="defaultRadio3",type="radio", name="radio-group")
+            label.styled-label(for="defaultRadio3") 請重新上傳以下證件請重新上傳以下證件請重新上傳以下證件請重新上傳以下證件請重新上傳以下證件請重新上傳以下證件
+
+        .toggle
+            .bubble(v-for="(item, i) in financial", :key="i", @click.prevent="toggleBubble(i)", :class="{'active': item.status == true}") 
+                span.icon {{item.status}}
+                span.text {{item.from}}

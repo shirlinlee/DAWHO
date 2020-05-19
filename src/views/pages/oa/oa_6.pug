@@ -1,0 +1,48 @@
+extends ../../includes/_layout_open.pug
+
+block title
+    title 開戶進度查詢
+
+block scss
+
+block js
+    
+
+block main
+    .open-wrapper.step-wrapper
+        section.view.d-flex
+            .w50.d-flex
+                h1.main-title
+                    | 歡迎回來
+                    br
+                    | 讓我們繼續完成申請吧
+            .w50.d-flex
+                .step-check
+                    ul.step-check-ul  
+                        li.step-check-list.active
+                            span.step-check-icon
+                            span.step-check-status
+                                span.step-check-status_ttl 完成身份驗證
+                                span.step-check-status_des 你已透過信用卡進行身份驗證
+                            a.step-check-link(href="#") 
+                                span.txt 變更
+                                span.icon
+                                    img(src="/assets/images/open/icon/arrow-right@3x.png", alt="arrow")
+                        li.step-check-list
+                            span.step-check-icon
+                            span.step-check-status
+                                span.step-check-status_ttl 填寫個人資料
+                                span.step-check-status_des 
+                        li.step-check-list
+                            span.step-check-icon
+                            span.step-check-status
+                                span.step-check-status_ttl 設定網路銀行帳號密碼
+                                span.step-check-status_des 
+                        li.step-check-list
+                            span.step-check-icon
+                            span.step-check-status
+                                span.step-check-status_ttl 設定理財密碼
+                                span.step-check-status_des 
+                        
+        .center.align-bottom
+                button.btn.btn-primary(type="submit") 繼續完成            

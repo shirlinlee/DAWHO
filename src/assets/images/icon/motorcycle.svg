@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <path id="prefix__a" d="M0.84 0.421L1.26 0.421 1.26 0.842 0.84 0.842z"/>
+        <path id="prefix__c" d="M0.46 0.202L5.097 0.202 5.097 2.526 0.46 2.526z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 4) translate(0 13.745)">
+            <mask id="prefix__b" fill="#fff">
+                <use xlink:href="#prefix__a"/>
+            </mask>
+        </g>
+        <path fill="#C19438" d="M19.116 3.594c0 .942-.762 1.706-1.702 1.706s-1.703-.764-1.703-1.706.762-1.706 1.703-1.706c.94 0 1.702.764 1.702 1.706" transform="translate(1 4)"/>
+        <path stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.908 2.25L18.044 8.637M20.285 11.671c-.169-1.735-1.629-3.092-3.404-3.092-1.276 0-2.388.7-2.976 1.738-.233.41-.384.874-.43 1.368" transform="translate(1 4)"/>
+        <g transform="translate(1 4) translate(1.68 12.06)">
+            <mask id="prefix__d" fill="#fff">
+                <use xlink:href="#prefix__c"/>
+            </mask>
+            <path fill="#1E1E1E" d="M5.097.202c0 1.283-1.038 2.325-2.319 2.325C1.498 2.527.46 1.485.46.202" mask="url(#prefix__d)"/>
+        </g>
+        <path fill="#1E1E1E" d="M19.136 12.226c0 1.284-1.038 2.325-2.32 2.325-1.28 0-2.318-1.041-2.318-2.325" transform="translate(1 4)"/>
+        <path stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.016 11.723H1.47V7.43c0-1.423 1.151-2.577 2.57-2.577h4.44l2.618 6.72M14.663 11.719L20.184 11.705M15.087 8.806L15.691 2.105 12.688.632" transform="translate(1 4)"/>
+    </g>
+</svg>

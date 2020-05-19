@@ -1,0 +1,131 @@
+
+extends ../includes/youhui-detail/_layout.pug
+
+block title
+    title 大戶優惠詳情
+
+block scss
+    link(rel='stylesheet' href='/assets/styles/youhui-detail.css')
+
+
+block main
+    div#appYouhuiDetail
+        include ../includes/youhui-detail/_header.pug
+        div#appYouhuiDetailContent
+            div.twd-deposit.detail-content(data-detail-content='twd-deposit')(style='display:none')
+                h1 台幣活存利率
+                h2 1.1
+                    span %
+                h3 10萬元以內
+                div.info
+                    h1 優惠介紹
+                    ul
+                        li 新臺幣1元就開始計算利息
+                        li 存款10萬元以內，優惠年利率為 1.1%
+                        li 10萬～200萬元，優惠年利率為 0.45%
+                        li 超過200萬元部分，以牌告利率計算
+                        li 每月20日結算計息
+                        li 優惠期間即日起至2021年6月30日止
+            div.transfer.detail-content(data-detail-content='transfer')(style='display:none')
+                h1 免費跨提 / 跨轉次數
+                h2 16
+                    span 次
+                div.info
+                    h1 優惠介紹
+                    ul
+                        li 首次生效日為帳戶成功開立後，次日營業時
+                            p 間；若遇到假日，生效日則遞延至次營業日
+                        li 存款10萬元以內，優惠年利率為 1.1%
+                        li 10萬～200萬元，優惠年利率為 0.45%
+                        li 超過200萬元部分，以牌告利率計算
+                        li 每月20日結算計息
+                        li 優惠期間即日起至2021年6月30日止
+                    h1 手機轉帳限制
+                    table
+                        tbody
+                            tr
+                                th 開戶驗證方式
+                                th 轉帳金額限制 (註1)
+                            tr
+                                td 臨櫃驗證
+                                td 單筆5萬/單日10萬/
+                                    p 單月20萬
+                            tr
+                                td 永豐銀行帳戶
+                                td 單筆5萬/單日10萬/
+                                    p 單月20萬
+                            tr
+                                td 其他銀行帳戶
+                                td 單筆1萬/單日3萬/
+                                    p 單月5萬(註2)
+                            tr
+                                td 永豐/他行信用卡
+                                td 臨櫃驗證後才可使用
+                    .note
+                        .row
+                            .col
+                                p 註１：
+                            .col
+                                p 轉帳金額為網路銀行、行動銀行、ATM合併計算
+                        .row
+                            .col
+                                p 註２：
+                            .col
+                                p 若要提高轉帳金額，請前往最近分行臨櫃申請
+            div.credit-card.detail-content(data-detail-content='credit-card')(style='display:none')
+                h1 國內刷卡回饋最高
+                    h2 7
+                        span %
+                div.mixed
+                    div.mixed--content
+                        p.mixed--content--title 1%
+                        p.mixed--content--desc 一般消費
+                        p.mixed--content--note
+                    div.mixed--content
+                        p.mixed--content--title 1%
+                        p.mixed--content--desc 完成指定任務
+                        p.mixed--content--note 上限200元/月
+                    div.mixed--content
+                        p.mixed--content--title 5%
+                        p.mixed--content--desc 特色通路消費
+                        p.mixed--content--note 上限600元/月
+                div.mission
+                    p.mission--title 指定任務
+                    p.mission--desc 使用電子帳單並綁定帳戶自動扣繳
+                hr
+                include ../includes/youhui-detail/channels.pug
+            div.swipe-abroad.detail-content(data-detail-content='swipe-abroad')
+                h1 國外刷卡回饋最高
+                    h2 8
+                        span %
+                div.mixed
+                    div.mixed--content
+                        p.mixed--content--title 1%
+                        p.mixed--content--desc 一般消費
+                        p.mixed--content--note
+                    div.mixed--content
+                        p.mixed--content--title 2%
+                        p.mixed--content--desc 完成指定任務
+                        p.mixed--content--note 上限200元/月
+                    div.mixed--content
+                        p.mixed--content--title 5%
+                        p.mixed--content--desc 特色通路消費
+                        p.mixed--content--note 上限600元/月
+                div.mission
+                    p.mission--title 指定任務
+                    p.mission--desc 使用電子帳單並綁定帳戶自動扣繳
+                div.info
+                    h1 回饋說明
+                    p.desc 國外刷卡回饋認定方式需同時滿足已下條件
+                    ul
+                        li 交易商店之國別須為非台灣地區(台、澎、
+                            p 金、馬)
+                        li 交易幣別需為新台幣以外之一般交易(不含
+                            p 國外消費結匯手續費)
+                hr
+                include ../includes/youhui-detail/channels.pug
+
+
+block js
+    script(src='/assets/js/youhui-detail.bundle.js' defer)
+

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <filter id="prefix__b" width="140.6%" height="346.5%" x="-17.4%" y="-88%" filterUnits="objectBoundingBox">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.604867788 0"/>
+        </filter>
+        <filter id="prefix__d" width="140.7%" height="197%" x="-17.4%" y="-34.6%" filterUnits="objectBoundingBox">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.604867788 0"/>
+        </filter>
+        <path id="prefix__c" d="M34.48 1.68c0-.92-.74-1.669-1.66-1.68H1.68C.752 0 0 .752 0 1.68v4h34.48v-4z"/>
+        <path id="prefix__e" d="M0 9v12.76c0 .928.752 1.68 1.68 1.68h31.08c.92-.011 1.66-.76 1.66-1.68V9H0z"/>
+        <linearGradient id="prefix__a" x1="100%" x2="0%" y1="94.074%" y2="26.242%">
+            <stop offset="0%" stop-color="#A16B28"/>
+            <stop offset="100%" stop-color="#F2CB91"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="url(#prefix__a)" d="M817 922.999C817 940.674 802.674 955 785 955c-17.672 0-32-14.326-32-32.001C753 905.326 767.328 891 785 891c17.674 0 32 14.326 32 31.999" transform="translate(-753 -891)"/>
+        <g fill-rule="nonzero" transform="translate(-753 -891) translate(768 911)">
+            <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__c"/>
+            <use fill="#FFF" xlink:href="#prefix__c"/>
+            <g>
+                <use fill="#000" filter="url(#prefix__d)" xlink:href="#prefix__e"/>
+                <use fill="#FFF" xlink:href="#prefix__e"/>
+            </g>
+        </g>
+    </g>
+</svg>

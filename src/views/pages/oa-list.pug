@@ -70,12 +70,13 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
       background: #fff;
       }
       .list table th {
-      padding: 2px 0;
-      color: #cd9b1d;
+      padding: 2px 4px;
+      color: #111;
       font-weight: normal;
       border: 1px #ddd solid;
       /*border-right: 2px #aaa solid;*/
-      background: #666;
+      background: #eee;
+      text-align:left
       }
       .list table td {
       padding: 2px 8px;
@@ -111,7 +112,7 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
       .newAdd {
       color: #6633cc;
       }
-      
+      .font-bold{font-weight:bold}
       /* tfoot td {
       background: #f5fff5;
       } */
@@ -121,10 +122,14 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
       h2 2020 開戶列表
       table.list
         tbody
-
+            
+          tr
+            th 編號
+            th HTML 檔名
+            th 補充
           - for(var i = 1; i <= 40; i++)
             tr  
-              td(width="50",style="font-weight:bold") #{i}
+              td.font-bold(width="50") #{i}
               td(width="250")
                 a(target='_blank', href='oa/oa_' + i + '.html') #{'oa_'+ i}
               td

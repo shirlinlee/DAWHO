@@ -1,26 +1,27 @@
-extends ../../includes/_layout_open.pug
+extends ../../includes/_layout_oas.pug
 
 block title
     title 開戶進度查詢
 
 block scss
+    
 
 block js
 
 block main
-
-    #appOpen
-        .open-progress
-            .progress-line(style="width:10%")
-
-        .view
-            h1.main-title 請輸入行動電話
-            form
-                .form-group.invalid-error
-                    label.form-label(for="")
-                    input.form-control(id="", type="tel", placeholder="請輸入行動電話", aria-describedby="telHelp") 
-                    small.form-text.text-danger.f13 行動電話格式錯誤
-            
-            .center
-                button.btn.btn-primary.disabled(type="submit") 發送驗證碼
+    .view-992
+        h1.main-title 請輸入驗證碼
+        h2.sub-title 驗證碼已發送 至 0956 ... 888
+        form
+            .form-group.seperate-input
+                input.form-control(id="", type="text", maxlength="1")
+                input.form-control(id="", type="text", maxlength="1") 
+                input.form-control(id="", type="text", maxlength="1") 
+                input.form-control(id="", type="text", maxlength="1") 
+                input.form-control(id="", type="text", maxlength="1") 
+                input.form-control(id="", type="text", maxlength="1") 
+            p.note 驗證碼將在 1分52秒 失效
+        .center.align-bottom
+            button.btn.btn-primary(type="submit") 送出
+                
                 

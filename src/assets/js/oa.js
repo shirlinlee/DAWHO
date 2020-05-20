@@ -49,12 +49,28 @@ function cardSlick() {
 }
 
 
-
+ 
  
 new Vue({
     el: '#appOpen',
     data: {
-        bankArray: [],
+        bankObj: [
+            { bankCode: '004', bankName: '台灣銀行' },
+            { bankCode: '005', bankName: '土地銀行' },
+            { bankCode: '006', bankName: '合作金庫' },
+            { bankCode: '007', bankName: '第一銀行' },
+            { bankCode: '008', bankName: '華南銀行' },
+            { bankCode: '009', bankName: '彰化銀行' },
+            { bankCode: '010', bankName: '華僑銀行' },
+            { bankCode: '011', bankName: '上海商銀' },
+            { bankCode: '012', bankName: '台北富邦' },
+            { bankCode: '013', bankName: '國泰世華' },
+            { bankCode: '016', bankName: '高雄銀行' },
+            { bankCode: '017', bankName: '兆豐商銀' },
+            { bankCode: '021', bankName: '花旗銀行' }
+        ],
+        bankNameInput: '',//oa_20
+        bankEmpty: false,
         financial: [
             { from: '薪資所得', status: true },
             { from: '租金收入', status: false },
@@ -72,6 +88,28 @@ new Vue({
     computed: {
         financialFrom() {
             return [...this.financial].filter((item) => item.status)
+        },
+        filterBank() {
+            const vm = this;
+            let tempArray = []
+            return [...this.bankObj].filter((bank)=> {
+                console.log(bank.bankCode.indexOf(vm.bankNameInput), bank.bankName.indexOf(vm.bankNameInput))
+              
+                if (vm.bankNameInput == '') { 
+                    vm.bankEmpty = false
+                    return tempArray.push(this.bankObj) 
+                }
+                if (vm.bankNameInput !== '' && bank.bankCode.indexOf(vm.bankNameInput) == -1 && bank.bankName.indexOf(vm.bankNameInput) == -1) {
+                    vm.bankEmpty = true
+                    tempArray = []
+                    return null
+                } else {
+                    vm.bankEmpty = false
+                    return bank.bankCode.includes(vm.bankNameInput) || bank.bankName.includes(vm.bankNameInput)
+                }
+                
+            })
+            
         }
     },
     methods: {

@@ -572,6 +572,25 @@
 
 
 
-
-
-
+/* modal 搜尋銀行*/
+#search-bank-input{
+    width: 530px;
+    margin: 20px auto;
+    position: relative;
+}
+.bank-list{
+    padding: .5rem 1rem;
+    &-li {
+        padding: .5em .3em;
+        border-bottom: 1px solid #e3e3e3;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #111111;
+        &:last-child {
+            border-bottom: 0px;
+        }
+        .name{
+            padding-left: 1rem;
+        }
+    }
+}

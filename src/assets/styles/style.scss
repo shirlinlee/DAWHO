@@ -126,7 +126,7 @@ p {
 // 金色邊按鈕
 .btn_gold_light {
     text-decoration: none;
-    display: inline-block;
+    display: block;
     width: 100%;
     padding: 0 20px;
     max-width: 263px;
@@ -141,7 +141,7 @@ p {
 // 金色底按鈕
 .btn_gold {
     text-decoration: none;
-    display: inline-block;
+    display: block;
     color: #111111;
     padding: 0 20px;
     max-width: 263px;
@@ -196,9 +196,14 @@ main {
         background-image: url(/assets/images/icon/close.svg);
         @extend %icon_position_right;
     }
+    .back {
+        display: block;
+        background-image: url(/assets/images/icon/arrow-left.svg);
+        @extend %icon_position_left;
+    }
 }
 
-.tooltip {
+.tooltip_btn {
     display: inline-block;
     padding-right: 20px;
     background-image: url(/assets/images/icon/info.svg);
@@ -206,14 +211,20 @@ main {
     cursor: pointer;
 }
 
-.in_progress {
-    background-image: url(/assets/images/icon/unacommpolish.svg);
-    @extend %icon_position_right;
-}
-
-.done {
-    background-image: url(/assets/images/icon/acommpolish.svg);
-    @extend %icon_position_right;
+.tooltips_content {
+    width: 218px;
+    height: 140px;
+    opacity: 0.85;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 16px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    z-index: 99;
 }
 
 .slider_wrapper {
@@ -234,26 +245,14 @@ main {
     }
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0 !important;
+}
+
 .swiper-pagination-bullet {
     background: #e3e3e3 !important;
 }
 
 .swiper-pagination-bullet-active {
     background: #d4b572 !important;
-}
-
-.tooltips_content {
-    width: 218px;
-    height: 140px;
-    opacity: 0.85;
-    border-radius: 10px;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 16px;
-    line-height: 1.5;
-    font-size: 12px;
-    position: absolute;
-    z-index: 99;
 }

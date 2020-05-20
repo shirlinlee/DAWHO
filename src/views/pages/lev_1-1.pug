@@ -38,10 +38,31 @@ block main
                             font 2020/03/11 13:00
                         p.f14.tooltip_btn 平均財富累計管道
                         .deposit_wrapper
-                            div.W33(v-for="(item, index) in ways", :key="index")
-                                img(:src="'/assets/images/icon/person_0'+(index+1)+'.svg'", alt="")
-                                p.f14 {{item.title}}
-                                a(:href="item.btn_href")  {{item.btn_txt}}
+
+                            div.W33
+                                img(src="/assets/images/icon/01.svg", alt="")
+                                p.f14 臺幣活存
+                                a(href="#") 前往查看
+                            div.W33
+                                img(src="/assets/images/icon/02.svg", alt="")
+                                p.f14 外幣活存
+                                a(href="#") 前往換匯
+                            div.W33
+                                img(src="/assets/images/icon/03.svg", alt="")
+                                p.f14 臺幣定存
+                                a(href="#") 立即申請
+                            div.W33
+                                img(src="/assets/images/icon/04.svg", alt="")
+                                p.f14 外幣定存
+                                a(href="#") 立即申請
+                            div.W33
+                                img(src="/assets/images/icon/05.svg", alt="")
+                                p.f14 基金庫存
+                                a(href="#") 立即申購
+                            div.W33
+                                img(src="/assets/images/icon/05.svg", alt="")
+                                p.f14 ibrAin庫存
+                                a(href="#") 立即申購
 
                         hr.hr_grey
                         p.cheer 🙄還差一點就快達到每月目標了～
@@ -55,11 +76,22 @@ block main
                         p.f14 完成下列任一服務申請
 
                         .deposit_wrapper
-                            div.W50(v-for="(item, index) in loans", :key="index")
-                                img(:src="'/assets/images/icon/person_0'+(index+6)+'.svg'", alt="")
-                                p.f14 {{item.title}}
-                                a(:href="item.btn_href")  {{item.btn_txt}}
-
+                            div.W50.done
+                                img(src="/assets/images/icon/07.svg", alt="")
+                                p.f14 汽車貸款
+                                a(href="#") 前往申請
+                            div.W50
+                                img(src="/assets/images/icon/08.svg", alt="")
+                                p.f14 信用貸款
+                                a(href="#") 前往申請
+                            div.W50
+                                img(src="/assets/images/icon/09.svg", alt="")
+                                p.f14 人身保險
+                                a(href="#") 前往申請
+                            div.W50
+                                img(src="/assets/images/icon/10.svg", alt="")
+                                p.f14 房屋貸款
+                                a(href="#") 前往申請
                         hr.hr_grey
                         p.cheer 🎉  持續維持到月底，下月還能享有同樣優惠喔
 
@@ -75,4 +107,3 @@ block main
 block js
     script(src='/lib/js/swiper.min.js' defer)
     script(src='/assets/js/upgrade.bundle.js' defer)
-

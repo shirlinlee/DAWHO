@@ -1,0 +1,141 @@
+﻿doctype html
+html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com:office:office')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=750, user-scalable=1')
+    meta(name='keywords', content='')
+    meta(name='description', content='')
+    title 開戶OA
+    // ============================== css start ==============================
+    // ============================== css close ==============================
+    // ============================== script start ==============================
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js')
+    script.
+      $(document).ready(function(){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+            $('.backtop').fadeIn();
+            } else {
+            $('.backtop').fadeOut();
+            }
+        });
+        $('.backtop').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        $('a').attr('target','_blank');
+      });
+    script(type='text/javascript').
+      var width = screen.width;
+      var meta = document.createElement("meta");
+      var head = document.getElementsByTagName("head")[0];
+      if (width >= 1024) {
+      meta.setAttribute("name", "viewport");
+      meta.setAttribute("content", "width=1024");
+      head.appendChild(meta);
+      } else if (width < 1024 && width >= 768) { // iPad in portrait mode
+      meta.setAttribute("name", "viewport");
+      meta.setAttribute("content", "width=960");
+      head.appendChild(meta);
+      } else if (width <767) { // anything smaller than 700px in width
+      meta.setAttribute("name", "viewport");
+      meta.setAttribute("content", "width=640; maximum-scale=1");
+      head.appendChild(meta);
+      };
+    // ============================== script close ==============================
+    style(type='text/css').
+      * { margin: 0; padding: 0; border: 0;}
+      a { color: #784f1d;text-decoration: none;}
+      body { background: #de0700; background: #dfdfdf; font-family: Arial, Helvetica, sans-serif; letter-spacing: -0.4px; }
+      h2, .backtop a { color: #cd9b1d;}
+      h2 {
+        padding: 0 0.5em;
+        width: 100%;
+        line-height: 2em;
+        background: #fff3e2;
+      }
+      .backtop a { color: #666; text-decoration: none;}
+      .backtop {text-align: center; padding: 5px 0;}
+      .list {}
+      .list table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      color: #222;
+      font-size: 13px;
+      line-height: 2em;
+      background: #fff;
+      }
+      .list table th {
+      padding: 2px 4px;
+      color: #111;
+      font-weight: normal;
+      border: 1px #ddd solid;
+      /*border-right: 2px #aaa solid;*/
+      background: #eee;
+      text-align:left
+      }
+      .list table td {
+      padding: 2px 8px;
+      border: 1px #ddd solid;
+      }
+      .list table tr.even {
+      background: #d0fbff;
+      }
+      .list table tr.odd {
+      background: #f8f1e5;
+      }
+      .list table .blue {
+      background: #daeef3;
+      }
+      .list table .green {
+      background: #ebf1de;
+      }
+      .list table .center {
+      text-align: center;
+      }
+      .list table .line {
+      border-bottom: 3px #888 solid;
+      }
+      /*
+      .list table tr:hover {
+      color: #000;
+      background: #ffeec2;
+      }
+      */
+      .list table tbody.WebService {
+      background: #f2f2f2;
+      }
+      .newAdd {
+      color: #6633cc;
+      }
+      .font-bold{font-weight:bold}
+      /* tfoot td {
+      background: #f5fff5;
+      } */
+  body
+    .list
+      // ============================== header start ==============================
+      h2 2020 開戶列表
+      table.list
+        tbody
+            
+          tr
+            th 編號
+            th HTML 檔名
+            th 補充
+          - for(var i = 1; i <= 40; i++)
+            tr  
+              td.font-bold(width="50") #{i}
+              td(width="250")
+                a(target='_blank', href='oa/oa_' + i + '.html') #{'oa_'+ i}
+              td
+         
+         
+       
+      // ============================== content close ==============================
+      .backtop(style='text-align: center;')
+        a(href='#top') Back to Top

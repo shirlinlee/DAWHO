@@ -1,0 +1,63 @@
+
+extends ../includes/youhui-detail/_layout.pug
+
+block title
+    title 大戶優惠詳情
+
+block scss
+    link(rel='stylesheet' href='/assets/styles/youhui-detail.css')
+
+
+block main
+    div#appYouhuiDetailContent
+        div.transfer.detail-content(data-detail-content='transfer')
+                h1 免費跨提 / 跨轉次數
+                h2 16
+                    span 次
+                div.info
+                    h1 優惠介紹
+                    ul
+                        li 首次生效日為帳戶成功開立後，次日營業時
+                            p 間；若遇到假日，生效日則遞延至次營業日
+                        li 存款10萬元以內，優惠年利率為 1.1%
+                        li 10萬～200萬元，優惠年利率為 0.45%
+                        li 超過200萬元部分，以牌告利率計算
+                        li 每月20日結算計息
+                        li 優惠期間即日起至2021年6月30日止
+                    h1 手機轉帳限制
+                    table
+                        tbody
+                            tr
+                                th 開戶驗證方式
+                                th 轉帳金額限制 (註1)
+                            tr
+                                td 臨櫃驗證
+                                td 單筆5萬/單日10萬/
+                                    p 單月20萬
+                            tr
+                                td 永豐銀行帳戶
+                                td 單筆5萬/單日10萬/
+                                    p 單月20萬
+                            tr
+                                td 其他銀行帳戶
+                                td 單筆1萬/單日3萬/
+                                    p 單月5萬(註2)
+                            tr
+                                td 永豐/他行信用卡
+                                td 臨櫃驗證後才可使用
+                    .note
+                        .row
+                            .col
+                                p 註１：
+                            .col
+                                p 轉帳金額為網路銀行、行動銀行、ATM合併計算
+                        .row
+                            .col
+                                p 註２：
+                            .col
+                                p 若要提高轉帳金額，請前往最近分行臨櫃申請
+
+
+block js
+    script(src='/assets/js/youhui-detail.bundle.js' defer)
+

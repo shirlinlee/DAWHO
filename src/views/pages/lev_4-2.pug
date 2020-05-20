@@ -1,0 +1,31 @@
+
+extends ../includes/youhui-detail/_layout.pug
+
+block title
+    title 大戶優惠詳情
+
+block scss
+    link(rel='stylesheet' href='/assets/styles/youhui-detail.css')
+
+
+block main
+    div#appYouhuiDetailContent
+        div.twd-deposit.detail-content(data-detail-content='twd-deposit')
+            h1 台幣活存利率
+            h2 1.1
+                span %
+            h3 10萬元以內
+            div.info
+                h1 優惠介紹
+                ul
+                    li 新臺幣1元就開始計算利息
+                    li 存款10萬元以內，優惠年利率為 1.1%
+                    li 10萬～200萬元，優惠年利率為 0.45%
+                    li 超過200萬元部分，以牌告利率計算
+                    li 每月20日結算計息
+                    li 優惠期間即日起至2021年6月30日止
+
+
+block js
+    script(src='/assets/js/youhui-detail.bundle.js' defer)
+

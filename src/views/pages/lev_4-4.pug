@@ -1,0 +1,39 @@
+
+extends ../includes/youhui-detail/_layout.pug
+
+block title
+    title 大戶優惠詳情
+
+block scss
+    link(rel='stylesheet' href='/assets/styles/youhui-detail.css')
+
+
+block main
+    div#appYouhuiDetailContent
+        div.credit-card.detail-content(data-detail-content='credit-card')
+                h1 國內刷卡回饋最高
+                    h2 7
+                        span %
+                div.mixed
+                    div.mixed--content
+                        p.mixed--content--title 1%
+                        p.mixed--content--desc 一般消費
+                        p.mixed--content--note
+                    div.mixed--content
+                        p.mixed--content--title 1%
+                        p.mixed--content--desc 完成指定任務
+                        p.mixed--content--note 上限200元/月
+                    div.mixed--content
+                        p.mixed--content--title 5%
+                        p.mixed--content--desc 特色通路消費
+                        p.mixed--content--note 上限600元/月
+                div.mission
+                    p.mission--title 指定任務
+                    p.mission--desc 使用電子帳單並綁定帳戶自動扣繳
+                hr
+                include ../includes/youhui-detail/channels.pug
+
+
+block js
+    script(src='/assets/js/youhui-detail.bundle.js' defer)
+

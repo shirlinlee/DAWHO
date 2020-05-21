@@ -1,6 +1,12 @@
 @import 'library/_mediaQuery';
 @import 'library/_styleSetting';
 
+@mixin iPad() {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        @content;
+    }
+}
+
 body {
     // background: linear-gradient(to bottom, #36363b 15%, #1f1f23);
     padding-top: calc(40px + 135px);
@@ -147,7 +153,7 @@ body {
                 font-weight: normal;
                 font-stretch: normal;
                 font-style: normal;
-                line-height: 1.25;
+                line-height: 1.5;
                 letter-spacing: normal;
                 &::before {
                     content: '・';
@@ -190,6 +196,9 @@ body {
                     }
                     &:first-child {
                         flex: 20%;
+                        @include iPad() {
+                            flex: initial;
+                        }
                     }
                 }
             }
@@ -225,6 +234,9 @@ body {
                 position: absolute;
                 margin-left: -68px;
                 margin-top: 4px;
+                @include iPad(){
+                    margin-left: -128px;
+                }
             }
         }
     }
@@ -343,7 +355,6 @@ body {
         }
     }
     .detail-content {
-
     }
     .twd-deposit {
     }

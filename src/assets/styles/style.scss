@@ -211,6 +211,10 @@ main {
     cursor: pointer;
 }
 
+.tooltip_templates {
+    display: none;
+}
+
 .tooltips_content {
     width: 218px;
     height: 140px;
@@ -225,6 +229,15 @@ main {
     font-size: 12px;
     position: absolute;
     z-index: 99;
+}
+
+.tooltipster-box {
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    flex: inherit;
 }
 
 .slider_wrapper {

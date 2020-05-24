@@ -1,0 +1,70 @@
+extends ../../includes/_layout_open.pug
+
+block title
+    title 身分證_成功
+
+block scss
+
+block js
+
+block main
+
+    #appOpen
+
+        .view-992
+
+            .upload-card-box.invalid-error
+                h1.main-title 身分證正面
+                .card-photo
+                    //- 上傳照片
+                    //- img(src="", alt="")
+                    .error-box
+                        .text-note 照片內容不正確
+                        .f13 檔案格式限JPG、PNG、TIFF
+                hr.bg-grey
+
+                .card-note-list
+                    p.list-ttl 請確認你的照片
+                    ul.line-primary
+                        li 資訊清晰且完整、未被部分裁切
+                        li 大小比例適中可辨識
+                        li 頭像清晰，不會反光、太暗或模糊
+                        li 使用彩色照片
+
+            .center.d-flex.flex-column.mt-2
+                button.btn.btn-primary(type="button") 確認
+                a.btn.text-center.text-underline.mt-1(href="") 重新上傳
+        
+        //- lightbox
+        .modal-backdrop.fade.show
+        .modal.fade.show#upload-card-modal(tabindex="-1",role="dialog", aria-hidden="true")
+            .modal-dialog
+                .modal-content.invalid-error
+                    .modal-header
+                        h5.modal-title 身分證正面
+                        button.close(@click.prevent="closeModal('#upload-card-modal')",type="button",data-dismiss="modal") 關閉
+                    .modal-body-box
+                        .modal-body
+                            .upload-card-box
+                                .card-photo
+                                    //- 上傳照片
+                                    //- img(src="", alt="")
+                                    .error-box
+                                        .text-note 照片內容不正確
+                                        .f13 檔案格式限JPG、PNG、TIFF
+                                hr.bg-grey
+
+                                .card-note-list
+                                    p.list-ttl 請確認你的照片
+                                    ul.line-primary.text-danger
+                                        li 資訊清晰且完整、未被部分裁切
+                                        li 大小比例適中可辨識
+                                        li 頭像清晰，不會反光、太暗或模糊
+                                        li 使用彩色照片
+                                
+
+                    .modal-footer.column
+                        button.btn.btn-primary(type="button") 確認
+                        a.btn.text-center.text-underline.mt-1(href="") 重新上傳
+    
+    

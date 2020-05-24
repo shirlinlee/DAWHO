@@ -42,6 +42,9 @@ img {
     display: flex;
     width: 100%;
 }
+.flex-column{
+    flex-direction: column;
+}
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -59,6 +62,9 @@ img {
 .txt-note{color: #818181;}
 .text-danger {color: #ff6767; }
 .txt-heghtlight{ color: #c38b47; }
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
 
 .mt-1{margin-top: 1rem !important;}
 .mt-2{margin-top: 2rem !important;}
@@ -357,9 +363,10 @@ img {
 hr {
     height: 1px;
     width: 100%;
+    border: 0px;
     &.bg-grey{
-        border-top: 1px solid #e8e8e8;
-        // background: #e8e8e8;
+        background: #e8e8e8;
+        
     }
 }
 

@@ -1,0 +1,65 @@
+extends ../../includes/_layout_open.pug
+
+block title
+    title 身分證_成功
+
+block scss
+
+block js
+
+block main
+
+    #appOpen
+
+        .view-992
+
+            .upload-card-box
+                h1.main-title 確認證件裁切範圍
+                p 請手動將紅框線對準證件的四角
+                
+                .upload-photo-bg
+                    .photo
+                        img(src="/assets/images/open/idCard/blur-pic@2x.png", alt="照片模糊")
+                    .resizable
+                        .resizers
+                            .resizer.top-left
+                            .resizer.top-right
+                            .resizer.bottom-left
+                            .resizer.bottom-right
+                
+
+            .center.d-flex.flex-column.mt-2
+                button.btn.btn-primary(type="button") 確認
+                a.btn.text-center.mt-1(href="") 重新上傳
+        
+        //- lightbox
+        .modal-backdrop.fade.show
+        .modal.fade.show#upload-card-modal(tabindex="-1",role="dialog", aria-hidden="true")
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        h5.modal-title 確認證件裁切範圍
+                        button.close(@click.prevent="closeModal('#upload-card-modal')",type="button",data-dismiss="modal") 關閉
+                    .modal-body-box
+                        .modal-body
+                            p 請手動將紅框線對準證件的四角
+                            .upload-card-box
+                                .card-photo
+                                    //- 上傳照片
+                                    //- img(src="", alt="")
+                                hr.bg-grey
+
+                                .card-note-list
+                                    p.list-ttl 請確認你的照片
+                                    ul.line-primary
+                                        li 資訊清晰且完整、未被部分裁切
+                                        li 大小比例適中可辨識
+                                        li 頭像清晰，不會反光、太暗或模糊
+                                        li 使用彩色照片
+                                
+
+                    .modal-footer.column
+                        button.btn.btn-primary(type="button") 確認
+                        a.btn.text-center.mt-1(href="") 重新上傳
+    
+    

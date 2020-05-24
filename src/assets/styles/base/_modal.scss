@@ -14,6 +14,9 @@
         visibility: visible;
         .modal-dialog{
             animation: showUp .3s linear forwards;
+            @include  maxW-768 {
+                animation: showUp_M .3s linear forwards;
+            }
         }
     }
     &-header {
@@ -40,6 +43,10 @@
         background-clip: padding-box;
         border-radius: 10px;
         outline: 0;
+        @include maxW-768 {
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
     }
     &-dialog {
         position: absolute;
@@ -53,6 +60,10 @@
         @include maxW-992 {
             width: 100%;
             margin: 0;
+        }
+        @include maxW-768 {
+           top: 10%;
+           bottom: 0;
         }
     }
     &-body-box {
@@ -73,6 +84,9 @@
         align-items: center;
         justify-content: flex-end;
         padding: .75rem;
+        &.column {
+            flex-direction: column;
+        }
         &>* {
             margin: .25rem;
         }
@@ -100,6 +114,12 @@
         opacity: 1;
     }
 }
+@keyframes showUp_M {
+    100% {
+        bottom: 0%;
+        opacity: 1;
+    }
+}
 
 .modal-backdrop {
     position: fixed;
@@ -109,19 +129,25 @@
     width: 100vw;
     height: 100vh;
     background-color: #000;
+    visibility: hidden;
     &.fade {
         opacity: 0;
+        visibility: hidden;
     }
     &.show {
         opacity: .5;
         z-index: 1007;
+        visibility: visible;
     }
 }
 
 
 .modal.fade .modal-dialog {
     transition: transform .3s ease-out;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    @include maxW-768 {
+        transform: translate(-50%,0%); 
+    }
 }
 .modal.show .modal-dialog {
    // transform: none;

@@ -37,6 +37,7 @@ body {
             font-weight: normal;
             line-height: 1.2;
             padding: 10px 20px;
+            background-image: linear-gradient(to bottom, #2b2b2f, #36363b);
             .back {
                 display: block;
                 background-image: url(/assets/images/icon/arrow-left.svg);
@@ -48,6 +49,9 @@ body {
             color: #ffffff;
             height: 135px;
             background-image: url(/assets/images/bg-grade.svg);
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-color: #36363b;
             display: flex;
             align-items: center;
             justify-content: center;

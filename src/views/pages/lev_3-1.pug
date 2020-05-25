@@ -1,0 +1,33 @@
+extends ../includes/_layout.pug
+
+block title
+    title 等級權益
+
+block scss
+    link(rel='stylesheet', href='/lib/styles/swiper.min.css')
+    link(rel='stylesheet', href='/assets/styles/discount.css')
+
+block main
+    div#appUpgrade
+        h1.header 等級
+        img.badge(src="/assets/images/badge/dada.png", width="100", alt="")
+
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    .bg_white.achieve
+                    span.line
+                        font
+
+                .swiper-slide
+                    .bg_white.miss
+                    span.line
+
+        .btn_wrapper
+            a.btn_gold(href="#") 升級攻略
+            a.btn_gold_light(href="#") 歷史等級
+
+
+block js
+    script(src='/lib/js/swiper.min.js' defer)
+    script(src='/assets/js/discount.bundle.js' defer)

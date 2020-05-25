@@ -1,0 +1,79 @@
+extends ../includes/_layout.pug
+
+block title
+    title 完整優惠
+
+block scss
+    link(rel='stylesheet', href='/lib/styles/tooltipster.bundle.min.css')
+    link(rel='stylesheet', href='/assets/styles/history.css')
+
+block main
+    div#appHistory
+        h1.header
+            .back 歷史等級
+        select(name="month")
+            option(value="2020年 2月") 2020年 2月
+            option(value="2020年 3月") 2020年 3月
+        h2.f_white.f16 2月等級 大戶
+        img.badge(src="/assets/images/badge/dahu.png", width="100", alt="")
+
+        .container
+           p.t_right.f_grey_02.f12 資料期間： 2020年 1月
+           p.t_center.f_grey_01.f14 資料期間內達成任一項任務，當月就能升等喔！
+           ul
+            li.achieve
+                img.status_01(src="/assets/images/icon/13.svg", alt="")
+                img.status_02(src="/assets/images/icon/13_disable.svg", alt="")
+                div
+                    font.f14.f_grey_01.tooltip_btn(data-tooltip-content=".tooltips_content") 平均財富達到10萬
+                    span.f14 實際平均 230,875
+
+                a.f_black(href="#") 已達成
+
+            hr.hr_black
+            li.achieve
+                img.status_01(src="/assets/images/icon/15.svg", alt="")
+                img.status_02(src="/assets/images/icon/15_disable.svg", alt="")
+                div
+                    font.f14.f_grey_01 汽車貸款
+                a.f_black(href="#") 已達成
+
+            hr.hr_black
+
+            li.fail
+                img.status_01(src="/assets/images/icon/14.svg", alt="")
+                img.status_02(src="/assets/images/icon/14_disable.svg", alt="")
+                div
+                    font.f14.f_grey_01 信用貸款
+                a.f_black(href="#") 未達成
+
+            hr.hr_black
+
+            li.fail
+                img.status_01(src="/assets/images/icon/16.svg", alt="")
+                img.status_02(src="/assets/images/icon/16_disable.svg", alt="")
+                div
+                    font.f14.f_grey_01 房屋貸款
+                a.f_black(href="#") 未達成
+
+            hr.hr_black
+
+            li.fail
+                img.status_01(src="/assets/images/icon/17.svg", alt="")
+                img.status_02(src="/assets/images/icon/17_disable.svg", alt="")
+                div
+                    font.f14.f_grey_01 人身保險
+                a.f_black(href="#") 未達成
+
+
+        p.f14.f_grey_01 只要最強任務解鎖，人人都是「大戶」
+
+    .tooltip_templates
+        .tooltips_content
+            | 每個營業日下午1點結算資產餘額(含台外幣活存、台外幣定存、基金庫存淨值、ibrAin庫存淨值)，每月第一個營業日計算每日平均加總值，作為平均財富最後計算結果，超過10萬元即可於次月提升等級。
+
+
+block js
+    script(src='/lib/js/jquery-1.12.4.min.js' defer)
+    script(src='/lib/js/tooltipster.bundle.js' defer)
+    script(src='/assets/js/history.bundle.js' defer)

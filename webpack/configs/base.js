@@ -1,6 +1,6 @@
 const BASE = {
     dev: '',
-    prod: '/test',
+    prod: '/prod',
 };
 
 module.exports = BASE;

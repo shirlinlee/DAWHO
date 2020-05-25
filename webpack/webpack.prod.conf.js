@@ -21,8 +21,8 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
                         loader: 'sass-loader',
                         options: {
                             prependData: `
-                            $asset : "${BASE.prod}/assets";
-                            $public : "${BASE.prod}/";
+                            $assets : "${BASE.prod}/assets";
+                            $public : "${BASE.prod}";
                           `,
                         },
                     },

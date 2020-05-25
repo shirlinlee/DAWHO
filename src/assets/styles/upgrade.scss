@@ -21,7 +21,7 @@ body {
 
 .choose {
     padding-bottom: 30px;
-    background-image: url(/assets/images/icon/dropdown.svg);
+    background-image:  url($asset + '/images/icon/dropdown.svg');
     @extend %icon_position_bottom;
     margin-bottom: 5px;
 }

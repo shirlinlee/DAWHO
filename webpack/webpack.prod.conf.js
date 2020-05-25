@@ -1,5 +1,7 @@
 const merge = require('webpack-merge');
 const PATHS = require('./configs/PATHS');
+const BASE = require('./configs/BASE');
+
 const baseWebpackConfig = require('./webpack.base.conf');
 
 const buildWebpackConfig = merge(baseWebpackConfig, {
@@ -8,7 +10,25 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
         path: PATHS.out,
     },
     optimization: {
-      minimize: true, // minimize js
+        minimize: true, // minimize js
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(scss|sass)$/,
+                use: [
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            prependData: `
+                            $asset : "${BASE.prod}/assets";
+                            $public : "${BASE.prod}/";
+                          `,
+                        },
+                    },
+                ],
+            },
+        ],
     },
 });
 

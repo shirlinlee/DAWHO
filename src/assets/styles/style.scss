@@ -193,7 +193,7 @@ main {
     z-index: 200;
     .close {
         display: block;
-        background-image: url(/assets/images/icon/close.svg);
+        background-image: url($asset + '/images/icon/close.svg');
         @extend %icon_position_right;
     }
     .back {
@@ -206,7 +206,7 @@ main {
 .tooltip_btn {
     display: inline-block;
     padding-right: 20px;
-    background-image: url(/assets/images/icon/info.svg);
+    background-image: url($asset + '/images/icon/info.svg');
     @extend %icon_position_right;
     cursor: pointer;
 }

@@ -1,0 +1,53 @@
+- var data = { withdraw : "已提款", cancel : "已取消", fail : "已失效"}
+mixin _containerSearch(status, hasData)
+    include ./_header.search.pug
+    div#appChaxunRecordContent
+        div.account
+            p.account-title 扣款帳號
+            div.account-info
+                p 營業部活期存款
+                p (807)0016893949394934
+                a
+                    img(src=assets+"/images/more.png" alt="")
+        ul.status-nav
+            li(class=(status==='withdraw')?'active':'')
+                a #{data['withdraw']}
+            li(class=(status==='cancel')?'active':'')
+                a #{data['cancel']}
+            li(class=(status==='fail')?'active':'')
+                a #{data['fail']}
+        div.status-data
+            if hasData
+                ul.transaction-list
+                    li
+                        p 2020/05/05
+                        p 新臺幣 1,000 元
+                        a
+                            img(src=assets+"/images/icon/arrow-right.svg" alt="")
+                    li
+                        p 2020/05/03
+                        p 新臺幣 2,000 元
+                        a
+                            img(src=assets+"/images/icon/arrow-right.svg" alt="")
+                    li
+                        p 2020/05/01
+                        p 美金 200 元
+                        a
+                            img(src=assets+"/images/icon/arrow-right.svg" alt="")
+                    li
+                        p 2020/04/28
+                        p 日圓 10,000 元
+                        a
+                            img(src=assets+"/images/icon/arrow-right.svg" alt="")
+                    li
+                        p 2020/04/20
+                        p 新臺幣 3,000 元
+                        a
+                            img(src=assets+"/images/icon/arrow-right.svg" alt="")
+            else
+                img(src=assets+"/images/no-result.svg" alt="")
+                p.no-data 尚無#{data[status]}記錄
+        div.notice
+            p 注意事項
+            a
+                img(src=assets+"/images/icon/plus.svg" alt="")

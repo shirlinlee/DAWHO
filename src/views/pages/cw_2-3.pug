@@ -1,0 +1,19 @@
+extends ../includes/chaxun-record/_layout.pug
+
+block title
+    title cw_2-3
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/chaxun-record.css')
+
+
+block main
+    div#appChaxunRecord
+        include ../includes/chaxun-record/_container.search.pug
+        +_containerSearch("fail", true)
+
+
+
+block js
+    script(src= assets + '/js/chaxun-record.bundle.js' defer)
+

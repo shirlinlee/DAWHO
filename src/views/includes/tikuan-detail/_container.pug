@@ -1,0 +1,52 @@
+- var data = { withdraw : "已提款", cancel : "已取消", fail : "已失效"}
+mixin _container(status, isForeign)
+    header#tikuan-detail--header
+        h1.title
+            .back
+                p 提款明細
+        div.header-status
+            case status
+                when 'withdraw'
+                    img(src=assets+"/images/icon/cw-success.svg" alt="")
+                    p #{data[status]}
+                when 'cancel'
+                    img(src=assets+"/images/icon/cw-fail.svg" alt="")
+                    p.white #{data[status]}
+                when 'fail'
+                    img(src=assets+"/images/icon/cw-fail.svg" alt="")
+                    p.white #{data[status]}
+    div#appTikuanDetailContent
+        .value-content
+            p 提款金額
+            if !isForeign
+                p.value 新臺幣 1,000 元
+            else
+                p.value 日幣 10,000 元
+        hr
+        ul.infos
+            li.grey
+                p 申請時間
+                p 2020/04/30 16:32:02
+            li
+                p 提款方式
+                p 無卡提款
+            li
+                p 提款序號
+                p 40154039
+            li.grey
+                p 金融代號
+                p 807 永豐銀行
+            li.grey
+                p 提款帳號
+                p 1980180024229999
+            if isForeign
+                li.grey
+                    p 扣款金額
+                    p.foreign 新臺幣 2,784 元
+                li.grey
+                    p 匯率
+                    p 0.2748000
+            li
+                p ATM機台編號
+                p 1298-99
+

@@ -2,7 +2,7 @@
 @import 'library/_styleSetting';
 
 body {
-    background: linear-gradient(to bottom, #36363b 15%, #1f1f23);
+    background: #1f1f23;
     background-image: url($asset + '/images/bg_02.png');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -102,6 +102,7 @@ body {
             border-width: 1px;
             border-image-slice: 1;
             border-radius: 5px;
+            white-space: nowrap;
         }
         &.achieve {
             a {

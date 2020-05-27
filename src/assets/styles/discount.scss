@@ -17,6 +17,15 @@ body {
 .swiper-slide {
     position: relative;
     padding-top: 48px;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 41px;
+        margin-left: -8px;
+        border-bottom: solid 8px #ffffff;
+        border-left: solid 8px transparent;
+        border-right: solid 8px transparent;
+    }
     .line {
         display: block;
         position: absolute;

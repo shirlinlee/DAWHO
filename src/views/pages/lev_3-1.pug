@@ -4,13 +4,13 @@ block title
     title 等級權益
 
 block scss
-    link(rel='stylesheet', href='/lib/styles/swiper.min.css')
-    link(rel='stylesheet', href='/assets/styles/discount.css')
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet', href= assets + '/styles/discount.css')
 
 block main
     div#appUpgrade
         h1.header 等級
-        img.badge(src="/assets/images/badge/dada.png", width="100", alt="")
+        img.badge(src=assets +"/images/badge/dada.png", width="100", alt="")
 
         .swiper-container
             .swiper-wrapper
@@ -29,5 +29,5 @@ block main
 
 
 block js
-    script(src='/lib/js/swiper.min.js' defer)
-    script(src='/assets/js/discount.bundle.js' defer)
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src=assets + '/js/discount.bundle.js' defer)

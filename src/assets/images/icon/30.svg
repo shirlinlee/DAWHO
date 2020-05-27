@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <linearGradient id="prefix__a" x1="102.053%" x2="14.058%" y1="105.508%" y2="10.316%">
+            <stop offset="0%" stop-color="#FFE0A5"/>
+            <stop offset="54.574%" stop-color="#795523"/>
+            <stop offset="100%" stop-color="#FFC772"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="0%" x2="76.022%" y1=".009%" y2="99.991%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="0%" x2="76.022%" y1="1.182%" y2="98.818%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="38.484%" x2="55.993%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="20" cy="20" r="19.75" stroke="url(#prefix__a)" stroke-width=".5"/>
+        <g stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="url(#prefix__b)" d="M19.387 6.04c0 3.06-2.48 5.54-5.54 5.54S8.306 9.1 8.306 6.04 10.787.5 13.847.5c3.06 0 5.54 2.48 5.54 5.54z" transform="translate(10 10)"/>
+            <path stroke="url(#prefix__b)" d="M11.58 13.92c0 3.06-2.48 5.54-5.54 5.54S.5 16.98.5 13.92s2.48-5.54 5.54-5.54 5.54 2.48 5.54 5.54z" transform="translate(10 10)"/>
+            <path stroke="url(#prefix__c)" d="M8.214 15.63c-.507.643-1.292 1.055-2.174 1.055-1.528 0-2.766-1.239-2.766-2.766 0-1.528 1.238-2.767 2.766-2.767.92 0 1.734.45 2.237 1.139m-5.6.803h2.716m-2.715 1.65h2.715" transform="translate(10 10)"/>
+            <path stroke="url(#prefix__d)" d="M15.273 4.48c-.097-.433-.415-1.144-1.455-1.17-.446-.011-.898.116-1.194.468-.318.376-.385.95-.108 1.369.406.61 1.185.677 1.83.854.577.158 1.137.45 1.13 1.128-.009.827-.94 1.379-1.695 1.29-.194-.023-1.252-.056-1.564-1.123M13.82 3.31v-.648m-.038 5.757v.715" transform="translate(10 10)"/>
+        </g>
+    </g>
+</svg>

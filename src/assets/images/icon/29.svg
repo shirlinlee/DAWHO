@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <linearGradient id="prefix__a" x1="102.053%" x2="14.058%" y1="105.508%" y2="10.316%">
+            <stop offset="0%" stop-color="#FFE0A5"/>
+            <stop offset="54.574%" stop-color="#795523"/>
+            <stop offset="100%" stop-color="#FFC772"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="0%" x2="76.022%" y1="4.875%" y2="95.125%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="9.048%" x2="94.636%" y1="-128.862%" y2="150.878%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="20" cy="20" r="19.75" stroke="url(#prefix__a)" stroke-width=".5"/>
+        <g>
+            <path fill="url(#prefix__b)" d="M1.566 10.5l2.858 1.438-.455.97-1.676-.843c.77 3.665 3.92 6.357 7.628 6.357 3.511 0 6.555-2.422 7.504-5.852l.066-.252 1.009.263c-.982 4.039-4.502 6.919-8.58 6.919-3.993 0-7.417-2.756-8.495-6.597l-.524.938L0 13.3 1.566 10.5zm8.513-10c3.994 0 7.418 2.756 8.496 6.597l.524-.938.901.54L18.434 9.5l-2.858-1.438.455-.97 1.676.843c-.77-3.665-3.92-6.357-7.628-6.357C6.568 1.578 3.524 4 2.575 7.43l-.066.252L1.5 7.42C2.482 3.38 6.002.5 10.08.5z" transform="translate(10 10)"/>
+            <path stroke="url(#prefix__c)" stroke-linecap="round" d="M11.893 8.404c-.124-.551-.529-1.457-1.853-1.49-.569-.015-1.145.148-1.522.594-.405.48-.49 1.213-.137 1.745.517.778 1.51.862 2.331 1.087.736.202 1.449.574 1.439 1.438-.011 1.054-1.197 1.757-2.159 1.644-.246-.03-1.594-.072-1.992-1.431m2.04-5.077v-.827m-.048 7.334v.91" transform="translate(10 10)"/>
+        </g>
+    </g>
+</svg>

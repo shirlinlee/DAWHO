@@ -13,6 +13,15 @@ new Vue({
                     clickable: true,
                 },
             });
+            $('.tooltip_btn').tooltipster({
+                content: $('.tooltips_content'),
+                contentCloning: true,
+                animation: 'grow',
+                side: 'bottom',
+                arrow: false,
+                animationDuration: 450,
+                trigger: 'click',
+            });
         });
     },
 });

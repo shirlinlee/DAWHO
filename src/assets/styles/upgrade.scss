@@ -21,7 +21,7 @@ body {
 
 .choose {
     padding-bottom: 30px;
-    background-image:  url($asset + '/images/icon/dropdown.svg');
+    background-image: url($asset + '/images/icon/dropdown.svg');
     @extend %icon_position_bottom;
     margin-bottom: 5px;
 }
@@ -45,12 +45,12 @@ body {
         margin-bottom: 16px;
         line-height: 1.4;
         &.in_progress {
-            background-image: url(/assets/images/icon/unacommpolish.svg);
+            background-image: url($asset + '/images/icon/unacommpolish.svg');
             @extend %icon_position_right;
         }
 
         &.done {
-            background-image: url(/assets/images/icon/acommpolish.svg);
+            background-image: url($asset + '/images/icon/acommpolish.svg');
             @extend %icon_position_right;
         }
     }
@@ -137,7 +137,7 @@ body {
                 top: 28px;
                 transform: translate(8px, 0);
                 @extend %bg_img_center;
-                background-image: url(/assets/images/icon/achive.svg);
+                background-image: url($asset + '/images/icon/achive.svg');
             }
         }
         a {

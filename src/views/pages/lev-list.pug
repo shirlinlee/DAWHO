@@ -110,9 +110,9 @@ html
                 th 補充
             tr(v-for="(item, index) in lev_lists", :key="index")
                 td.font-bold(width="50") {{item.html}}
-                td
+                td(width="90")
                     a(target='_blank', :href="'lev_' + item.html + '.html'") lev_{{item.html}}
-                td(width="80")
+                td(v-html="item.ps")
 
 
 

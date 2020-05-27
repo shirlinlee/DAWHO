@@ -1,0 +1,45 @@
+$active : #fed28f;
+$active_bg: rgba(254, 210, 143, 0.5);
+
+.toggle {
+	cursor: pointer;
+	display: inline-block;
+}
+.toggle-switch {
+	display: inline-block;
+	background: #ccc;
+	border-radius: 16px;
+	width: 34px;
+	height: 14px;
+	position: relative;
+	vertical-align: middle;
+	transition: background 0.25s;
+	&:before,
+	&:after {
+		content: "";
+	}
+	&:before {
+		display: block;
+		background: linear-gradient(to bottom, #fff 0%,#eee 100%);
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: -4px;
+		left:0px;
+		transition: left 0.25s;
+	}
+
+	.toggle-checkbox:checked + & {
+		background: $active_bg;
+		&:before {
+            background: $active;
+			left: 14px;
+		}
+	}
+}
+.toggle-checkbox {
+	position: absolute;
+	visibility: hidden;
+}
+

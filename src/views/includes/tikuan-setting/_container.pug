@@ -9,7 +9,8 @@ mixin _container(status)
                 p.name 營業部活期存款
                 div.account
                     p (807) 0016893949394934
-                    img(src=assets+"/images/icon/cw-open.svg" alt="")
+                    include ../components.pug
+                    +switch(true)
                 p.status 2020/04/30 啟用
         else
             div.empty

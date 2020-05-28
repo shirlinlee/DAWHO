@@ -3,4 +3,20 @@ mixin switch(status)
         input.toggle-checkbox(type='checkbox')
         .toggle-switch
 
-//- link(rel='stylesheet' href= assets + '/styles/components.css')
+
+mixin select(list)
+    select.cw-select
+        each data in list
+            option(value=data) #{data}
+
+mixin dropdown(list,placeholder)
+    select.cw-dropdown(required)
+        option(value="" selected disabled) #{placeholder}
+        each data in list
+            option(value=data) #{data}
+
+mixin check(id,label,isChecked)
+    label.cw-check
+        input(id='check_'+id,type='checkbox', checked=isChecked)
+        label(for='check_'+id) #{label}
+

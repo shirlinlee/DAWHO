@@ -4,9 +4,8 @@ const media = window.matchMedia("(max-width: 768px)");
 let detectResize = false;
 
 
-
 $(document).ready(function() {
-    //cardSlick()
+    
 
     if (!isMobile) {
         $('.custom-select').select2({
@@ -15,39 +14,31 @@ $(document).ready(function() {
         });
     } 
 
+    //oa_18
+    var mySwiper = new Swiper('#card-slider-slick', {
+        // Optional parameters
+        slidesPerView: 3,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+                centeredSlides: true,
+                //loop: true,
+            }
+        }
+    })
+
     //oa-28.html
-    makeResizableDiv('.resizable') 
+    //makeResizableDiv('.resizable') 
     
     $(window).resize(function () {
-        //cardSlick()
     });
 });
 
-
-
-function cardSlick() {
-    $('#card-slider-slick').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        responsive: [
-            {
-                breakpoint: 9999,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            }
-        ]
-    });
-}
 
 
 /*Make resizable div by Hung Nguyen*/
@@ -77,7 +68,7 @@ function makeResizableDiv(div) {
             original_height = parseFloat(getComputedStyle(element, null).getPropertyValue('height').replace('px', ''));
             console.log('original_width', original_width)
             original_x = element.getBoundingClientRect().left;
-            original_y = element.getBoundingClientRect().top;
+            original_y = element.getBoundingClientRect().top; 
             original_mouse_x = e.pageX + parent_x;
             original_mouse_y = e.pageY + parent_y;
             window.addEventListener('mousemove', resize)
@@ -180,7 +171,16 @@ new Vue({
     mounted: function () {
         mode();
         this.$nextTick(() => {
-          
+            //自動跳下一格//oa-36
+            $(".seperate-input .form-control").keyup(function () {
+                if (this.value.length == this.maxLength) {
+                    var $next = $(this).next('.form-control');
+                    if ($next.length)
+                        $(this).next('.form-control').focus();
+                    else
+                        $(this).blur();
+                }
+            });
         });
     },
     computed: {

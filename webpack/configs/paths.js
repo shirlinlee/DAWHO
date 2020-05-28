@@ -1,6 +1,6 @@
 const path = require('path');
 
-const PATHS = {
+const PATHS = { 
     src: path.join(__dirname, '../../src'),
     dist: path.join(__dirname, '../../dist'),
     out: path.join(__dirname, '../../out'),

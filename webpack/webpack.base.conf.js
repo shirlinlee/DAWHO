@@ -11,7 +11,7 @@ const PUG_LOCALS = require('../src/views/pug.locals');
 const PAGES_DIR = `${PATHS.src}/views/pages/`;
 const PAGES_FILES = glob.sync(`${PAGES_DIR}**/*.pug`).map((page) => {
     return page.split('/views/pages')[1];
-});
+}); 
 
 const STYLES_DIR = `${PATHS.src}/${PATHS.assets}/styles`;
 const STYLES_FILES = glob

@@ -1,4 +1,4 @@
-extends ../../includes/_layout_oas.pug
+extends ../../includes/_layout_open.pug
 
 block title
     title 開戶進度查詢
@@ -9,10 +9,10 @@ block scss
 block js
 
 block main
-    .view-992
+    .view-992#appOpen
         h1.main-title 請輸入驗證碼
         h2.sub-title 驗證碼已發送 至 0956 ... 888
-        form
+        form(style="max-width:350px;margin:0 auto")
             .form-group.seperate-input
                 input.form-control(id="", type="text", maxlength="1")
                 input.form-control(id="", type="text", maxlength="1") 
@@ -20,7 +20,8 @@ block main
                 input.form-control(id="", type="text", maxlength="1") 
                 input.form-control(id="", type="text", maxlength="1") 
                 input.form-control(id="", type="text", maxlength="1") 
-            p.note 驗證碼將在 1分52秒 失效
+            p.note.text-center 驗證碼將在 1分52秒 失效
+            p.text-center.f14.mt-1.mb-2 每日驗證碼發送上限為5次，剩餘4次 
         .center.align-bottom
             button.btn.btn-primary(type="submit") 送出
                 

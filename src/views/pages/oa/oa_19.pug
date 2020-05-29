@@ -9,33 +9,36 @@ block js
     
 
 block main
-    .open-wrapper
-        section.d-flex.step-front-wrapper
-            .w50.step-front-words
-                h1.main-title.main-title_black 臨櫃驗證
-                p.main-sub-txt 若要使用臨櫃方式驗證，請依序完成以下步驟
-            .w50.d-flex.step-front-container
-                .step-check
-                    ul.step-check-ul  
-                        li.step-check-list
-                            span.step-check-icon
-                                img(src="/assets/images/open/frontDesk/step-1@2x.png", alt="step 1")
-                            span.step-check-status
-                                span.step-check-status_ttl 01
-                                span.step-check-status_des 先透過手機完成個人資料填寫
-                        li.step-check-list
-                            span.step-check-icon
-                                img(src="/assets/images/open/frontDesk/step-2@2x.png", alt="step 2")
-                            span.step-check-status
-                                span.step-check-status_ttl 02
-                                span.step-check-status_des 30日內攜帶雙證件至鄰近<br>永豐銀行進行身份驗證
-                        li.step-check-list
-                            span.step-check-icon
-                                img(src="/assets/images/open/frontDesk/step-3@2x.png", alt="step 3")
-                            span.step-check-status
-                                span.step-check-status_ttl 03
-                                span.step-check-status_des 完成開戶
-               
-        //-hr.bg-grey                
-        .center.align-bottom
-                button.btn.btn-primary(type="button") 下一步            
+    #appOpen
+        .open-progress
+            .progress-line(style="width:45%")
+        .open-wrapper
+            section.d-flex.step-front-wrapper
+                .w50.step-front-words
+                    h1.main-title.main-title_black 臨櫃驗證
+                    p.main-sub-txt 若要使用臨櫃方式驗證，請依序完成以下步驟
+                .w50.step-front-container
+                    .step-check
+                        ul.step-check-ul  
+                            li.step-check-list
+                                span.step-check-icon
+                                    img(src="/assets/images/open/frontDesk/step-1@2x.png", alt="step 1")
+                                span.step-check-status
+                                    span.step-check-status_ttl 01
+                                    span.step-check-status_des 先透過手機完成個人資料填寫
+                            li.step-check-list
+                                span.step-check-icon
+                                    img(src="/assets/images/open/frontDesk/step-2@2x.png", alt="step 2")
+                                span.step-check-status
+                                    span.step-check-status_ttl 02
+                                    span.step-check-status_des 30日內攜帶雙證件至鄰近<br>永豐銀行進行身份驗證
+                            li.step-check-list
+                                span.step-check-icon
+                                    img(src="/assets/images/open/frontDesk/step-3@2x.png", alt="step 3")
+                                span.step-check-status
+                                    span.step-check-status_ttl 03
+                                    span.step-check-status_des 完成開戶
+            .view-992    
+                hr.bg-grey                
+            .center.align-bottom
+                    button.btn.btn-primary(type="button") 下一步            

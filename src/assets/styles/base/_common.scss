@@ -66,8 +66,10 @@ img {
 .text-left {text-align: left;}
 .text-right {text-align: right;}
 
+.mt-0{margin-top: 0rem !important;}
 .mt-1{margin-top: 1rem !important;}
 .mt-2{margin-top: 2rem !important;}
+.mb-0{margin-bottom: 0rem !important;}
 .mb-1{margin-bottom: 1rem !important;}
 .mb-2{margin-bottom: 2rem !important;}
 
@@ -105,7 +107,7 @@ img {
 
 .sub-content {
     // height: calc(100vh - 48px - 80px);
-    min-height: 600px;
+    min-height: 608px;
     .view-992 {
         max-width: 992px;
         margin: 0 auto;
@@ -113,13 +115,12 @@ img {
     }
     .view{
         padding: 0 16px;
-        min-height: 60vh;
         display: flex;
         flex-direction: column;
     }
 
     .main-title{
-        padding: 1.2rem 0 1rem;
+        margin: 0 0 32px;
         text-align: left;
         font-size: 1.5rem;
         font-weight: bold;
@@ -164,6 +165,7 @@ img {
             border: 1px solid #ff6767;
         }
         .form-text{
+            margin-top: 4px;
             color: #ff6767;
         }
     }
@@ -179,7 +181,7 @@ img {
     height: 42px;
     font-size: 1rem;
     line-height: 42px;
-    color: #111;
+    color: #818181;
     border: 1px solid #aaaaaa;
     border-radius: 5px;
     transition: border .3s ease;
@@ -234,14 +236,14 @@ img {
 
 
 ::placeholder {
-  color: #e3e3e3;
+  color: #818181;
   opacity: 1;
 }
 :-ms-input-placeholder {
- color: #e3e3e3;
+ color: #818181;
 }
 ::-ms-input-placeholder {
- color: #e3e3e3;
+ color: #818181;
 }
 
 
@@ -252,8 +254,12 @@ img {
     flex-direction: row;
     justify-content: space-between;
     & > .form-control {
-        flex: 1 1 auto;
-        margin: 0 4px;
+        flex: 1 1 48px;
+        height: 56px;
+        margin: 0 5px;
+        font-size: 1.5rem;
+        line-height: 56px;
+        text-align: center;
     }
 }
 .note {
@@ -270,7 +276,7 @@ img {
     text-align: center;
     margin: 0 auto 30px;
     &.align-bottom {
-        margin: auto auto 32px;
+        margin: 48px auto 32px;
     }
 }
 
@@ -387,7 +393,10 @@ hr {
     & + label {
         position: relative;
         cursor: pointer;
-        padding: 0 0 0 30px;
+        width: 306px;
+        padding: 0 0 0 40px;
+        font-size: 1rem;
+        color: #111;
 
     .small {
         display: block;

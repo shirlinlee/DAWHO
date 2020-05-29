@@ -8,31 +8,34 @@ block scss
 block js
 
 block main
-    .view
-        h1.main-title 開始前，請先讓我們了解你
-        form
-            .form-group
-                label.form-label(for="") 身分證字號
-                input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="idHelp") 
-                small.form-text.text-danger.f13 required
-            .form-group
-                label.form-label(for="") 生日
-                input.form-control(id="", type="tel", placeholder="例：1998/09/05", aria-describedby="telHelp") 
-                small.form-text.text-danger.f13 required
-            .form-group
-                p 是否有美國國籍或其他地區稅務居民身份?
-                a(href="") 
-                    | 什麼是稅務身份? 
-                    span.info.img 
-                        img(src="/assets/images/open/icon/info@2x.png", alt="info")
-            .form-radio.form-group
-                input.styled-radio(id="defaultRadio1",type="radio", name="radio-group", checked="checked")
-                label.styled-label(for="defaultRadio1") 是
-            .form-radio.form-group
-                input.styled-radio(id="defaultRadio2",type="radio", name="radio-group")
-                label.styled-label(for="defaultRadio2") 否
+    #appOpen 
+        .open-progress
+            .progress-line(style="width:35%")
+        .view-992
+            h1.main-title 開始前，請先讓我們了解你
+            form
+                .form-group
+                    label.form-label(for="") 身分證字號
+                    input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="idHelp") 
+                    small.form-text.text-danger.f13 required
+                .form-group
+                    label.form-label(for="") 生日
+                    input.form-control(id="", type="tel", placeholder="例：1998/09/05", aria-describedby="telHelp") 
+                    small.form-text.text-danger.f13 required
+                .form-group.mt-2
+                    p 是否有美國國籍或其他地區稅務居民身份?
+                    a(href="") 
+                        | 什麼是稅務身份? 
+                        span.info.img 
+                            img(src="/assets/images/open/icon/info@2x.png", alt="info")
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio1",type="radio", name="radio-group", checked="checked")
+                    label.styled-label(for="defaultRadio1") 是
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio2",type="radio", name="radio-group")
+                    label.styled-label(for="defaultRadio2") 否
 
 
-        .center.align-bottom
-            button.btn.btn-primary.disabled(type="submit") 下一步
-                
+            .center.align-bottom
+                button.btn.btn-primary.disabled(type="submit") 下一步
+                    

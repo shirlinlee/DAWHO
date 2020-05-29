@@ -9,7 +9,7 @@ new Vue({
         mode();
         this.$nextTick(() => {
             var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1.1,
+                slidesPerView: 1.16,
                 centeredSlides: true,
                 on: {
                     slideChange: () => {

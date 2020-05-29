@@ -1,0 +1,22 @@
+extends ../includes/_layout.pug
+
+block title
+    title 首頁
+
+block scss
+    link(rel='stylesheet', href= assets + '/styles/level.css')
+
+block main
+    .lb_wrapper.show
+        .lb.level
+            .img_wrapper
+                img(src=assets + "/images/bg_07.png", alt="")
+                img.badge(src=assets + "/images/badge/dada.png", alt="")
+
+            h6.f18 本月等級 大大
+            p.f14
+                span 好可惜，差一點就能升等了，
+                span 繼續努力！
+            a.btn_gold.btn_experience 查看完整優惠
+
+

@@ -50,19 +50,4 @@ block main
                         | 元
 
 
-        a.btn_gold(@click="openRights") 查看完整權益
-
-        .lb_wrapper(:show="openLB")
-            .lb
-                h1.f_white.f24 開DAWHO 享優惠
-                .env
-                    img.top(src=assets + "/images/env/01.svg", alt="")
-                    img.bottom(src=assets + "/images/env/02.svg", alt="")
-                    img.badge(src=assets + "/images/env/03.svg", alt="")
-
-                a.btn_gold 點擊閱讀
-
-
-
-block js
-    script(src=assets + '/js/index.bundle.js' defer)
+        a.btn_gold.btn_seeRight 查看完整權益

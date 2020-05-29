@@ -15,7 +15,8 @@ body {
         width: 100px;
     }
     > hr {
-        margin: 24px 0;
+        margin: 24px auto;
+        width: calc(100% - 48px);
     }
 }
 
@@ -38,6 +39,9 @@ body {
                 margin-top: 16px;
                 margin-bottom: 0;
                 font-size: 12px;
+            }
+            &.way {
+                margin-top: 4px;
             }
         }
     }
@@ -116,7 +120,7 @@ body {
 
 .deposit_wrapper {
     display: flex;
-    margin: 8px auto 0;
+    margin: 4px auto 0;
     display: flex;
     flex-wrap: wrap;
     div {
@@ -124,7 +128,9 @@ body {
         flex-direction: column;
         align-items: center;
         cursor: pointer;
-        margin-bottom: 28px;
+        margin-top: 4px;
+        margin-bottom: 24px;
+
         &.done {
             position: relative;
             &::before {
@@ -145,7 +151,7 @@ body {
             font-size: 14px;
             border-radius: 14px;
             background-color: #fdd8c0;
-            padding: 5px 8px;
+            padding: 7px 8px;
             margin-top: 8px;
             text-decoration: none;
         }

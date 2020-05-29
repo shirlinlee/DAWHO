@@ -4,14 +4,18 @@ new Vue({
     el: '#appIndex',
     data: {
         message: 'Vue Installed',
-        openLB: false,
+        isLBOpen: false,
+        isENVOpen: false,
     },
     mounted: function () {
         mode();
     },
     methods: {
         openRights() {
-            this.openLB = true;
+            this.isLBOpen = true;
+        },
+        openEnv() {
+            this.isENVOpen = true;
         },
     },
 });

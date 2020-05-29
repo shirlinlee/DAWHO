@@ -1,0 +1,22 @@
+extends ../includes/_layout.pug
+
+block title
+    title 首頁
+
+block scss
+    link(rel='stylesheet', href= assets + '/styles/index.css')
+
+block main
+    .lb_wrapper.show
+        .lb.dahu
+            h1.f_white.f24 開DAWHO 享優惠
+            .env
+                .back
+                img.env_img.body(src=assets + "/images/env/02.png", alt="")
+                .top_wrapper
+                    img.env_img.top(src=assets + "/images/env/01.svg", alt="")
+                    img.env_img.badge(src=assets + "/images/env/03.svg", alt="")
+
+
+            a.btn_gold.btn_read 點擊閱讀
+

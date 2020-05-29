@@ -13,6 +13,10 @@ block main
         img.badge(src=assets +'/images/badge/dahu.png', width="100", alt="", v-if="status1" )
         img.badge(src=assets +'/images/badge/dada_black.png', width="100", alt="", v-else)
 
+        h2.f18
+            span(v-if="status1") 目前等級
+            span(v-else) 其他等級
+
         .swiper-container
             .swiper-wrapper
                 .swiper-slide
@@ -78,7 +82,8 @@ block main
 
         .btn_wrapper
             a.btn_gold(href="#") 升級攻略
-            a.btn_gold_light(href="#") 歷史等級
+            a.btn_gold_light(href="#")
+                span 歷史等級
 
 
 block js

@@ -130,6 +130,18 @@ body {
     }
 }
 
+
+.proportion_tag .percent{
+    width: calc(90% - 22px)
+}
+//only for Safari 13+
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) and (display:flow-root) { 
+        .proportion_tag .percent{
+            width: calc(90% - 20px)
+        }
+} }
+
 .deposit_wrapper {
     display: flex;
     margin: 5px auto 0;

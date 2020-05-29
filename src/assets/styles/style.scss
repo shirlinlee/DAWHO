@@ -227,6 +227,23 @@ main {
     }
 }
 
+.time {
+    * {
+        vertical-align: top;
+    }
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 17px;
+        margin-right: 4px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url($assets + '/images/icon/time.svg');
+        vertical-align: top;
+    }
+}
+
 .tooltip_btn {
     display: inline-block;
     padding-right: 20px;

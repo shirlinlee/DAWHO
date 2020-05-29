@@ -1,0 +1,16 @@
+extends ../includes/_layout.pug
+
+block title
+    title cw_4-2
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/judian-atm.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+
+include ../includes/judian-atm/_overlay.pug
+block main
+    div#appJudianAtm
+        +overlay(true)
+
+
+

@@ -1,0 +1,14 @@
+extends ../includes/_layout.pug
+
+block title
+    title cw_3-1
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/tikuan-setting.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+
+
+block main
+    div#appTikuanSetting
+        include ../includes/tikuan-setting/_container.pug
+        +_container(true)

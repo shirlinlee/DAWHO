@@ -1,0 +1,136 @@
+$active: #fed28f;
+$active_bg: rgba(254, 210, 143, 0.5);
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 16px;
+    width: 34px;
+    height: 14px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+    &:before,
+    &:after {
+        content: '';
+    }
+    &:before {
+        display: block;
+        background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -4px;
+        left: 0px;
+        transition: left 0.25s;
+    }
+
+    .toggle-checkbox:checked + & {
+        background: $active_bg;
+        &:before {
+            background: $active;
+            left: 14px;
+        }
+    }
+}
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+// select
+select.cw-select {
+    -webkit-appearance: none;
+    background-image: url($assets + '/images/icon/cw-dropdown.svg');
+    background-position: right 12px center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    padding: 6px 32px 6px 13px;
+    border-radius: 16px;
+    border: solid 1px #d5c1aa;
+    background-color: #fff6eb;
+    font-family: MicrosoftJhengHei;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #976324;
+    margin-right: 8px;
+}
+
+// dropdown
+select.cw-dropdown {
+    -webkit-appearance: none;
+    background-image: url($assets + '/images/icon/cw-dropdown.svg');
+    background-position: right 8px center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    padding: 9px 32px 9px 8px;
+    border-radius: 3px;
+    border: solid 1px #aaaaaa;
+    background-color: #ffffff;
+    font-family: MicrosoftJhengHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #111111;
+    width: 100%;
+    &:invalid {
+        color: #818181;
+    }
+}
+
+//check
+.cw-check {
+    margin-right: 8px;
+    input {
+        position: absolute;
+        left: -9999px;
+    }
+    label {
+        display: inline-block;
+        position: relative;
+        padding: 6px 12px 6px 12px;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #111111;
+        white-space: nowrap;
+        cursor: pointer;
+        user-select: none;
+        transition: background-color 0.2s, content 0.2s;
+        border-radius: 16px;
+        border: solid 1px #aaaaaa;
+    }
+    input:checked + label {
+        padding: 6px 12px 6px 36px;
+        font-weight: bold;
+        color: #976324;
+        border-radius: 16px;
+        border: solid 1px #d5c1aa;
+        background-color: #fff6eb;
+    }
+    input:checked + label::before {
+        content: url($assets + '/images/icon/cw-checked.svg');
+        display: inline-block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 9px;
+        top: 4px;
+        transition: background-color 0.2s, content 0.2s;
+    }
+}

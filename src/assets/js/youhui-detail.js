@@ -4,7 +4,6 @@ import { getPosition } from './modules/utils';
         Init() {
             const containers = $('.grade--container');
             containers.on('click', function () {
-
                 containers.removeClass('active');
                 $(this).addClass('active');
 
@@ -35,13 +34,15 @@ import { getPosition } from './modules/utils';
             });
 
             const navbar = $('.channels .nav-bar');
-            const sticky = getPosition(
-                document.getElementById('channels--nav-bar')
-            ).y;
-            // const sticky = document.getElementById('channels--nav-bar').offsetTop;
+            // const sticky = getPosition(
+            //     document.getElementById('channels--nav-bar')
+            // ).y;
+            const sticky = document.getElementById('channels--nav-bar')
+                .offsetTop;
+            var heightHeader = $('#youhui-detail--header').height();
             $(window).scroll(function () {
                 scroll = $(window).scrollTop();
-                if (scroll > sticky + navbar.height()) {
+                if (scroll > sticky - heightHeader) {
                     navbar.addClass('sticky');
                 } else {
                     navbar.removeClass('sticky');

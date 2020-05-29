@@ -83,10 +83,10 @@
         height: 24px;
     }
     &.dahu {
-        background-image: url($asset + '/images/bg_04.png');
+        background-image: url($assets + '/images/bg_04.png');
     }
     &.dada {
-        background-image: url($asset + '/images/bg_05.png');
+        background-image: url($assets + '/images/bg_05.png');
     }
     &.showDetail {
         width: 100%;

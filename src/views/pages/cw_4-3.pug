@@ -1,0 +1,61 @@
+extends ../includes/_layout.pug
+
+block title
+    title cw_4-3
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/judian-atm.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+
+include ../includes/judian-atm/_overlay.pug
+block main
+    div#appJudianAtm
+        header
+            h1.title
+                .back
+                    p ATM據點
+        div#appJudianAtmMap
+            div.map
+                img(src=assets+"/images/map.png" alt="")
+            div.info
+                p.name 營業部
+                p.distance 0.04 km
+            div.content
+                div.item
+                    div.type
+                        img(src=assets+"/images/icon/location.svg" alt="")
+                        p 地址
+                    div.des
+                        p 台北市中山區南京東路三段36號
+                hr
+                div.item
+                    div.type
+                        img(src=assets+"/images/icon/time.svg" alt="")
+                        p 服務時間
+                    div.des
+                        p 24小時
+
+                div.item.note
+                    div.type
+                    div.des
+                        p.note 實際服務時間依設備裝設地點而定，如有疑問請洽客服中心
+                hr
+                div.item
+                    div.type
+                        img(src=assets+"/images/icon/withdraw.svg" alt="")
+                        p 提款
+                    div.des
+                        p 臺幣、人民幣、美金、日圓
+                hr
+                div.item
+                    div.type
+                        img(src=assets+"/images/icon/deposit.svg" alt="")
+                        p 存款
+                    div.des
+                        p 臺幣
+            button.confirm 規劃路線
+
+
+
+
+

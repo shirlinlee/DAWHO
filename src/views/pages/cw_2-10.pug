@@ -1,0 +1,20 @@
+extends ../includes/tikuan-detail/_layout.pug
+
+block title
+    title cw_2-8
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/tikuan-detail.css')
+
+
+block main
+    div#appTikuanDetail
+        include ../includes/tikuan-detail/_container.pug
+        +_container('fail', false)
+
+
+
+
+block js
+    script(src= assets + '/js/tikuan-detail.bundle.js' defer)
+

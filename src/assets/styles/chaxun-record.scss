@@ -1,0 +1,183 @@
+@import 'library/_mediaQuery';
+@import 'library/_styleSetting';
+
+@mixin iPad() {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        @content;
+    }
+}
+
+body {
+    background: url($assets + '/images/page-marblebg.png') no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#appChaxunRecord {
+    padding-top: 36px;
+    > p {
+        margin: 32px auto 24px;
+    }
+    > img {
+        width: 100px;
+    }
+    > hr {
+        margin: 24px 0;
+    }
+    > header {
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 200;
+        background: white;
+        .title {
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.1;
+            letter-spacing: normal;
+            text-align: center;
+            color: #111111;
+            margin: 7px 18px;
+
+            .back {
+                display: block;
+                height: 30px;
+                background-image: url($assets + '/images/icon/arrow-left.svg');
+                @extend %icon_position_left;
+            }
+        }
+    }
+}
+#appChaxunRecordContent {
+    padding: 0 16px;
+    background: url($assets + '/images/page-marblebg.png') no-repeat;
+    background-size: 100%;
+
+    .account {
+        margin-top: 24px;
+        text-align: left;
+        background-color: #3d3d3d;
+        border-radius: 3px;
+        padding: 16px;
+        &-title {
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+        }
+        &-info {
+            margin-top: 16px;
+            padding: 9px 7px;
+            border-radius: 3px;
+            background-color: #ffffff;
+            border: 1px gray solid;
+            p {
+                line-height: 1.5;
+            }
+            img {
+                position: absolute;
+                right: 50px;
+                width: 20px;
+                top: 140px;
+            }
+        }
+    }
+
+    ul.status-nav {
+        display: flex;
+        li {
+            margin-top: 24px;
+            flex: 1;
+            padding-bottom: 7px;
+            border-bottom: 1px #e3e3e3 solid;
+            color: #818181;
+            a {
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+            }
+            &.active {
+                font-weight: bold;
+                color: #c38b47;
+                border-bottom: 2px #c38b47 solid;
+            }
+        }
+    }
+    .status-data {
+        margin-top: 24px;
+        p.no-data {
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #818181;
+        }
+    }
+    ul.transaction-list {
+        margin-top: 24px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #111111;
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 8px;
+            height: 56px;
+            &:nth-child(odd) {
+                background-color: rgba(0, 0, 0, 0.03);
+            }
+            p:nth-of-type(1) {
+                flex: 1;
+                text-align: left;
+            }
+            p:nth-of-type(2) {
+                flex: 1;
+                text-align: right;
+            }
+            a {
+                height: 20px;
+                padding-left: 7px;
+            }
+        }
+    }
+
+    div.notice {
+        margin-top: 32px;
+        padding: 8px;
+        height: 40px;
+        background-color: rgba(195, 139, 71, 0.1);
+        p {
+            float: left;
+            height: 24px;
+            font-family: MicrosoftJhengHei;
+            font-size: 14px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.71;
+            letter-spacing: normal;
+            color: #111111;
+        }
+        a {
+            float: right;
+        }
+    }
+}

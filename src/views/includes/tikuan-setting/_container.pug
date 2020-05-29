@@ -1,0 +1,26 @@
+mixin _container(status)
+    header
+        h1.title
+            .back
+                p 無卡提款設定
+    div#appTikuanSettingContent
+        if status
+            div.content
+                p.name 營業部活期存款
+                div.account
+                    p (807) 0016893949394934
+                    include ../components.pug
+                    +switch(true)
+                p.status 2020/04/30 啟用
+        else
+            div.empty
+                img(src=assets+"/images/icon/cw-empty.svg" alt="")
+                p
+                    | 您尚未啟用無卡提款服務，
+                    br
+                    | 如您欲啟用無卡提款服務，請攜帶本行晶片金融卡至永豐銀行ATM進行設定，謝謝。
+
+        div.notice
+            p 注意事項
+            a
+                img(src=assets+"/images/icon/plus.svg" alt="")

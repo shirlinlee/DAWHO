@@ -1,0 +1,74 @@
+extends ../includes/_layout.pug
+
+block title
+    title cw_4-1
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/judian-atm.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+
+include ../includes/components.pug
+include ../includes/judian-atm/_overlay.pug
+block main
+    div#appJudianAtm
+        header
+            h1.title
+                .back
+                    p 無卡提款設定
+        div#appJudianAtmContent
+            div.search-content
+                .search-bar-container
+                    input#search-bar-input(type='text' placeholder='搜尋銀行代碼')
+                    a()
+                        img.search-bar-icon(src=assets+"/images/icon/cw-search.png")
+                .search-horizontal
+                    button.cw-filter-button
+                        img(src=assets+"/images/icon/filter.svg" alt="")
+                    +select(['台北市','新北市'])
+                    +select(['中山區','松山區'])
+                    +select(['提款','存款'])
+                    +check('foreign','外幣')
+                    +check('usd','美金')
+            p.note 實際服務時間依設備裝設地點而定，如有疑問請洽客服
+             ul.atm-list
+                    li
+                        p.name 營業部
+                        div.address
+                            p 台北市中山區南京東路三段36號
+                            img(src=assets+"/images/icon/arrow-right.svg" alt="")
+                        div.info
+                            img(src=assets+"/images/icon/time.svg" alt="")
+                            p.time.bold 24 小時
+                            p.distance 0.04 km
+                        hr
+                        p.withdraw 提款：臺幣、人民幣、美金、日圓
+                        p.deposit 存款：臺幣
+                    li
+                        p.name 敦北分行
+                        div.address
+                            p 台北市-松山區敦化北路209號1樓、207號2樓
+                            img(src=assets+"/images/icon/arrow-right.svg" alt="")
+                        div.info
+                            img(src=assets+"/images/icon/time.svg" alt="")
+                            p.time 9:00 - 16:00
+                            p.distance 0.18 km
+                        hr
+                        p.withdraw 提款：臺幣、日圓
+                    li
+                        p.name 萊爾富北市山華店
+                        div.address
+                            p 台北市中山區長春路208號1樓
+                            img(src=assets+"/images/icon/arrow-right.svg" alt="")
+                        div.info
+                            img(src=assets+"/images/icon/time.svg" alt="")
+                            p.time.bold 24 小時
+                            p.distance 0.33 km
+                        hr
+                        p.withdraw 提款：臺幣
+        +overlay()
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/judian-atm.bundle.js' defer)
+
+

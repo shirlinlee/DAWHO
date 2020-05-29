@@ -1,0 +1,33 @@
+include ../components.pug
+mixin overlay(isOpen)
+    div#appJudianAtmOverlay(class=isOpen?'active':'')
+        header
+            h1.title
+                .back
+                    p 地點查詢
+        .appJudianAtmOverlayContent
+            div.category
+                p.name 縣市
+                div.category-content
+                    +dropdown(['台北市','新北市'],"請選擇縣市")
+            div.category
+                p.name 區域
+                div.category-content
+                    +dropdown(['中山區','松山區'],"請選擇區域")
+            div.category
+                p.name 功能
+                div.category-content
+                    +check('withdraw','提款',true)
+                    +check('deposit','存款')
+            div.category
+                p.name 外幣幣別
+                div.category-content
+                    +check('cny','人民幣')
+                    +check('usd','美金')
+                    +check('jpy','日圓')
+                    +check('hkd','港幣',true)
+            div.category
+                p.name 服務時間
+                div.category-content
+                    +check('24hour','24小時',true)
+        button.confirm 確認

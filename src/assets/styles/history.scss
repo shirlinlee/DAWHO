@@ -3,7 +3,7 @@
 
 body {
     background: #1f1f23;
-    background-image: url($asset + '/images/bg_02.png');
+    background-image: url($assets + '/images/bg_02.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center top;
@@ -12,7 +12,7 @@ body {
 
 #appHistory {
     padding-bottom: 25px;
-    // background-image: url($asset+'/images/bg_02.png');
+    // background-image: url($assets + '/images/bg_02.png');
     // background-repeat: no-repeat;
     // background-size: 100%;
     // background-position: center top;
@@ -23,7 +23,7 @@ body {
         border-radius: 13px;
         border: solid 1px rgba(0, 0, 0, 0.3);
         background-color: #1e1e1e;
-        background-image: url($asset + '/images/icon/dropdown.svg');
+        background-image: url($assets + '/images/icon/dropdown.svg');
         background-position: right 8px center;
         background-size: 13px;
         background-repeat: no-repeat;
@@ -124,7 +124,10 @@ body {
                 width: 60px;
                 height: 60px;
                 position: absolute;
-                background-image: url($asset + '/images/icon/bling.svg');
+                background-image: url($assets + '/images/icon/bling.svg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
             }
         }
         &.fail {

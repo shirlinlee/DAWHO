@@ -22,6 +22,11 @@ import { getPosition } from './modules/utils';
                 .parent('.nav-link')
                 .data('type');
             $(`.content[data-name='${t}']`).show();
+            const navbar = $('.channels .nav-bar');
+            const sticky = document.getElementById('channels--nav-bar')
+                .offsetTop;
+            const channelTitle = $('.channels-title').offset().top
+            var heightHeader = $('#youhui-detail--header').height();
 
             // listener
             navs.on('click', function () {
@@ -31,15 +36,16 @@ import { getPosition } from './modules/utils';
                 contents.hide(0);
                 const type = $(this).data('type');
                 $(`.channels .content[data-name='${type}']`).show();
+
+                // scroll to 特色通路
+                $([document.documentElement, document.body]).animate(
+                    {
+                        scrollTop: channelTitle - heightHeader,
+                    },
+                    0
+                );
             });
 
-            const navbar = $('.channels .nav-bar');
-            // const sticky = getPosition(
-            //     document.getElementById('channels--nav-bar')
-            // ).y;
-            const sticky = document.getElementById('channels--nav-bar')
-                .offsetTop;
-            var heightHeader = $('#youhui-detail--header').height();
             $(window).scroll(function () {
                 scroll = $(window).scrollTop();
                 if (scroll > sticky - heightHeader) {

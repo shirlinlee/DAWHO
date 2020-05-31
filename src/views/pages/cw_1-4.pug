@@ -1,0 +1,46 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title cw_1-4
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/cardless.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+
+include ../includes/components.pug
+block main
+    div#appCardless
+        header
+            img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+            p.title 無卡提款
+            img.left(src=assets+"/images/icon/more.svg" alt="")
+
+        div#appCardlessContent
+            ul.infos
+                li.grey
+                    p.title 交易時間
+                    p.content 2020/04/30
+                li
+                    p.title 扣款帳號
+                    div.content
+                        p 營業部活期存款
+                        p (807) 0016893949394934
+
+                li.grey
+                    p.title 提款金額
+                    p.content.gold 新臺幣 3,000 元
+            .buttons
+                button.withdraw 確認提款
+            div.notice
+                p 注意事項
+                a
+                    img(src=assets+"/images/icon/plus.svg" alt="")
+
+
+
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/cardless.bundle.js' defer)
+

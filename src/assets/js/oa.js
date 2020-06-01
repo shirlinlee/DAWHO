@@ -15,22 +15,37 @@ $(document).ready(function() {
     } 
 
     //oa_18
-    var mySwiper = new Swiper('#card-slider-slick', {
-        // Optional parameters
-        slidesPerView: 3,
+    var swiper = new Swiper('#card-slider-slick', {
+        slidesPerView: 1.1,
+        spaceBetween: 12,
+        centeredSlides: true,
+        //init: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-next',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
         breakpoints: {
-            768: {
-                slidesPerView: 1.2,
-                spaceBetween: 20,
+            640: {
+                init: true,
+                slidesPerView: 3,
+                spaceBetween: 12,
                 centeredSlides: true,
-                //loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-prev',
+                    prevEl: '.swiper-button-next',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                }
             }
         }
-    })
+    });
+    
 
     //oa-28.html
     //makeResizableDiv('.resizable') 
@@ -166,7 +181,8 @@ new Vue({
             { from: '退休金', status: true },
             { from: '營業收入', status: true },
             { from: '利息收入', status: false }
-        ]
+        ],
+        creditCardNum: null,//oa_23
     },
     mounted: function () {
         mode();
@@ -214,6 +230,7 @@ new Vue({
         toggleBubble(i) {
             this.financial[i].status = !this.financial[i].status
         },
+        //
         openModal(id){
             console.log(id)
             $('.modal-backdrop').addClass('show');
@@ -222,6 +239,60 @@ new Vue({
         closeModal(id) {
             $('.modal-backdrop').removeClass('show');
             $(id).removeClass('show');
+        },
+        //
+        openModalDark(id) {
+            $('.modal-backdrop-dark').addClass('show');
+            $(id).addClass('show');
+        },
+        closeModalDark(id) {
+            $('.modal-backdrop-dark').removeClass('show');
+            $(id).removeClass('show');
+        },
+        outsideClose(id) {
+            $(event.target).removeClass('show');
+            if ($('.modal-backdrop-dark').length > 0) {
+                $('.modal-backdrop-dark').removeClass('show');
+            }
+            if ($('.modal-backdrop').length > 0) {
+                $('.modal-backdrop').removeClass('show');
+            }
+        },
+        ccFormat() { //oa_23
+            console.log(this.creditCardNum)
+            if (this.creditCardNum == null || this.creditCardNum == '' || this.creditCardNum == 'undefined') return;
+            var v = this.creditCardNum.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+            var matches = v.match(/\d{4,16}/g);
+            var match = matches && matches[0] || ''
+            var creditCardArray = []
+            for (let i = 0, len = match.length; i < len; i += 4) {
+                creditCardArray.push(match.substring(i, i + 4))
+                console.log('1',creditCardArray)
+            }
+            if (creditCardArray.length) {
+                console.log('2',creditCardArray)
+                return this.creditCardNum = creditCardArray.join('  -  ')
+            } else {
+                return this.creditCardNum
+            }
+        }
+    },
+    filters: {
+        ccFormat: function (value) {
+           
+            if (value == null || value == '' || value == 'undefined' ) return;
+            var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+            var matches = v.match(/\d{4,16}/g);
+            var match = matches && matches[0] || ''
+            var parts = []
+            for (let i = 0, len = match.length; i < len; i += 4) {
+                parts.push(match.substring(i, i + 4))
+            }
+            if (parts.length) {
+                return parts.join('-')
+            } else {
+                return value
+            }
         }
     }
 });

@@ -1,0 +1,29 @@
+extends ../../includes/_layout_open.pug
+
+block title
+    title 永豐銀行存戶驗證
+
+block scss
+block js 
+
+block main
+    #appOpen 
+        .open-progress
+            .progress-line(style="width:40%")
+        .view-992
+            h1.main-title 永豐銀行存戶驗證
+            form
+                .form-group
+                    label.form-label(for="bankName") 存款帳號
+                    input.form-control(v-model="bankNameInput" ,id="bankName", type="text", placeholder="請輸入存款帳號") 
+                    //- small.form-text.text-danger.f13 required
+            
+            .commen-box
+                p 註1：目前已申請銀行且有非約轉功能之客戶，將保留你的網路銀行功能
+                p 註2：未申請網路銀行的客戶，審核成功後，網銀將提供「約定轉帳功能」，若要開啟非約定轉帳功能，請至臨櫃辦理。
+                p 註3：客戶授權貴行指定本人於貴行既有活期存款賬戶之原留存印鑑，作為本帳戶一切往來業務核印之用，如需變更請洽任一分行臨櫃辦理。
+
+            .center
+                button.btn.btn-primary.disabled(type="submit") 驗證帳戶
+        
+

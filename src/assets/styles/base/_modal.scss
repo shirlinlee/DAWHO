@@ -153,3 +153,121 @@
    // transform: none;
    display: flex;
 }
+.modal-dark.show .modal-dark-dialog {
+   // transform: none;
+   display: block;
+}
+
+
+
+/* Dark */
+.modal-backdrop-dark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    visibility: hidden;
+    &.fade {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &.show {
+        opacity: .7;
+        z-index: 1007;
+        visibility: visible;
+    }
+}
+
+.modal-dark {
+    &.show {
+        .modal-dark-dialog {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &-dialog{
+        max-width: 328px;
+    }
+    .modal-dark-body {
+        position: relative;
+        flex: initial;
+        padding: 0;
+        font-size: 0.875rem;
+    }
+    .modal-content{
+        border-radius: 3px;
+        padding: 24px 24px 32px;
+        background: rgb(58,53,47);
+        background: linear-gradient(180deg, #3a352f 20%, #1f1f1f 100%);
+        .modal-dark-icon{
+            max-width: 54px;
+            margin: 0 auto;
+        }
+        .modal-dark-title{
+            margin: 1rem auto;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            color: #ffffff;
+        }
+        .modal-dark-content {
+            font-size: 1rem;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #ffffff;
+        }
+    }
+    &-footer {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn.btn-120{
+        min-width: 120px;
+        margin: 0 8px;
+    }
+    .btn.btn-180{
+        min-width: 180px;
+        margin: 0 8px;
+    }
+}
+
+.btn-gold-outline{
+    padding: 1px;
+    background: linear-gradient(to bottom, #f2cb91, #c29557);
+    &>span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background: rgba(31,31,31,1);
+        border-radius: 3px;
+        
+        font-size: 1rem;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fed28f;
+    }
+}
+
+.btn-gold-primary{
+    font-size: 1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #111111;
+    background: linear-gradient(to bottom, #f2cb91, #c29557);
+}

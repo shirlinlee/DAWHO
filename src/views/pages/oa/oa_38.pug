@@ -8,49 +8,84 @@ block scss
 block js
 
 block main
-    .view-992#appOpen
-        h1.main-title.mb-1 設定你的金融卡
-        form
-            .form-group
-                label.form-label(for="") 選擇悠遊卡自動加值功能（自動功能開啟後即無法關閉）
-            .form-radio.form-group
-                input.styled-radio(id="defaultRadio1",type="radio", name="radio-group", checked="checked")
-                label.styled-label(for="defaultRadio1") 開啟
-            .form-radio.form-group
-                input.styled-radio(id="defaultRadio2",type="radio", name="radio-group")
-                label.styled-label(for="defaultRadio2") 關閉
-            
-            .form-group
-                label.form-label(for="") 
-                    a(href="") 聯名卡/認同機構之個人資料使用同意條款
-            .form-radio.form-group
-                input.styled-radio(id="defaultRadio1",type="radio", name="radio-group", checked="checked")
-                label.styled-label(for="defaultRadio1") 開啟
-            .form-radio.form-group
-                input.styled-radio(id="defaultRadio2",type="radio", name="radio-group")
-                label.styled-label(for="defaultRadio2") 關閉
-
-            .form-group
-                a.text-underline(href="") 聯名卡/認同機構之個人資料使用同意條款
-
-            .form-group
-                label.form-label(for="") 選擇悠遊卡自動加值功能（自動功能開啟後即無法關閉）
-                input.form-control(id="", type="text", placehilder="請輸入 6-20 位英數字",aria-describedby="idHelp") 
-            .form-group
-                label.form-label(for="") 再次輸入代號
-                input.form-control(id="", type="text", placehilder="請輸入 6-20 位英數字", aria-describedby="idHelp") 
-         
-            .mt-2.mb-2
-                hr.bg-grey
-
-            .form-group
-                label.form-label(for="") 設定密碼
-                input.form-control(id="", type="password", placehilder="請輸入 6-20 位英數字",aria-describedby="idHelp") 
-            .form-group
-                label.form-label(for="") 請再次輸入密碼
-                input.form-control(id="", type="password", placehilder="請輸入 6-20 位英數字", aria-describedby="idHelp") 
-         
-
-        .center.align-bottom.mt-2
-            button.btn.btn-primary.disabled(type="submit") 下一步
+    #appOpen 
+        .open-progress
+            .progress-line(style="width:100%")
+        .view-992
+            h1.main-title.mb-1 設定你的金融卡
+            form
+                .form-group
+                    label.form-label(for="") 選擇悠遊卡自動加值功能（自動功能開啟後即無法關閉）
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-1-1",type="radio", name="radio-group", checked="checked")
+                    label.styled-label(for="defaultRadio-1-1") 開啟
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-1-2",type="radio", name="radio-group")
+                    label.styled-label(for="defaultRadio-1-2") 關閉
                 
+                .form-group
+                    a.text-underline(href="") 聯名卡/認同機構之個人資料使用同意條款
+                    p.f14.txt-note 需同意才能進行申請
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-2-1",type="radio", name="radio-group-2", checked="checked")
+                    label.styled-label(for="defaultRadio-2-1") 我同意
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-2-2",type="radio", name="radio-group-2")
+                    label.styled-label(for="defaultRadio-2-2") 我不同意
+
+                .form-group
+                    label.form-label(for="") 提供個人資料與悠遊卡公司作為行銷業務之特定項目的使用
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-3-1",type="radio", name="radio-group-3", checked="checked")
+                    label.styled-label(for="defaultRadio-3-1") 我同意
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-3-2",type="radio", name="radio-group-3")
+                    label.styled-label(for="defaultRadio-3-2") 我不同意
+
+                hr.bg-grey.mt-2.mb-2
+
+                .form-group
+                    label.form-label(for="") 簽帳金融卡寄送地址
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-4-1",type="radio", name="radio-group-3", checked="checked")
+                    label.styled-label(for="defaultRadio-4-1") 
+                        | 現居地址
+                        br
+                        | 新北市汐止區汐止區一段39-3號
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-4-2",type="radio", name="radio-group-3")
+                    label.styled-label(for="defaultRadio-4-2") 
+                        | 戶籍地址
+                        br 
+                        | 新北市汐止區汐止區一段39-3號
+                .form-radio.form-group
+                    input.styled-radio(id="defaultRadio-4-3",type="radio", name="radio-group-3")
+                    label.styled-label(for="defaultRadio-4-3") 
+                        | 公司地址
+                        br 
+                        | 台北市中正區中山區1號
+
+                //- .form-group
+                //-     a.text-underline(href="") 聯名卡/認同機構之個人資料使用同意條款
+
+                //- .form-group
+                //-     label.form-label(for="") 選擇悠遊卡自動加值功能（自動功能開啟後即無法關閉）
+                //-     input.form-control(id="", type="text", placehilder="請輸入 6-20 位英數字",aria-describedby="idHelp") 
+                //- .form-group
+                //-     label.form-label(for="") 再次輸入代號
+                //-     input.form-control(id="", type="text", placehilder="請輸入 6-20 位英數字", aria-describedby="idHelp") 
+            
+                //- .mt-2.mb-2
+                //-     hr.bg-grey
+
+                //- .form-group
+                //-     label.form-label(for="") 設定密碼
+                //-     input.form-control(id="", type="password", placehilder="請輸入 6-20 位英數字",aria-describedby="idHelp") 
+                //- .form-group
+                //-     label.form-label(for="") 請再次輸入密碼
+                //-     input.form-control(id="", type="password", placehilder="請輸入 6-20 位英數字", aria-describedby="idHelp") 
+            
+
+            .center.align-bottom.mt-3
+                button.btn.btn-primary.disabled(type="submit") 完成
+                    

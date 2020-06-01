@@ -6,6 +6,7 @@ body {
     background: #fff;
     font-size: 16px;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -69,9 +70,17 @@ img {
 .mt-0{margin-top: 0rem !important;}
 .mt-1{margin-top: 1rem !important;}
 .mt-2{margin-top: 2rem !important;}
+.mt-3{margin-top: 3rem !important;}
 .mb-0{margin-bottom: 0rem !important;}
 .mb-1{margin-bottom: 1rem !important;}
 .mb-2{margin-bottom: 2rem !important;}
+.mb-3{margin-bottom: 3rem !important;}
+
+.mt-12{margin-top: 12px!important;}
+.mt-24{margin-top: 24px!important;}
+.mb-12{margin-bottom: 12px!important;}
+.mb-24{margin-bottom: 24px!important;}
+
 
 /* icon */
 .info { display: inline-block; width: 16px; }
@@ -288,6 +297,7 @@ img {
     font-size: 1rem;
     border-radius: 3px;
     border: none;
+    cursor: pointer;
     &:focus {
         outline: none;
     }
@@ -318,6 +328,15 @@ img {
     margin-bottom: 30px;
     width: 100%;
     height: 3px;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: #f5f5f5;
+    }
     .progress-line{
         position: absolute;
         top: 0;
@@ -325,6 +344,7 @@ img {
         bottom: 0;
         background: rgb(232,203,62);
         background: linear-gradient(90deg, rgba(232,203,62,1) 0%, rgba(205,155,29,1) 100%);
+        z-index: 2;
     }
 }
 
@@ -487,7 +507,7 @@ hr {
     top: 0;
     width: 18px;
     height: 18px;
-    border: 1px solid #ddd;
+    border: 1px solid #aaaaaa;
     border-radius: 100%;
     background: #fff;
 }

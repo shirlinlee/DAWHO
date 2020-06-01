@@ -14,7 +14,7 @@ block main
 
         //- lightbox
         .modal-backdrop.fade
-        .modal.fade#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true")
+        .modal.fade#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
             .modal-dialog
                 .modal-content
                     .modal-header

@@ -1,0 +1,34 @@
+extends ../../includes/_layout_open.pug
+
+block title
+    title 開戶進度查詢
+
+block scss
+block js
+ 
+block main
+    #appOpen
+        .view
+            button.btn.btn-primary(@click="openModalDark('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
+        
+ 
+        //- lightbox
+        .modal-backdrop-dark.fade
+        .modal.modal-dark.fade#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
+            .modal-dialog.modal-dark-dialog
+                .modal-content
+                    .modal-dark-body
+                        //- icon
+                        .modal-dark-icon
+                            img(src="/assets/images/open/modal/alert-error.png", alt="alert-error") 
+                        //- title
+                        h6.modal-dark-title 已申請預約開戶服務
+                        p.modal-dark-content 你在本行已有預約開戶，請聯絡客服或洽分行臨櫃將預約資料取消
+                    .modal-dark-footer
+                        //- 兩顆btn .btn-120
+                        button.btn.btn-120.btn-gold-outline(type="button") 
+                            span 尋找鄰近分行
+                        button.btn.btn-120.btn-gold-primary(type="button") 客服一點通
+                        //- 單一顆btn .btn-180
+                        //- button.btn.btn-180.btn-gold-primary(type="button") 客服一點通
+    

@@ -10,7 +10,9 @@
             display: flex;
             img {
                 width: 22px;
+                height: 22px;
                 margin-right: 9px;
+                margin-top: 2px;
             }
         }
         .tooltip_btn {
@@ -33,7 +35,7 @@
         }
         &:nth-child(2n + 1) {
             border-right: 1px solid #000;
-            box-shadow: 1px 0px 0px rgba(255, 255, 255, 0.1);
+            box-shadow: 1px 0px 0px rgba(255, 255, 255, 0.05);
         }
         img {
             position: absolute;
@@ -44,7 +46,7 @@
         span {
             display: block;
             &.f_gold {
-                line-height: 22px !important;
+                line-height: 21px !important;
                 color: #fee1b7;
             }
         }
@@ -61,13 +63,16 @@
     padding-left: 10px;
     padding-right: 10px;
     line-height: 28px;
-    margin: 10px auto;
+    font-weight: normal;
+    margin: 5px auto 0;
 }
 .btn_read {
-    color: #784f1d;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    bottom: 32px;
+    margin-bottom: 0;
+    left: 50%;
     max-width: 180px;
+    transform: translate(-50%, 0);
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 7px 12px 0 rgba(0, 0, 0, 0.26);
 }
 
@@ -79,6 +84,7 @@
     transform: translate(-50%, -50%);
     border-radius: 15px;
     height: 350px;
+    padding-top: 40px !important;
     h1 {
         height: 24px;
     }
@@ -92,10 +98,10 @@
         width: 100%;
         height: 100%;
         border-radius: 0;
-        transition: all 0.5s 1s; //step2 背景開 等1s
+        transition: all 0.5s 1s, height 0.3s 1.5s; //step2 背景開 等1s
         //step1 信封恢復正面
         .env {
-            transform: scale(1);
+            transform: scale(1) translate(-50%, -50%);
             height: 100%;
             margin: 0 auto;
             transition: all 0.4s, height 0.3s 1s, margin 0.3s 1s; //step1 展開高度 等1s
@@ -126,21 +132,27 @@
             opacity: 0;
             transition: opacity 0.3s 1.7s, z-index 0.3s 1.7s, margin 0.3s 1.7s; //step3 信封+文字按鈕退 等1.7s
         }
+        .btn_read {
+            transition: opacity 0.3s, z-index 0.3s 1.7s, margin 0.3s 1.7s; //step3 信封+文字按鈕退 等1.7s
+        }
         h1 {
             opacity: 0;
             height: 0;
-            transition: all 0.3s 1.7s, height 0.1s 1.7s; //step3 信封+文字按鈕退 等1.7s
+            transition: all 0.3s, height 0.1s 1.7s; //step3 信封+文字按鈕退 等1.7s
         }
     }
 }
 
 .env {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 298px;
     height: 203px;
-    margin: 25px auto 0;
+    margin: 0;
     transform: perspective(1060px) rotateY(-19deg) rotateX(-6deg) skewX(-8deg)
-        scaleY(0.8) scaleX(0.85);
+        scaleY(0.8) scaleX(0.85) translate(-50%, -50%);
+    transform-origin: left top;
     transition: all 0.4s;
     .env_img,
     .back {
@@ -300,7 +312,7 @@
     }
     .divi {
         .rect {
-            background-image: linear-gradient(0deg, #7f7b92 13%, white 88%);
+            background-image: linear-gradient(0deg, #9c99a7 13%, #e2e2e9 88%);
         }
         .line {
             &:last-child {

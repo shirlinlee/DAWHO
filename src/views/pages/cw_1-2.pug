@@ -1,0 +1,109 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title cw_1-4
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/cardless.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+
+include ../includes/components.pug
+block main
+    div#appCardless.qa
+        header
+            img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+            p.title 無卡提款
+            img.left(src=assets+"/images/icon/more.svg" alt="")
+
+        h4.f24 如何使用無卡提款？
+
+        ul.QA
+            li
+                p.title
+                    span.f_gold Q1
+                    span 申請無卡提款需要什麼條件？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+            li
+                p.title
+                    span.f_gold Q2
+                    span 如何申請無卡提款？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+            li
+                p.title
+                    span.f_gold Q3
+                    span 可以申請幾組提款帳號？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+            li
+                p.title
+                    span.f_gold Q4
+                    span 有提款筆數及金額限制嗎？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+            li
+                p.title
+                    span.f_gold Q5
+                    span 如何授權我的行動裝置？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+            li
+                p.title
+                    span.f_gold Q6
+                    span 手機遺失怎麼辦？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+            li
+                p.title
+                    span.f_gold Q7
+                    span 無卡提款密碼錯誤次數上限？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+            li
+                p.title
+                    span.f_gold Q8
+                    span 如何關閉無卡提款？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+            li
+                p.title
+                    span.f_gold Q9
+                    span 忘記無卡提款密碼怎麼辦？
+                p.content
+                    | 請攜帶本行晶片金融卡至
+                    a(href="#") 本行設置之ATM
+                    | 進行設定，完成後開啟行動銀行APP進行行動裝置授權，設定成功後即可使用無卡提款。
+
+
+
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/cardless.bundle.js' defer)
+

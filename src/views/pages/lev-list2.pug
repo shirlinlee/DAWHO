@@ -3,7 +3,7 @@ html
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=1')
-    title 無卡提款CW
+    title 分級制LEV
     // ============================== css start ==============================
     // ============================== css close ==============================
     // ============================== script start ==============================
@@ -100,7 +100,7 @@ html
   body
     #list
       // ============================== header start ==============================
-      h2 2020 無卡提款列表
+      h2 2020 分級制列表
       table.list
         tbody
 
@@ -108,10 +108,10 @@ html
                 th 編號
                 th HTML 檔名
                 th 補充
-            tr(v-for="(item, index) in cw_lists", :key="index")
+            tr(v-for="(item, index) in lev_lists", :key="index")
                 td.font-bold(width="50") {{item.html}}
                 td(width="90")
-                    a(target='_blank', :href="'cw_' + item.html + '.html'") cw_{{item.html}}
+                    a(target='_blank', :href="'lev_' + item.html + '.html'") lev_{{item.html}}
                 td(v-html="item.ps")
 
 
@@ -122,4 +122,4 @@ html
 
 block js
     script(src= public +'/lib/js/vue@2.6.11.min.js' defer)
-    script(src=assets + '/js/list.bundle.js' defer)
+    script(src=assets + '/js/list2.bundle.js' defer)

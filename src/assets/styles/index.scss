@@ -77,13 +77,13 @@
 }
 
 .lb {
-    width: 298px;
+    width: 305px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
-    height: 350px;
+    height: 395px;
     padding-top: 40px !important;
     h1 {
         height: 24px;
@@ -150,8 +150,16 @@
     width: 298px;
     height: 203px;
     margin: 0;
-    transform: perspective(1060px) rotateY(-19deg) rotateX(-6deg) skewX(-8deg)
-        scaleY(0.8) scaleX(0.85) translate(-50%, -50%);
+    transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg) skewX(-8deg)
+        scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    -webkit-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
+        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    -moz-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
+        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    -ms-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
+        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    -o-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
+        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
     transform-origin: left top;
     transition: all 0.4s;
     .env_img,

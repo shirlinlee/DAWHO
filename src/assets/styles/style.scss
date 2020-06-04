@@ -9,6 +9,31 @@ body {
 
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', 微軟正黑體, 'Microsoft JhengHei', sans-serif;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/font/Roboto-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/font/Roboto-Light.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/font/Roboto-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/font/Roboto-Bold.ttf');
+    font-weight: bold;
 }
 
 p {

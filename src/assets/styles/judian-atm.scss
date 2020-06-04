@@ -89,6 +89,7 @@ body {
     button.cw-filter-button {
         cursor: pointer;
         position: relative;
+        border: none;
         border-radius: 50%;
         border: solid 1px #d5c1aa;
         background-color: #fff6eb;
@@ -96,12 +97,14 @@ body {
         padding-bottom: 9px;
         padding-right: 12px;
         margin-right: 8px;
+        width: 32px;
+        height: 32px;
         img {
             width: 20px;
             height: 20px;
             position: relative;
-            left: 6px;
-            top: 7px;
+            left: 5px;
+            top: 5px;
         }
     }
 
@@ -156,6 +159,9 @@ body {
                     margin-left: 4px;
                     &.bold {
                         font-weight: bold;
+                    }
+                    &::before{
+                        content: none;
                     }
                 }
                 p.distance {
@@ -288,6 +294,7 @@ body {
 
 #appJudianAtmMap {
     padding: 0 16px;
+    padding-bottom: 32px;
     .map {
         img {
             width: 375px;
@@ -314,7 +321,7 @@ body {
         }
     }
     .content {
-        margin-top: 16px;
+        margin-top: 31px;
         text-align: left;
         font-family: MicrosoftJhengHei;
         font-size: 16px;
@@ -333,12 +340,12 @@ body {
             margin-top: 16px;
             display: flex;
             .type {
-                flex-basis: 40%;
+                flex-basis: 32%;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
             }
             .des {
-                flex-basis: 60%;
+                flex-basis: 68%;
             }
             &.note {
                 margin-top: 5px;

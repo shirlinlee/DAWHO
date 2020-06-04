@@ -15,9 +15,10 @@ body {
 }
 
 #appTikuanDetail {
+    padding-top: 180px;
     > header {
         background: url($assets + '/images/cw_header.png') no-repeat;
-        background-position: center;
+        background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -67,7 +68,6 @@ body {
     }
 }
 #appTikuanDetailContent {
-    margin-top: 180px;
     padding: 0 16px;
     .value-content {
         p {
@@ -104,6 +104,7 @@ body {
 
     ul.infos {
         margin-top: 24px;
+        margin-bottom: 92px;
         font-family: Roboto;
         font-size: 16px;
         font-weight: normal;

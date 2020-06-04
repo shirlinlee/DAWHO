@@ -152,7 +152,6 @@ body {
             li {
                 position: relative;
                 padding-top: 12px;
-                font-family: MicrosoftJhengHei;
                 font-size: 16px;
                 font-weight: normal;
                 font-stretch: normal;
@@ -250,14 +249,12 @@ body {
         background-color: #fdf4ea;
         padding: 8px 0px;
         &--title {
-            font-family: MicrosoftJhengHei;
             font-size: 16px;
             font-weight: bold;
             color: #8a5a48;
         }
         &--desc {
             margin-top: 4px;
-            font-family: MicrosoftJhengHei;
             font-size: 14px;
             color: #ac8878;
         }

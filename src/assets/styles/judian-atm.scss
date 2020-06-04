@@ -57,10 +57,10 @@ body {
             height: 40px;
             padding: 10px 8px;
             border-radius: 3px;
+            border:0;
             border: 1px solid #aaaaaa;
             background-color: #ffffff;
             outline: none;
-            font-family: MicrosoftJhengHei;
             font-size: 16px;
             font-weight: normal;
             font-stretch: normal;
@@ -111,7 +111,6 @@ body {
     p.note {
         text-align: left;
         margin-top: 24px;
-        font-family: MicrosoftJhengHei;
         font-size: 14px;
         font-weight: normal;
         font-stretch: normal;
@@ -260,7 +259,6 @@ body {
                 margin-top: 16px;
             }
             p.name {
-                font-family: MicrosoftJhengHei;
                 font-size: 16px;
                 font-weight: bold;
                 font-stretch: normal;
@@ -273,7 +271,6 @@ body {
     }
     button.confirm {
         margin-top: 36px;
-        font-family: MicrosoftJhengHei;
         font-size: 16px;
         font-weight: bold;
         font-stretch: normal;
@@ -323,7 +320,6 @@ body {
     .content {
         margin-top: 31px;
         text-align: left;
-        font-family: MicrosoftJhengHei;
         font-size: 16px;
         font-weight: normal;
         font-stretch: normal;
@@ -350,7 +346,6 @@ body {
             &.note {
                 margin-top: 5px;
                 p {
-                    font-family: MicrosoftJhengHei;
                     font-size: 16px;
                     font-weight: normal;
                     font-stretch: normal;
@@ -370,7 +365,6 @@ body {
     }
     button.confirm {
         margin-top: 36px;
-        font-family: MicrosoftJhengHei;
         font-size: 16px;
         font-weight: bold;
         font-stretch: normal;

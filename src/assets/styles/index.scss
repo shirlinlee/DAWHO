@@ -51,7 +51,8 @@
             }
         }
         font {
-            padding: 0 2px;
+            padding: 0 4px;
+            font-weight: bold;
         }
     }
 }
@@ -198,11 +199,14 @@
             transform: scaleX(1.1) translate(-30px, -20px);
         }
     }
+    .paper {
+        width: 100%;
+    }
 }
 
 .paper {
-    width: 100%;
-    max-width: 298px;
+    width: calc(100% - 48px);
+    max-width: 400px;
     opacity: 0;
     height: 0;
     box-sizing: border-box;
@@ -215,10 +219,25 @@
     padding: 24px;
     transform: scale(0.8) translate(-50%, 50%);
     transform-origin: left;
-    > img {
+    &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        top: 2px;
+        left: 2px;
+        border-radius: 8px;
+        z-index: 1;
+    }
+    > * {
+        position: relative;
+        z-index: 10;
+    }
+    .badge {
         width: 132px;
-        margin-top: 20px;
-        margin-bottom: 12px;
+        display: block;
+        margin: 20px auto 12px;
     }
     h5 {
         font-family: serif;
@@ -233,7 +252,7 @@
             margin: 0 5px;
         }
         .line {
-            width: 120px;
+            width: calc(50% - 8px);
             height: 1px;
             margin-top: 3px;
         }
@@ -251,6 +270,7 @@
         p {
             line-height: 40px;
             padding-left: 5px;
+            font-weight: bold;
         }
     }
     .btn_experience {
@@ -264,8 +284,15 @@
 
 .dahu {
     .paper {
-        border: solid #c0ad72 2px;
-        background: linear-gradient(219deg, #d5d5d1 2%, #ffecd0 100%);
+        background: linear-gradient(
+            217deg,
+            #7c5b1d 102%,
+            #c0ad72 53%,
+            #fff2d3 0%
+        );
+        &:before {
+            background: linear-gradient(219deg, #ffffff 2%, #ffecd0 100%);
+        }
     }
     h6 {
         color: #784f1d;
@@ -308,8 +335,11 @@
 
 .dada {
     .paper {
-        border: solid #eae8f4 2px;
-        background: linear-gradient(219deg, #b2b2b7 2%, #544974 100%);
+        background-image: linear-gradient(201deg, #eae8f4 180%, #4b455f 10%),
+            linear-gradient(211deg, #b2b2b7 88%, #544974 42%, #96959d -1%);
+        &:before {
+            background: linear-gradient(219deg, #b2b2b7 2%, #544974 100%);
+        }
     }
 
     h6 {
@@ -324,10 +354,10 @@
         }
         .line {
             &:last-child {
-                background: linear-gradient(219deg, #ffffff 13%, #7f7b92 88%);
+                background: linear-gradient(181deg, #ffffff 13%, #7f7b92 95%);
             }
             &:first-child {
-                background: linear-gradient(219deg, #7f7b92 13%, #ffffff 88%);
+                background: linear-gradient(181deg, #7f7b92 13%, #ffffff 66%);
             }
         }
     }

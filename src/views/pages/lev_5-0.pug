@@ -52,15 +52,15 @@ block main
 
         a.btn_gold.btn_seeRight(@click="openRights") 查看完整權益
 
-        .lb_wrapper(:class="{show:isLBOpen}")
-            .lb.dada(:class="{showDetail:isENVOpen }")
+        .lb_wrapper(:class="{show: true}")
+            .lb.dahu(:class="{showDetail:isENVOpen }")
                 h1.f_white.f24 開DAWHO 享優惠
-                .env.dada
+                .env.dahu
                     .back
                     .paper
                         h6.f16 本月等級
-                        img(src=assets + "/images/badge/dahu.png", alt="")
-                        h5.f18 大戶
+                        img.badge(src=assets + "/images/badge/dahu.png", alt="")
+                        img(src=assets + "/images/icon/name-dahu.svg", alt="")
                         .divi
                             .line
                             .rect

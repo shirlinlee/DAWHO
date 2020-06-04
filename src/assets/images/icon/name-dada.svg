@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="25" viewBox="0 0 36 25">
+    <defs>
+        <filter id="prefix__a" width="112.5%" height="118%" x="-6.2%" y="-9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+        </filter>
+        <filter id="prefix__c" width="112.5%" height="118%" x="-6.2%" y="-9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+        </filter>
+        <text id="prefix__b" fill="#FFF" font-family="STSongti-TC-Bold, Songti TC" font-size="18" font-weight="bold">
+            <tspan x="0" y="19">大大</tspan>
+        </text>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke="#D1CFDD" stroke-width=".5" transform="translate(-.447)">
+        <use fill="#FFF" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use fill="#FFF" filter="url(#prefix__c)" xlink:href="#prefix__b"/>
+        <use xlink:href="#prefix__b"/>
+    </g>
+</svg>

@@ -293,7 +293,7 @@ main {
 
 .tooltips_content {
     width: 218px;
-    height: 140px;
+    max-height: 140px;
     opacity: 0.85;
     border-radius: 10px;
     -webkit-backdrop-filter: blur(4px);
@@ -305,6 +305,7 @@ main {
     font-size: 12px;
     position: absolute;
     z-index: 99;
+    text-align: left;
 }
 
 .tooltipster-box {

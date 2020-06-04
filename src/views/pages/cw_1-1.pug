@@ -1,0 +1,62 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title cw_1-1
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet' href= assets + '/styles/cardless.css')
+
+
+block main
+    div#appCardless.index
+        header
+            img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+            p.title 無卡提款
+            img.left(src=assets+"/images/icon/more_black.jpg" alt="")
+
+        .swiper-container
+            .strateg.swiper-wrapper
+                .swiper-slide
+                    .text.f_white
+                        h2.f30 手機就是你的提款卡
+                        h3.f16 不限永豐銀行ATM皆可提領
+                    img(src=assets+"/images/bg_08.jpg", alt="", width="100%")
+                    p.f_white.f16
+                        | 取號30分鐘內踏著輕鬆步伐，
+                        br
+                        | 到提供跨行提款的任何銀行ATM都可領
+
+                .swiper-slide
+                    .text.f_white
+                        h2.f30 大戶卡只想放在家
+                        h3.f16 30秒設定無卡取款，臺/外幣都可領
+                    img(src=assets+"/images/bg_09.jpg", alt="", width="100%")
+                    p.f_white.f16
+                        | 請攜帶DAWHO晶片金融卡至
+                        br
+                        | 本行設置之ATM進行設定
+
+            .pagination
+                .swiper-button-prev
+                    img(src=assets+"/images/icon/arrow-left-black.svg", alt="")
+                .swiper-button-next
+                    img(src=assets+"/images/icon/arrow-right-black.svg", alt="")
+
+
+        .bottom_area
+            a.btn_gold 查詢ATM據點
+            a.f_gold_light 了解更多
+
+
+
+
+
+
+
+block js
+    script(src= public +'/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src= assets + '/js/cardless.bundle.js' defer)
+

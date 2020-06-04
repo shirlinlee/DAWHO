@@ -1,19 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-    <defs>
-        <linearGradient id="prefix__c" x1="114.072%" x2="28.446%" y1="100.995%" y2="36.024%">
-            <stop offset="0%" stop-color="#C29557"/>
-            <stop offset="46.934%" stop-color="#C89C5E"/>
-            <stop offset="100%" stop-color="#F2CB91"/>
-        </linearGradient>
-        <filter id="prefix__a" width="129.1%" height="152.5%" x="-14.5%" y="-22.5%" filterUnits="objectBoundingBox">
-            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
-            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1"/>
-            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.803921569 0 0 0 0 0.607843137 0 0 0 0 0.11372549 0 0 0 1 0"/>
-        </filter>
-        <path id="prefix__b" d="M12.976 8.22l6.212 7.765c.215.27.172.662-.098.878-.11.089-.248.137-.39.137H5.3c-.345 0-.625-.28-.625-.625 0-.142.049-.28.137-.39l6.212-7.765c.431-.539 1.218-.626 1.757-.195.072.058.137.123.195.195z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd" transform="matrix(1 0 0 -1 0 24)">
-        <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
-        <use fill="url(#prefix__c)" xlink:href="#prefix__b"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <path fill="#C38B47" fill-rule="evenodd" d="M4 5L12 5 8 11z"/>
 </svg>

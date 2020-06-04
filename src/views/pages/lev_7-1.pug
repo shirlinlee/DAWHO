@@ -1,0 +1,22 @@
+extends ../includes/_layout.pug
+
+block title
+    title 等級刷新通知
+
+block scss
+    link(rel='stylesheet', href= assets + '/styles/level.css')
+
+block main
+    .lb_wrapper.show
+        .lb.level
+            .img_wrapper
+                img(src=assets + "/images/bg_06.png", alt="")
+                img.badge(src=assets + "/images/badge/dahu.png", alt="")
+
+            h6.f18 本月等級 大戶
+            p.f14
+                span 恭喜升等！
+                span 本月將享有最高等級優惠
+            a.btn_gold.btn_experience 查看完整優惠
+
+

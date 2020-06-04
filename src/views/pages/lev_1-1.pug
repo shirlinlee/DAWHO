@@ -4,8 +4,9 @@ block title
     title 升級攻略
 
 block scss
-    link(rel='stylesheet', href='/lib/styles/swiper.min.css')
-    link(rel='stylesheet', href='/assets/styles/upgrade.css')
+    link(rel='stylesheet', href= public +'/lib/styles/tooltipster.bundle.min.css')
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet', href= assets + '/styles/upgrade.css')
 
 block main
     div#appUpgrade
@@ -13,7 +14,7 @@ block main
             .close 升級攻略
         p.f_grey_01.f16 目前等級
         //- 大戶 dahu.png; 大大 dada.png
-        img(src="/assets/images/badge/dahu.png", alt="")
+        img(src=assets +"/images/badge/dahu.png", alt="")
         hr.hr_black
         .choose.f_grey_02.f14
             | 選擇一種最適合自己的升級攻略輕鬆當大戶
@@ -31,36 +32,36 @@ block main
                             span(v-for="index in 6", :class="'deposit_0'+index")
                             .proportion_tag
                                 //- 下方寫入百分比減去(金額的寬度/2)
-                                font.percent(style="width: calc(90% - 22px)")
+                                font.percent
                                 font.price 80,395
 
-                        p.f12.f_grey_03 更新時間
-                            font 2020-03-11 13:00
-                        p.f14.tooltip_btn 平均財富累計管道
+                        p.f12.f_grey_03.time
+                            font 2020-03-11
+                        p.f14.tooltip_btn.way(data-tooltip-content=".tooltips_content") 平均財富累計管道
                         .deposit_wrapper
 
                             div.W33
-                                img(src="/assets/images/icon/01.svg", alt="")
+                                img(src=assets +"/images/icon/01.svg", alt="")
                                 p.f14 臺幣活存
                                 a(href="#") 前往查看
                             div.W33
-                                img(src="/assets/images/icon/02.svg", alt="")
+                                img(src=assets +"/images/icon/02.svg", alt="")
                                 p.f14 外幣活存
                                 a(href="#") 前往換匯
                             div.W33
-                                img(src="/assets/images/icon/03.svg", alt="")
+                                img(src=assets +"/images/icon/03.svg", alt="")
                                 p.f14 臺幣定存
                                 a(href="#") 立即申請
                             div.W33
-                                img(src="/assets/images/icon/04.svg", alt="")
+                                img(src=assets +"/images/icon/04.svg", alt="")
                                 p.f14 外幣定存
                                 a(href="#") 立即申請
                             div.W33
-                                img(src="/assets/images/icon/05.svg", alt="")
+                                img(src=assets +"/images/icon/05.svg", alt="")
                                 p.f14 基金庫存
                                 a(href="#") 立即申購
                             div.W33
-                                img(src="/assets/images/icon/05.svg", alt="")
+                                img(src=assets +"/images/icon/06.svg", alt="")
                                 p.f14 ibrAin庫存
                                 a(href="#") 立即申購
 
@@ -77,27 +78,27 @@ block main
 
                         .deposit_wrapper
                             div.W50.done
-                                img(src="/assets/images/icon/07.svg", alt="")
+                                img(src=assets +"/images/icon/07.svg", alt="")
                                 p.f14 汽車貸款
                                 a(href="#") 前往申請
                             div.W50
-                                img(src="/assets/images/icon/08.svg", alt="")
+                                img(src=assets +"/images/icon/10.svg", alt="")
                                 p.f14 信用貸款
                                 a(href="#") 前往申請
                             div.W50
-                                img(src="/assets/images/icon/09.svg", alt="")
+                                img(src=assets +"/images/icon/09.svg", alt="")
                                 p.f14 人身保險
                                 a(href="#") 前往申請
                             div.W50
-                                img(src="/assets/images/icon/10.svg", alt="")
+                                img(src=assets +"/images/icon/11.svg", alt="")
                                 p.f14 房屋貸款
                                 a(href="#") 前往申請
                             div.W50
-                                img(src="/assets/images/icon/26.svg", alt="")
+                                img(src=assets +"/images/icon/26.svg", alt="")
                                 p.f14 新戶有禮
                                 a(href="#") 前往說明
                             div.W50
-                                img(src="/assets/images/icon/27.svg", alt="")
+                                img(src=assets +"/images/icon/27.svg", alt="")
                                 p.f14 優惠活動
                                 a(href="#") 前往說明
 
@@ -106,13 +107,18 @@ block main
 
             .swiper-pagination
 
-        p.f_white.f12
+        p.f_grey_01.f12
             | —— 我是底線 ——
             br
             | 都知道升級攻略了，還在等什麼
 
+    .tooltip_templates
+        .tooltips_content
+            | 每個營業日下午1點結算資產餘額(含台外幣活存、台外幣定存、基金庫存淨值、ibrAin庫存淨值)，每月第一個營業日計算每日平均加總值，作為平均財富最後計算結果，超過10萬元即可於次月提升等級。
 
 
 block js
-    script(src='/lib/js/swiper.min.js' defer)
-    script(src='/assets/js/upgrade.bundle.js' defer)
+    script(src= public +'/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public +'/lib/js/tooltipster.bundle.js' defer)
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src=assets + '/js/upgrade.bundle.js' defer)

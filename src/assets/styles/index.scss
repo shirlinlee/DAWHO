@@ -1,5 +1,340 @@
-body {
-    background-image: url(../images/cat/punhu.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+#appIndex {
+    border-radius: 10px;
+    background-image: linear-gradient(129deg, #36343a 19%, #19181b 112%);
+    padding: 17px;
+    > div {
+        display: inline-block;
+        width: 100%;
+        h2 {
+            float: left;
+            display: flex;
+            img {
+                width: 22px;
+                height: 22px;
+                margin-right: 9px;
+                margin-top: 2px;
+            }
+        }
+        .tooltip_btn {
+            float: right;
+            line-height: 25px;
+        }
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li.W50 {
+        margin: 15px 0;
+        padding-left: 50px;
+        position: relative;
+        text-align: left;
+        &:nth-child(2n) {
+            margin-left: 20px;
+            width: calc(50% - 20px);
+        }
+        &:nth-child(2n + 1) {
+            border-right: 1px solid #000;
+            box-shadow: 1px 0px 0px rgba(255, 255, 255, 0.05);
+        }
+        img {
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        span {
+            display: block;
+            &.f_gold {
+                line-height: 21px !important;
+                color: #fee1b7;
+            }
+        }
+        font {
+            padding: 0 2px;
+        }
+    }
+}
+
+.btn_seeRight {
+    font-size: 14px;
+    border-radius: 14px;
+    max-width: 104px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 28px;
+    font-weight: normal;
+    margin: 5px auto 0;
+}
+.btn_read {
+    position: absolute;
+    bottom: 32px;
+    margin-bottom: 0;
+    left: 50%;
+    max-width: 180px;
+    transform: translate(-50%, 0);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 7px 12px 0 rgba(0, 0, 0, 0.26);
+}
+
+.lb {
+    width: 305px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    height: 395px;
+    padding-top: 40px !important;
+    h1 {
+        height: 24px;
+    }
+    &.dahu {
+        background-image: url($assets + '/images/bg_04.png');
+    }
+    &.dada {
+        background-image: url($assets + '/images/bg_05.png');
+    }
+    &.showDetail {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        transition: all 0.5s 1s, height 0.3s 1.5s; //step2 背景開 等1s
+        //step1 信封恢復正面
+        .env {
+            transform: scale(1) translate(-50%, -50%);
+            height: 100%;
+            margin: 0 auto;
+            transition: all 0.4s, height 0.3s 1s, margin 0.3s 1s; //step1 展開高度 等1s
+        }
+        .top_wrapper {
+            transform: rotateX(140deg);
+            transition: transform 0.5s 1s, filter 0.5s 1s, opacity 0.3s 1.3s,
+                margin 0.3s 1.7s, z-index 0.3s 1.7s; //step2 信封開 等1s
+            -webkit-filter: brightness(90%);
+            filter: brightness(90%);
+            opacity: 0;
+            margin-bottom: -100px;
+            z-index: -1;
+        }
+        .paper {
+            height: 483px;
+            transform: scale(1) translate(-50%, 50%);
+            transition: opacity 0s 1.5s, height 0.4s 1.5s, bottom 0.4s 1.5s,
+                transform 0.4s 2s;
+            opacity: 1;
+            bottom: 50%;
+        }
+        .body,
+        .back,
+        .btn_read {
+            margin-bottom: -100px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s 1.7s, z-index 0.3s 1.7s, margin 0.3s 1.7s; //step3 信封+文字按鈕退 等1.7s
+        }
+        .btn_read {
+            transition: opacity 0.3s, z-index 0.3s 1.7s, margin 0.3s 1.7s; //step3 信封+文字按鈕退 等1.7s
+        }
+        h1 {
+            opacity: 0;
+            height: 0;
+            transition: all 0.3s, height 0.1s 1.7s; //step3 信封+文字按鈕退 等1.7s
+        }
+    }
+}
+
+.env {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 298px;
+    height: 203px;
+    margin: 0;
+    transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg) skewX(-8deg)
+        scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    -webkit-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
+        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    -moz-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
+        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    -ms-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
+        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    -o-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
+        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
+    transform-origin: left top;
+    transition: all 0.4s;
+    .env_img,
+    .back {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .back {
+        width: 257.4px;
+        height: 157px;
+        box-shadow: 2px 8px 15px 0 rgba(0, 0, 0, 0.46);
+        background-image: linear-gradient(249deg, #f9e5ca 113%, #f8dbb1 16%);
+        bottom: 43px;
+        left: 22px;
+    }
+    .body {
+        width: 100%;
+    }
+    .top_wrapper {
+        position: absolute;
+        width: 100%;
+        height: 210px;
+        transform-origin: center 21px;
+        bottom: 10px;
+        .top {
+            top: -12px;
+            left: -5px;
+            transform: skewX(-7deg);
+            width: 100%;
+        }
+        .badge {
+            width: 51px;
+            top: 50%;
+            left: 50%;
+            transform: scaleX(1.1) translate(-30px, -20px);
+        }
+    }
+}
+
+.paper {
+    width: 100%;
+    max-width: 298px;
+    opacity: 0;
+    height: 0;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.47);
+    padding: 24px;
+    transform: scale(0.8) translate(-50%, 50%);
+    transform-origin: left;
+    > img {
+        width: 132px;
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+    h5 {
+        font-family: serif;
+    }
+    .divi {
+        margin-top: 13px;
+        display: flex;
+        .rect {
+            width: 6px;
+            height: 6px;
+            transform: rotate(45deg);
+            margin: 0 5px;
+        }
+        .line {
+            width: 120px;
+            height: 1px;
+            margin-top: 3px;
+        }
+    }
+
+    ul {
+        margin-top: 20px;
+    }
+    li {
+        display: flex;
+        min-width: 100%;
+        margin: 0 0 5px;
+        font-size: 16px;
+        height: 40px;
+        p {
+            line-height: 40px;
+            padding-left: 5px;
+        }
+    }
+    .btn_experience {
+        opacity: 1;
+        max-width: 180px;
+        margin: 20px auto 0;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2),
+            0 7px 12px 0 rgba(0, 0, 0, 0.26);
+    }
+}
+
+.dahu {
+    .paper {
+        border: solid #c0ad72 2px;
+        background: linear-gradient(219deg, #d5d5d1 2%, #ffecd0 100%);
+    }
+    h6 {
+        color: #784f1d;
+    }
+    h5 {
+        color: #be9559;
+    }
+    .divi {
+        .rect {
+            background-image: linear-gradient(
+                182deg,
+                #d2b782 614%,
+                #a6814b -802%
+            );
+        }
+        .line {
+            &:last-child {
+                background: linear-gradient(
+                    219deg,
+                    rgba(166, 129, 75, 1) 13%,
+                    rgba(210, 183, 130, 1) 88%
+                );
+            }
+            &:first-child {
+                background: linear-gradient(
+                    219deg,
+                    rgba(210, 183, 130, 1) 13%,
+                    rgba(166, 129, 75, 1) 88%
+                );
+            }
+        }
+    }
+    li {
+        color: #784f1d;
+    }
+    .btn_experience {
+        color: #784f1d;
+    }
+}
+
+.dada {
+    .paper {
+        border: solid #eae8f4 2px;
+        background: linear-gradient(219deg, #b2b2b7 2%, #544974 100%);
+    }
+
+    h6 {
+        color: #fff;
+    }
+    h5 {
+        color: #fff;
+    }
+    .divi {
+        .rect {
+            background-image: linear-gradient(0deg, #9c99a7 13%, #e2e2e9 88%);
+        }
+        .line {
+            &:last-child {
+                background: linear-gradient(219deg, #ffffff 13%, #7f7b92 88%);
+            }
+            &:first-child {
+                background: linear-gradient(219deg, #7f7b92 13%, #ffffff 88%);
+            }
+        }
+    }
+    li {
+        color: #fff;
+    }
+    .btn_experience {
+        color: #111111;
+    }
 }

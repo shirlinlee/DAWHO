@@ -1,0 +1,34 @@
+extends ../includes/_layout.pug
+
+block title
+    title 領取等級
+
+block scss
+    link(rel='stylesheet', href= assets + '/styles/index.css')
+
+block main
+    .lb_wrapper.show
+        .lb.showDetail.dahu
+            .paper
+                h6.f16 本月等級
+                img(src=assets + "/images/badge/dahu.png", alt="")
+                h5.f18 大戶
+                .divi
+                    .line
+                    .rect
+                    .line
+
+                ul
+                    li
+                        img(src=assets + "/images/icon/19_gold.svg", alt="")
+                        p 台幣活存最高利率 1%
+                    li
+                        img(src=assets + "/images/icon/20_gold.svg", alt="")
+                        p 信用卡現金回饋最高 8%
+                    li
+                        img(src=assets + "/images/icon/21_gold.svg", alt="")
+                        p 每月免費跨提跨轉次數16次
+
+                a.btn_gold.btn_experience 開始體驗
+
+

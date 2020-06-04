@@ -1,33 +1,41 @@
 extends ../includes/_layout.pug
 
 block title
-    title 等級權益
+    title 完整優惠
 
 block scss
-    link(rel='stylesheet', href='/lib/styles/swiper.min.css')
-    link(rel='stylesheet', href='/assets/styles/discount.css')
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet', href= assets + '/styles/discount.css')
 
 block main
-    div#appUpgrade
+    div#appDiscount
         h1.header 等級
-        img.badge(src="/assets/images/badge/dada.png", width="100", alt="")
+        img.badge(src=assets +"/images/badge/dada.png", width="100", alt="")
+
+        h2.f18
+            span 目前等級
+
 
         .swiper-container
             .swiper-wrapper
                 .swiper-slide
                     .bg_white.achieve
+                        br
                     span.line
                         font
 
                 .swiper-slide
                     .bg_white.miss
+                        br
+
                     span.line
 
         .btn_wrapper
             a.btn_gold(href="#") 升級攻略
-            a.btn_gold_light(href="#") 歷史等級
+            a.btn_gold_light(href="#")
+                span 歷史等級
 
 
 block js
-    script(src='/lib/js/swiper.min.js' defer)
-    script(src='/assets/js/discount.bundle.js' defer)
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src=assets + '/js/discount.bundle.js' defer)

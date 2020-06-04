@@ -6,8 +6,13 @@ body {
     padding-top: 45px;
 }
 
-#appUpgrade {
-    padding-bottom: 25px;
+#appDiscount {
+    padding-bottom: 16px;
+    h2 {
+        color: #d8d8d8;
+        padding: 16px 0 6px;
+        font-weight: bold;
+    }
 }
 
 .badge {
@@ -17,6 +22,18 @@ body {
 .swiper-slide {
     position: relative;
     padding-top: 48px;
+    > div {
+        padding: 0;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 41px;
+        margin-left: -8px;
+        border-bottom: solid 8px #ffffff;
+        border-left: solid 8px transparent;
+        border-right: solid 8px transparent;
+    }
     .line {
         display: block;
         position: absolute;
@@ -45,12 +62,7 @@ body {
     }
     &:last-child {
         .line {
-            background-image: linear-gradient(
-                to left,
-                #7d7d7d,
-                #c39657 12%,
-                #c39657
-            );
+            background-image: linear-gradient(to left, #7d7d7d, #c39657);
             left: 0%;
         }
     }
@@ -103,37 +115,60 @@ body {
 .rights_content {
     background: #fff;
     display: inline-block;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: #e3e3e3;
+        width: 1px;
+        height: calc(100% - 64px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &:after {
+        height: 1px;
+        width: calc(100% - 40px);
+    }
     li {
         float: left;
         font-size: 14px;
+        padding: 0 20px;
         img {
-            margin-top: 10px;
+            margin-top: 30px;
         }
-        &:nth-child(2n + 1) {
-            border-right: 1px solid #e3e3e3;
-        }
-        &:nth-child(1),
-        &:nth-child(2) {
-            border-bottom: 1px solid #e3e3e3;
-            h6 {
-                margin-bottom: 20px;
-            }
-        }
-        &:nth-child(3),
-        &:nth-child(4) {
-            img {
-                margin-top: 30px;
-            }
+        // &:nth-child(2n + 1) {
+        //     border-right: 1px solid #e3e3e3;
+        // }
+        // &:nth-child(1),
+        // &:nth-child(2) {
+        //     border-bottom: 1px solid #e3e3e3;
+        //     h6 {
+        //         margin-bottom: 20px;
+        //     }
+        // }
+        // &:nth-child(3),
+        // &:nth-child(4) {
+        //     img {
+        //         margin-top: 30px;
+        //     }
+        // }
+
+        h6 {
+            margin-top: 8px;
+            margin-bottom: 20px;
         }
         &.achieve {
             h6 {
-                margin-top: 10px;
                 color: #c38b47;
             }
         }
         &.miss {
             h6 {
-                margin-top: 10px;
                 color: #656565;
             }
         }

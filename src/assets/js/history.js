@@ -13,7 +13,7 @@ new Vue({
                 side: 'bottom',
                 arrow: false,
                 animationDuration: 450,
-                // trigger: 'click',
+                trigger: 'click',
             });
         });
     },

@@ -299,6 +299,9 @@ body {
                             left: 0;
                             right: 0;
                             background: #c38b47;
+                            @include maxW-414 {
+                                bottom: -9px;
+                            }
                         }
                     }
                 }

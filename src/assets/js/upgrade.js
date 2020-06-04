@@ -6,12 +6,21 @@ new Vue({
         mode();
         this.$nextTick(() => {
             var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1.1,
+                slidesPerView: 1.16,
                 centeredSlides: true,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
                 },
+            });
+            $('.tooltip_btn').tooltipster({
+                content: $('.tooltips_content'),
+                contentCloning: true,
+                animation: 'grow',
+                side: 'bottom',
+                arrow: false,
+                animationDuration: 450,
+                trigger: 'click',
             });
         });
     },

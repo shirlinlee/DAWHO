@@ -1,11 +1,9 @@
 ﻿doctype html
-html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com:office:office')
+html
   head
     meta(charset='UTF-8')
-    meta(name='viewport', content='width=750, user-scalable=1')
-    meta(name='keywords', content='')
-    meta(name='description', content='')
-    title 分級制LEV
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=1')
+    title 無卡提款CW
     // ============================== css start ==============================
     // ============================== css close ==============================
     // ============================== script start ==============================
@@ -29,26 +27,9 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
         });
         $('a').attr('target','_blank');
       });
-    script(type='text/javascript').
-      var width = screen.width;
-      var meta = document.createElement("meta");
-      var head = document.getElementsByTagName("head")[0];
-      if (width >= 1024) {
-      meta.setAttribute("name", "viewport");
-      meta.setAttribute("content", "width=1024");
-      head.appendChild(meta);
-      } else if (width < 1024 && width >= 768) { // iPad in portrait mode
-      meta.setAttribute("name", "viewport");
-      meta.setAttribute("content", "width=960");
-      head.appendChild(meta);
-      } else if (width <767) { // anything smaller than 700px in width
-      meta.setAttribute("name", "viewport");
-      meta.setAttribute("content", "width=640; maximum-scale=1");
-      head.appendChild(meta);
-      };
-    // ============================== script close ==============================
+
     style(type='text/css').
-      * { margin: 0; padding: 0; border: 0;}
+      * { margin: 0; padding: 0; border: 0; box-sizing: border-box;}
       a { color: #784f1d;text-decoration: none;}
       body { background: #de0700; background: #dfdfdf; font-family: Arial, Helvetica, sans-serif; letter-spacing: -0.4px; }
       h2, .backtop a { color: #cd9b1d;}
@@ -65,12 +46,12 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
       border-collapse: collapse;
       border-spacing: 0;
       color: #222;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 2em;
       background: #fff;
       }
       table th {
-      padding: 2px 4px;
+      padding: 4px 4px;
       color: #111;
       font-weight: normal;
       border: 1px #ddd solid;
@@ -79,7 +60,7 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
       text-align:left
       }
       table td {
-      padding: 2px 8px;
+      padding: 4px 8px;
       border: 1px #ddd solid;
       }
       table tr.even {
@@ -119,7 +100,7 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
   body
     #list
       // ============================== header start ==============================
-      h2 2020 無卡提款 列表
+      h2 2020 無卡提款列表
       table.list
         tbody
 
@@ -127,15 +108,11 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
                 th 編號
                 th HTML 檔名
                 th 補充
-            - var list = [{html:"1-3",note:""},{html:"1-4",note:""},{html:"2-2",note:""},{html:"2-3",note:""},{html:"2-4",note:""},{html:"2-5",note:""},{html:"2-6",note:""},{html:"2-7",note:""},{html:"2-8",note:""},{html:"2-9",note:""},{html:"2-10",note:""},{html:"2-11",note:""},{html:"3-1",note:""},{html:"3-2",note:""},{html:"4-1",note:""},{html:"4-2",note:""},{html:"4-3",note:""}]
-            - var count = 1
-            each data in list
-                - var d = "cw_" + data.html + ".html"
-                tr(v-for="(item, index) in lev_lists", :key="index")
-                    td.font-bold(width="50") #{count++}
-                    td(width="250")
-                        a(target='_blank', href=d) #{d}
-                    td #{data.note}
+            tr(v-for="(item, index) in cw_lists", :key="index")
+                td.font-bold(width="50") {{item.html}}
+                td(width="90")
+                    a(target='_blank', :href="'cw_' + item.html + '.html'") cw_{{item.html}}
+                td(v-html="item.ps")
 
 
 
@@ -143,3 +120,6 @@ html(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com
       .backtop(style='text-align: center;')
         a(href='#top') Back to Top
 
+block js
+    script(src= public +'/lib/js/vue@2.6.11.min.js' defer)
+    script(src=assets + '/js/list.bundle.js' defer)

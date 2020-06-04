@@ -1,0 +1,91 @@
+extends ../includes/_layout.pug
+
+block title
+    title 完整優惠
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet', href= assets + '/styles/discount.css')
+
+block main
+    div#appDiscount
+        h1.header 等級
+        img.badge(src=assets +'/images/badge/dahu.png', width="100", alt="", v-if="status1" )
+        img.badge(src=assets +'/images/badge/dada_black.png', width="100", alt="", v-else)
+
+        h2.f18
+            span(v-if="status1") 目前等級
+            span(v-else) 其他等級
+
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    .bg_white.achieve
+                        ul.rights_content
+                            li.W50.achieve
+                                img(src=assets +"/images/icon/22_gold.svg", alt="")
+                                p 臺幣活存利率
+                                h6
+                                    font 1.1
+                                    | %
+                            li.W50.achieve
+                                img(src=assets +"/images/icon/23_gold.svg", alt="")
+                                p 免費跨提轉
+                                h6
+                                    font 16
+                                    | 次
+                            li.W50.achieve
+                                img(src=assets +"/images/icon/24_gold.svg", alt="")
+                                p 國內刷卡最高回饋
+                                h6
+                                    font 7
+                                    | %
+                            li.W50.achieve
+                                img(src=assets +"/images/icon/25_gold.svg", alt="")
+                                p 國外刷卡最高回饋
+                                h6
+                                    font 8
+                                    | %
+                    span.line
+                        font
+
+                .swiper-slide
+                    .bg_white.miss
+                        ul.rights_content
+                            li.W50.miss
+                                img(src=assets +"/images/icon/22_grey.svg", alt="")
+                                p 臺幣活存利率
+                                h6
+                                    font 1.1
+                                    | %
+                            li.W50.miss
+                                img(src=assets +"/images/icon/23_grey.svg", alt="")
+                                p 免費跨提轉
+                                h6
+                                    font 16
+                                    | 次
+                            li.W50.miss
+                                img(src=assets +"/images/icon/24_grey.svg", alt="")
+                                p 國內刷卡最高回饋
+                                h6
+                                    font 7
+                                    | %
+                            li.W50.miss
+                                img(src=assets +"/images/icon/25_grey.svg", alt="")
+                                p 國外刷卡最高回饋
+                                h6
+                                    font 8
+                                    | %
+
+
+                    span.line
+
+        .btn_wrapper
+            a.btn_gold(href="#") 升級攻略
+            a.btn_gold_light(href="#")
+                span 歷史等級
+
+
+block js
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src=assets + '/js/discount.bundle.js' defer)

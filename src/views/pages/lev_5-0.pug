@@ -1,0 +1,94 @@
+extends ../includes/_layout.pug
+
+block title
+    title 首頁
+
+block scss
+    link(rel='stylesheet', href= assets + '/styles/index.css')
+
+block main
+    div#appIndex
+        div
+            h2
+                img(src=assets + "/images/badge/dahu.png", alt="")
+                p.f_white.f18  大戶優惠
+
+            p.f_grey_01.f12.tooltip_btn 2020-05
+
+        ul
+            li.W50
+                img(src=assets + "/images/icon/28.svg", alt="")
+                p.f_white.f14
+                    span 活存利率
+                    span.f_gold
+                        | 最高
+                        font.f20 1.1
+                        | %
+            li.W50
+                img(src=assets + "/images/icon/29.svg", alt="")
+                p.f_white.f14
+                    span 免費跨提轉
+                    span.f_gold
+                        | 剩
+                        font.f20 16
+                        | 次
+            li.W50
+                img(src=assets + "/images/icon/30.svg", alt="")
+                p.f_white.f14
+                    span 歐元換匯
+                    span.f_gold
+                        | 最高減
+                        font.f20 6
+                        | 分
+            li.W50
+                img(src=assets + "/images/icon/31.svg", alt="")
+                p.f_white.f14
+                    span 基金手續費
+                    span.f_gold
+                        | 最低
+                        font.f20 0
+                        | 元
+
+
+        a.btn_gold.btn_seeRight(@click="openRights") 查看完整權益
+
+        .lb_wrapper(:class="{show:isLBOpen}")
+            .lb.dada(:class="{showDetail:isENVOpen }")
+                h1.f_white.f24 開DAWHO 享優惠
+                .env.dada
+                    .back
+                    .paper
+                        h6.f16 本月等級
+                        img(src=assets + "/images/badge/dahu.png", alt="")
+                        h5.f18 大戶
+                        .divi
+                            .line
+                            .rect
+                            .line
+
+                        ul
+                            li
+                                img(src=assets + "/images/icon/19_gold.svg", alt="")
+                                p 台幣活存最高利率 1%
+                            li
+                                img(src=assets + "/images/icon/20_gold.svg", alt="")
+                                p 信用卡現金回饋最高 8%
+                            li
+                                img(src=assets + "/images/icon/21_gold.svg", alt="")
+                                p 每月免費跨提跨轉次數16次
+
+                        a.btn_gold.btn_experience 開始體驗
+
+
+                    img.env_img.body(src=assets + "/images/env/02.png", alt="")
+                    .top_wrapper
+                        img.env_img.top(src=assets + "/images/env/01.svg", alt="")
+                        img.env_img.badge(src=assets + "/images/env/03.svg", alt="")
+
+
+                a.btn_gold.btn_read(@click="openEnv") 點擊閱讀
+
+
+
+block js
+    script(src=assets + '/js/index.bundle.js' defer)

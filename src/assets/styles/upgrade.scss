@@ -15,13 +15,14 @@ body {
         width: 100px;
     }
     > hr {
-        margin: 24px 0;
+        margin: 24px auto;
+        width: calc(100% - 48px);
     }
 }
 
 .choose {
     padding-bottom: 30px;
-    background-image:  url($assets + '/images/icon/dropdown.svg');
+    background-image: url($assets + '/images/icon/dropdown.svg');
     @extend %icon_position_bottom;
     margin-bottom: 5px;
 }
@@ -39,18 +40,21 @@ body {
                 margin-bottom: 0;
                 font-size: 12px;
             }
+            &.way {
+                margin-top: 4px;
+            }
         }
     }
     h6 {
         margin-bottom: 16px;
         line-height: 1.4;
         &.in_progress {
-            background-image: url(/assets/images/icon/unacommpolish.svg);
+            background-image: url($assets + '/images/icon/unacommpolish.svg');
             @extend %icon_position_right;
         }
 
         &.done {
-            background-image: url(/assets/images/icon/acommpolish.svg);
+            background-image: url($assets + '/images/icon/acommpolish.svg');
             @extend %icon_position_right;
         }
     }
@@ -99,7 +103,7 @@ body {
     width: 100%;
     overflow: visible;
     height: 20px;
-    margin-top: 3px;
+    margin-top: 4px;
     display: flex;
     justify-content: flex-start;
     font {
@@ -110,13 +114,37 @@ body {
             padding: 0 3px;
             line-height: 20px;
             border-radius: 3px;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.4);
+                bottom: 100%;
+                height: 19px;
+                width: 1px;
+                left: 50%;
+                transform: translate(-1px, 0);
+            }
         }
     }
 }
 
+
+.proportion_tag .percent{
+    width: calc(90% - 22px)
+}
+//only for Safari 13+
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) and (display:flow-root) { 
+        .proportion_tag .percent{
+            width: calc(90% - 20px)
+        }
+} }
+
 .deposit_wrapper {
     display: flex;
-    margin: 8px auto 0;
+    margin: 5px auto 0;
     display: flex;
     flex-wrap: wrap;
     div {
@@ -124,7 +152,9 @@ body {
         flex-direction: column;
         align-items: center;
         cursor: pointer;
-        margin-bottom: 28px;
+        margin-top: 4px;
+        margin-bottom: 24px;
+
         &.done {
             position: relative;
             &::before {
@@ -137,15 +167,19 @@ body {
                 top: 28px;
                 transform: translate(8px, 0);
                 @extend %bg_img_center;
-                background-image: url(/assets/images/icon/achive.svg);
+                background-image: url($assets + '/images/icon/achive.svg');
             }
+        }
+        &.W50 {
+            margin-bottom: 16px;
+            margin-top: 3px;
         }
         a {
             color: #6b382f;
             font-size: 14px;
             border-radius: 14px;
             background-color: #fdd8c0;
-            padding: 5px 8px;
+            padding: 7px 8px;
             margin-top: 8px;
             text-decoration: none;
         }

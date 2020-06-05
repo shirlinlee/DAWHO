@@ -1,24 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="25" viewBox="0 0 36 25">
     <defs>
-        <filter id="prefix__a" width="112.5%" height="118%" x="-6.2%" y="-9%" filterUnits="objectBoundingBox">
+        <filter id="prefix__b" width="113.4%" height="127.9%" x="-6.8%" y="-13.9%" filterUnits="objectBoundingBox">
             <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
             <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
             <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
             <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
         </filter>
-        <filter id="prefix__c" width="112.5%" height="118%" x="-6.2%" y="-9%" filterUnits="objectBoundingBox">
-            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
-            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
-            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
-            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
-        </filter>
-        <text id="prefix__b" fill="#FFF" font-family="STSongti-TC-Bold, Songti TC" font-size="18" font-weight="bold">
-            <tspan x="0" y="19">大大</tspan>
-        </text>
+        <path id="prefix__a" d="M.882 21.826c3.576-1.824 5.823-3.42 6.741-4.788.918-1.368 1.449-3.342 1.593-5.922h.45c.216 2.136.591 3.849 1.125 5.139s1.263 2.463 2.187 3.519c.924 1.056 1.464 1.584 1.62 1.584.048 0 .12-.042.216-.126.468-.456 1.104-.684 1.908-.684.204 0 .42.012.648.036l.072-.324c-2.016-.876-3.6-2.004-4.752-3.384-1.152-1.38-1.998-3.3-2.538-5.76h6.588c.288 0 .432-.042.432-.126 0-.108-.285-.444-.855-1.008-.57-.564-.921-.846-1.053-.846-.084 0-.186.072-.306.216l-.972 1.134H9.27c.024-.504.048-1.182.072-2.034.024-.852.069-1.392.135-1.62.066-.228.201-.402.405-.522.204-.12.306-.21.306-.27 0-.06-.03-.111-.09-.153-.06-.042-.339-.132-.837-.27-.498-.138-1.053-.273-1.665-.405.06 1.464.09 2.559.09 3.285s-.018 1.389-.054 1.989H2.034c-.408 0-.708-.03-.9-.09l.324.846c.24-.084.492-.126.756-.126h5.382c-.132 2.376-.63 4.266-1.494 5.67s-2.67 2.988-5.418 4.752l.198.288zm18 0c3.576-1.824 5.823-3.42 6.741-4.788.918-1.368 1.449-3.342 1.593-5.922h.45c.216 2.136.591 3.849 1.125 5.139s1.263 2.463 2.187 3.519c.924 1.056 1.464 1.584 1.62 1.584.048 0 .12-.042.216-.126.468-.456 1.104-.684 1.908-.684.204 0 .42.012.648.036l.072-.324c-2.016-.876-3.6-2.004-4.752-3.384-1.152-1.38-1.998-3.3-2.538-5.76h6.588c.288 0 .432-.042.432-.126 0-.108-.285-.444-.855-1.008-.57-.564-.921-.846-1.053-.846-.084 0-.186.072-.306.216l-.972 1.134H27.27c.024-.504.048-1.182.072-2.034.024-.852.069-1.392.135-1.62.066-.228.201-.402.405-.522.204-.12.306-.21.306-.27 0-.06-.03-.111-.09-.153-.06-.042-.339-.132-.837-.27-.498-.138-1.053-.273-1.665-.405.06 1.464.09 2.559.09 3.285s-.018 1.389-.054 1.989h-5.598c-.408 0-.708-.03-.9-.09l.324.846c.24-.084.492-.126.756-.126h5.382c-.132 2.376-.63 4.266-1.494 5.67s-2.67 2.988-5.418 4.752l.198.288z"/>
     </defs>
-    <g fill="none" fill-rule="evenodd" stroke="#D1CFDD" stroke-width=".5" transform="translate(-.447)">
-        <use fill="#FFF" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
-        <use fill="#FFF" filter="url(#prefix__c)" xlink:href="#prefix__b"/>
-        <use xlink:href="#prefix__b"/>
+    <g fill="none" transform="translate(-.447)">
+        <use fill="#FFF" xlink:href="#prefix__a"/>
+        <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__a"/>
+        <use stroke="#D1CFDD" stroke-width=".5" xlink:href="#prefix__a"/>
     </g>
 </svg>

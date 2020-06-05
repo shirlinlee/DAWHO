@@ -105,6 +105,8 @@
             transform: scale(1) translate(-50%, -50%);
             height: 100%;
             margin: 0 auto;
+            top: 50%;
+            left: 50%;
             transition: all 0.4s, height 0.3s 1s, margin 0.3s 1s; //step1 展開高度 等1s
         }
         .top_wrapper {

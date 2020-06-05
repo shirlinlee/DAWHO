@@ -209,11 +209,12 @@ body {
                 display: flex;
                 .col {
                     p {
-                        font-size: 16px;
+                        font-size: 14px;
                         margin-bottom: 12px;
                     }
                     &:first-child {
                         flex: 20%;
+                        flex-shrink: 0;
                         @include iPad() {
                             flex: initial;
                         }

@@ -146,27 +146,23 @@
 
 .env {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 100px;
+    left: 0;
     width: 298px;
     height: 203px;
     margin: 0;
-    transform: perspective(1060px) rotateY(-21deg) rotateX(-6deg) skewX(-8deg)
-        rotateZ(2deg) scaleY(0.9) scaleX(0.95) translate(-53%, -49%);
-    -webkit-transform: perspective(1060px) rotateY(-21deg) rotateX(-6deg)
-        skewX(-8deg) rotateZ(2deg) scaleY(0.9) scaleX(0.95)
-        translate(-53%, -49%);
-    -moz-transform: perspective(1060px) rotateY(-21deg) rotateX(-6deg)
-        skewX(-8deg) rotateZ(2deg) scaleY(0.9) scaleX(0.95)
-        translate(-53%, -49%);
-    -ms-transform: perspective(1060px) rotateY(-21deg) rotateX(-6deg)
-        skewX(-8deg) rotateZ(2deg) scaleY(0.9) scaleX(0.95)
-        translate(-53%, -49%);
-    -o-transform: perspective(1060px) rotateY(-21deg) rotateX(-6deg)
-        skewX(-8deg) rotateZ(2deg) scaleY(0.9) scaleX(0.95)
-        translate(-53%, -49%);
-    transform-origin: left top;
+    transform: perspective(500px) rotateX(15deg) rotateY(-14deg) rotateZ(3deg)
+        scale(1.05, 0.95);
+    transform-origin: right top;
     transition: all 0.4s;
+    -webkit-transform: perspective(500px) rotateX(15deg) rotateY(-14deg)
+        rotateZ(3deg) scale(1.05, 0.95);
+    -moz-transform: perspective(500px) rotateX(15deg) rotateY(-14deg)
+        rotateZ(3deg) scale(1.05, 0.95);
+    -ms-transform: perspective(500px) rotateX(15deg) rotateY(-14deg)
+        rotateZ(3deg) scale(1.05, 0.95);
+    -o-transform: perspective(500px) rotateX(15deg) rotateY(-14deg)
+        rotateZ(3deg) scale(1.05, 0.95);
     .env_img,
     .back {
         position: absolute;
@@ -197,9 +193,9 @@
             width: 100%;
         }
         .badge {
-            width: 51px;
-            top: 50%;
-            left: 50%;
+            width: 66px;
+            top: calc(50% - 11px);
+            left: calc(50% - 8px);
             transform: scaleX(1.1) translate(-30px, -20px);
         }
     }

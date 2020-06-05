@@ -36,7 +36,7 @@ new Vue({
             { name: '', html: '6-2', ps: '' },
             { name: '', html: '6-3', ps: '' },
             { name: '', html: '7-1', ps: '' },
-            { name: '', html: '7-2', ps: '' },
+            // { name: '', html: '7-2', ps: '' },
             { name: '', html: '7-3', ps: '' },
         ],
     },

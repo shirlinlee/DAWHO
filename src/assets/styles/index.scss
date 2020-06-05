@@ -287,10 +287,10 @@
 .dahu {
     .paper {
         background: linear-gradient(
-            217deg,
-            #7c5b1d 102%,
-            #c0ad72 53%,
-            #fff2d3 0%
+            205deg,
+            #7c5b1d 2%,
+            #c0ad72 70%,
+            #fff2d3 100%
         );
         &:before {
             background: linear-gradient(219deg, #ffffff 2%, #ffecd0 100%);
@@ -333,8 +333,12 @@
 
 .dada {
     .paper {
-        background-image: linear-gradient(201deg, #eae8f4 180%, #4b455f 10%),
-            linear-gradient(211deg, #b2b2b7 88%, #544974 42%, #96959d -1%);
+        background-image: linear-gradient(
+            201deg,
+            #eae8f4 2%,
+            #544974 70%,
+            #96959d 100%
+        );
         &:before {
             background: linear-gradient(219deg, #b2b2b7 2%, #544974 100%);
         }

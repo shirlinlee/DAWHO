@@ -9,6 +9,32 @@ body {
 
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', 微軟正黑體, 'Microsoft JhengHei', sans-serif;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/fonts/Roboto-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/fonts/Roboto-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/fonts/Roboto-Bold.ttf');
+    font-weight: bold;
 }
 
 p {
@@ -267,7 +293,7 @@ main {
 
 .tooltips_content {
     width: 218px;
-    height: 140px;
+    max-height: 140px;
     opacity: 0.85;
     border-radius: 10px;
     -webkit-backdrop-filter: blur(4px);
@@ -279,6 +305,7 @@ main {
     font-size: 12px;
     position: absolute;
     z-index: 99;
+    text-align: left;
 }
 
 .tooltipster-box {

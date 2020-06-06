@@ -1,0 +1,44 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title cw_1-6-errorCode
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/result.css')
+
+block main
+    div#appCardless
+        header
+            h1
+                img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+                | 無卡提款
+                img.dots(src=assets+"/images/icon/more_black.jpg" alt="")
+
+        .status_wrapper.error
+            img.status(src=assets+"/images/ufo.png", alt="")
+            h5.f_white 取號失敗
+
+        .W100
+            p.f16.error_msg
+                | 交易失敗：提款序號（已提款/
+                br
+                | 已失敗/已取消）[FEPRsFAIL]
+
+            .btn_wrapper
+                a.btn_gold(href="#") 重新申請
+                a.btn_gold_light(href="#")
+                    span 提款記錄查詢
+
+            .notice
+                p 注意事項
+                a
+                    img(src=assets+"/images/icon/plus.svg" alt="")
+
+
+
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/result.bundle.js' defer)
+

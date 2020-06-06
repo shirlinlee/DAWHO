@@ -27,7 +27,7 @@
     });
 
     $('.QA').on('click', '.title', function () {
-        $(this).siblings('.content').slideToggle();
+        $(this).toggleClass('open').siblings('.content').slideToggle();
     });
 
     var swiper = new Swiper('.swiper-container', {

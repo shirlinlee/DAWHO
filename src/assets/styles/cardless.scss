@@ -421,12 +421,13 @@ body {
         min-height: 56px;
         height: 100%;
         font-size: 16px;
+        line-height: 1.5;
+        position: relative;
         &:nth-child(odd) {
             background-color: rgba(0, 0, 0, 0.03);
         }
         a {
             color: #c38b47;
-            text-decoration: none;
         }
         .title {
             font-weight: bold;
@@ -435,14 +436,45 @@ body {
             background-image: url($assets + '/images/icon/plus.svg');
             background-repeat: no-repeat;
             background-position: right 8px center;
+            &.open {
+                background-image: url($assets + '/images/icon/minus.svg');
+            }
             .f_gold {
                 padding-right: 5px;
                 font-family: serif;
             }
         }
+        .mr16 {
+            margin-top: 16px;
+        }
         .content {
             display: none;
             padding: 16px 0 0;
+        }
+        .number {
+            li {
+                margin-bottom: 10px;
+                position: relative;
+                padding-left: 29px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                span {
+                    display: inline-block;
+                    margin: 0 9px 0 0;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #c38b47;
+                    border-radius: 50%;
+                    color: #fff;
+                    line-height: 20px;
+                    text-align: center;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
         }
     }
 }

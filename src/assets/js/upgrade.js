@@ -12,6 +12,11 @@ new Vue({
                     el: '.swiper-pagination',
                     clickable: true,
                 },
+                on: {
+                    slideChange: () => {
+                        $('.tooltip_btn').tooltipster('hide');
+                    },
+                },
             });
             $('.tooltip_btn').tooltipster({
                 content: $('.tooltips_content'),
@@ -21,6 +26,9 @@ new Vue({
                 arrow: false,
                 animationDuration: 450,
                 trigger: 'click',
+            });
+            $(window).on('scroll', function () {
+                $('.tooltip_btn').tooltipster('hide');
             });
         });
     },

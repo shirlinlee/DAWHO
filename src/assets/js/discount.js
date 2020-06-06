@@ -13,7 +13,6 @@ new Vue({
                 centeredSlides: true,
                 on: {
                     slideChange: () => {
-                        console.log(this.status1);
                         this.status1 = !this.status1;
                     },
                 },

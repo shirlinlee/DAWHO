@@ -49,15 +49,12 @@ block main
                 button.gogo 我要提領
                 button.record
                     span 提款記錄查詢
-            div.notice
-                p 注意事項
-                a
-                    img(src=assets+"/images/icon/plus.svg" alt="")
-
+            +notice('內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容容內容內容內容')
 
 
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
     script(src= assets + '/js/cardless.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
 

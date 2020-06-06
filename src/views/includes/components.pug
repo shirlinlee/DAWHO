@@ -20,3 +20,11 @@ mixin check(id,label,isChecked)
         input(id='check_'+id,type='checkbox', checked=isChecked)
         label(for='check_'+id) #{label}
 
+mixin notice(content,isLight)
+    div.cw-notice
+        .cw-notice-title
+            p(class=(isLight)?'light':'') 注意事項
+            a
+                img
+        .cw-notice-content
+            p(class=(isLight)?'light':'') #{content}

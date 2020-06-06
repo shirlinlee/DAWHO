@@ -78,12 +78,14 @@ body {
             right: 8px;
         }
         .search-horizontal {
-            margin-top: 16px;
-            width: 100%;
-            overflow: auto;
+            width: calc(100% + 32px);
+            margin: 16px -16px 0;
+            padding: 0 16px;
             white-space: nowrap;
-            text-align: left;
             display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            margin-top: 24px;
         }
     }
     //circle
@@ -257,7 +259,7 @@ body {
         .category {
             margin-top: 16px;
             &-content {
-                margin-top: 16px;
+                margin-top: 8px;
             }
             p.name {
                 font-size: 16px;
@@ -272,6 +274,7 @@ body {
     }
     button.confirm {
         margin-top: 36px;
+        margin-bottom: 32px;
         font-size: 16px;
         font-weight: bold;
         font-stretch: normal;
@@ -295,7 +298,7 @@ body {
     padding-bottom: 32px;
     .map {
         img {
-            width: 375px;
+            width: 100%;
         }
     }
     .info {
@@ -366,6 +369,7 @@ body {
     }
     button.confirm {
         margin-top: 36px;
+        margin-bottom: 32px;
         font-size: 16px;
         font-weight: bold;
         font-stretch: normal;

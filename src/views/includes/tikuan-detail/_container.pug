@@ -4,18 +4,19 @@ mixin _container(status, isForeign)
         h1.title
             .back
                 p 提款明細
-        div.header-status
-            case status
-                when 'withdraw'
-                    img(src=assets+"/images/icon/cw-success.svg" alt="")
-                    p #{data[status]}
-                when 'cancel'
-                    img(src=assets+"/images/icon/cw-fail.svg" alt="")
-                    p.white #{data[status]}
-                when 'fail'
-                    img(src=assets+"/images/icon/cw-fail.svg" alt="")
-                    p.white #{data[status]}
     div#appTikuanDetailContent
+        .status-content
+            .status-content-body
+                case status
+                    when 'withdraw'
+                        img(src=assets+"/images/icon/cw-success.svg" alt="")
+                        p #{data[status]}
+                    when 'cancel'
+                        img(src=assets+"/images/icon/cw-fail.svg" alt="")
+                        p.white #{data[status]}
+                    when 'fail'
+                        img(src=assets+"/images/icon/cw-fail.svg" alt="")
+                        p.white #{data[status]}
         .value-content
             p 提款金額
             if !isForeign

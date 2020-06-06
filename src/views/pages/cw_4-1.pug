@@ -18,7 +18,7 @@ block main
         div#appJudianAtmContent
             div.search-content
                 .search-bar-container
-                    input#search-bar-input(type='text' placeholder='搜尋銀行代碼')
+                    input#search-bar-input(type='text' placeholder='請輸入縣市、區域或幣別等關鍵字')
                     a()
                         img.search-bar-icon(src=assets+"/images/icon/cw-search.png")
                 .search-horizontal
@@ -26,9 +26,9 @@ block main
                         img(src=assets+"/images/icon/filter.svg" alt="")
                     +select(['台北市','新北市'])
                     +select(['中山區','松山區'])
-                    +select(['提款','存款'])
-                    +check('foreign','外幣')
-                    +check('usd','美金')
+                    +select(['全部','提款','存款'],1)
+                    +select(['人民幣','日圓','港幣','美金'],2)
+                    +check('usd','24小時','true')
             p.note 實際服務時間依設備裝設地點而定，如有疑問請洽客服
              ul.atm-list
                     li

@@ -4,10 +4,10 @@ mixin switch(status)
         .toggle-switch
 
 
-mixin select(list)
+mixin select(list,target)
     select.cw-select
-        each data in list
-            option(value=data) #{data}
+        each data,i in list
+            option(value=data selected=(target==i)?true:false) #{data}
 
 mixin dropdown(list,placeholder)
     select.cw-dropdown(required)

@@ -94,13 +94,13 @@ select.cw-dropdown {
 
 //check
 .cw-check {
-    margin-right: 8px;
-
     input {
         position: absolute;
         left: -9999px;
     }
     label {
+        margin-right: 8px;
+        margin-bottom: 8px;
         display: inline-block;
         position: relative;
         padding: 6px 12px 6px 12px;

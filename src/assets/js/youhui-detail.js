@@ -25,7 +25,9 @@ import { getPosition } from './modules/utils';
             const navbar = $('.channels .nav-bar');
             const sticky = document.getElementById('channels--nav-bar')
                 .offsetTop;
-            const channelTitle = $('.channels-title').offset().top
+            const channelTitle = $('.channels-title').offset().top;
+            const channelBar = $('#channels--nav-bar').offset().top;
+
             var heightHeader = $('#youhui-detail--header').height();
 
             // listener
@@ -40,7 +42,7 @@ import { getPosition } from './modules/utils';
                 // scroll to 特色通路
                 $([document.documentElement, document.body]).animate(
                     {
-                        scrollTop: channelTitle - heightHeader,
+                        scrollTop: channelBar - (heightHeader - 1),
                     },
                     0
                 );

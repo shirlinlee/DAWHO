@@ -124,14 +124,14 @@ body {
                 height: 19px;
                 width: 1px;
                 left: 50%;
-                transform: translate(1px, 0);
+                margin-left: -1px;
             }
         }
     }
 }
 
 .proportion_tag .percent {
-    width: calc(90% - 22px);
+    width: calc(90% - 21px);
 }
 //only for Safari 13+
 @media not all and (min-resolution: 0.001dpcm) {
@@ -154,7 +154,6 @@ body {
         cursor: pointer;
         margin-top: 4px;
         margin-bottom: 24px;
-
         &.done {
             position: relative;
             &::before {

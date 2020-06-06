@@ -355,7 +355,6 @@ body {
     }
     ul.infos {
         margin-top: 24px;
-
         font-size: 16px;
         font-weight: normal;
         font-stretch: normal;
@@ -416,7 +415,7 @@ body {
 .QA {
     padding: 0 16px;
     text-align: left;
-    li {
+    > li {
         text-align: left;
         padding: 16px 8px;
         min-height: 56px;

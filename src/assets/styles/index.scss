@@ -105,6 +105,8 @@
             transform: scale(1) translate(-50%, -50%);
             height: 100%;
             margin: 0 auto;
+            top: 50%;
+            left: 50%;
             transition: all 0.4s, height 0.3s 1s, margin 0.3s 1s; //step1 展開高度 等1s
         }
         .top_wrapper {
@@ -146,23 +148,23 @@
 
 .env {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 100px;
+    left: 0;
     width: 298px;
     height: 203px;
     margin: 0;
-    transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg) skewX(-8deg)
-        scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
-    -webkit-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
-        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
-    -moz-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
-        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
-    -ms-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
-        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
-    -o-transform: perspective(1060px) rotateY(-15deg) rotateX(-6deg)
-        skewX(-8deg) scaleY(0.9) scaleX(0.9) translate(-53%, -49%);
-    transform-origin: left top;
+    transform: perspective(500px) rotateX(15deg) rotateY(-14deg) rotateZ(3deg)
+        scale(1.05, 0.95);
+    transform-origin: right top;
     transition: all 0.4s;
+    -webkit-transform: perspective(500px) rotateX(15deg) rotateY(-14deg)
+        rotateZ(3deg) scale(1.05, 0.95);
+    -moz-transform: perspective(500px) rotateX(15deg) rotateY(-14deg)
+        rotateZ(3deg) scale(1.05, 0.95);
+    -ms-transform: perspective(500px) rotateX(15deg) rotateY(-14deg)
+        rotateZ(3deg) scale(1.05, 0.95);
+    -o-transform: perspective(500px) rotateX(15deg) rotateY(-14deg)
+        rotateZ(3deg) scale(1.05, 0.95);
     .env_img,
     .back {
         position: absolute;
@@ -193,9 +195,9 @@
             width: 100%;
         }
         .badge {
-            width: 51px;
-            top: 50%;
-            left: 50%;
+            width: 66px;
+            top: calc(50% - 11px);
+            left: calc(50% - 8px);
             transform: scaleX(1.1) translate(-30px, -20px);
         }
     }
@@ -285,10 +287,10 @@
 .dahu {
     .paper {
         background: linear-gradient(
-            217deg,
-            #7c5b1d 102%,
-            #c0ad72 53%,
-            #fff2d3 0%
+            205deg,
+            #7c5b1d 2%,
+            #c0ad72 70%,
+            #fff2d3 100%
         );
         &:before {
             background: linear-gradient(219deg, #ffffff 2%, #ffecd0 100%);
@@ -302,11 +304,7 @@
     }
     .divi {
         .rect {
-            background-image: linear-gradient(
-                182deg,
-                #d2b782 614%,
-                #a6814b -802%
-            );
+            background-image: linear-gradient(to bottom, #d2b782, #a6814b);
         }
         .line {
             &:last-child {
@@ -335,8 +333,12 @@
 
 .dada {
     .paper {
-        background-image: linear-gradient(201deg, #eae8f4 180%, #4b455f 10%),
-            linear-gradient(211deg, #b2b2b7 88%, #544974 42%, #96959d -1%);
+        background-image: linear-gradient(
+            201deg,
+            #eae8f4 2%,
+            #544974 70%,
+            #96959d 100%
+        );
         &:before {
             background: linear-gradient(219deg, #b2b2b7 2%, #544974 100%);
         }

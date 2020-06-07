@@ -50,6 +50,7 @@ body {
             width: 100%;
             display: block;
             margin-top: 24px;
+            position: relative;
         }
         input#search-bar-input {
             margin: 0 auto;
@@ -70,16 +71,18 @@ body {
             -webkit-appearance: none;
         }
         .search-bar-icon {
-            position: relative;
-            float: right;
+            position: absolute;
             width: 24px;
             height: 24px;
-            top: -32px;
+            top: 8px;
             right: 8px;
+            img {
+                width: 100%;
+            }
         }
         .search-horizontal {
             width: calc(100% + 32px);
-            margin: 0 -16px;
+            margin: 16px -16px 0;
             padding: 0 16px;
             white-space: nowrap;
             display: flex;
@@ -112,7 +115,7 @@ body {
 
     p.note {
         text-align: left;
-        margin-top: 24px;
+        margin-top: 16px;
         font-size: 14px;
         font-weight: normal;
         font-stretch: normal;
@@ -123,7 +126,6 @@ body {
     }
     ul.atm-list {
         margin-top: 16px;
-
         font-size: 16px;
         font-weight: normal;
         font-stretch: normal;

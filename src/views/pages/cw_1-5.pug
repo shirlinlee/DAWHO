@@ -2,21 +2,88 @@
 extends ../includes/_layout.pug
 
 block title
-    title cw_1-4
+    title cw_1-5
 
 block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
     link(rel='stylesheet' href= assets + '/styles/result.css')
+
+include ../includes/components.pug
 
 block main
     div#appCardless
         header
-            img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
-            p.title 無卡提款
-            img.left(src=assets+"/images/icon/more.svg" alt="")
+            h1
+                img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+                | 無卡提款
+                img.dots(src=assets+"/images/icon/more_black.jpg" alt="")
+
+        .status_wrapper.success
+            img.status(src=assets+"/images/success.png", alt="")
+            h5.f16 取號成功
+
+        .content.bg_white
+            p.f14 有效時間
+            p.f30.count
+                span.min 29
+                | :
+                span.sec 57
+
+            span.f_grey_03.count_txt
+                font 請於有效時間內前往ATM完成提款 
+                a(href="#") 重新申請
+            p.f14.erial_title 你的提款序號
+            h5.erial
+                div
+                    span 4
+                div
+                    span 2
+                div
+                    span 4
+                div
+                    span 7
+                font -
+                div
+                    span 3
+                div
+                    span 5
+                div
+                    span 4
+                div
+                    span 9
+
+        .W100
+            ul.infos
+                li
+                    p 金融代號
+                    p 807 永豐銀行
+                li
+                    p 扣款帳號
+                    p
+                        | 營業部活期存款
+                        br
+                        | (807) 0016893949394934
+                li
+                    p 提款金額
+                    p.f_gold.f_b
+                        | 新台幣
+                        font 3,000
+                        | 元
+                li
+                    p 交易時間
+                    p 2020/04/30
+
+            .btn_wrapper
+                a.btn_gold(href="#") ATM據點查詢
+                a.btn_gold_light(href="#")
+                    span 取消本次提款
+
+            +notice('內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容容內容內容內容')
 
 
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
     script(src= assets + '/js/result.bundle.js' defer)
 

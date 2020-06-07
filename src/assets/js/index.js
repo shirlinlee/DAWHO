@@ -20,6 +20,9 @@ new Vue({
             // distance: 7,
             maxWidth: '218px',
         });
+        $(window).on('scroll', function () {
+            $('.tooltip_btn').tooltipster('hide');
+        });
     },
     methods: {
         openRights() {

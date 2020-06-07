@@ -15,6 +15,10 @@ new Vue({
                 animationDuration: 450,
                 trigger: 'click',
             });
+
+            $(window).on('scroll', function () {
+                $('.tooltip_btn').tooltipster('hide');
+            });
         });
     },
 });

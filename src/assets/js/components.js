@@ -1,5 +1,5 @@
 (function ($) {
-    $('.cw-notice-title a').on('click', function () {
+    $('.cw-notice-title').on('click', function () {
         $(this).toggleClass('active');
         $('.cw-notice-content').slideToggle();
     });

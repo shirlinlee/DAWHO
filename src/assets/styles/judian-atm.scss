@@ -46,10 +46,13 @@ body {
 #appJudianAtmContent {
     padding: 0 16px;
     .search-content {
+        display: flex;
+        flex-direction: column;
         .search-bar-container {
             width: 100%;
             display: block;
             margin-top: 24px;
+            height: 40px;
         }
         input#search-bar-input {
             margin: 0 auto;
@@ -85,6 +88,7 @@ body {
             display: flex;
             overflow-x: scroll;
             overflow-y: hidden;
+            margin-top: 16px;
         }
     }
     //circle

@@ -29,17 +29,4 @@
     $('.QA').on('click', '.title', function () {
         $(this).toggleClass('open').siblings('.content').slideToggle();
     });
-
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        centeredSlides: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
 })(jQuery);

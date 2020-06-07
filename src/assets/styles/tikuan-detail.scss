@@ -22,6 +22,7 @@ body {
         left: 0;
         position: fixed;
         z-index: 200;
+        background-color: #221e1d;
         .title {
             font-size: 20px;
             font-weight: normal;
@@ -32,7 +33,7 @@ body {
             text-align: center;
             color: #ffffff;
             margin: 7px 18px;
-
+            background-color: #221e1d;
             .back {
                 display: block;
                 height: 30px;

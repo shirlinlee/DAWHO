@@ -298,7 +298,8 @@ body {
     padding-bottom: 32px;
     .map {
         img {
-            width: 100%;
+            width: calc(100% + 32px);
+            margin: 0 -16px 0;
         }
     }
     .info {

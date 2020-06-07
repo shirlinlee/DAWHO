@@ -5,7 +5,10 @@ block title
     title cw_1-5
 
 block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
     link(rel='stylesheet' href= assets + '/styles/result.css')
+
+include ../includes/components.pug
 
 block main
     div#appCardless
@@ -75,15 +78,12 @@ block main
                 a.btn_gold_light(href="#")
                     span 取消本次提款
 
-            .notice
-                p 注意事項
-                a
-                    img(src=assets+"/images/icon/plus.svg" alt="")
-
+            +notice('內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容容內容內容內容')
 
 
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
     script(src= assets + '/js/result.bundle.js' defer)
 

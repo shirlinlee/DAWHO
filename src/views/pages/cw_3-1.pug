@@ -12,3 +12,7 @@ block main
     div#appTikuanSetting
         include ../includes/tikuan-setting/_container.pug
         +_container(true)
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)

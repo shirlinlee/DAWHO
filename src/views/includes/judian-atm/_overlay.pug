@@ -17,17 +17,17 @@ mixin overlay(isOpen)
             div.category
                 p.name 功能
                 div.category-content
-                    +check('withdraw','提款',true)
-                    +check('deposit','存款')
+                    +check('ol-withdraw','提款',true)
+                    +check('ol-deposit','存款')
             div.category
                 p.name 外幣幣別
                 div.category-content
-                    +check('cny','人民幣')
-                    +check('usd','美金')
-                    +check('jpy','日圓')
-                    +check('hkd','港幣',true)
+                    +check('ol-cny','人民幣')
+                    +check('ol-usd','美金')
+                    +check('ol-jpy','日圓')
+                    +check('ol-hkd','港幣',true)
             div.category
                 p.name 服務時間
                 div.category-content
-                    +check('24hour','24小時',true)
+                    +check('ol-24hour','24小時',true)
         button.confirm 確認

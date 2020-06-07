@@ -4,10 +4,10 @@ mixin switch(status)
         .toggle-switch
 
 
-mixin select(list)
+mixin select(list,target)
     select.cw-select
-        each data in list
-            option(value=data) #{data}
+        each data,i in list
+            option(value=data selected=(target==i)?true:false) #{data}
 
 mixin dropdown(list,placeholder)
     select.cw-dropdown(required)
@@ -20,3 +20,11 @@ mixin check(id,label,isChecked)
         input(id='check_'+id,type='checkbox', checked=isChecked)
         label(for='check_'+id) #{label}
 
+mixin notice(content,isLight)
+    div.cw-notice
+        .cw-notice-title
+            p(class=(isLight)?'light':'') 注意事項
+            a
+                img
+        .cw-notice-content
+            p(class=(isLight)?'light':'') #{content}

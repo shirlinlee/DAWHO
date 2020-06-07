@@ -4,11 +4,11 @@
         $('p.money-note span.hint').hide();
 
         $('p.money-note span.note').show();
-        $('div.quick').show();
+        // $('div.quick').show();
     });
     $('.money').on('focusout', function () {
         $('p.money-note span.note').hide();
-        $('div.quick').hide();
+        // $('div.quick').hide();
 
         var min = parseInt($(this).attr('min'), 10);
         if (this.value < min) {

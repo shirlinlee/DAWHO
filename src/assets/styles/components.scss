@@ -94,13 +94,13 @@ select.cw-dropdown {
 
 //check
 .cw-check {
-    margin-right: 8px;
-
     input {
         position: absolute;
         left: -9999px;
     }
     label {
+        margin-right: 8px;
+        margin-bottom: 8px;
         display: inline-block;
         position: relative;
         padding: 6px 12px 6px 12px;
@@ -136,5 +136,60 @@ select.cw-dropdown {
         left: 9px;
         top: 4px;
         transition: background-color 0.2s, content 0.2s;
+    }
+}
+
+// 注意事項
+div.cw-notice {
+    margin-top: 32px;
+    margin-bottom: 56px;
+    padding: 8px;
+    background-color: rgba(195, 139, 71, 0.1);
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        p {
+            float: left;
+            font-size: 14px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.71;
+            letter-spacing: normal;
+            color: #111111;
+            &.light {
+                color: #fed28f;
+            }
+        }
+        a {
+            float: right;
+            img {
+                content: url($assets + '/images/icon/plus.svg');
+                width: 20px;
+                height: 20px;
+                min-width: 20px;
+                min-height: 20px;
+            }
+            &.active {
+                content: url($assets + '/images/icon/minus.svg');
+            }
+        }
+    }
+    &-content {
+        display: none;
+        text-align: left;
+        margin-top: 16px;
+        p {
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: #111111;
+            &.light {
+                color: #ffffff;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 - var data = { withdraw : "已提款", cancel : "已取消", fail : "已失效"}
+include ../components.pug
 mixin _containerSearch(status, hasData)
     include ./_header.search.pug
     div#appChaxunRecordContent
@@ -47,7 +48,4 @@ mixin _containerSearch(status, hasData)
             else
                 img(src=assets+"/images/no-result.svg" alt="")
                 p.no-data 尚無#{data[status]}記錄
-        div.notice
-            p 注意事項
-            a
-                img(src=assets+"/images/icon/plus.svg" alt="")
+        +notice('內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容容內容內容內容')

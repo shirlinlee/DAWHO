@@ -15,14 +15,9 @@ body {
 }
 
 #appTikuanDetail {
-    padding-top: 180px;
     > header {
-        background: url($assets + '/images/cw_header.png') no-repeat;
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
         width: 100%;
-        height: 180px;
+        height: 30px;
         top: 0;
         left: 0;
         position: fixed;
@@ -69,6 +64,39 @@ body {
 }
 #appTikuanDetailContent {
     padding: 0 16px;
+    .status-content {
+        background: url($assets + '/images/cw_header.png') no-repeat;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: calc(100% + 32px);
+        margin: 0 -16px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        &-body {
+            margin-bottom: 24px;
+            img {
+                margin-top: 24px;
+                width: 56px;
+                height: 56px;
+            }
+            p {
+                margin-top: 12px;
+                font-size: 16px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #fee1b7;
+                &.white {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
     .value-content {
         p {
             padding-top: 24px;

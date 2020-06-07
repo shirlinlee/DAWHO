@@ -1,3 +1,4 @@
+include ../components.pug
 mixin _container(status)
     header
         h1.title
@@ -9,7 +10,6 @@ mixin _container(status)
                 p.name 營業部活期存款
                 div.account
                     p (807) 0016893949394934
-                    include ../components.pug
                     +switch(true)
                 p.status 2020/04/30 啟用
         else
@@ -20,7 +20,4 @@ mixin _container(status)
                     br
                     | 如您欲啟用無卡提款服務，請攜帶本行晶片金融卡至永豐銀行ATM進行設定，謝謝。
 
-        div.notice
-            p 注意事項
-            a
-                img(src=assets+"/images/icon/plus.svg" alt="")
+        +notice('內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容容內容內容內容',true)

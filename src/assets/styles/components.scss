@@ -46,7 +46,6 @@ $active_bg: rgba(254, 210, 143, 0.5);
 // select
 select.cw-select {
     outline: none;
-    -webkit-appearance: none;
     background-image: url($assets + '/images/icon/cw-dropdown.svg');
     background-position: right 12px center;
     background-size: 16px;
@@ -69,7 +68,6 @@ select.cw-select {
 // dropdown
 select.cw-dropdown {
     outline: none;
-    -webkit-appearance: none;
     background-image: url($assets + '/images/icon/cw-dropdown.svg');
     background-position: right 8px center;
     background-size: 16px;

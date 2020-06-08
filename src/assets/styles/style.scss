@@ -393,14 +393,8 @@ button:focus {
 }
 
 textarea,
-input[type='number'],
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'] {
+input,
+select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

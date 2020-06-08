@@ -385,10 +385,23 @@ main {
     }
 }
 
-
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+textarea,
+input[type='number'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }

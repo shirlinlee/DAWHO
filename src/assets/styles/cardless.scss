@@ -208,6 +208,10 @@ body {
         }
 
         input[type='number'].money {
+            /* Remove First */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
             margin-top: 8px;
             padding: 9px 32px 9px 8px;
             outline: none;

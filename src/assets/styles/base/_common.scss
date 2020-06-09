@@ -16,7 +16,36 @@ a {
 
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', 微軟正黑體, 'Microsoft JhengHei', sans-serif;
+    text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/fonts/Roboto-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/fonts/Roboto-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url($assets + '/fonts/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+
 
 img {
     max-width: 100%;

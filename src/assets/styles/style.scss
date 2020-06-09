@@ -152,7 +152,7 @@ main {
     z-index: 200;
     .close {
         display: block;
-        background-image: url(/assets/images/icon/close.svg);
+        background-image: url($assets + '/images/icon/close.svg');
         @extend %icon_position_right;
     }
 }
@@ -160,18 +160,18 @@ main {
 .tooltip {
     display: inline-block;
     padding-right: 20px;
-    background-image: url(/assets/images/icon/info.svg);
+    background-image: url($assets + '/images/icon/info.svg');
     @extend %icon_position_right;
     cursor: pointer;
 }
 
 .in_progress {
-    background-image: url(/assets/images/icon/unacommpolish.svg);
+    background-image: url($assets + '/images/icon/unacommpolish.svg');
     @extend %icon_position_right;
 }
 
 .done {
-    background-image: url(/assets/images/icon/acommpolish.svg);
+    background-image: url($assets + '/images/icon/acommpolish.svg');
     @extend %icon_position_right;
 }
 

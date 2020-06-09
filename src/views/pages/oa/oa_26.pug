@@ -20,7 +20,7 @@ block main
                 .id-card-display.id-card-display-right
                     h2.sub-ttl 
                         span.icn 
-                            img(src="/assets/images/open/icon/check@3x.png", alt="right")
+                            img(src=assets + "/images/open/icon/check@3x.png", alt="right")
                         span.txt 正確拍攝方式
 
                     ul.list-style-disc
@@ -29,7 +29,7 @@ block main
 
                     .id-card-photo
                         .photo-box.mb-1
-                            img(src="/assets/images/open/idCard/sdk@2x.png", alt="")
+                            img(src=assets + "/images/open/idCard/sdk@2x.png", alt="")
                         .note 註1：第二證件可使用健保卡、駕照、護照上傳。
                         
 
@@ -38,26 +38,26 @@ block main
                 .id-card-display.id-card-display-wrong
                     h2.sub-ttl 
                         span.icn 
-                            img(src="/assets/images/open/icon/fail@3x.png", alt="right")
+                            img(src=assets + "/images/open/icon/fail@3x.png", alt="right")
                         span.txt.text-danger 錯誤拍攝方式
                     p(style="max-width:328px") 若健保卡照片已磨損或無大頭照，請以其他有清晰大頭照證件上傳（例如：駕照、護照等）。上傳影像須為完整彩色清晰影像。
                         
                     .id-card-photo
                         .id-card-photo-item
                             .photo
-                                img(src="/assets/images/open/idCard/blur-pic@2x.png", alt="照片模糊")
+                                img(src=assets + "/images/open/idCard/blur-pic@2x.png", alt="照片模糊")
                             .text 照片模糊
                         .id-card-photo-item
                             .photo
-                                img(src="/assets/images/open/idCard/nopic@2x.png", alt="無照片")
+                                img(src=assets + "/images/open/idCard/nopic@2x.png", alt="無照片")
                             .text 無照片
                         .id-card-photo-item
                             .photo
-                                img(src="/assets/images/open/idCard/saturation-pic@2x.png", alt="黑白照片")
+                                img(src=assets + "/images/open/idCard/saturation-pic@2x.png", alt="黑白照片")
                             .text 黑白照片
                         .id-card-photo-item
                             .photo
-                                img(src="/assets/images/open/idCard/nocomplete-pic@2x.png", alt="影像不完整")
+                                img(src=assets + "/images/open/idCard/nocomplete-pic@2x.png", alt="影像不完整")
                             .text 影像不完整
 
             .center.mt-2

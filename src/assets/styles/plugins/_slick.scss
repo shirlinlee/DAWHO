@@ -9,7 +9,7 @@
         top: calc(50% - 33px);
         width: 66px;
         height: 66px;
-        background: url('/assets/images/open/icon/slick-next@3x.png') no-repeat center center;
+        background: url($assets + '/images/open/icon/slick-next@3x.png') no-repeat center center;
         background-size: 100% auto;
         font-size: 0px;
         z-index: 3;

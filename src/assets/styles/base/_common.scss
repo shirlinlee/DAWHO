@@ -253,7 +253,7 @@ img {
         color: #111;
         border: 1px solid #aaaaaa;
         border-radius: 5px;
-        background: #fff url(/assets/images/open/icon/dropdown@2x.png) no-repeat 98% center;
+        background: #fff url($assets + '/images/open/icon/dropdown@2x.png') no-repeat 98% center;
         background-size: 16px auto;
         -moz-appearance: none;
         -webkit-appearance: none;
@@ -585,7 +585,7 @@ hr {
     .icon {
         width: 0;
         height: 24px;
-        background: url(/assets/images/open/icon/check-brown@3x.png) no-repeat center center;
+        background: url($assets + '/images/open/icon/check-brown@3x.png') no-repeat center center;
         background-size: 100% auto;
         transition: width .1s ease;
     }

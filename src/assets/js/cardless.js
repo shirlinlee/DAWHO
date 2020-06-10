@@ -29,4 +29,17 @@
     $('.QA').on('click', '.title', function () {
         $(this).toggleClass('open').siblings('.content').slideToggle();
     });
+
+    $('.account').on('click', '.account-info', function () {
+        $('.lb_wrapper').addClass('show');
+    });
+
+    $('body').on('click', '.head .f_gold', function () {
+        $('.lb_wrapper').removeClass('show');
+    });
+
+    $('body').on('click', '.infos li', function () {
+        $('body').find('.infos li').removeClass('accountDetail');
+        $(this).addClass('accountDetail');
+    });
 })(jQuery);

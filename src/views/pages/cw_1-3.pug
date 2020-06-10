@@ -5,6 +5,7 @@ block title
     title cw_1-3
 
 block scss
+    link(rel='stylesheet' href= assets + '/styles/result.css')
     link(rel='stylesheet' href= assets + '/styles/cardless.css')
     link(rel='stylesheet' href= assets + '/styles/components.css')
 
@@ -52,6 +53,30 @@ block main
             +notice('內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容容內容內容內容')
 
 
+        .lb_wrapper
+            .lb
+                div.head
+                    h5.f20.f_b 扣款帳號
+                    a.f_gold.f_b(href="#") 取消
+
+                ul.infos
+                    li
+                        | 營業部活期存款
+                        br
+                        | (807)0016893949394934
+                    li
+                        | 營業部活期存款
+                        br
+                        | (807)0016893949394934
+
+                    li
+                        | 營業部活期存款
+                        br
+                        | (807)0016893949394934
+
+
+
+                a.btn_gold(href="#") 確定
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)

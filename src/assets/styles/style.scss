@@ -10,6 +10,7 @@ body {
 * {
     box-sizing: border-box;
     font-family: 'Roboto', 微軟正黑體, 'Microsoft JhengHei', sans-serif;
+    text-size-adjust: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
@@ -393,14 +394,8 @@ button:focus {
 }
 
 textarea,
-input[type='number'],
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'] {
+input,
+select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

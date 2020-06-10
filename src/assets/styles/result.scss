@@ -12,8 +12,7 @@
         h1 {
             font-size: 20px;
             font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
+
             line-height: 44px;
             display: block;
             letter-spacing: normal;
@@ -110,7 +109,7 @@
                 margin: 0 2px;
                 width: 30px;
                 height: 44px;
-                display: inline-block;
+                display: block;
                 line-height: 44px;
                 box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.23);
                 border-style: solid;
@@ -147,8 +146,7 @@
         margin: 24px auto 48px;
         font-size: 16px;
         font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
+
         line-height: 1.5;
         letter-spacing: normal;
         color: #111111;
@@ -172,8 +170,7 @@
             p.foreign {
                 font-size: 16px;
                 font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
+
                 line-height: 1.5;
                 letter-spacing: normal;
                 color: #c38b47;
@@ -195,8 +192,7 @@
             height: 24px;
             font-size: 14px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
+
             line-height: 1.71;
             letter-spacing: normal;
             color: #111111;

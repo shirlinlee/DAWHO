@@ -27,8 +27,7 @@ body {
         .title {
             font-size: 20px;
             font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
+
             line-height: 1.1;
             letter-spacing: normal;
             text-align: center;
@@ -52,7 +51,7 @@ body {
             width: 100%;
             display: block;
             margin-top: 24px;
-            height: 40px;
+            position: relative;
         }
         input#search-bar-input {
             margin: 0 auto;
@@ -66,23 +65,23 @@ body {
             outline: none;
             font-size: 16px;
             font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
+
             line-height: normal;
             letter-spacing: normal;
-            -webkit-appearance: none;
         }
         .search-bar-icon {
-            position: relative;
-            float: right;
+            position: absolute;
             width: 24px;
             height: 24px;
-            top: -32px;
+            top: 8px;
             right: 8px;
+            img {
+                width: 100%;
+            }
         }
         .search-horizontal {
             width: calc(100% + 32px);
-            margin: 0 -16px;
+            margin: 16px -16px 0;
             padding: 0 16px;
             white-space: nowrap;
             display: flex;
@@ -116,22 +115,19 @@ body {
 
     p.note {
         text-align: left;
-        margin-top: 24px;
+        margin-top: 16px;
         font-size: 14px;
         font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
+
         line-height: normal;
         letter-spacing: normal;
         color: #111111;
     }
     ul.atm-list {
         margin-top: 16px;
-
         font-size: 16px;
         font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
+
         line-height: 1.5;
         letter-spacing: normal;
         color: #111111;
@@ -173,8 +169,7 @@ body {
                     margin-right: 8px;
                     font-size: 16px;
                     font-weight: bold;
-                    font-stretch: normal;
-                    font-style: normal;
+
                     line-height: normal;
                     letter-spacing: normal;
                     text-align: right;
@@ -237,8 +232,7 @@ body {
         .title {
             font-size: 20px;
             font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
+
             line-height: 1.1;
             letter-spacing: normal;
             text-align: center;
@@ -267,8 +261,7 @@ body {
             p.name {
                 font-size: 16px;
                 font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
+
                 line-height: 1.5;
                 letter-spacing: normal;
                 color: #111111;
@@ -280,8 +273,7 @@ body {
         margin-bottom: 32px;
         font-size: 16px;
         font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
+
         line-height: normal;
         letter-spacing: normal;
         text-align: center;
@@ -318,8 +310,7 @@ body {
 
             font-size: 16px;
             font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
+
             line-height: normal;
             letter-spacing: normal;
             color: #111111;
@@ -330,8 +321,7 @@ body {
         text-align: left;
         font-size: 16px;
         font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
+
         line-height: normal;
         letter-spacing: normal;
         color: #111111;
@@ -356,8 +346,7 @@ body {
                 p {
                     font-size: 16px;
                     font-weight: normal;
-                    font-stretch: normal;
-                    font-style: normal;
+
                     line-height: normal;
                     letter-spacing: normal;
                     color: #818181;
@@ -376,8 +365,7 @@ body {
         margin-bottom: 32px;
         font-size: 16px;
         font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
+
         line-height: normal;
         letter-spacing: normal;
         text-align: center;

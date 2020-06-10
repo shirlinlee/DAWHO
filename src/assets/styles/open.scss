@@ -1,9 +1,10 @@
 
-@import 'plugins/_slick';
-@import 'plugins/_select2';
+
 @import 'base/_common';
 @import 'base/_modal';
- 
+ @import 'plugins/_slick';
+@import 'plugins/_select2';
+@import 'plugins/_cropper';
 
 
 .open-wrapper{
@@ -128,10 +129,7 @@
 
  
 /* card slider */
-#card-slider-slick.swiper-container{
-    margin-bottom: 32px;
-    overflow: inherit;
-}
+
 .card-sldier{
     // width: 100%;
     // max-width: 940px;
@@ -148,7 +146,10 @@
     //     // justify-content: space-around;
     // }
     &-container{
-        padding: 20px 16px 0;
+        padding: 20px 16px 68px;
+        @include maxW-768{
+            padding: 20px 16px 0;
+        }
     }   
     &-item {
         position: relative;
@@ -175,6 +176,10 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            @include maxW-device-768{
+                height: 240px;
+                min-height: 240px;
+            }
         }
         &_title{
             display: flex;
@@ -188,12 +193,12 @@
             }   
             .ttl-tag{
                 margin-left: 8px;
-                padding: .1em .5em;
+                padding: 0 .4em;
                 border-radius: 5px;
                 border: 1px solid #c38b47;
                 font-size: 0.875rem;
                 font-weight: normal;
-                line-height: 1.5;
+                line-height: 1.4;
                 color: #c38b47;
             }
         }
@@ -203,7 +208,7 @@
             }
             .content-list{
                 position: relative;
-                margin-bottom: 1rem;
+                margin-bottom: 11px;
                 font-size: 0.875rem;
                 line-height: 1.5;
                 color: #111111;
@@ -231,15 +236,13 @@
             }
         }
         &_btn{
-            padding: 20px 0 24px;
-            margin-top: auto;
+            padding: 16px 0 24px;
             text-align: center;
-            @include maxW-768 {
-                position: absolute;
-                bottom: 16px;
-                left: 10%;
-                right: 10%;
-            }
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 0;
+           
             .btn {
                 min-width: initial;
                 width: 100%;
@@ -719,69 +722,69 @@
         position: relative;
         width: 343px;
         height: 230px;
-        background: rgba(0,0,0,0.7);
+        background: #333;
         border-radius: 10px;
-       // overflow: hidden;
+        overflow: hidden;
 
         display: flex;
         align-items: center;
         justify-content: center;
         .photo{
-            width: 240px;
-            height: 150px;
+            width: 100%;
+        }
+    }
+   
+}
+.upload-card-tool {
+    width: 273px;
+    height: 49px;
+    margin: 24px auto;
+    border-radius: 10px;
+    background-color: #f9f4ed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .docs-buttons{
+         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn-group{
+            display: flex;
+            align-items: center;
+        }
+        .btn-rotate {
+            min-width: 44px;
+            height: 44px;
+            &_left{
+                background: url($assets + '/images/open/icon/icon-rotate-left@3x.png') no-repeat center center;
+                background-size: 24px auto;
+            }
+            &_right{
+                background: url($assets + '/images/open/icon/icon-rotate-right@3x.png') no-repeat center center;
+                background-size: 24px auto;
+            }
+        }
+        //input
+        label.btn-upload{
+            width: 7em;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.13;
+            color: #c38b47;
+            cursor: pointer;
+            border-left: 1px solid #c38b47;
+            padding-left: 1.5em;
+            margin-left: 1em;
+        }
+        #inputImage {
+            opacity: 0;
+            height: 0;
+            visibility: hidden;
+            width: 0;
         }
     }
 }
-
-
-.resizable {
-  width: 280px;
-  height: 175px;
-  position: absolute;
-  top: 45px;
-  left: 45px;
-}
-
-.resizable .resizers{
-  width: 100%;
-  height: 100%;
-  border: 4px solid red;
-  box-sizing: border-box;
-}
-
-.resizable .resizers .resizer{
-  width: 45px;
-  height: 45px;
-  border-radius: 50%; /*magic to turn square into circle*/
-  position: absolute;
-}
-
-.resizable .resizers .resizer.top-left {
-  left: -20px;
-  top: -20px;
-  background: rgba(255,70,65, .7);
-  cursor: nwse-resize; /*resizer cursor*/
-}
-.resizable .resizers .resizer.top-right {
-  right: -20px;
-  top: -20px;
-  background: rgba(49,255,49, .7);
-  cursor: nesw-resize;
-}
-.resizable .resizers .resizer.bottom-left {
-  left: -20px;
-  bottom: -20px;
-  background: rgba(0,0,255, .7);
-  cursor: nesw-resize;
-}
-.resizable .resizers .resizer.bottom-right {
-  right: -20px;
-  bottom: -20px;
-  background: rgba(239,255,64, .7);
-  cursor: nwse-resize;
-}
-
-
 
 
 

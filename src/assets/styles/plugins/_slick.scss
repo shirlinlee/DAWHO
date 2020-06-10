@@ -1,9 +1,30 @@
 #card-slider-slick{
-
-    .slick-list{
-        // padding: 0 12vw 0 12px;
+    &.swiper-container{
+        margin-bottom: 32px;
+        overflow: inherit;
+        @include maxW-device-768 {
+            margin-bottom: 62px;
+        }
     }
-
+    
+    .swiper-wrapper {
+        justify-content: center;
+        @include maxW-device-768() {
+            justify-content: initial;
+        }
+    }
+    .swiper-slide{
+        // padding: 0 12vw 0 12px;
+        max-width: 260px;
+        min-height: 522px;
+        margin: 0 6px;
+        @include maxW-device-768() {
+            max-width: 100%;
+            height: 542px;
+            margin: 0;
+        }
+    }
+    
     .slick-arrow{
         position: absolute;
         top: calc(50% - 33px);
@@ -25,45 +46,96 @@
         }
         
     }
-    .slick-prev{
-        left: -10px;
-        transform: rotate(180deg);
-    }
-    .slick-next{
-        right: -10px;
-    }
-    .slick-dots{
-        position: absolute;
-        bottom: -20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .slick-dots {
-        li {
+    .swiper-button-prev {
+        top: 40%;
+        left: -16px;
+        width: 66px;
+        height: 66px;
+        background: url($assets + '/images/open/icon/prev@3x.png') no-repeat center center;
+        background-size: 100% auto;
+        &:focus {
+            outline: none;
+        }
+        @include minW-768 {
+            display: none;
+        }
+    }
+    .swiper-button-next {
+        top: 40%;
+        right: -16px;
+        width: 66px;
+        height: 66px;
+        background: url($assets + '/images/open/icon/next@3x.png') no-repeat center center;
+        background-size: 100% auto;
+        &:focus {
+            outline: none;
+        }
+        @include minW-768 {
+            display: none;
+        }
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-family: initial;
+        color: transparent;
+    }
+    .swiper-pagination-bullets{
+        @include maxW-device-768 {
+            bottom: -37px;
+        }
+        .swiper-pagination-bullet{
+             width: 6px;
+            height: 6px;
             display: inline-block;
-            margin: 0 3px;
-            button {
-                background: #e3e3e3;
-                text-indent: -99999px;
-                -webkit-appearance: none;
-                padding: 0;
-                width: 6px;
-                height: 6px;
-                border: none;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
-            }
-            &.slick-active {
-                button {
-                    background: #d4b572;
-                }
+            border-radius: 100%;
+            background: #c5c5c5;
+            opacity: 1;
+            &.swiper-pagination-bullet-active{
+                background-image: linear-gradient(145deg, #ecbd72 21%, #cd9545 92%);
             }
         }
     }
+
+
+    // .slick-prev{
+    //     left: -10px;
+    //     transform: rotate(180deg);
+    // }
+    // .slick-next{
+    //     right: -10px;
+    // }
+    // .slick-dots{
+    //     position: absolute;
+    //     bottom: -20px;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
+
+    // .slick-dots {
+    //     li {
+    //         display: inline-block;
+    //         margin: 0 3px;
+    //         button {
+    //             background: #e3e3e3;
+    //             text-indent: -99999px;
+    //             -webkit-appearance: none;
+    //             padding: 0;
+    //             width: 6px;
+    //             height: 6px;
+    //             border: none;
+    //             border-radius: 50%;
+    //             -webkit-border-radius: 50%;
+    //             -moz-border-radius: 50%;
+    //             -ms-border-radius: 50%;
+    //             -o-border-radius: 50%;
+    //         }
+    //         &.slick-active {
+    //             button {
+    //                 background: #d4b572;
+    //             }
+    //         }
+    //     }
+    // }
 
 }

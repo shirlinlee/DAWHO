@@ -5,8 +5,6 @@ block title
 
 block scss
 
-block js
-
 block main
 
     #appOpen
@@ -14,28 +12,38 @@ block main
         .view-992
 
             .upload-card-box
-                h1.main-title 確認證件裁切範圍
-                p 請手動將紅框線對準證件的四角
+                h1.main-title.mb-1 確認證件裁切範圍
+                p.mb-2 請手動將紅框線對準證件的四角
                 
                 .upload-photo-bg
                     .photo
-                        img(src=assets + "/images/open/idCard/blur-pic@2x.png", alt="照片模糊")
-                    .resizable
-                        .resizers
-                            .resizer.top-left
-                            .resizer.top-right
-                            .resizer.bottom-left
-                            .resizer.bottom-right
-                
+                        img#uploaded-id-card(src=assets + "/images/open/idCard/blur-pic@2x.png", alt="")
+                    //- .resizable
+                    //-     .resizers
+                    //-         .resizer.top-left
+                    //-         .resizer.top-right
+                    //-         .resizer.bottom-left
+                    //-         .resizer.bottom-right
+            .upload-card-tool    
+                .docs-buttons
+                    .btn-group
+                        button.btn.btn-rotate.btn-rotate_left(type="button", data-method="rotate", data-option="-45", title="Rotate Left")
+                        button.btn.btn-rotate.btn-rotate_right(type="button", data-method="rotate", data-option="-45", title="Rotate Right")
+                    .btn-group
+                        label.btn-upload(for="inputImage", title="Upload image file")
+                            input.sr-only#inputImage(type="file", name="file", accept=".jpg,.jpeg,.png")
+                            span 重新上傳
+
+          
+          
 
             .center.d-flex.flex-column.mt-2
                 button.btn.btn-primary(type="button") 確認
-                a.btn.text-center.mt-1(href="") 重新上傳
         
         //- lightbox
-        .modal-backdrop.fade.show
-        .modal.fade.show#upload-card-modal(tabindex="-1",role="dialog", aria-hidden="true")
-            .modal-dialog
+        //- .modal-backdrop.fade.show
+        //- .modal.fade.show#upload-card-modal(tabindex="-1",role="dialog", aria-hidden="true")
+        //-     .modal-dialog
                 .modal-content
                     .modal-header
                         h5.modal-title 確認證件裁切範圍
@@ -61,5 +69,11 @@ block main
                     .modal-footer.column
                         button.btn.btn-primary(type="button") 確認
                         a.btn.text-center.mt-1(href="") 重新上傳
-    
-    
+
+
+block js
+    script(src = public +'/lib/js/cropper.js' defer)
+    script(src = public +'/lib/js/jquery-cropper.js' defer)
+    script(src = assets + '/js/cropper.bundle.js' defer)
+
+

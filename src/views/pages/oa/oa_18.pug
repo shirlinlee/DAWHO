@@ -4,8 +4,6 @@ block title
     title 開戶進度查詢
 
 block scss
-    
-block js
 
 block main 
     #appOpen
@@ -23,8 +21,7 @@ block main
                                 .main-ttl 銀行帳戶驗證
                                 .ttl-tag 快速驗證
                             .card-sldier-item_content
-                                ul.content-ul 
-                                    li.content-list.check 可立即開啟金融卡非約定轉帳功能
+                                ul.content-ul  
                                     li.content-list.check 轉帳限額單筆１萬、單日３萬、單月５萬
                                     li.content-list.fail 無法使用數位銀行驗證，如Richart, O-bank等
                                     li.content-list.check 他行留存的行動電話需與本行留存的相同才能進行驗證
@@ -52,7 +49,6 @@ block main
                                 .ttl-tag 快速驗證
                             .card-sldier-item_content
                                 ul.content-ul
-                                    li.content-list.check 可立即開啟金融卡非約定轉帳功能
                                     li.content-list.check 轉帳限額單筆5萬、單日10萬、單月20萬
                                     li.content-list.check 線上申請完成後，30日內須帶雙證件前往鄰近永豐銀行分行進行驗證
                             .card-sldier-item_btn
@@ -62,4 +58,6 @@ block main
                 .swiper-button-prev.card-arrow-prev
                 .swiper-button-next.card-arrow-next
 
-            
+
+block js
+    script(src=assets + '/js/oa-18.bundle.js' defer)

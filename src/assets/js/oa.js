@@ -14,37 +14,6 @@ $(document).ready(function() {
         });
     } 
 
-    //oa_18
-    var swiper = new Swiper('#card-slider-slick', {
-        slidesPerView: 1.1,
-        spaceBetween: 12,
-        centeredSlides: true,
-        //init: true,
-        navigation: {
-            nextEl: '.swiper-button-prev',
-            prevEl: '.swiper-button-next',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            640: {
-                init: true,
-                slidesPerView: 3,
-                spaceBetween: 12,
-                centeredSlides: true,
-                navigation: {
-                    nextEl: '.swiper-button-prev',
-                    prevEl: '.swiper-button-next',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                }
-            }
-        }
-    });
     
 
     //oa-28.html

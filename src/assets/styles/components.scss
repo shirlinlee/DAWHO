@@ -25,7 +25,7 @@ $active_bg: rgba(254, 210, 143, 0.5);
         width: 20px;
         height: 20px;
         position: absolute;
-        top: -4px;
+        top: -3px;
         left: 0px;
         transition: left 0.25s;
     }
@@ -180,12 +180,29 @@ div.cw-notice {
         p {
             font-size: 12px;
             font-weight: normal;
-
             line-height: 1.5;
             letter-spacing: normal;
             color: #111111;
             &.light {
                 color: #ffffff;
+            }
+        }
+        &.light {
+            ul {
+                color: #ffffff;
+            }
+        }
+        ul {
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: normal;
+            color: #111111;
+            line-height: 1.5;
+            li:not(:first-child) {
+                margin-top: 8px;
+                ul {
+                    margin-left: 1em;
+                }
             }
         }
     }

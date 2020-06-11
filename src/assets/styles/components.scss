@@ -157,18 +157,19 @@ div.cw-notice {
         }
         a {
             float: right;
-            img {
-                content: url($assets + '/images/icon/plus.svg');
+            p {
+                background-image: url($assets + '/images/icon/plus.svg');
+                background-repeat: no-repeat;
+                background-position: center;
                 width: 20px;
                 height: 20px;
-                min-width: 20px;
-                min-height: 20px;
+                display: block;
             }
         }
         &.active {
             a {
-                img {
-                    content: url($assets + '/images/icon/minus.svg');
+                p {
+                    background-image: url($assets + '/images/icon/minus.svg');
                 }
             }
         }

@@ -198,14 +198,9 @@ body {
             margin: 0;
         }
 
-        /* Firefox */
         input[type='number'].money {
+            /* Firefox */
             -moz-appearance: textfield;
-        }
-
-        input[type='number'].money {
-            /* Remove First */
-            -moz-appearance: none;
             appearance: none;
             margin-top: 8px;
             padding: 9px 32px 9px 8px;
@@ -243,6 +238,7 @@ body {
                 color: #818181;
             }
         }
+
         p.money-note {
             margin-top: 4px;
             text-align: left;

@@ -34,7 +34,7 @@
         $('.lb_wrapper').addClass('show');
     });
 
-    $('body').on('click', '.head .f_gold', function () {
+    $('body').on('click', '.head .f_gold, .lb a', function () {
         $('.lb_wrapper').removeClass('show');
     });
 

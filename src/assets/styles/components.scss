@@ -143,6 +143,7 @@ div.cw-notice {
     &-title {
         display: flex;
         justify-content: space-between;
+        position: relative;
         p {
             float: left;
             font-size: 14px;
@@ -157,6 +158,9 @@ div.cw-notice {
         }
         a {
             float: right;
+            position: absolute;
+            top: 0;
+            right: 10px;
             p {
                 background-image: url($assets + '/images/icon/plus.svg');
                 background-repeat: no-repeat;

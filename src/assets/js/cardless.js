@@ -49,4 +49,8 @@
         $('body').find('.infos li').removeClass('accountDetail');
         $(this).addClass('accountDetail');
     });
+
+    $('.quick button').on('mousedown touchstart click', function () {
+        $('input.money').val(parseInt($(this).data('price'), 10));
+    });
 })(jQuery);

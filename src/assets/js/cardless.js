@@ -4,11 +4,11 @@
         $('p.money-note span.hint').hide();
 
         $('p.money-note span.note').show();
-        $('div.quick').show();
+        $('div.quick').css('display', 'inline-block');
     });
     $('.money').on('focusout', function () {
         $('p.money-note span.note').hide();
-        $('div.quick').hide();
+        // $('div.quick').hide();
         $('p.money-note span.hint').hide();
         var min = parseInt($(this).attr('min'), 10);
         if (this.value < min) {
@@ -30,6 +30,13 @@
         $(this).toggleClass('open').siblings('.content').slideToggle();
     });
 
+    $('.quick button').on('mousedown touchstart click', function () {
+        $('.quick button').removeClass('active');
+        $('input.money').val(parseInt($(this).data('price'), 10));
+        $(this).addClass('active');
+        $('.money').removeClass('hint');
+        $('p.money-note span.hint').hide();
+    });
     $('.account').on('click', '.account-info', function () {
         $('.lb_wrapper').addClass('show');
     });
@@ -41,9 +48,12 @@
     $('body').on('click', '.infos li', function () {
         $('body').find('.infos li').removeClass('accountDetail');
         $(this).addClass('accountDetail');
+<<<<<<< HEAD
     });
 
     $('.quick button').on('mousedown touchstart click', function () {
         $('input.money').val(parseInt($(this).data('price'), 10));
+=======
+>>>>>>> dev/junx
     });
 })(jQuery);

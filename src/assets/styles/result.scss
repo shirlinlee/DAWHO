@@ -105,6 +105,7 @@
                 padding: 0 6px;
             }
             div {
+                font-weight: bold;
                 text-align: center;
                 margin: 0 2px;
                 width: 30px;
@@ -221,10 +222,16 @@
         border-bottom-right-radius: 0;
         padding: 16px;
         text-align: left;
+        transform: translate(0, 105%);
+        -webkit-transform: translate(0, 105%);
+        -moz-transform: translate(0, 105%);
+        -ms-transform: translate(0, 105%);
+        -o-transform: translate(0, 105%);
         .head {
             display: inline-block;
             width: 100%;
             line-height: 30px;
+            margin-bottom: 24px;
             h5 {
                 float: left;
             }
@@ -235,11 +242,10 @@
         }
 
         .accountDetail {
-            background-color: #3d3d3d;
-            padding: 16px 8px;
-            line-height: 1.88;
+            background-color: #3d3d3d !important;
+            // padding: 16px 8px;
+            // line-height: 1.88;
             color: #fee1b7;
-            margin: 24px auto 0;
         }
         .infos {
             margin-top: 0;
@@ -252,6 +258,15 @@
         .btn_gold {
             text-align: center;
             max-width: 215px;
+        }
+    }
+    .lb_wrapper.show {
+        .lb {
+            transform: translate(0, 0);
+            -webkit-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
         }
     }
 }

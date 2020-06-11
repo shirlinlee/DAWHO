@@ -19,8 +19,18 @@ block main
 
         .container
            p.t_right.f_grey_02.f12 資料期間： 2020年 1月
-           p.t_center.f_grey_01.f14 資料期間內達成任一項任務，當月就能升等喔！
+           p.t_center.f_grey_01.f14 資料期間內達成任一項任務，次月就能升等喔！
            ul
+            li.achieve
+                img.status_01(src=assets +"/images/icon/12.svg", alt="")
+                img.status_02(src=assets +"/images/icon/12_disable.svg", alt="")
+                div
+                    font.f14.f_grey_01.tooltip_btn(data-tooltip-content=".tooltips_content") 平符合新戶/優惠活動
+
+                a.f_black(href="#") 已達成
+
+            hr.hr_black
+
             li.achieve
                 img.status_01(src=assets +"/images/icon/13.svg", alt="")
                 img.status_02(src=assets +"/images/icon/13_disable.svg", alt="")

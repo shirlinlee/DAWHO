@@ -5,6 +5,7 @@ block title
     title cw_1-3
 
 block scss
+    link(rel='stylesheet' href= assets + '/styles/result.css')
     link(rel='stylesheet' href= assets + '/styles/cardless.css')
     link(rel='stylesheet' href= assets + '/styles/components.css')
 
@@ -31,7 +32,7 @@ block main
                 div.item
                     p.name 提款幣別
                     p.data
-                +dropdown(['美金','新台幣'],'請選擇提款幣別')
+                +dropdown(['美金','新臺幣'],'請選擇提款幣別')
                 div.item
                     p.name 提款金額
                     p.data 帳戶餘額 8,900元
@@ -39,7 +40,7 @@ block main
                 p.money-note
                     span.note 以千元為單位，自行提領最高3萬元，跨行最高2萬元
                 p.money-note
-                    span.hint 新台幣以千元為單位
+                    span.hint 新臺幣以千元為單位
                 div.quick
                     button(data-price="3000") 3,000
                     button(data-price="5000") 5,000
@@ -52,6 +53,30 @@ block main
             +notice(15)
 
 
+        .lb_wrapper
+            .lb
+                div.head
+                    h5.f20.f_b 扣款帳號
+                    a.f_gold.f_b(href="#") 取消
+
+                ul.infos
+                    li
+                        | 營業部活期存款
+                        br
+                        | (807)0016893949394934
+                    li
+                        | 營業部活期存款
+                        br
+                        | (807)0016893949394934
+
+                    li
+                        | 營業部活期存款
+                        br
+                        | (807)0016893949394934
+
+
+
+                a.btn_gold(href="#") 確定
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)

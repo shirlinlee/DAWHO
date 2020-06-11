@@ -51,7 +51,12 @@ new Vue({
                 ps:
                     '查看errorCode點 <a href="cw_1-6-errorCode.html">cw_1-6-errorCode</a>',
             },
-            { name: '', html: '1-7', ps: '' },
+            {
+                name: '',
+                html: '1-7',
+                ps:
+                    '切換效果在<a href="cw_1-3.html">1-3</a>，此分開畫面為靜態切版',
+            },
             { name: '', html: '2-2', ps: '' },
             { name: '', html: '2-3', ps: '' },
             { name: '', html: '2-4', ps: '' },

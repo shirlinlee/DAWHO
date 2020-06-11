@@ -48,12 +48,9 @@
     $('body').on('click', '.infos li', function () {
         $('body').find('.infos li').removeClass('accountDetail');
         $(this).addClass('accountDetail');
-<<<<<<< HEAD
     });
 
     $('.quick button').on('mousedown touchstart click', function () {
         $('input.money').val(parseInt($(this).data('price'), 10));
-=======
->>>>>>> dev/junx
     });
 })(jQuery);

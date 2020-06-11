@@ -11,6 +11,7 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', 微軟正黑體, 'Microsoft JhengHei', sans-serif;
     text-size-adjust: none;
+    max-height: 100%;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
@@ -296,7 +297,7 @@ main {
 
 .tooltips_content {
     width: 218px;
-    max-height: 140px;
+    max-height: 140px !important;
     opacity: 0.85;
     border-radius: 10px;
     -webkit-backdrop-filter: blur(4px);

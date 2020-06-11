@@ -29,4 +29,8 @@
     $('.QA').on('click', '.title', function () {
         $(this).toggleClass('open').siblings('.content').slideToggle();
     });
+
+    $('.quick button').on('mousedown touchstart click', function () {
+        $('input.money').val(parseInt($(this).data('price'), 10));
+    });
 })(jQuery);

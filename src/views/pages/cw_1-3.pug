@@ -41,10 +41,10 @@ block main
                 p.money-note
                     span.hint 新台幣以千元為單位
                 div.quick
-                    button.active 3,000
-                    button.active 5,000
-                    button 9,000
-                    button 13,000
+                    button.active(data-price="3000") 3,000
+                    button.active(data-price="5000") 5,000
+                    button(data-price="9000") 9,000
+                    button(data-price="13000") 13,000
             .buttons
                 button.gogo 我要提領
                 button.record

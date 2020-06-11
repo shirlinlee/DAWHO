@@ -19,7 +19,14 @@ block main
                 img.dots(src=assets+"/images/icon/more_black.jpg" alt="")
 
         .status_wrapper.success
-            img.status(src=assets+"/images/success.png", alt="")
+            .status
+                img.ori(src=assets+"/images/success/success_ori.png" alt="" style="position: relative;")
+                img.oval(src=assets+"/images/success/oval.png" alt="")
+                img.check(src=assets+"/images/success/check.png" alt="")
+                img.dots_01.dots(src=assets+"/images/success/dots.svg" alt="")
+                img.dots_02.dots(src=assets+"/images/success/dots.svg" alt="")
+                img.dots_03.dots(src=assets+"/images/success/dots.svg" alt="")
+
             h5.f16 取號成功
 
         .content.bg_white

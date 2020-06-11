@@ -36,7 +36,7 @@ block main
                 div.item
                     p.name 提款金額
                     p.data 帳戶餘額 8,900元
-                input.money(placeholder='請輸入提款金額' type="number" min=1000 max=30000)
+                input.money(placeholder='請輸入提款金額' type="number" pattern="[0-9]*" inputmode="numeric" min=1000 max=30000)
                 p.money-note
                     span.note 以千元為單位，自行提領最高3萬元，跨行最高2萬元
                 p.money-note
@@ -50,7 +50,7 @@ block main
                 button.gogo 我要提領
                 button.record
                     span 提款記錄查詢
-            +notice('內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容容內容內容內容')
+            +notice(15)
 
 
         .lb_wrapper

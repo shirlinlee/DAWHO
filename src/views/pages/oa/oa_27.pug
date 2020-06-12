@@ -1,0 +1,41 @@
+extends ../../includes/_layout_open.pug
+
+block title
+    title 上傳雙證件
+
+block scss
+
+block js
+
+block main
+
+    #appOpen
+        .open-progress
+            .progress-line(style="width:60%")
+        
+        .view-992
+            h1.main-title 上傳雙證件
+            .id-card-upload_ttl 身分證
+            .id-card-upload
+                .id-card-display.id-card-display-front
+                    label.btn-card-upload(for="idCardFront", title="Upload image file")
+                        input.sr-only#idCardFront(type="file", name="file", accept=".jpg,.jpeg,.png")
+                    span.id-card-upload_note 上傳身分證正面
+                .id-card-display.id-card-display-Back
+                    label.btn-card-upload(for="idCardBack", title="Upload image file")
+                        input.sr-only#idCardBack(type="file", name="file", accept=".jpg,.jpeg,.png")
+                    span.id-card-upload_note 上傳身分證反面
+                
+            .id-card-upload_ttl 第二證件
+            .id-card-upload
+                .id-card-display.id-card-display-other
+                    label.btn-card-upload(for="idCardOther", title="Upload image file")
+                        input.sr-only#idCardOther(type="file", name="file", accept=".jpg,.jpeg,.png")
+                    span.id-card-upload_note 上傳健保卡、駕照、護照
+             
+
+            .center.mt-2
+                button.btn.btn-primary(type="button") 下一步
+        
+
+    

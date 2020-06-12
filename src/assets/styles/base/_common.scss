@@ -85,8 +85,9 @@ img {
     justify-content: space-between;
 }
 
-.f13 { font-size: 0.8125rem; }
-.f14 { font-size: 0.875rem; }
+.f13 { font-size: 0.8125rem !important; }
+.f14 { font-size: 0.875rem !important; }
+.f20 { font-size: 1.125rem !important; }
 
 .text-underline{ text-decoration: underline; }
 .txt-note{color: #818181;}
@@ -107,9 +108,17 @@ img {
 
 .mt-12{margin-top: 12px!important;}
 .mt-24{margin-top: 24px!important;}
+.mt-48{margin-top: 48px!important;}
 .mb-12{margin-bottom: 12px!important;}
 .mb-24{margin-bottom: 24px!important;}
+.mb-48{margin-bottom: 48px!important;}
 
+.sr-only{
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
 
 /* icon */
 .info { display: inline-block; width: 16px; }
@@ -158,7 +167,7 @@ img {
     }
 
     .main-title{
-        margin: 0 0 32px;
+        margin: 0 0 16px;
         text-align: left;
         font-size: 1.5rem;
         font-weight: bold;
@@ -221,7 +230,7 @@ img {
     line-height: 42px;
     color: #818181;
     border: 1px solid #aaaaaa;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: border .3s ease;
     &:focus {
         outline: none;
@@ -471,7 +480,7 @@ hr {
 
   // Box hover
   &:hover + label:before {
-    background: #c38b47;
+    background: #fff;
   }
 
   // Box checked
@@ -493,22 +502,15 @@ hr {
   }
 
   // Checkmark. Could be replaced with an image
-  &:checked + label:after {
+  &:checked + label:after { 
     content: '';
     position: absolute;
-    left: 7px;
-    top: 11px;
-    background: white;
-    width: 2px;
-    height: 2px;
-    box-shadow: 
-      2px 0 0 white,
-      4px 0 0 white,
-      4px -2px 0 white,
-      4px -4px 0 white,
-      4px -6px 0 white,
-      4px -8px 0 white;
-    transform: rotate(45deg);
+    left: 3px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background: url($assets + '/images/open/icon/check-w.svg') no-repeat center center;
+    background-size: 18px auto;
   }
 }
 

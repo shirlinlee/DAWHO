@@ -9,22 +9,24 @@ block js
 block main
     #appOpen 
         .open-progress
-            .progress-line(style="width:35%")
+            .progress-line(style="width:40%")
         .view-992
             h1.main-title 銀行帳戶驗證
-            p.title-pdm 無法使用數位帳戶進行驗證(如Richart,O-bank)
+            p.f14.mb-2 無法使用數位帳戶進行驗證(如Richart,O-bank)
             form
                 .form-group
                     label.form-label(for="bankName") 銀行名稱
-                    input.form-control(v-model="bankNameInput", @click="openModal('#searchBankModal')" ,id="bankName", type="text", placeholder="請選擇") 
-                    small.form-text.text-danger.f13 required
+                    input.form-control.arrow-down(v-model="bankNameInput", @click="openModal('#searchBankModal')" ,id="bankName", type="text", placeholder="請選擇", autocomplete="off") 
+                    //- small.form-text.text-danger.f13 required
                 .form-group
                     label.form-label(for="bankNumber") 存款帳號
                     input.form-control(id="bankNumber", type="text", placeholder="請輸入選擇銀行的存款帳號", aria-describedby="") 
-                    small.form-text.text-danger.f13 required
-                .form-group
+                    //- small.form-text.text-danger.f13 required
+
+                .form-group.mt-2.mb-24
                     hr.bg-grey
-                .form-check.form-group
+
+                .form-check.form-group.mb-48
                     input.styled-checkbox(id="defaultCheck1",type="checkbox", checked="checked")
                     label.styled-label(for="defaultCheck1") 同意開啟金融卡非約定轉帳功能
             .center
@@ -39,8 +41,9 @@ block main
                 .modal-content
                     .modal-header
                         #search-bank-input
+                            span.icon.searchBank(v-if="bankNameInput.length === 0") 
+                            span.icon.clearBank(v-else, @click.prevent="bankNameInput = ''")
                             input.form-control#search-bank(v-model="bankNameInput", type="text", placeholder="搜尋銀行代碼") 
-                            .div {{bankNameInput}}
                         button.close(@click.prevent="closeModal('#searchBankModal')",type="button",data-dismiss="modal") 關閉
                     .modal-body-box
                         .modal-body
@@ -50,7 +53,10 @@ block main
                                      @click="bankNameInput = bank.bankName") 
                                         span.code {{bank.bankCode}}
                                         span.name {{bank.bankName}}
-                                .bankEmpty {{bankEmpty}}
+                                .bankEmpty(v-show="bankEmpty")
+                                    .bankEmpty_photo
+                                        img(src=assets + "/images/open/modal/no-result.svg", alt="no-result")
+                                    .bankEmpty_text 搜尋的銀行目前不在合作夥伴內，試試看其他家銀行吧！
 
                     .modal-footer
                         

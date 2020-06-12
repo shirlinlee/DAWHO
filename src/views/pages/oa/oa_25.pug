@@ -1,0 +1,85 @@
+extends ../../includes/_layout_open.pug
+
+block title
+    title 開戶進度查詢
+
+block scss
+
+block js
+
+block main
+
+    #appOpen
+        .open-progress
+            .progress-line(style="width:35%")
+        
+        .flex-title.view-992
+            h1 信用卡驗證
+            a(href="javascript:void(0)",@click="openModal('#collapesBank')",data-toggle="modal", data-target="#collapesBank") 查看合作銀行
+
+        .view
+
+            .black-card
+                .black-card-box
+                    label.carmra(for="frmCCNum")
+                        .icn 
+                            img(src=assets + "/images/open/icon/camera@2x.png", alt="camara")
+                        .txt 拍照掃瞄
+                    div 
+                        label.ttl(for="frmCCNum") 信用卡卡號
+                        input.creditCardInput(v-model="creditCardNum", @input="ccFormat", name="cardnumber", id="frmCCNum", required , autocomplete="cc-number")
+                        //- .form-box
+                        //-     .form-group
+                        //-         input.form-control(id="frmCCNum",required, maxlength="4", autocomplete="cc-number") 
+                        //-     span.line
+                        //-     .form-group
+                        //-         input.form-control(id="frmCCNum", required, maxlength="4", autocomplete="cc-number")
+                        //-     span.line
+                        //-     .form-group
+                        //-         input.form-control(id="frmCCNum", required, maxlength="4", autocomplete="cc-number")
+                        //-     span.line
+                        //-     .form-group
+                        //-         input.form-control(id="frmCCNum", required, maxlength="4", autocomplete="cc-number") 
+                    
+                    .d-flex.align-center.justify-between
+                        div 
+                            label.ttl(for="frmCCExp") 有效期限
+                            .form-box.width6
+                                input.form-control(name="cc-exp", id="frmCCExp" ,required ,placeholder="MM-YY", autocomplete="cc-exp") 
+                                
+                        div 
+                            label.ttl(for="frmCCCVC") CVS
+                             .form-box.width6
+                                .form-group
+                                    input.form-control(name="cvs", id="frmCCCVC", required, autocomplete="cc-csc", maxlength="3", placeholder="_ _ _") 
+
+
+            .center
+                button.btn.btn-primary.disabled(type="submit") 驗證
+        
+        //- https://codepen.io/tommyno/pen/vgLYKY
+        //- modal
+        .modal-backdrop.fade.show
+        .modal.fade.show#collapesBank(tabindex="-1",role="dialog", aria-hidden="true")
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        h5.modal-title.f20 信用卡驗證合作銀行
+                        button.close(@click.prevent="closeModal('#collapesBank')",type="button",data-dismiss="modal") 關閉
+                 
+                        .modal-body
+                            .bank-list-wrap 
+                                ul
+                                    li 永豐銀行
+                                    li 聯邦銀行
+                                    li 遠東銀行
+                                    li 元大銀行
+                                    li 兆豐銀行
+                                    li 渣打銀行
+                                    li 台中銀行
+                                    li 安泰銀行
+                                    li 陽信銀行
+                                    li 三信銀行
+                                    li 華泰銀行
+                                    li 星展銀行
+                    .modal-footer

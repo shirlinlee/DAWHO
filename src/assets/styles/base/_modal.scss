@@ -31,6 +31,7 @@
             color: #c38b47;
             font-size: 0.875rem;    
             background: transparent;
+            cursor: pointer;
         }
     }
     &-content {
@@ -39,7 +40,7 @@
         flex-direction: column;
         width: 100%;
         pointer-events: auto;
-        background-color: #fff;
+        background-color: #f9f9f9;
         background-clip: padding-box;
         border-radius: 10px;
         outline: 0;
@@ -71,6 +72,9 @@
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        @include maxW-768 {
+            height: 80vh;
+        }
     }
     &-body {
         position: relative;
@@ -135,7 +139,7 @@
         visibility: hidden;
     }
     &.show {
-        opacity: .5;
+        opacity: .7;
         z-index: 1007;
         visibility: visible;
     }

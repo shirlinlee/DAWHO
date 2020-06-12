@@ -15,111 +15,9 @@ $(document).ready(function() {
     } 
 
     
-
-    //oa-28.html
-    //makeResizableDiv('.resizable') 
-    
     $(window).resize(function () {
     });
 });
-
-
-
-/*Make resizable div by Hung Nguyen*/
-function makeResizableDiv(div) {
-    const element = document.querySelector(div);
-    const parent_elem = document.querySelector('.upload-card-box .upload-photo-bg');
-    const resizers = document.querySelectorAll(div + ' .resizer') 
-   
-    let parent_x = parent_elem.getBoundingClientRect().left;
-    let parent_y = parent_elem.getBoundingClientRect().top;
-
-    const minimum_size = 150;
-    const maxmun_size = 240;
-    let original_width = 0;
-    let original_height = 0;
-    let original_x = 0;
-    let original_y = 0;
-    let original_mouse_x = 0;
-    let original_mouse_y = 0;
-
-    
-    for (let i = 0; i < resizers.length; i++) {
-        const currentResizer = resizers[i];
-        currentResizer.addEventListener('mousedown', function (e) {
-            e.preventDefault()
-            original_width = parseFloat(getComputedStyle(element, null).getPropertyValue('width').replace('px', ''));
-            original_height = parseFloat(getComputedStyle(element, null).getPropertyValue('height').replace('px', ''));
-            console.log('original_width', original_width)
-            original_x = element.getBoundingClientRect().left;
-            original_y = element.getBoundingClientRect().top; 
-            original_mouse_x = e.pageX + parent_x;
-            original_mouse_y = e.pageY + parent_y;
-            window.addEventListener('mousemove', resize)
-            window.addEventListener('mouseup', stopResize)
-        })
-
-        function resize(e) {
-           
-            if (currentResizer.classList.contains('bottom-right')) {
-                const width = original_width + (e.pageX - original_mouse_x);
-                const height = original_height + (e.pageY - original_mouse_y)
-                if (width > minimum_size) {
-                    element.style.width = width + 'px'
-                }
-                if (height > minimum_size) {
-                    element.style.height = height + 'px'
-                }
-            }
-            else if (currentResizer.classList.contains('bottom-left')) {
-                const height = original_height + (e.pageY - original_mouse_y)
-                const width = original_width - (e.pageX - original_mouse_x)
-                if (height > minimum_size) {
-                    element.style.height = height + 'px'
-                }
-                if (width > minimum_size) {
-                    element.style.width = width + 'px'
-                    element.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
-                }
-            }
-            else if (currentResizer.classList.contains('top-right')) {
-                const width = original_width + (e.pageX - original_mouse_x)
-                const height = original_height - (e.pageY - original_mouse_y)
-                if (width > minimum_size) {
-                    element.style.width = width + 'px'
-                }
-                if (height > minimum_size) {
-                    element.style.height = height + 'px'
-                    element.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
-                }
-                console.log('width', width)
-                if ( width > maxmun_size ) {
-                    element.style.width = maxmun_size + 'px'
-                }
-            }
-            else {
-                const width = original_width - (e.pageX - original_mouse_x)
-                const height = original_height - (e.pageY - original_mouse_y)
-                if (width > minimum_size) {
-                    element.style.width = width + 'px'
-                    element.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
-                }
-                if (height > minimum_size) {
-                    element.style.height = height + 'px'
-                    element.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
-                }
-                if (width > maxmun_size) {
-                    element.style.width = maxmun_size + 'px'
-                }
-            }
-        }
-
-        function stopResize() {
-            window.removeEventListener('mousemove', resize)
-        }
-    }
-}
-
 
 
 
@@ -127,7 +25,7 @@ function makeResizableDiv(div) {
 new Vue({
     el: '#appOpen',
     data: {
-        bankObj: [
+        bankObj: [//oa_20
             { bankCode: '004', bankName: '台灣銀行' },
             { bankCode: '005', bankName: '土地銀行' },
             { bankCode: '006', bankName: '合作金庫' },
@@ -174,25 +72,16 @@ new Vue({
         },
         filterBank() {
             const vm = this;
-            let tempArray = []
-            return [...this.bankObj].filter((bank)=> {
-                console.log(bank.bankCode.indexOf(vm.bankNameInput), bank.bankName.indexOf(vm.bankNameInput))
-              
-                if (vm.bankNameInput == '') { 
-                    vm.bankEmpty = false
-                    return tempArray.push(this.bankObj) 
-                }
-                if (vm.bankNameInput !== '' && bank.bankCode.indexOf(vm.bankNameInput) == -1 && bank.bankName.indexOf(vm.bankNameInput) == -1) {
-                    vm.bankEmpty = true
-                    tempArray = []
-                    return null
-                } else {
-                    vm.bankEmpty = false
-                    return bank.bankCode.includes(vm.bankNameInput) || bank.bankName.includes(vm.bankNameInput)
-                }
-                
-            })
             
+            let result = this.bankObj.filter((bank) => {
+                return bank.bankCode.match(vm.bankNameInput) || bank.bankName.match(vm.bankNameInput)
+            })
+            if (result.length > 0) {
+                vm.bankEmpty = false
+            } else {
+                vm.bankEmpty = true
+            }
+            return result;
         }
     },
     methods: {

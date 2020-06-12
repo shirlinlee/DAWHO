@@ -10,8 +10,8 @@
 body {
     background: url($assets + '/images/page-marblebg.png') no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: 100%;
 }
 
 #appChaxunRecord {

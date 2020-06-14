@@ -66,6 +66,13 @@ body {
             left: 0%;
         }
     }
+    .line.grey {
+        background: #7d7d7d;
+        font {
+            display: none;
+        }
+    }
+
     > .bg_white {
         position: relative;
         &:before {
@@ -80,7 +87,18 @@ body {
             transform: translate(-50%, 0);
             z-index: 11;
         }
-        &.achieve {
+        &.other {
+            &:before {
+                background-color: #7d7d7d;
+            }
+        }
+        // &.current {
+        //     &:before {
+        //         background-color: #fecc87;
+        //     }
+        // }
+        &.achieve,
+        &.current {
             &:before {
                 background-color: #fecc87;
             }

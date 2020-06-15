@@ -11,7 +11,8 @@ new Vue({
             {
                 name: '',
                 html: '3-1',
-                ps: '查看完整切換效果請點 <a href="lev_3-0.html">lev_3-0</a>',
+                ps:
+                    '查看另一狀態請點 <a href="lev_3-1-greyBar.html">lev_3-1-greyBar</a>',
             },
             { name: '', html: '3-2', ps: '' },
             { name: '', html: '3-3', ps: '' },

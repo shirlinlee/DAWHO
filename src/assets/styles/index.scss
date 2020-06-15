@@ -131,7 +131,24 @@
             margin-bottom: -100px;
             z-index: -1;
             opacity: 0;
-            transition: opacity 0.3s 1.7s, z-index 0.3s 1.7s, margin 0.3s 1.7s; //step3 信封+文字按鈕退 等1.7s
+            transition: all 0.1s 1s, opacity 0.3s 1.7s, z-index 0.3s 1.7s,
+                margin 0.3s 1.7s;
+            //step3信封+文字按鈕退等1.7s:;
+            -webkit-transition: all 0.1s 1s, opacity 0.3s 1.7s,
+                z-index 0.3s 1.7s, margin 0.3s 1.7s;
+            -moz-transition: all 0.1s 1s, opacity 0.3s 1.7s, z-index 0.3s 1.7s,
+                margin 0.3s 1.7s;
+            -ms-transition: all 0.1s 1s, opacity 0.3s 1.7s, z-index 0.3s 1.7s,
+                margin 0.3s 1.7s;
+            -o-transition: all 0.1s 1s, opacity 0.3s 1.7s, z-index 0.3s 1.7s,
+                margin 0.3s 1.7s;
+            -moz-transition: all 0.1s 1s, opacity 0.3s 1.7s, z-index 0.3s 1.7s,
+                margin 0.3s 1.7s;
+        }
+        .back {
+            // bottom: 43px;
+            height: 157;
+            bottom: 43px;
         }
         .btn_read {
             transition: opacity 0.3s, z-index 0.3s 1.7s, margin 0.3s 1.7s; //step3 信封+文字按鈕退 等1.7s
@@ -173,10 +190,10 @@
     }
     .back {
         width: 257.4px;
-        height: 157px;
+        height: 155px;
         box-shadow: 2px 8px 15px 0 rgba(0, 0, 0, 0.46);
         background-image: linear-gradient(249deg, #f9e5ca 113%, #f8dbb1 16%);
-        bottom: 43px;
+        bottom: 33px;
         left: 22px;
     }
     .body {

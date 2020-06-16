@@ -10,10 +10,12 @@ block scss
 block main
     div#appDiscount
         h1.header 等級
-        img.badge(src=assets +"/images/badge/dada.png", width="100", alt="")
+        img.badge(src=assets +'/images/badge/dada.png', width="100", alt="", v-if="status1" )
+        img.badge(src=assets +'/images/badge/dahu_black.png', width="100", alt="", v-else)
 
         h2.f18
-            span 目前等級
+            span(v-if="status1") 目前等級
+            span(v-else) 其他等級
 
 
         .swiper-container

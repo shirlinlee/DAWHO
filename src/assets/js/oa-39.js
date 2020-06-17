@@ -1,9 +1,9 @@
 
 $(document).ready(function () {
 
-    var cardSwiper = new Swiper('#choose-card-slider', {
-        slidesPerView: 1,
-        spaceBetween: 12,
+    var cardSwiper = new Swiper('#continue-choose-card-slider', {
+        slidesPerView: 1, 
+        spaceBetween: 16,
         centeredSlides: true,
         navigation: {
             nextEl: '.card-arrow-prev',
@@ -16,20 +16,21 @@ $(document).ready(function () {
         breakpoints: {
             640: {
                 slidesPerView: 2,
-                spaceBetween: 12,
+                spaceBetween: 16,
                 centeredSlides: false,
             },
             768: {
-                slidesPerView: 'auto',
-                spaceBetween: 12,
+                slidesPerView: 3,
+                spaceBetween: 16,
                 centeredSlides: false,
             },
             1024: {
-                slidesPerView: 'auto',
-                spaceBetween: 12,
-                centeredSlides: false,
+                slidesPerView: 3,
+                spaceBetween: 0,
+                centeredSlides: true,
+                loop: true
             },
         }
     });
-   
+
 });

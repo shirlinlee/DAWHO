@@ -1,3 +1,8 @@
+//1-1279px
+//1280px-1920px
+
+
+
 @mixin maxW-320() {
     @media screen and (max-width: 320px) {
         @content;
@@ -36,6 +41,11 @@
 
 @mixin maxW-992() {
     @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+@mixin maxW-1279() {
+    @media screen and (max-width: 1279px) {
         @content;
     }
 }

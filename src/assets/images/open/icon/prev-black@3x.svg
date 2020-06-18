@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="66" viewBox="0 0 66 66">
+    <defs>
+        <linearGradient id="prefix__c" x1="21.578%" x2="82.771%" y1="2.271%" y2="85.971%">
+            <stop offset="0%" stop-color="#272727"/>
+            <stop offset="100%" stop-color="#232323"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="42.864%" x2="61.15%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FAD8A3"/>
+            <stop offset="36.042%" stop-color="#FDEED1"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+        <filter id="prefix__a" width="162.5%" height="162.5%" x="-31.2%" y="-31.2%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.419607843 0 0 0 0 0.419607843 0 0 0 0 0.419607843 0 0 0 0.4 0"/>
+        </filter>
+        <circle id="prefix__b" cx="24" cy="24" r="24"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 57 9)">
+        <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use fill="url(#prefix__c)" xlink:href="#prefix__b"/>
+        <path stroke="url(#prefix__d)" d="M21 16.639l5.608 6.403c.484.553.484 1.363 0 1.916L21 31.361l.786.639 5.608-6.403c.808-.923.808-2.271 0-3.194L21.786 16l-.786.639z"/>
+    </g>
+</svg>

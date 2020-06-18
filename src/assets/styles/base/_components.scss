@@ -1,0 +1,79 @@
+
+// 注意事項
+div.cw-notice {
+    margin-top: 32px;
+    margin-bottom: 56px;
+    padding: 8px;
+    background-color: rgba(195, 139, 71, 0.1);
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        p {
+            float: left;
+            font-size: 14px;
+            font-weight: bold;
+
+            line-height: 1.71;
+            letter-spacing: normal;
+            color: #111111;
+            &.light {
+                color: #fed28f;
+            }
+        }
+        a {
+            float: right;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            p {
+                background-image: url($assets + '/images/open/icon/plus.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 20px;
+                height: 20px;
+                display: block;
+            }
+        }
+        &.active {
+            a {
+                p {
+                    background-image: url($assets + '/images/open/icon/minus.svg');
+                }
+            }
+        }
+    }
+    &-content {
+        display: none;
+        text-align: left;
+        margin-top: 16px;
+        p {
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: #111111;
+            &.light {
+                color: #ffffff;
+            }
+        }
+        &.light {
+            ul {
+                color: #ffffff;
+            }
+        }
+        ul {
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: normal;
+            color: #111111;
+            line-height: 1.5;
+            li:not(:first-child) {
+                margin-top: 8px;
+                ul {
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}

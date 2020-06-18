@@ -5,6 +5,7 @@ block title
 
 block scss
 
+include ../../includes/components.pug
 block main
     #appOpen 
         .open-progress
@@ -20,6 +21,9 @@ block main
                     | Email：256458@sasa.com
                     br
                     | 如有疑問請聯絡我們 (02)2505-9999
+
+
+            +notice(15)
 
             hr.bg-grey
             h2.sub-title 繼續申辦信用卡
@@ -59,7 +63,8 @@ block main
 
                     
 block js
-    script(src=assets + '/js/oa-39.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+    script(src= assets + '/js/oa-39.bundle.js' defer)
 
 
 

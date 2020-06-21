@@ -9,6 +9,103 @@
 
 
 
+
+
+.intro-steps{
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80vh;
+    background-color: #000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .intro-steps-title{
+        .intro-steps_step{
+
+        }
+        .intro-steps_ttl{
+            position: relative;
+            margin: 0 auto 12px;
+            padding: 0 0 4px;
+            background-image: linear-gradient(102deg, #bc9e65 -3%, #dbb97f 14%, #ffe4bd 62%, #aa7942 91%, #50402a 113%, #3e2f1b 126%);
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 1.4;
+            letter-spacing: 13.33px;
+            text-align: center;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: linear-gradient(to right, #f7dba7 1%, #ab8347 12%, #b1895c 24%, #ffdeb7 54%, #a2794b 74%, #f4dab7 100%);;
+            }
+        }
+        .intro-steps_sub{
+            font-size: 16px;
+            font-weight: normal;
+            line-height: normal;
+            letter-spacing: 5px;
+            text-align: center;
+            color: #f7e7cf;
+        }
+    }
+    .intro-steps-button{
+        .btn-steps{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+            height: 55px;
+            border-radius: 26.5px;
+            border-style: solid;
+            border-width: 1px;
+            border-image-source: linear-gradient(110deg, #f2c67a, #ffe3bc 39%, #e9a85b 78%);
+            border-image-slice: 1;
+            background-image: linear-gradient(104deg, #000000 23%, #2e2e2e 54%, #000000 87%), linear-gradient(110deg, #f2c67a, #ffe3bc 39%, #e9a85b 78%);
+            background-clip: content-box, border-box;
+            span {
+                font-size: 20px;
+                line-height: 55px;
+                background-image: linear-gradient(105deg, #f2c67a 20%, #ffe3bc 55%, #e9a85b 89%);
+                font-size: 20px;
+                font-weight: bold;;
+                text-align: center;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    &.intro-steps_1 {
+        background-image: url($assets + '/images/open/bg/01.svg');
+    }
+    &.intro-steps_2 {
+        background-image: url($assets + '/images/open/bg/01.svg');
+    }
+    &.intro-steps_3 {
+        background-image: url($assets + '/images/open/bg/03.svg');
+    }
+    &.intro-steps_4 {
+        background-image: url($assets + '/images/open/bg/04.svg');
+    }
+    &.intro-steps_5 {
+        background-image: url($assets + '/images/open/bg/05.svg');
+    }
+    
+}
+
+
+
 .open-wrapper{
     height: 100%;
     padding: 10vh 0 0;

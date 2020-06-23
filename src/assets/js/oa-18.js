@@ -1,8 +1,8 @@
 
 $(document).ready(function () {
-    console.log('2or4io3')
+    console.log('2or4io3') 
     //oa_18
-    const breakpoint = window.matchMedia('(max-width:767px)');
+    const breakpoint = window.matchMedia('(max-device-width:767px)');
     let mySwiper;
     const breakpointChecker = function () {
         if (breakpoint.matches === true) {
@@ -11,11 +11,13 @@ $(document).ready(function () {
             // else if a small viewport and single column layout needed
         } else if (breakpoint.matches === false) {
             // clean up old instances and inline styles when available
+            console.log('mySwiper2', mySwiper)
             if (mySwiper !== undefined) mySwiper.destroy(true, true);
+            console.log('mySwiper3', mySwiper)
             // or/and do nothing
             return;
         }
-    };
+    }; 
     const enableSwiper = function () {
         mySwiper = new Swiper('#card-slider-slick', {
             init: true,

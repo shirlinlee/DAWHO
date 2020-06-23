@@ -38,6 +38,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        min-width: 792px;
         width: 100%;
         pointer-events: auto;
         background-color: #f9f9f9;
@@ -45,6 +46,7 @@
         border-radius: 10px;
         outline: 0;
         @include maxW-768 {
+            min-width: 100%;
             border-bottom-right-radius: 0px;
             border-bottom-left-radius: 0px;
         }
@@ -88,16 +90,22 @@
         align-items: center;
         justify-content: flex-end;
         padding: .75rem;
+        &.center {
+            justify-content: center;
+        }
         &.column {
             flex-direction: column;
         }
         &>* {
             margin: .25rem;
         }
+        button, .btn {
+            min-width: 180px;
+        }
     }
     .modal-title {
         font-weight: bold;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         font-size: 1.5rem;
         line-height: 1.4;
         color: #111;

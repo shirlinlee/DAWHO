@@ -50,3 +50,8 @@
     }
 }
 
+@mixin maxH-600() {
+    @media screen and (max-device-height: 600px) {   
+        @content;
+    }
+}

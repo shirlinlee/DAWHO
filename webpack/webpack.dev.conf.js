@@ -23,7 +23,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
                 use: [
                     {
                         loader: 'sass-loader',
-                        options: {
+                        options: { 
                             prependData: `
                             $assets : "${BASE.dev}/assets";
                             $public : "${BASE.dev}";

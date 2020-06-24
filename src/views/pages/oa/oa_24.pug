@@ -11,11 +11,11 @@ block main
 
     #appOpen
         .open-progress
-            .progress-line(style="width:35%")
+            .progress-line(style="width:40%")
         
         .flex-title.view-992
-            h1 信用卡驗證
-            a(href="javascript:void(0)",@click="openModal('#collapesBank')",data-toggle="modal", data-target="#collapesBank") 查看合作銀行
+            h1.main-title 信用卡驗證 
+            a.main-title-link.mt-2.mb-1(href="javascript:void(0)",@click="openModal('#collapesBank')",data-toggle="modal", data-target="#collapesBank") 查看可驗證銀行
 
         .view
 
@@ -45,7 +45,7 @@ block main
                         div 
                             label.ttl(for="frmCCExp") 有效期限
                             .form-box.width6
-                                input.form-control(name="cc-exp", id="frmCCExp" ,required ,placeholder="MM-YY", autocomplete="cc-exp") 
+                                input.form-control(name="cc-exp", id="frmCCExp" ,required ,maxlength="5",placeholder="MM-YY", autocomplete="cc-exp") 
                                 
                         div 
                             label.ttl(for="frmCCCVC") CVS

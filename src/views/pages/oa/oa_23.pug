@@ -1,7 +1,7 @@
 extends ../../includes/_layout_open.pug
 
 block title
-    title 開戶進度查詢
+    title 信用卡驗證
 
 block scss
 
@@ -11,11 +11,11 @@ block main
 
     #appOpen
         .open-progress
-            .progress-line(style="width:35%")
+            .progress-line(style="width:40%")
         
         .flex-title.view-992
-            h1 信用卡驗證
-            a(href="javascript:void(0)",@click="openModal('#collapesBank')",data-toggle="modal", data-target="#collapesBank") 查看合作銀行
+            h1.main-title 信用卡驗證 
+            a.main-title-link.mt-2.mb-1(href="javascript:void(0)",@click="openModal('#collapesBank')",data-toggle="modal", data-target="#collapesBank") 查看可驗證銀行
 
         .view
 
@@ -54,7 +54,7 @@ block main
                                     input.form-control(name="cvs", id="frmCCCVC", required, autocomplete="cc-csc", maxlength="3", placeholder="_ _ _") 
 
 
-            .center
+            .center.mb-2
                 button.btn.btn-primary.disabled(type="submit") 驗證
         
         //- https://codepen.io/tommyno/pen/vgLYKY

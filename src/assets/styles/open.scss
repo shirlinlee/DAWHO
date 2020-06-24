@@ -719,7 +719,7 @@
             width: 33.33%;
             margin-bottom: 2rem;
             padding: 0 1rem;
-            border-left: 4px solid #d4b572;
+            border-left: 4px solid #c38b47;
             font-size: 1.125rem;
             line-height: 1.5;
             color: #111;
@@ -737,28 +737,37 @@
     &-display{
         &-wrong {
             .id-card-photo{
-                max-width: 86%;
+                max-width: 100%;
+                margin: 16px 0 0;
                 display: flex;
                 flex-flow: row nowrap;
                 align-items: flex-start;
-                justify-content: space-between;
+                justify-content: flex-start;
                 @include maxW-768 {
-                    max-width: calc(100% + 20px);
-                    margin: 0 -10px;
+                    max-width: calc(100% + 8px);
+                    margin: 16px -4px 0;
                     flex-flow: row wrap;
                 }
                 .id-card-photo-item{
-                    margin: 20px 25px 40px 0;
+                    margin: 0 8px 8px 0;
+                    padding: 24px 24px;
+                    background: #f0f0f0;
                     @include maxW-768 {
-                        width: calc(50% - 20px);
-                        margin: 20px 10px 5px;
+                        width: calc(50% - 8px);
+                        margin: 0 4px 7px;
                     }
                     .text{
-                        margin-top: .4rem;
+                        margin: 16px auto 0;
                         font-size: 14px;
                         line-height: 1.71;
                         color: #111111;
                         text-align: center;
+                        &>img {
+                            width: 20px;
+                            transform: translateY(-1px);
+                            display: inline-block;
+                            margin-right: 2px;
+                        }
                     }
                 }
             }
@@ -769,18 +778,28 @@
         margin-bottom: 1rem;
     }
     .sub-ttl{
+        padding: 7px 6px;
         margin-bottom: 1rem;
         font-size: 1rem;
         font-weight: bold;
         line-height: 1.5;
-        color: #111111;
+        color: #784f1d;
+        background-image: linear-gradient(to right, #deb67d 42%, rgba(255, 227, 188, 0) 100%);
         .icn{
             display: inline-block;
             width: 24px;
             margin-right: 10px;
         }
+        &.right {
+            color: #784f1d;
+            background-image: linear-gradient(to right, #deb67d 42%, rgba(255, 227, 188, 0) 100%);
+        }
+        &.wrong {
+            color: #ffffff;
+            background-image: linear-gradient(to right, #d64b4b 41%, rgba(251, 149, 148, 0));
+        }
     }
-    .list-style-disc{
+    ul, ol{
         li {
             margin-bottom: 1rem;
         }
@@ -843,7 +862,7 @@
 
 /* modal 搜尋銀行*/
 #search-bank-input{
-    width: 530px;
+    width: 98%;
     margin: 40px auto 20px;
     position: relative;
     @include maxW-768 {
@@ -871,7 +890,7 @@
 }
 
 .arrow-down{
-    background: url($assets + '/images/open/icon/dropdown@2x.png') no-repeat 99% center;
+    background: #fff url($assets + '/images/open/icon/dropdown@2x.png') no-repeat 99% center;
     background-size: 16px auto;
 }
 
@@ -929,6 +948,7 @@
 .upload-card-box{
     max-width: 343px;
     margin: 0 auto;
+    
     .card-photo{
         width: 317px;
         height: 196px;
@@ -936,6 +956,9 @@
         margin: 0 auto 24px;
         border-radius: 10px;
         overflow: hidden;
+        @include maxW-768 {
+            width: 100%;
+        }
     }
     .card-note-list {
         padding: 14px 10px 0;
@@ -951,7 +974,7 @@
     .line-primary{
         li {
             font-size: 0.875rem;
-            border-left: 4px solid #d4b572;
+            border-left: 4px solid #c38b47;
             padding-left: 16px;
             margin: 0 0 16px;
         }
@@ -1098,8 +1121,8 @@
 
 
 /* 永豐銀行存戶驗證 */
-.commen-box{
-    margin: 45px auto 48px;
+.commen-box{ 
+    margin: 1rem auto 48px;
     p {
         margin-bottom: 1.5em;
         font-size: 0.875rem;
@@ -1107,6 +1130,9 @@
         color: #111111;
     }
 }
+
+
+
 
 
 
@@ -1125,12 +1151,23 @@
     &_note {
         position: absolute;
         width: 96%;
-        top: 73%;
+        top: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 16px;
         text-align: center;
-        color: #c38b47;
+        color: #976324;
+    }
+    &_mobileUse{
+        position: absolute;
+        top: 2px;
+        right: 20px;
+        @include maxW-device-768{
+            display: none;
+        }
+    }
+    .disabled {
+        pointer-events: none;
     }
     .id-card-display{
         position: relative;
@@ -1138,10 +1175,16 @@
         height: 208px;
         margin-right: 16px;
         margin-bottom: 16px;
-        background: #f9f4ed url($assets + '/images/open/idCard/id-card-front@3x.png')  no-repeat center 40%;
-        background-size: 88px auto;
+        background: #fff6eb url($assets + '/images/open/idCard/id-card-front@3x.png')  no-repeat center 40%;
+        background-size: 150px auto;
         border-radius: 10px;
         overflow: hidden;
+        border: 2px solid #d5c1aa;
+        @include maxW-768{
+            max-width: 327px;
+            width: 100%;
+            margin: 0 auto 16px 0;
+        }
         .btn-card-upload{
             position: absolute;
             top: 0;
@@ -1151,9 +1194,24 @@
         }
     }
     .id-card-display-Back{
-        background: #f9f4ed url($assets + '/images/open/idCard/id-card-back@3x.png')  no-repeat center 40%;
-        background-size: 88px auto;
+        background: #fff6eb url($assets + '/images/open/idCard/id-card-back@3x.png')  no-repeat center 40%;
+        background-size: 150px auto;
     }
+
+    .id-card-display-pc{
+        display: block;
+        @include maxW-device-768{
+            display: none;
+        }
+    }
+    .id-card-display-mb{
+        display: none;
+        @include maxW-device-768{
+            display: block;
+        }
+    }
+
+
 }
 
 

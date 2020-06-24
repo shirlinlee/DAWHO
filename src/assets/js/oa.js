@@ -1,4 +1,5 @@
 import mode from './modules/mode';
+//import { IgnorePlugin } from 'webpack';
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const media = window.matchMedia("(max-width: 768px)");
 let detectResize = false;
@@ -50,6 +51,8 @@ new Vue({
             { from: '利息收入', status: false }
         ],
         creditCardNum: null,//oa_23
+        currentNum: 0,// oa_27
+        otherCardSelect: null
     },
     mounted: function () {
         mode();
@@ -133,11 +136,16 @@ new Vue({
             } else {
                 return this.creditCardNum
             }
+        },
+        triggerChange(){
+            this.currentNum ++;
+            if (this.currentNum > 2) this.currentNum = 1 
+            if (this.currentNum === 1) $(this.$refs.fileLabel).attr("for", "step-1")
+            if (this.currentNum === 2) $(this.$refs.fileLabel).attr("for", "step-2")
         }
     },
     filters: {
         ccFormat: function (value) {
-           
             if (value == null || value == '' || value == 'undefined' ) return;
             var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
             var matches = v.match(/\d{4,16}/g);

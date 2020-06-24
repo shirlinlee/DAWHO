@@ -139,6 +139,33 @@ img {
 .list-style-disc{ padding-left: 30px; list-style: disc; }
 .list-style-cjk { padding-left: 30px; list-style: cjk-ideographic;}
 .list-style-decimal { padding-left: 30px; list-style: decimal; }
+.list-style-decimal.bg-primary { 
+    list-style: none;
+    counter-reset: li;
+    li {
+        position: relative;
+        padding-left: 0.5rem;
+        z-index: 1;
+        list-style: none; 
+        counter-increment: li;
+        &:before {
+            content: counter(li);
+            display: inline-block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
+            line-height: 20px;
+            top: 2px;
+            left: -22px;
+            color: #fff;
+            background: #c38b47;
+            border-radius: 50%;
+            z-index: -1;
+            text-align: center;
+        }
+    }
+ }
 
 .sub-header{
     width: 100%;
@@ -190,9 +217,14 @@ img {
     // height: calc(100vh - 48px - 80px);
     min-height: 608px;
     .view-992 {
+        position: relative;
         max-width: 992px;
         margin: 0 auto;
         padding: 0 20px;
+        @include maxH-600{
+            padding: 0 20px 60px;
+        }
+
     }
     .view{
         padding: 0 16px;
@@ -357,7 +389,7 @@ img {
 .center{
     text-align: center;
     margin: 0 auto;
-    padding: 0 0 30px;
+    padding: 0 0 32px;
     &.align-bottom {
         margin: 0 auto;
         padding: 48px 0 32px;

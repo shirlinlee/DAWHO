@@ -30,6 +30,10 @@ new Vue({
             $(window).on('scroll', function () {
                 $('.tooltip_btn').tooltipster('hide');
             });
+
+            // 06017更新
+            var priceW = $('body').find('.price').innerWidth();
+            $('.price').css({ marginLeft: -priceW / 2 });
         });
     },
 });

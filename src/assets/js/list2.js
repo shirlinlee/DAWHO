@@ -4,7 +4,12 @@ new Vue({
     el: '#list',
     data: {
         lev_lists: [
-            { name: '', html: '1-1', ps: '點選[i]觀看1-2的動態效果' },
+            {
+                name: '',
+                html: '1-1',
+                ps:
+                    '點選[i]觀看1-2的動態效果, 查看達標態請點 <a href="lev_1-1-yellowBar.html">lev_1-1-yellowBar</a>',
+            },
             { name: '', html: '1-2', ps: '' },
             { name: '', html: '2-1', ps: '點選[i]觀看2-2的動態效果' },
             { name: '', html: '2-2', ps: '' },

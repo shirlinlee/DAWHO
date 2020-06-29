@@ -29,7 +29,7 @@ block main
                 
             .id-card-upload_ttl 第二證件
             .id-card-upload
-                //- 桌機出現
+                //- 桌機出現 
                 .id-card-display.id-card-display-other.id-card-display-pc
                     label.btn-card-upload(for="idCardOther-pc", title="Upload image file")
                         input.sr-only#idCardOther-pc(type="file", name="file", accept=".jpg,.jpeg,.png")
@@ -41,14 +41,14 @@ block main
                         input.sr-only#step-2(ref="fileInput", type="file", name="file", accept=".jpg,.jpeg,.png", :class="{'disabled': currentNum === 1 }")
                     span.id-card-upload_note 上傳健保卡、駕照、護照
 
-                select.sr-only#step-1(name="uploadCardOther", ref="fileSelect", v-model="otherCardSelect", :class="{'disabled': currentNum === 2 }")
+                select.custom-select#step-1(style="opacity: 0", name="uploadCardOther", ref="fileSelect", v-model="otherCardSelect", :class="{'disabled': currentNum === 2 }")
                     option(value="1") 健保卡
-                    option(value="2") 駕照
+                    option(value="2") 駕照 
                     option(value="3") 護照
 
 
 
-            .bottom-area.center.mt-2
+            .bottom-area.center
                 button.btn.btn-primary.disabled(type="button") 下一步
         
 

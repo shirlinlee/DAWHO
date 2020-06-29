@@ -7,95 +7,98 @@ block scss
    
 block js
 block main
-    .view-992#appOpen
+    #appOpen
+        .open-progress
+            .progress-line(style="width:60%")
 
-        .editable-info-wrap
-            h2.info-title
-                | 基本資訊
-                a.icon.edited-icon(href="")
-                    img(src=assets + "/images/open/icon/edit@2x.png", alt="edit") 
+        .view-992 
+            .editable-info-wrap
+                h2.info-title
+                    | 基本資訊
+                    a.icon.edited-icon(href="")
+                        img(src=assets + "/images/open/icon/edit@2x.png", alt="edit") 
 
-            .editable-info  
-                .info-label 中文姓名
-                .info-reply 小美
-            .editable-info  
-                .info-label 英文姓名
-                .info-reply Hsiao Meil
-            .editable-info  
-                .info-label 身分證領證換發類別
-                .info-reply 補發
-            .editable-info  
-                .info-label 發證地點
-                .info-reply 臺北市
-            .editable-info  
-                .info-label 身分證發證日期
-                .info-reply 0840105
+                .editable-info  
+                    .info-label 中文姓名
+                    .info-reply 小美
+                .editable-info  
+                    .info-label 英文姓名
+                    .info-reply Hsiao Meil
+                .editable-info  
+                    .info-label 身分證領證換發類別
+                    .info-reply 補發
+                .editable-info  
+                    .info-label 發證地點
+                    .info-reply 臺北市
+                .editable-info  
+                    .info-label 身分證發證日期
+                    .info-reply 0840105
 
-        .editable-info-wrap
-            h2.info-title 
-                | 聯絡資訊
-                a.icon.edited-icon(href="")
-                    img(src=assets + "/images/open/icon/edit@2x.png", alt="edit") 
-            .editable-info  
-                .info-label Email
-                .info-reply 123@gmail.com
-            .editable-info  
-                .info-label 戶籍地址
-                .info-reply 118 台北市美麗區88巷8號8樓
-            .editable-info  
-                .info-label 現居地址
-                .info-reply 118 台北市美麗區88巷8號8樓
-            .editable-info  
-                .info-label 通訊電話
-                .info-reply 02-23091234
-        
-        .editable-info-wrap
-            h2.info-title 
-                | 工作資訊
-                a.icon.edited-icon(href="")
-                    img(src=assets + "/images/open/icon/edit@2x.png", alt="edit") 
-            .editable-info  
-                .info-label 教育程度
-                .info-reply 大專
-            .editable-info  
-                .info-label 職業類型
-                .info-reply 批發及零售業 中古商品
-            .editable-info  
-                .info-label 職稱
-                .info-reply 一般職員
-            .editable-info  
-                .info-label 年收入
-                .info-reply 100 萬元
-            .editable-info  
-                .info-label 服務機構
-                .info-reply 臺灣新北地方檢察署
-            .editable-info  
-                .info-label 公司電話
-                .info-reply 02-23183752
-            .editable-info  
-                .info-label 公司地址
-                .info-reply 台北市中正區中山路一號
-            .editable-info  
-                .info-label 開戶目的
-                .info-reply 儲蓄
-            .editable-info  
-                .info-label 財富/資金來源 
-                .info-reply 
-                    //- .bubble(v-for="(item, i) in financial", :key="i", @click.prevent="toggleBubble(i)", :class="{'active': item.status == true}") 
-                    //-     span.icon
-                    //-     span.text {{item.from}}
-                    .bubble(v-for="(item, i) in financialFrom", :key="i", :class="{'active': item.status == true}") 
-                        span.icon
-                        span.text {{item.from}}
-       
-            .editable-info  
-                .info-label 推薦人代碼
-                .info-reply 123
-
-
-          
-
-
-    .center.align-bottom.mt-2
-        button.btn.btn-primary.disabled(type="submit") 下一步
+            .editable-info-wrap
+                h2.info-title 
+                    | 聯絡資訊
+                    a.icon.edited-icon(href="")
+                        img(src=assets + "/images/open/icon/edit@2x.png", alt="edit") 
+                .editable-info  
+                    .info-label Email
+                    .info-reply 123@gmail.com
+                .editable-info  
+                    .info-label 戶籍地址
+                    .info-reply 118 台北市美麗區88巷8號8樓
+                .editable-info  
+                    .info-label 現居地址
+                    .info-reply 118 台北市美麗區88巷8號8樓
+                .editable-info  
+                    .info-label 通訊電話
+                    .info-reply 02-23091234
             
+            .editable-info-wrap
+                h2.info-title 
+                    | 工作資訊
+                    a.icon.edited-icon(href="")
+                        img(src=assets + "/images/open/icon/edit@2x.png", alt="edit") 
+                .editable-info  
+                    .info-label 教育程度
+                    .info-reply 大專
+                .editable-info  
+                    .info-label 職業類型
+                    .info-reply 批發及零售業 中古商品
+                .editable-info  
+                    .info-label 職稱
+                    .info-reply 一般職員
+                .editable-info  
+                    .info-label 年收入
+                    .info-reply 100 萬元
+                .editable-info  
+                    .info-label 服務機構
+                    .info-reply 臺灣新北地方檢察署
+                .editable-info  
+                    .info-label 公司電話
+                    .info-reply 02-23183752
+                .editable-info  
+                    .info-label 公司地址
+                    .info-reply 台北市中正區中山路一號
+                .editable-info  
+                    .info-label 開戶目的
+                    .info-reply 儲蓄
+                .editable-info  
+                    .info-label 財富/資金來源 
+                    .info-reply 
+                        //- .bubble(v-for="(item, i) in financial", :key="i", @click.prevent="toggleBubble(i)", :class="{'active': item.status == true}") 
+                        //-     span.icon
+                        //-     span.text {{item.from}}
+                        .bubble(v-for="(item, i) in financialFrom", :key="i", :class="{'active': item.status == true}") 
+                            span.icon
+                            span.text {{item.from}}
+        
+                .editable-info  
+                    .info-label 推薦人代碼
+                    .info-reply 123
+
+
+            
+
+
+        .bottom-area.center.align-bottom
+            button.btn.btn-primary.disabled(type="submit") 下一步
+                

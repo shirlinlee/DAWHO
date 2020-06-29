@@ -11,20 +11,20 @@ block main
         .open-progress
             .progress-line(style="width:55%")
         .view-992
-            h1.main-title 聯絡資訊
+            h1.main-title.mb-2 聯絡資訊
             form
                 .form-group.form-disabled
                     label.form-label(for="") 行動電話
                     input.form-control(id="", type="text", value="0923555944" ,aria-describedby="idHelp") 
-                .form-group
+                .form-group.pb-0
                     label.form-label(for="") Email
                     input.form-control(id="", type="Email", value="abc＠gmail.com", aria-describedby="idHelp") 
                     small.form-note 網路銀行交易通知將會發送至此Email
 
-                .mt-1.mb-1
-                    hr.bg-grey
+                .mt-24.mb-24
+                    hr.bg-grey 
 
-                .form-group.sm
+                .form-group
                     label.form-label(for="") 戶籍地址
                     select.custom-select(name="")
                         option(value="") 台北市中正區
@@ -32,15 +32,15 @@ block main
                 .form-group
                     input.form-control(id="", type="text", value="中正路一號" ,aria-describedby="idHelp") 
                     
-                .form-group
+                .form-group.pb-0.invalid-error
                     label.form-label(for="") 戶籍電話 (選填)
                     input.form-control(id="", type="tel", value="02-23183752", aria-describedby="telHelp") 
                     small.form-text.text-danger.f13 required
                 
-                .mt-1.mb-1
+                .mt-24.mb-24
                     hr.bg-grey
 
-                .form-group
+                .form-group.pb-0
                     label.form-label(for="") 現居地址
                 .form-radio.form-group
                     input.styled-radio(id="defaultRadio1",type="radio", name="radio-group", checked="checked")
@@ -48,7 +48,7 @@ block main
                 .form-radio.form-group
                     input.styled-radio(id="defaultRadio2",type="radio", name="radio-group")
                     label.styled-label(for="defaultRadio2") 使用其他地址
-                .form-group.sm
+                .form-group
                     select.custom-select(name="")
                         option(value="") 新北市汐止區
                         option(value="") 台北市中正區
@@ -56,7 +56,7 @@ block main
                     input.form-control(id="", type="text", value="汐萬路一段39-3號" ,aria-describedby="idHelp") 
                     
 
-                .form-group
+                .form-group.pb-0
                     label.form-label(for="") 現居電話
                 .form-radio.form-group
                     input.styled-radio(id="tel",type="radio", name="radio-group-2", checked="checked")
@@ -67,6 +67,6 @@ block main
                 .form-group
                     input.form-control(id="", type="tel", value="02-23183752", aria-describedby="telHelp") 
 
-            .center.align-bottom.mt-2
+            .bottom-area.center.align-bottom
                 button.btn.btn-primary.disabled(type="submit") 下一步
                     

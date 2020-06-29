@@ -38,7 +38,7 @@ block main
         .modal-backdrop.fade
         .modal.fade#searchBankModal(tabindex="-1",role="dialog", aria-hidden="true")
             .modal-dialog
-                .modal-content
+                .modal-content.minWidth
                     .modal-header
                         #search-bank-input
                             span.icon.searchBank(v-if="bankNameInput.length === 0") 

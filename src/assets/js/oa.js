@@ -5,7 +5,7 @@ const media = window.matchMedia("(max-width: 768px)");
 let detectResize = false;
 
 
-$(document).ready(function() {
+$(document).ready(function(e) {
     
 
     if (!isMobile) {
@@ -14,8 +14,16 @@ $(document).ready(function() {
             minimumResultsForSearch: Infinity
         });
     } 
+    //tooltip
+    let eevent = 'click';
+    if (isMobile) {
+        eevent = 'touchstart';
+    }
+    $('.tooltip').on(eevent, function () {
+        $(this).toggleClass('active')
+    });
 
-    
+
     $(window).resize(function () {
     });
 });
@@ -44,15 +52,16 @@ new Vue({
         bankNameInput: '',//oa_20
         bankEmpty: false,
         financial: [
-            { from: '薪資所得', status: true },
-            { from: '租金收入', status: false },
-            { from: '退休金', status: true },
-            { from: '營業收入', status: true },
-            { from: '利息收入', status: false }
+            { from: '薪資所得', status: true, input: false },
+            { from: '租金收入', status: false, input: false },
+            { from: '退休金', status: true, input: false },
+            { from: '營業收入', status: true, input: false },
+            { from: '利息收入', status: false, input: false },
+            { from: '其他', status: false, input: true }
         ],
         creditCardNum: null,//oa_23
         currentNum: 0,// oa_27
-        otherCardSelect: null
+        otherCardSelect: 1 
     },
     mounted: function () {
         mode();

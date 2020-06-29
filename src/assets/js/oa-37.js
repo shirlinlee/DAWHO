@@ -1,8 +1,8 @@
 
 $(document).ready(function () {
-
+ 
     var cardSwiper = new Swiper('#choose-card-slider', {
-        slidesPerView: 1,
+        slidesPerView: 1.1, 
         spaceBetween: 12,
         centeredSlides: true,
         navigation: {
@@ -15,9 +15,9 @@ $(document).ready(function () {
         },
         breakpoints: {
             640: {
-                slidesPerView: 2,
+                slidesPerView: 1.1,
                 spaceBetween: 12,
-                centeredSlides: false,
+                centeredSlides: true,
             },
             768: {
                 slidesPerView: 'auto',

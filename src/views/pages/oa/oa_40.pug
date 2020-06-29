@@ -7,13 +7,14 @@ block scss
  
 block main
     #appOpen
-        .view
-            button.btn.btn-primary(@click="openModalDark('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
-        
+        .view-992.d-flex
+            div(style="margin: 32px auto")
+                button.btn.btn-primary(@click="openModalDark('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
+         
  
         //- lightbox
-        .modal-backdrop-dark.fade
-        .modal.modal-dark.fade#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
+        .modal-backdrop-dark.fade.show
+        .modal.modal-dark.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
             .modal-dialog.modal-dark-dialog
                 .modal-content
                     .modal-dark-body

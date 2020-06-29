@@ -38,7 +38,6 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        min-width: 792px;
         width: 100%;
         pointer-events: auto;
         background-color: #f9f9f9;
@@ -46,9 +45,14 @@
         border-radius: 10px;
         outline: 0;
         @include maxW-768 {
-            min-width: 100%;
             border-bottom-right-radius: 0px;
             border-bottom-left-radius: 0px;
+        }
+        &.minWidth {
+            min-width: 792px;
+            @include maxW-768 {
+                min-width: 100%;
+            }
         }
     }
     &-dialog {

@@ -10,14 +10,14 @@ block main
         .open-progress
             .progress-line(style="width:100%")
         .view-992
-            h1.main-title.mb-1 設定你的金融卡
+            h1.main-title.mb-2 設定你的金融卡
             form
-                .form-group
-                    label.form-label(for="") 選擇悠遊卡自動加值功能（自動功能開啟後即無法關閉）
+                .form-group.mb-0
+                    label.form-label.mb-0(for="") 選擇悠遊卡自動加值功能（自動功能開啟後即無法關閉）
                 .form-radio.form-group
                     input.styled-radio(id="defaultRadio-1-1",type="radio", name="radio-group", checked="checked")
                     label.styled-label(for="defaultRadio-1-1") 開啟
-                .form-radio.form-group
+                .form-radio.form-group.pb-2
                     input.styled-radio(id="defaultRadio-1-2",type="radio", name="radio-group")
                     label.styled-label(for="defaultRadio-1-2") 關閉
                 
@@ -27,23 +27,23 @@ block main
                 .form-radio.form-group
                     input.styled-radio(id="defaultRadio-2-1",type="radio", name="radio-group-2", checked="checked")
                     label.styled-label(for="defaultRadio-2-1") 我同意
-                .form-radio.form-group
+                .form-radio.form-group.pb-2
                     input.styled-radio(id="defaultRadio-2-2",type="radio", name="radio-group-2")
                     label.styled-label(for="defaultRadio-2-2") 我不同意
 
                 .form-group
-                    label.form-label(for="") 提供個人資料與悠遊卡公司作為行銷業務之特定項目的使用
+                    label.form-label.mb-0(for="") 提供個人資料與悠遊卡公司作為行銷業務之特定項目的使用
                 .form-radio.form-group
                     input.styled-radio(id="defaultRadio-3-1",type="radio", name="radio-group-3", checked="checked")
                     label.styled-label(for="defaultRadio-3-1") 我同意
-                .form-radio.form-group
+                .form-radio.form-group.pb-0
                     input.styled-radio(id="defaultRadio-3-2",type="radio", name="radio-group-3")
                     label.styled-label(for="defaultRadio-3-2") 我不同意
 
-                hr.bg-grey.mt-2.mb-2
+                hr.bg-grey.mt-2.mb-24
 
                 .form-group
-                    label.form-label(for="") 簽帳金融卡寄送地址
+                    label.form-label.mb-0(for="") 簽帳金融卡寄送地址
                 .form-radio.form-group
                     input.styled-radio(id="defaultRadio-4-1",type="radio", name="radio-group-3", checked="checked")
                     label.styled-label(for="defaultRadio-4-1") 
@@ -56,7 +56,7 @@ block main
                         | 戶籍地址
                         br 
                         | 新北市汐止區汐止區一段39-3號
-                .form-radio.form-group
+                .form-radio.form-group.pb-0
                     input.styled-radio(id="defaultRadio-4-3",type="radio", name="radio-group-3")
                     label.styled-label(for="defaultRadio-4-3") 
                         | 公司地址
@@ -84,7 +84,7 @@ block main
                 //-     input.form-control(id="", type="password", placehilder="請輸入 6-20 位英數字", aria-describedby="idHelp") 
             
 
-            .center.align-bottom.mt-3
+            .bottom-area.center.align-bottom
                 button.btn.btn-primary.disabled(type="submit") 完成
                     
 block js

@@ -156,9 +156,9 @@ main {
         @extend %icon_position_right;
     }
 }
-
+ 
 .tooltip {
-    display: inline-block;
+    // display: inline-block;
     padding-right: 20px;
     background-image: url($assets + '/images/icon/info.svg');
     @extend %icon_position_right;

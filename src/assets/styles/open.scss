@@ -18,7 +18,7 @@
 .sub-content{
     background: url($assets + '/images/open/bg/whitestone.png') no-repeat center center;
     background-size: cover;
-
+    overflow: hidden;
     
 }
 /* 高度小於600, button fixed bottom */
@@ -55,7 +55,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     @include maxW-768 {
-        height: 100vh;
+        height: calc(100vh - 56px);
     }
     .intro-steps-title{
         .intro-steps_step{
@@ -101,11 +101,11 @@
             justify-content: center;
             min-width: 200px;
             height: 55px;
-            border-radius: 26.5px;
+            border-radius: 26px;
             border-style: solid;
             border-width: 1px;
             border-image-source: linear-gradient(110deg, #f2c67a, #ffe3bc 39%, #e9a85b 78%);
-            border-image-slice: 1;
+            // border-image-slice: 1;
             background-image: linear-gradient(104deg, #000000 23%, #2e2e2e 54%, #000000 87%), linear-gradient(110deg, #f2c67a, #ffe3bc 39%, #e9a85b 78%);
             background-clip: content-box, border-box;
             span {
@@ -227,6 +227,9 @@
             }
         }
         &:last-child {
+            @include maxW-768 {
+                padding-bottom: 0;
+            }
             &:before {
                 display: none;
             }
@@ -641,7 +644,12 @@
         @include maxW-768 {
             display: flex;
         }
-        .icn {width: 24px;}
+        .icn {
+            width: 24px;
+            img {
+                transform: translateY(-3px);
+            }
+        }
         .txt {color: #d4b572; font-size: 0.875rem;}
     }
     .ttl{
@@ -690,6 +698,8 @@
         border-radius: 3px;
         background: #222020;
         text-align: center;
+        -webkit-appearance: none;
+        appearance: none;
         @include maxW-768 {
             height: 46px;
             font-size: 1rem;
@@ -822,18 +832,20 @@
         padding: 0 0 1.6rem;
     }
     &:last-child {
+        margin: 0;
+        padding: 0;
         border-bottom: none;
     }
     .info-title{
-        padding: .5rem 0.5rem;
-        margin-bottom: 1rem;
+        padding: 0;
+        margin: 32px auto 24px 0;
         font-size: 24px;
         font-weight: bold;
-        line-height: 1.5;
+        line-height: 1;
         color: #111111;
         .edited-icon{
             display: inline-block;
-            margin-left: 20px;
+            margin-left: 8px;
             width: 24px;
         }
     }
@@ -1107,12 +1119,14 @@
         max-width: 262px;
         margin: 0 auto;
         .seperate-input {
-            margin: 32px auto 15px;
+            margin: 32px auto 0;
         }
         .form-control{
+            max-width: 50px;
             font-size: 30px;
             height: 56px;
             line-height: 56px;
+            color: #3d3d3d;
             text-align: center;
         }
     }
@@ -1277,39 +1291,64 @@
 
 /* 已完成大戶申請 oa-39 */
 .apply-all-done {
+    
     &_bg{
+        position: relative;
         width: 100%;
-        height: 152px;
+        height: 224px;
         background: url($assets + '/images/open/bg/done-top-bg.svg') no-repeat center center;
         background-size: cover;
+        @include maxW-768{
+            width: calc(100% + 40px);
+            margin: 0 -20px;
+        }
+    }
+    .main-title{
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0;
+        background-image: linear-gradient(102deg, #f2c67a, #ffe3bc 54%, #e9a85b 108%);
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.88;
+        text-align: center;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .main-title-des{
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.31;
+        color: #111111;
     }
 }
 #continue-choose-card-slider{
-    &.swiper-container{
-        padding: 50px 30px 20px;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: -22%;
+        left: -1%;
+        width: 100%;
+        padding-bottom: 40%;
+        background: url($assets + '/images/open/bg/finish-big.png') no-repeat center center;
+        background-size: cover;
+
     }
-    .swiper-slide{
-        .card-sldier-other_photo{
-            transform: scale(0.8);
-            transform-origin: center 85%;
-            transition: all .2s linear;
-        }
-        &.swiper-slide-active{
-            .card-sldier-other_photo{
-                transform: scale(1.3);
-                @include maxW-768 {
-                    transform: none;
-                }
-            }
+
+    .card-sldier-txt-container{
+        padding: 24px 20px 24px;
+        @include maxW-768{
+            position: relative;
+            padding: 24px 0 24px;
+            background: #f9f9f9;
+            margin: -40px 0 0;
+            z-index: 2;
             
         }
-    }
-    
-    .card-sldier-other_photo{
-        
-    }
-    .card-sldier-txt-container{
-        padding: 0px 20px 24px;
         .get-txt{
             font-size: 12px;
             text-align: center;
@@ -1321,7 +1360,7 @@
             font-size: 18px;
             font-weight: normal;
             line-height: 1.33;
-            text-align: center;
+            text-align: center; 
             color: #111111;
         }   
     }
@@ -1330,6 +1369,22 @@
         .btn-primary{
             min-width: 120px;
             margin: 0 auto;
+            @include maxW-768{
+                min-width: 180px;
+            }
+        }
+    }
+}
+
+.rules-box{
+    max-width: 343px;
+    margin: 0 auto 32px;
+    line-height: 1.72;
+    color: #818181;
+    p {
+        margin-bottom: 8px;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }

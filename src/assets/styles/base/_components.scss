@@ -1,8 +1,8 @@
 
 // 注意事項
 div.cw-notice {
-    margin-top: 32px;
-    margin-bottom: 56px;
+    max-width: 496px;
+    margin: 32px auto 24px;
     padding: 8px;
     background-color: rgba(195, 139, 71, 0.1);
     &-title {

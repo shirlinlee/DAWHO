@@ -8,7 +8,7 @@ html
     // ============================== css close ==============================
     // ============================== script start ==============================
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
-    script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js')
+    //- script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js')
     script.
       $(document).ready(function(){
         $(window).scroll(function () {
@@ -115,25 +115,29 @@ html
       background: #f5fff5;
       } */
   body
-    .list
+    #list.list
       // ============================== header start ==============================
       h2 2020 開戶列表
       table.list
         tbody
-            
+
           tr
-            th 編號
+            th 編號 
             th HTML 檔名
             th 補充
-          - for(var i = 1; i <= 40; i++)
-            tr  
-              td.font-bold(width="50") #{i}
-              td(width="250")
-                a(target='_blank', href='oa/oa_' + i + '.html') #{'oa_'+ i}
-              td
+          tr(v-for="(item, index) in oa_lists", :key="index")
+            td.font-bold(width="50") {{item.html}}
+            td(width="90")
+                a(target='_blank', :href="'oa/oa_' + item.html + '.html'") oa_{{item.html}}
+            td(v-html="item.ps")
          
          
        
       // ============================== content close ==============================
       .backtop(style='text-align: center;')
         a(href='#top') Back to Top
+
+
+block js
+    script(src= public +'/lib/js/vue@2.6.11.min.js' defer)
+    script(src=assets + '/js/oa-list.bundle.js' defer)

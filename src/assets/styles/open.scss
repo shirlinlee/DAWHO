@@ -1241,16 +1241,24 @@
         }
     }
     .swiper-slide {
-        max-width: 312px;
+        // max-width: 312px;
         box-shadow: 0 0 15px 0 rgba(167, 167, 167, 0.48);
+        &:nth-child(odd) {
+            background: url($assets + '/images/open/creditCard/open-odd.svg') no-repeat center center;
+            background-size: 100% auto;
+        }
+        &:nth-child(even) {
+            background: url($assets + '/images/open/creditCard/open-even.svg') no-repeat center center;
+            background-size: 100% auto;
+        }
         .card-sldier-item_photo {
             width: 100%;
-            max-width: 280px;
-            height: 262px;
+            // max-width: 280px;
+            min-height: 262px;
             margin: 0 auto;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: cover;
+            background-size: auto 90%;
         }
         .card-sldier-container{
             padding: 16px 16px 68px;

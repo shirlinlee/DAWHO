@@ -1,0 +1,593 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="259" height="200" viewBox="0 0 259 200">
+    <defs>
+        <filter id="prefix__b" width="119%" height="136%" x="-9.5%" y="-15.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+        </filter>
+        <filter id="prefix__h" width="100.3%" height="100.4%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__k" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__n" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__q" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__t" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__w" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__z" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__C" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__F" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__I" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__L" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__O" width="100.3%" height="100.5%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__R" width="100.3%" height="100.6%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__U" width="100.3%" height="100.6%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__X" width="100.3%" height="100.6%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__aa" width="100.3%" height="100.6%" x="-.2%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__ad" width="100.3%" height="100.6%" x="-.1%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__ag" width="100.3%" height="100.6%" x="-.1%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__aj" width="100.3%" height="100.6%" x="-.1%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__am" width="100.3%" height="100.6%" x="-.1%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__ap" width="100.3%" height="100.6%" x="-.1%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__as" width="100.3%" height="100.7%" x="-.1%" y="-.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy=".1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy=".1" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0.764705882 0 0 0 0 0.545098039 0 0 0 0 0.278431373 0 0 0 0.16919799 0"/>
+        </filter>
+        <filter id="prefix__av" width="100.4%" height="103.6%" x="-.3%" y="-.9%" filterUnits="objectBoundingBox">
+            <feOffset dx="-.2" dy=".2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="prefix__ay" width="101%" height="105%" x="-.8%" y="-1.2%" filterUnits="objectBoundingBox">
+            <feOffset dx="-.2" dy=".2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="prefix__aD" width="101.2%" height="124%" x="-.6%" y="-12%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius=".1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation=".15"/>
+            <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.2362149 0 0 0 0 0.141786934 0 0 0 0 0.0130215264 0 0 0 1 0"/>
+        </filter>
+        <filter id="prefix__aG" width="100.7%" height="124%" x="-.4%" y="-12%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius=".1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation=".15"/>
+            <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.2362149 0 0 0 0 0.141786934 0 0 0 0 0.0130215264 0 0 0 1 0"/>
+        </filter>
+        <path id="prefix__c" d="M46.657 57.083h166.02c.553 0 1 .448 1 1v84.006c0 2.21-1.79 4-4 4H49.657c-2.21 0-4-1.79-4-4V58.083c0-.552.448-1 1-1z"/>
+        <path id="prefix__e" d="M1 0h166.02c.553 0 1 .448 1 1v84.006c0 2.21-1.79 4-4 4H4c-2.21 0-4-1.79-4-4V1c0-.552.448-1 1-1z"/>
+        <path id="prefix__i" d="M19.144 146.298s44.536-3.671 67.126-29.05c22.591-25.377 20.977 34.233 31.95 24.514 10.973-9.72 77.687-69.81 85.65-141.755"/>
+        <path id="prefix__l" d="M18.233 148.258s46.359-4.505 69.491-30.78c23.133-26.277 19.852 34.35 30.783 25.006 10.93-9.344 79.093-68.147 87.511-138.822"/>
+        <path id="prefix__o" d="M17.322 150.219s48.182-5.34 71.857-32.513c23.675-27.174 18.726 34.468 29.614 25.5 10.889-8.968 80.5-66.484 89.374-135.89"/>
+        <path id="prefix__r" d="M16.411 152.179s50.005-6.173 74.222-34.245c24.217-28.071 17.6 34.586 28.447 25.993 10.846-8.592 81.908-64.82 91.236-132.957"/>
+        <path id="prefix__u" d="M15.5 154.14s51.828-7.008 76.587-35.978c24.76-28.969 16.476 34.704 27.28 26.487 10.803-8.217 83.314-63.156 93.098-130.025"/>
+        <path id="prefix__x" d="M14.59 156.1s53.65-7.842 78.951-37.71c25.301-29.866 15.35 34.822 26.112 26.98 10.762-7.84 84.722-61.492 94.96-127.091"/>
+        <path id="prefix__A" d="M13.679 158.06s55.473-8.676 81.316-39.44c25.844-30.766 14.225 34.938 24.945 27.473 10.72-7.466 86.129-59.83 96.822-124.16"/>
+        <path id="prefix__D" d="M12.768 160.021s57.296-9.51 83.681-41.173c26.386-31.663 13.1 35.057 23.777 27.966 10.678-7.09 87.537-58.165 98.685-121.227"/>
+        <path id="prefix__G" d="M11.857 161.982s59.119-10.345 86.046-42.906c26.928-32.56 11.975 35.175 22.61 28.46 10.635-6.715 88.943-56.501 100.547-118.294"/>
+        <path id="prefix__J" d="M10.946 163.942s60.942-11.179 88.411-44.637c27.47-33.459 10.85 35.292 21.443 28.953 10.593-6.34 90.35-54.838 102.408-115.362"/>
+        <path id="prefix__M" d="M10.035 165.903s62.765-12.014 90.777-46.37c28.012-34.356 9.724 35.41 20.274 29.447 10.551-5.964 91.758-53.174 104.271-112.43"/>
+        <path id="prefix__P" d="M9.124 167.863s64.588-12.848 93.142-48.102c28.554-35.254 8.598 35.528 19.107 29.94 10.508-5.588 93.165-51.51 106.133-109.496"/>
+        <path id="prefix__S" d="M8.214 169.823s66.41-13.681 95.506-49.833c29.096-36.152 7.473 35.646 17.94 30.433 10.466-5.212 94.571-49.846 107.995-106.564"/>
+        <path id="prefix__V" d="M7.303 171.784s68.233-14.516 97.871-51.566c29.639-37.05 6.348 35.764 16.772 30.927 10.424-4.837 95.979-48.183 109.857-103.632"/>
+        <path id="prefix__Y" d="M6.392 173.744s70.055-15.35 100.236-53.297c30.18-37.948 5.223 35.881 15.605 31.42 10.382-4.462 97.386-46.52 111.719-100.7"/>
+        <path id="prefix__ab" d="M5.481 175.705s71.878-16.185 102.601-55.03 4.098 36 14.437 31.913c10.34-4.085 98.793-44.855 113.582-97.766"/>
+        <path id="prefix__ae" d="M4.57 177.665s73.701-17.018 104.966-56.762c31.265-39.743 2.973 36.117 13.27 32.407 10.298-3.71 100.2-43.192 115.444-94.834"/>
+        <path id="prefix__ah" d="M3.66 179.626s75.523-17.853 107.33-58.494c31.808-40.641 1.847 36.235 12.103 32.9 10.255-3.335 101.607-41.528 117.305-91.902"/>
+        <path id="prefix__ak" d="M2.748 181.586S80.095 162.9 112.445 121.36c32.349-41.538.721 36.353 10.934 33.394 10.213-2.96 103.015-39.865 119.168-88.97"/>
+        <path id="prefix__an" d="M1.838 183.547s79.17-19.522 112.06-61.958c32.892-42.437-.403 36.47 9.768 33.887 10.17-2.584 104.421-38.201 121.03-86.037"/>
+        <path id="prefix__aq" d="M.927 185.507s80.992-20.355 114.426-63.69c33.433-43.334-1.53 36.588 8.6 34.38 10.128-2.208 105.828-36.537 122.892-83.104"/>
+        <path id="prefix__at" d="M.016 187.468s82.815-21.19 116.791-65.422c33.976-44.233-2.654 36.705 7.432 34.873 10.087-1.832 107.236-34.873 124.754-80.171"/>
+        <path id="prefix__aC" d="M55.619 66.667H88.824V68.334H55.619z"/>
+        <path id="prefix__aF" d="M55.619 71.667H111.238V73.334H55.619z"/>
+        <radialGradient id="prefix__a" cx="8.625%" cy="6.597%" r="130.653%" fx="8.625%" fy="6.597%" gradientTransform="matrix(.57898 .6617 -.51096 .74978 .07 -.04)">
+            <stop offset="0%" stop-color="#48453C"/>
+            <stop offset="100%"/>
+        </radialGradient>
+        <radialGradient id="prefix__j" cx="33.533%" cy="93.204%" r="194.923%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.6987 -.47075 .24441 .57842 -.127 .55)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__m" cx="33.533%" cy="93.204%" r="199.256%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.6835 -.46051 .23248 .58195 -.11 .544)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__p" cx="33.533%" cy="93.204%" r="203.719%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.66853 -.45043 .22112 .58533 -.095 .538)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__s" cx="33.533%" cy="93.204%" r="208.314%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.65378 -.4405 .2103 .58857 -.08 .531)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__v" cx="33.533%" cy="93.204%" r="213.046%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.63926 -.4307 .20001 .59168 -.065 .525)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__y" cx="33.533%" cy="93.204%" r="217.92%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.62496 -.42107 .19021 .59465 -.052 .519)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__B" cx="33.533%" cy="93.204%" r="222.939%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.6109 -.4116 .18088 .5975 -.038 .513)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__E" cx="33.533%" cy="93.204%" r="228.109%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.59705 -.40227 .17199 .60022 -.025 .507)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__H" cx="33.533%" cy="93.204%" r="233.435%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.58343 -.39309 .16352 .60283 -.013 .502)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__K" cx="33.533%" cy="93.204%" r="238.921%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.57003 -.38406 .15545 .60532 0 .497)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__N" cx="33.533%" cy="93.204%" r="244.573%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.55685 -.37519 .14777 .60771 .01 .491)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__Q" cx="33.533%" cy="93.204%" r="250.399%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.5439 -.36646 .14044 .61 .022 .486)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__T" cx="33.533%" cy="93.204%" r="256.402%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.53116 -.35788 .13346 .61218 .033 .481)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__W" cx="33.533%" cy="93.204%" r="262.591%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.51865 -.34944 .12681 .61427 .043 .477)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__Z" cx="33.533%" cy="93.204%" r="268.972%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.50634 -.34115 .12048 .61627 .053 .472)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__ac" cx="33.533%" cy="93.204%" r="275.553%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.49425 -.333 .11444 .61819 .063 .468)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__af" cx="33.533%" cy="93.204%" r="282.341%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.48237 -.325 .10868 .62002 .072 .463)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__ai" cx="33.533%" cy="93.204%" r="289.345%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.47069 -.31713 .10319 .62176 .081 .459)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__al" cx="33.533%" cy="93.204%" r="296.574%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.45922 -.3094 .09796 .62344 .09 .455)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__ao" cx="33.533%" cy="93.204%" r="304.037%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.44794 -.3018 .09297 .62503 .098 .45)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__ar" cx="33.533%" cy="93.204%" r="311.745%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.43687 -.29434 .08821 .62656 .107 .447)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__au" cx="33.533%" cy="93.204%" r="319.707%" fx="33.533%" fy="93.204%" gradientTransform="matrix(.42599 -.28701 .08368 .62802 .114 .443)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="4.966%" stop-color="#FFF"/>
+            <stop offset="7.427%" stop-color="#D3995D"/>
+            <stop offset="22.489%" stop-color="#FFF" stop-opacity=".714"/>
+            <stop offset="31.899%" stop-color="#D4B086"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="prefix__d" x1="-7.24%" x2="104.065%" y1="63.223%" y2="66.197%">
+            <stop offset="0%" stop-color="#815920"/>
+            <stop offset="66.408%" stop-color="#FFE2B9"/>
+            <stop offset="100%" stop-color="#744A17"/>
+        </linearGradient>
+        <linearGradient id="prefix__f" x1="-50.205%" x2="95.841%" y1="30%" y2="62.536%">
+            <stop offset="0%" stop-color="#FAD6A2"/>
+            <stop offset="20.1%" stop-color="#FFDDAD"/>
+            <stop offset="66.722%" stop-color="#DBB681"/>
+            <stop offset="100%" stop-color="#7E582B"/>
+        </linearGradient>
+        <linearGradient id="prefix__ax" x1="27.935%" x2="84.003%" y1="49.15%" y2="50.713%">
+            <stop offset="0%" stop-color="#644930"/>
+            <stop offset="100%"/>
+        </linearGradient>
+        <linearGradient id="prefix__aA" x1="27.935%" x2="84.003%" y1="47.565%" y2="52.041%">
+            <stop offset="0%" stop-color="#644930"/>
+            <stop offset="100%"/>
+        </linearGradient>
+        <linearGradient id="prefix__aB" x1="-47.044%" x2="100%" y1="50%" y2="50.119%">
+            <stop offset="0%" stop-color="#D1AC6A"/>
+            <stop offset="10.741%" stop-color="#AB8347"/>
+            <stop offset="22.436%" stop-color="#B1895C"/>
+            <stop offset="73.245%" stop-color="#A2794B"/>
+            <stop offset="100%" stop-color="#39260D"/>
+        </linearGradient>
+        <linearGradient id="prefix__aE" x1="-47.044%" x2="100%" y1="50%" y2="50.042%">
+            <stop offset="0%" stop-color="#D1AC6A"/>
+            <stop offset="10.741%" stop-color="#AB8347"/>
+            <stop offset="22.436%" stop-color="#B1895C"/>
+            <stop offset="73.245%" stop-color="#A2794B"/>
+            <stop offset="100%" stop-color="#39260D"/>
+        </linearGradient>
+        <text id="prefix__aw" font-family="PingFangTC-Semibold, PingFang TC" font-size="8" font-weight="500" letter-spacing="1.6">
+            <tspan x="0" y="8">1234567 1234567</tspan>
+        </text>
+        <text id="prefix__az" font-family="PingFangTC-Semibold, PingFang TC" font-size="6" font-weight="500" letter-spacing=".375">
+            <tspan x="55.619" y="93.667">存戶帳號</tspan>
+        </text>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="url(#prefix__a)" d="M0 0H259V200H0z"/>
+        <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__c"/>
+        <use fill="url(#prefix__d)" xlink:href="#prefix__c"/>
+        <g transform="translate(45.657 55.833)">
+            <mask id="prefix__g" fill="#fff">
+                <use xlink:href="#prefix__e"/>
+            </mask>
+            <use fill="url(#prefix__f)" xlink:href="#prefix__e"/>
+            <g mask="url(#prefix__g)" opacity=".7">
+                <g transform="translate(-61.43 -51.667)">
+                    <use fill="#000" filter="url(#prefix__h)" xlink:href="#prefix__i"/>
+                    <use stroke="url(#prefix__j)" stroke-width=".5" xlink:href="#prefix__i"/>
+                    <use fill="#000" filter="url(#prefix__k)" xlink:href="#prefix__l"/>
+                    <use stroke="url(#prefix__m)" stroke-width=".5" xlink:href="#prefix__l"/>
+                    <use fill="#000" filter="url(#prefix__n)" xlink:href="#prefix__o"/>
+                    <use stroke="url(#prefix__p)" stroke-width=".5" xlink:href="#prefix__o"/>
+                    <use fill="#000" filter="url(#prefix__q)" xlink:href="#prefix__r"/>
+                    <use stroke="url(#prefix__s)" stroke-width=".5" xlink:href="#prefix__r"/>
+                    <use fill="#000" filter="url(#prefix__t)" xlink:href="#prefix__u"/>
+                    <use stroke="url(#prefix__v)" stroke-width=".5" xlink:href="#prefix__u"/>
+                    <use fill="#000" filter="url(#prefix__w)" xlink:href="#prefix__x"/>
+                    <use stroke="url(#prefix__y)" stroke-width=".5" xlink:href="#prefix__x"/>
+                    <use fill="#000" filter="url(#prefix__z)" xlink:href="#prefix__A"/>
+                    <use stroke="url(#prefix__B)" stroke-width=".5" xlink:href="#prefix__A"/>
+                    <use fill="#000" filter="url(#prefix__C)" xlink:href="#prefix__D"/>
+                    <use stroke="url(#prefix__E)" stroke-width=".5" xlink:href="#prefix__D"/>
+                    <use fill="#000" filter="url(#prefix__F)" xlink:href="#prefix__G"/>
+                    <use stroke="url(#prefix__H)" stroke-width=".5" xlink:href="#prefix__G"/>
+                    <use fill="#000" filter="url(#prefix__I)" xlink:href="#prefix__J"/>
+                    <use stroke="url(#prefix__K)" stroke-width=".5" xlink:href="#prefix__J"/>
+                    <use fill="#000" filter="url(#prefix__L)" xlink:href="#prefix__M"/>
+                    <use stroke="url(#prefix__N)" stroke-width=".5" xlink:href="#prefix__M"/>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__O)" xlink:href="#prefix__P"/>
+                        <use stroke="url(#prefix__Q)" stroke-width=".5" xlink:href="#prefix__P"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__R)" xlink:href="#prefix__S"/>
+                        <use stroke="url(#prefix__T)" stroke-width=".5" xlink:href="#prefix__S"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__U)" xlink:href="#prefix__V"/>
+                        <use stroke="url(#prefix__W)" stroke-width=".5" xlink:href="#prefix__V"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__X)" xlink:href="#prefix__Y"/>
+                        <use stroke="url(#prefix__Z)" stroke-width=".5" xlink:href="#prefix__Y"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__aa)" xlink:href="#prefix__ab"/>
+                        <use stroke="url(#prefix__ac)" stroke-width=".5" xlink:href="#prefix__ab"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__ad)" xlink:href="#prefix__ae"/>
+                        <use stroke="url(#prefix__af)" stroke-width=".5" xlink:href="#prefix__ae"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__ag)" xlink:href="#prefix__ah"/>
+                        <use stroke="url(#prefix__ai)" stroke-width=".5" xlink:href="#prefix__ah"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__aj)" xlink:href="#prefix__ak"/>
+                        <use stroke="url(#prefix__al)" stroke-width=".5" xlink:href="#prefix__ak"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__am)" xlink:href="#prefix__an"/>
+                        <use stroke="url(#prefix__ao)" stroke-width=".5" xlink:href="#prefix__an"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__ap)" xlink:href="#prefix__aq"/>
+                        <use stroke="url(#prefix__ar)" stroke-width=".5" xlink:href="#prefix__aq"/>
+                    </g>
+                    <g>
+                        <use fill="#000" filter="url(#prefix__as)" xlink:href="#prefix__at"/>
+                        <use stroke="url(#prefix__au)" stroke-width=".5" xlink:href="#prefix__at"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(55.619 96.667)">
+            <use fill="#D8D8D8" filter="url(#prefix__av)" xlink:href="#prefix__aw"/>
+            <use fill="url(#prefix__ax)" xlink:href="#prefix__aw"/>
+            <use fill="#D8D8D8" xlink:href="#prefix__aw"/>
+        </g>
+        <use fill="#D8D8D8" filter="url(#prefix__ay)" xlink:href="#prefix__az"/>
+        <use fill="url(#prefix__aA)" xlink:href="#prefix__az"/>
+        <use fill="#D8D8D8" xlink:href="#prefix__az"/>
+        <g>
+            <use fill="url(#prefix__aB)" xlink:href="#prefix__aC"/>
+            <use fill="#000" filter="url(#prefix__aD)" xlink:href="#prefix__aC"/>
+        </g>
+        <g>
+            <use fill="url(#prefix__aE)" xlink:href="#prefix__aF"/>
+            <use fill="#000" filter="url(#prefix__aG)" xlink:href="#prefix__aF"/>
+        </g>
+    </g>
+</svg>

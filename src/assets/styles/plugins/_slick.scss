@@ -1,12 +1,4 @@
 @charset "UTF-8";
-
-// Default Variables
-
-// Slick icon entity codes outputs the following
-// "\2190" outputs ascii character "←"
-// "\2192" outputs ascii character "→"
-// "\2022" outputs ascii character "•"
-
 $slick-font-path: "./fonts/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "./" !default;
@@ -344,9 +336,11 @@ $slick-opacity-not-active: 0.25 !default;
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
     opacity: 0;
 }
+ 
 
-
+/* swiper 0a-18 */
 #card-slider-slick{ 
+
     &.swiper-container{
         margin-bottom: 32px;
         overflow: inherit;
@@ -356,14 +350,14 @@ $slick-opacity-not-active: 0.25 !default;
     }
     
     .swiper-wrapper {
-        justify-content: center;
-        @include maxW-device-768() {
-            justify-content: initial;
-        }
+        // justify-content: center;
+        // @include maxW-device-768() {
+        //     justify-content: initial;
+        // }
     }
     .swiper-slide{
         // padding: 0 12vw 0 12px;
-        max-width: 260px;
+        // max-width: 260px;
         min-height: 522px;
         margin: 0 6px;
         @include maxW-device-768() {

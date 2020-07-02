@@ -35,13 +35,13 @@ block main
                         input.sr-only#idCardOther-pc(type="file", name="file", accept=".jpg,.jpeg,.png")
                     span.id-card-upload_note 上傳健保卡、駕照、護照
                 //- 手機出現
-                //- first trigger select, second trigger photo 
+                //- first trigger select, second trigger open file  
                 .id-card-display.id-card-display-other.id-card-display-mb
                     label.btn-card-upload(ref="fileLabel", for="step-1", title="Upload image file", @click="triggerChange")
                         input.sr-only#step-2(ref="fileInput", type="file", name="file", accept=".jpg,.jpeg,.png", :class="{'disabled': currentNum === 1 }")
                     span.id-card-upload_note 上傳健保卡、駕照、護照
 
-                select.custom-select#step-1(style="opacity: 0", name="uploadCardOther", ref="fileSelect", v-model="otherCardSelect", :class="{'disabled': currentNum === 2 }")
+                select#step-1(style="opacity: 0", name="uploadCardOther", ref="fileSelect", v-model="otherCardSelect", :class="{'disabled': currentNum === 2 }")
                     option(value="1") 健保卡
                     option(value="2") 駕照 
                     option(value="3") 護照

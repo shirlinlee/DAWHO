@@ -1,43 +1,79 @@
 
-$(document).ready(function () {
-    console.log('2or4io3') 
-    //oa_18
-    const breakpoint = window.matchMedia('(max-device-width:767px)');
-    let mySwiper;
-    const breakpointChecker = function () {
-        if (breakpoint.matches === true) {
-            // fire small viewport version of swiper
-            return enableSwiper();
-            // else if a small viewport and single column layout needed
-        } else if (breakpoint.matches === false) {
-            // clean up old instances and inline styles when available
-            console.log('mySwiper2', mySwiper)
-            if (mySwiper !== undefined) mySwiper.destroy(true, true);
-            console.log('mySwiper3', mySwiper)
-            // or/and do nothing
-            return;
-        }
-    }; 
-    const enableSwiper = function () {
-        mySwiper = new Swiper('#card-slider-slick', {
-            init: true,
-            slidesPerView: 1.1,
-            spaceBetween: 12,
-            centeredSlides: true,
-            navigation: {
-                nextEl: '.card-arrow-prev',
-                prevEl: '.card-arrow-next',
+$(document).ready(function () { 
+
+    let cardSwiper = new Swiper('#card-slider-slick', {
+        slidesPerView: 1.1,
+        spaceBetween: 12,
+        centeredSlides: true,
+        navigation: {
+            nextEl: '.card-arrow-prev',
+            prevEl: '.card-arrow-next',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1.1,
+                spaceBetween: 12,
+                centeredSlides: true,
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            }
-        });
-    };
-    // keep an eye on viewport size changes
-    breakpoint.addListener(breakpointChecker);
-    // kickstart
-    breakpointChecker();
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                centeredSlides: true,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 12,
+                centeredSlides: false,
+            },
+        }
+    });
+
+
+    //oa_18
+    // const breakpoint = window.matchMedia('(max-device-width:767px)');
+    // let mySwiper;
+    // const breakpointChecker = function () {
+    //     if (breakpoint.matches === true) {
+    //         // fire small viewport version of swiper
+    //         return enableSwiper();
+    //         // else if a small viewport and single column layout needed
+    //     } else if (breakpoint.matches === false) {
+    //         // clean up old instances and inline styles when available
+    //         console.log('mySwiper2', mySwiper)
+    //         if (mySwiper !== undefined) mySwiper.destroy(true, true);
+    //         console.log('mySwiper3', mySwiper)
+    //         // or/and do nothing
+    //         return;
+    //     }
+    // }; 
+    // const enableSwiper = function () {
+    //     mySwiper = new Swiper('#card-slider-slick', {
+    //         init: true,
+    //         slidesPerView: 1.1,
+    //         spaceBetween: 12,
+    //         centeredSlides: true,
+    //         navigation: {
+    //             nextEl: '.card-arrow-prev',
+    //             prevEl: '.card-arrow-next',
+    //         },
+    //         pagination: {
+    //             el: '.swiper-pagination',
+    //             clickable: true,
+    //         }
+    //     });
+    // };
+    // // keep an eye on viewport size changes
+    // breakpoint.addListener(breakpointChecker);
+    // // kickstart
+    // breakpointChecker();
+
+
+
+
     // var mySwiper = new Swiper('#card-slider-slick', {
     //     slidesPerView: 3,
     //     spaceBetween: 12,

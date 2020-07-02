@@ -3,9 +3,8 @@ extends ../../includes/_layout_open.pug
 block title
     title 請選擇你的金融卡
 
+    link(rel='stylesheet', href=public+'/lib/styles/swiper.min.css')
 block scss
-
-block js
 
 block main
 
@@ -55,6 +54,7 @@ block main
 
 
 block js
+    script(src=public+'/lib/js/swiper.min.js')
     script(src=assets + '/js/oa-37.bundle.js' defer)
 
 

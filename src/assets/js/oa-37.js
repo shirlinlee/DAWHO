@@ -20,12 +20,12 @@ $(document).ready(function () {
                 centeredSlides: true,
             },
             768: {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 12,
-                centeredSlides: false,
+                centeredSlides: true,
             },
             1024: {
-                slidesPerView: 'auto',
+                slidesPerView: 3,
                 spaceBetween: 12,
                 centeredSlides: false,
             },

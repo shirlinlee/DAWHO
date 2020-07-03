@@ -1,0 +1,27 @@
+extends ../../includes/_layout_oas.pug
+
+block title
+    title 開戶進度查詢
+
+block scss
+
+block main
+
+    #appOas
+        .view-992
+            h1.main-title 請輸入驗證碼
+            h2.sub-title 驗證碼已發送 至 0956 ... 888
+            form
+                .form-group.seperate-input
+                    input.form-control(id="", type="text", maxlength="1")
+                    input.form-control(id="", type="text", maxlength="1") 
+                    input.form-control(id="", type="text", maxlength="1") 
+                    input.form-control(id="", type="text", maxlength="1") 
+                    input.form-control(id="", type="text", maxlength="1") 
+                    input.form-control(id="", type="text", maxlength="1") 
+                p.note 驗證碼將在 1分52秒 失效
+            .bottom-area.center.align-bottom
+                button.btn.btn-primary(type="submit") 送出
+                
+
+block js

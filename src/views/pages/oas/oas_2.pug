@@ -1,7 +1,6 @@
 extends ../../includes/_layout_oas.pug
-
 block title
-    title 開戶進度查詢
+    title 需要補件
 
 block scss
     
@@ -9,19 +8,23 @@ block scss
 block js
 
 block main
-    .view
-        h1.main-title 請輸入驗證碼
-        h2.sub-title 驗證碼已發送 至 0956 ... 888
-        form
-            .form-group.seperate-input
-                input.form-control(id="", type="text", maxlength="1")
-                input.form-control(id="", type="text", maxlength="1") 
-                input.form-control(id="", type="text", maxlength="1") 
-                input.form-control(id="", type="text", maxlength="1") 
-                input.form-control(id="", type="text", maxlength="1") 
-                input.form-control(id="", type="text", maxlength="1") 
-            p.note 驗證碼將在 1分52秒 失效
-        .center.align-bottom
-            button.btn.btn-primary(type="submit") 送出
+
+    #appOas.sub-content
+        .view-992.just-content-between
+            .status
+                .status-image
+                    img(src=assets + "/images/oas/steps/step-1.svg", alt="需要補件")
+                .status-title 需要補件
+                .status-content 
+                    p.text-white 請重新上傳以下證件
+                    ul.ul-list
+                        li
+                            a.link(href="#") ・身分證
+                        li
+                            a.link(href="#") ・第二證件
+
+            .center.align-bottom
+                button.btn.btn-primary(type="submit") 開始補件
+               
                 
                 

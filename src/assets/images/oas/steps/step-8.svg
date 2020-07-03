@@ -1,0 +1,436 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="270" viewBox="0 0 375 270">
+    <defs>
+        <radialGradient id="prefix__c" cx="35.262%" cy="68.055%" r="109.938%" fx="35.262%" fy="68.055%" gradientTransform="matrix(-.83222 .51686 -.54309 -.7599 1.016 1.015)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__d" cx="35.262%" cy="68.055%" r="109.713%" fx="35.262%" fy="68.055%" gradientTransform="matrix(-.83392 .51792 -.54057 -.76657 1.015 1.02)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__e" cx="35.262%" cy="68.055%" r="109.502%" fx="35.262%" fy="68.055%" gradientTransform="matrix(-.83553 .51891 -.53818 -.77294 1.014 1.024)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__f" cx="35.262%" cy="68.055%" r="109.309%" fx="35.262%" fy="68.055%" gradientTransform="matrix(-.837 .51983 -.53598 -.77886 1.013 1.027)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__g" cx="50%" cy="55.647%" r="88.613%" fx="50%" fy="55.647%" gradientTransform="matrix(-.85167 .50052 -.45425 -.70503 1.179 .699)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__h" cx="50%" cy="55.647%" r="88.498%" fx="50%" fy="55.647%" gradientTransform="matrix(-.85278 .50117 -.4527 -.7093 1.178 .7)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__i" cx="50%" cy="55.647%" r="88.397%" fx="50%" fy="55.647%" gradientTransform="matrix(-.85375 .50174 -.4513 -.7131 1.178 .702)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__j" cx="50%" cy="55.647%" r="88.309%" fx="50%" fy="55.647%" gradientTransform="matrix(-.8546 .50225 -.45009 -.71646 1.178 .704)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__u" cx="59.305%" cy="59.994%" r="208.335%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.2981 -.63478 .21226 .66975 .289 .575)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__v" cx="59.305%" cy="59.994%" r="214.359%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.28972 -.61694 .19686 .68216 .303 .557)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__w" cx="59.305%" cy="59.994%" r="222.786%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.27876 -.5936 .17823 .69754 .32 .533)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__x" cx="59.305%" cy="59.994%" r="233.376%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.26611 -.56667 .15863 .71417 .34 .508)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__y" cx="59.305%" cy="59.994%" r="245.462%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.25301 -.53876 .14025 .73022 .359 .481)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__z" cx="59.305%" cy="59.994%" r="260.92%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.23802 -.50685 .1213 .74719 .38 .452)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__A" cx="59.305%" cy="59.994%" r="279.261%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.22239 -.47356 .10364 .76342 .399 .423)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__B" cx="59.305%" cy="59.994%" r="299.295%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.2075 -.44186 .08859 .77757 .417 .395)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="9.163%" stop-color="#D3995D"/>
+            <stop offset="11.423%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__C" cx="59.305%" cy="59.994%" r="328.265%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.18919 -.40286 .07218 .79332 .438 .363)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__D" cx="59.305%" cy="59.994%" r="368.053%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.16874 -.35931 .05631 .80889 .46 .328)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="14.871%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__E" cx="59.305%" cy="59.994%" r="421.633%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.1473 -.31365 .04217 .82303 .48 .292)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="16.351%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__F" cx="59.305%" cy="59.994%" r="485.86%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.12782 -.27219 .03134 .83405 .498 .261)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__G" cx="59.305%" cy="59.994%" r="603.293%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.10294 -.2192 .02005 .8457 .52 .223)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.38%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__H" cx="59.305%" cy="59.994%" r="767.393%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.08093 -.17233 .01227 .8538 .538 .19)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="6.403%" stop-color="#D3995D"/>
+            <stop offset="19.312%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="34.902%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__I" cx="59.305%" cy="59.994%" r="1160.965%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.0535 -.11391 .00532 .86113 .558 .15)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__J" cx="59.305%" cy="59.994%" r="2119.62%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.0293 -.0624 .00159 .86508 .575 .118)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__K" cx="59.305%" cy="59.994%" r="4896.623%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.01268 -.027 .0003 .86646 .585 .096)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__L" cx="59.305%" cy="59.994%" r="1616.378%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.03842 -.08182 .00273 .86387 .569 .13)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__M" cx="59.305%" cy="59.994%" r="908.101%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.06839 -.14563 .00873 .85753 .547 .172)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__N" cx="59.305%" cy="59.994%" r="630.921%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.09843 -.2096 .01829 .84752 .524 .216)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__O" cx="59.305%" cy="59.994%" r="485.138%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.12801 -.2726 .03144 .83395 .498 .261)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__P" cx="59.305%" cy="59.994%" r="407.58%" fx="59.305%" fy="59.994%" gradientTransform="matrix(.15237 -.32447 .0453 .81988 .476 .3)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C" stop-opacity="0"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="prefix__Z" cx="35.262%" cy="68.055%" r="297.056%" fx="35.262%" fy="68.055%" gradientTransform="matrix(-.308 .19128 -.0588 -.96142 .501 1.267)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="prefix__k" x1="96.324%" x2="23.154%" y1="-5.609%" y2="85.19%">
+            <stop offset="0%" stop-color="#9F6019"/>
+            <stop offset="41.672%" stop-color="#DDBB96"/>
+            <stop offset="100%" stop-color="#9B662E"/>
+        </linearGradient>
+        <linearGradient id="prefix__o" x1="49.988%" x2="49.988%" y1="-6.262%" y2="71.938%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#FFECD0"/>
+        </linearGradient>
+        <linearGradient id="prefix__n" x1="8.861%" x2="89.444%" y1="-12.584%" y2="110.619%">
+            <stop offset="0%" stop-color="#B58B43"/>
+            <stop offset="69.186%" stop-color="#FFFCF9"/>
+            <stop offset="100%" stop-color="#AA7434"/>
+        </linearGradient>
+        <linearGradient id="prefix__r" x1="0%" x2="103.295%" y1="80.984%" y2="80.984%">
+            <stop offset="0%" stop-color="#B98F5D"/>
+            <stop offset="42.665%" stop-color="#FFE1B5"/>
+            <stop offset="53.249%" stop-color="#FFE3BA"/>
+            <stop offset="100%" stop-color="#B98F5D"/>
+        </linearGradient>
+        <linearGradient id="prefix__Q" x1="5.345%" x2="100%" y1="30.497%" y2="97.283%">
+            <stop offset="0%" stop-color="#D1AC6A"/>
+            <stop offset="10.741%" stop-color="#AB8347"/>
+            <stop offset="22.436%" stop-color="#B1895C"/>
+            <stop offset="53.569%" stop-color="#FFDEB7"/>
+            <stop offset="73.245%" stop-color="#A2794B"/>
+            <stop offset="100%" stop-color="#39260D"/>
+        </linearGradient>
+        <linearGradient id="prefix__T" x1="10.741%" x2="69.375%" y1="-71.795%" y2="142.663%">
+            <stop offset="0%" stop-color="#D1AC6A"/>
+            <stop offset="10.741%" stop-color="#AB8347"/>
+            <stop offset="22.436%" stop-color="#B1895C"/>
+            <stop offset="38.011%" stop-color="#FFDEB7"/>
+            <stop offset="73.245%" stop-color="#A2794B"/>
+            <stop offset="100%" stop-color="#39260D"/>
+        </linearGradient>
+        <linearGradient id="prefix__Y" x1="38.966%" x2="38.966%" y1="18.421%" y2="100%">
+            <stop offset="0%" stop-color="#B98F5D"/>
+            <stop offset="77.477%" stop-color="#FFE3BA"/>
+            <stop offset="100%" stop-color="#B98F5D"/>
+        </linearGradient>
+        <filter id="prefix__l" width="133.3%" height="128.1%" x="-16.7%" y="-12.3%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".385" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+        </filter>
+        <filter id="prefix__q" width="119.7%" height="132.4%" x="-9.9%" y="-13.4%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="3.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="prefix__s" width="113.7%" height="122.6%" x="-6.9%" y="-8.5%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation=".5"/>
+            <feOffset dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="prefix__S" width="101%" height="101%" x="-.5%" y="-.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius=".1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation=".15"/>
+            <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.2362149 0 0 0 0 0.141786934 0 0 0 0 0.0130215264 0 0 0 1 0"/>
+        </filter>
+        <filter id="prefix__V" width="101.7%" height="101.7%" x="-.9%" y="-.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius=".1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation=".15"/>
+            <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.2362149 0 0 0 0 0.141786934 0 0 0 0 0.0130215264 0 0 0 1 0"/>
+        </filter>
+        <filter id="prefix__W" width="115.4%" height="149.1%" x="-7.7%" y="-16.4%" filterUnits="objectBoundingBox">
+            <feOffset dy="3" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <path id="prefix__a" d="M0 0H375V270H0z"/>
+        <path id="prefix__p" d="M0 0L58.347 38.326 116.695 0 116.695 70.932 0 70.932z"/>
+        <path id="prefix__R" d="M58.347 19.45c11.374 0 20.594 9.22 20.594 20.592 0 11.374-9.22 20.594-20.594 20.594-11.373 0-20.593-9.22-20.593-20.594 0-11.373 9.22-20.593 20.593-20.593zm0 2.287c-10.11 0-18.305 8.196-18.305 18.305 0 10.11 8.196 18.305 18.305 18.305 10.11 0 18.306-8.195 18.306-18.305s-8.196-18.305-18.306-18.305z"/>
+        <path id="prefix__U" d="M60.226 28.602v9.724h9.725v3.432h-9.726l.001 9.725h-3.432v-9.725h-9.725v-3.432h9.724l.001-9.724h3.432z"/>
+        <path id="prefix__X" d="M76.653 202.5L128.636 165.806 141.438 165.858 193.347 202.5z"/>
+        <rect id="prefix__m" width="98.39" height="116.695" x="9.153" y="0" rx="1"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="prefix__b" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <g mask="url(#prefix__b)">
+            <g>
+                <g stroke-width=".5" transform="translate(53 -4)">
+                    <rect width="125.847" height="135" x="72.076" y="72.076" stroke="url(#prefix__c)" opacity=".8" rx="2"/>
+                    <rect width="139.576" height="148.729" x="65.212" y="65.212" stroke="url(#prefix__d)" opacity=".8" rx="4"/>
+                    <rect width="155.593" height="164.746" x="57.203" y="57.203" stroke="url(#prefix__e)" opacity=".5" rx="6"/>
+                    <rect width="173.898" height="183.051" x="48.051" y="48.051" stroke="url(#prefix__f)" opacity=".3" rx="8"/>
+                    <rect width="194.492" height="203.644" x="37.754" y="37.754" stroke="url(#prefix__g)" opacity=".45" rx="10"/>
+                    <rect width="217.373" height="226.525" x="26.314" y="26.314" stroke="url(#prefix__h)" opacity=".4" rx="12"/>
+                    <rect width="242.542" height="251.695" x="13.729" y="13.729" stroke="url(#prefix__i)" opacity=".3" rx="14"/>
+                    <rect width="270" height="279.153" stroke="url(#prefix__j)" opacity=".05" rx="16"/>
+                </g>
+                <g transform="translate(53 -4) translate(76.653 77.797)">
+                    <path fill="url(#prefix__k)" d="M0 53.771L58.347 6.119 116.695 53.771 116.695 124.703 0 124.703z"/>
+                    <use fill="#000" filter="url(#prefix__l)" xlink:href="#prefix__m"/>
+                    <use fill="url(#prefix__o)" stroke="url(#prefix__n)" stroke-width=".769" xlink:href="#prefix__m"/>
+                    <g transform="translate(0 53.771)">
+                        <mask id="prefix__t" fill="#fff">
+                            <use xlink:href="#prefix__p"/>
+                        </mask>
+                        <use fill="#000" filter="url(#prefix__q)" xlink:href="#prefix__p"/>
+                        <use fill="url(#prefix__r)" xlink:href="#prefix__p"/>
+                        <use fill="#000" filter="url(#prefix__s)" xlink:href="#prefix__p"/>
+                        <g stroke-width=".5" mask="url(#prefix__t)" opacity=".35">
+                            <g opacity=".7">
+                                <path stroke="url(#prefix__u)" d="M.959 111.062s105.595-19.609 145.452-42.314C186.268 46.042 223.02 2.18 287.205.632" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__v)" d="M1.989 111.062s103.126-18.459 143.71-39.994C185.96 49.702 223.208 7.88 285.144 6.824" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__w)" d="M3.018 111.062s100.65-17.132 141.968-37.279c40.653-19.823 78.41-59.182 138.1-59.734" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__x)" d="M4.048 111.062s98.528-15.813 140.747-34.564c41.18-18.289 79.598-55.175 137.261-55.225" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__y)" d="M5.078 111.062s96.03-14.502 139.005-31.846c41.543-16.765 80.491-51.167 135.914-50.714" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__z)" d="M5.078 111.062s93.88-13.2 137.785-29.125c42.05-15.25 81.686-47.146 135.075-46.194" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__A)" d="M6.107 111.062s91.367-11.909 136.044-26.396C184.543 70.92 224.725 41.55 275.88 42.998" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__B)" d="M7.137 111.062S96.33 100.256 141.959 87c42.887-12.459 83.777-39.733 132.89-37.76" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__C)" d="M8.167 111.062s86.669-9.532 133.081-21.319c43.21-10.972 84.66-35.678 131.542-33.207" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__D)" d="M9.196 111.062s84.476-8.269 131.86-18.563c43.697-9.494 85.871-31.601 130.704-28.641" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__E)" d="M10.226 111.062s81.946-7.012 130.12-15.793c44.009-8.023 86.748-27.49 129.355-24.055" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__F)" d="M11.256 111.062s79.42-5.941 128.38-13.41c44.317-6.76 87.618-24.062 128.005-20.052" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__G)" d="M12.285 111.062s77.213-4.695 127.157-10.595c44.801-5.292 88.84-19.863 127.17-15.4" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__H)" d="M13.315 111.062s74.69-3.626 125.419-8.15c45.106-4.021 89.704-16.373 125.818-11.278" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__I)" d="M13.315 111.062s72.476-2.366 124.194-5.24c45.597-2.535 90.937-11.94 124.984-6.522" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__J)" d="M14.345 111.062s69.964-1.26 122.456-2.643c45.902-1.212 91.794-8.171 123.633-2.18" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__K)" d="M15.374 111.156s67.748-.117 121.231.018c46.405.118 93.037-3.68 122.799 1.952" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__L)" d="M16.404 111.062s65.25.97 119.493 2.664c46.715 1.46 93.888-.315 121.448 6.625" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__M)" d="M17.434 111.062s63.034 2.085 118.267 5.369c47.23 2.809 95.14 3.619 120.614 11.144" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__N)" d="M18.463 111.062s60.554 3.193 116.531 8.08c47.549 4.15 95.984 7.591 119.262 15.658" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__O)" d="M19.493 111.062s58.086 4.29 114.795 10.792c47.869 5.488 96.82 11.575 117.908 20.17" transform="translate(-133.856 -60.636)"/>
+                                <path stroke="url(#prefix__P)" d="M20.523 111.062s189.02 17.711 230.644 37.155" transform="translate(-133.856 -60.636)"/>
+                            </g>
+                        </g>
+                    </g>
+                    <use fill="url(#prefix__Q)" xlink:href="#prefix__R"/>
+                    <use fill="#000" filter="url(#prefix__S)" xlink:href="#prefix__R"/>
+                    <g transform="rotate(-45 58.51 40.042)">
+                        <use fill="url(#prefix__T)" xlink:href="#prefix__U"/>
+                        <use fill="#000" filter="url(#prefix__V)" xlink:href="#prefix__U"/>
+                    </g>
+                </g>
+                <g transform="translate(53 -4)">
+                    <use fill="#000" filter="url(#prefix__W)" xlink:href="#prefix__X"/>
+                    <use fill="url(#prefix__Y)" xlink:href="#prefix__X"/>
+                </g>
+                <path stroke="url(#prefix__Z)" stroke-width=".5" d="M81.278 202.5L128.263 168.405 141.178 168.405 189.932 202.5" opacity=".8" transform="translate(53 -4)"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,25 +1,26 @@
 extends ../../includes/_layout_oas.pug
 
 block title
-    title 開戶進度查詢
+    title 你是哪位大戶呢？
 
 block scss
 
-block js
-
 
 block main
-    .view
-        h1.main-title 你是哪位大戶呢？
-        form
-            .form-group
-                label.form-label(for="") 身分證字號
-                input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="emailHelp") 
-                small.form-text.text-muted required
-            .form-group
-                label.form-label(for="") 行動電話
-                input.form-control(id="", type="tel", placeholder="請輸入行動電話", aria-describedby="emailHelp") 
-                small.form-text.text-muted required
-        .center.align-bottom
-            button.btn.btn-primary(type="submit") 查詢進度
+    #appOas.sub-content.white-stone-bg
+        .view-992
+            h1.main-title.mb-2 你是哪位大戶呢？
+            form
+                //- 欄位錯誤請加此class: .form-group(.invalid-error)
+                .form-group
+                    label.form-label(for="") 身分證字號
+                    input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="emailHelp") 
+                    //- small.form-text.text-danger required
+                .form-group.pb-0
+                    label.form-label(for="") 行動電話
+                    input.form-control(id="", type="tel", placeholder="請輸入行動電話", aria-describedby="emailHelp") 
+                    //- small.form-text.text-danger required
+            .bottom-area.center.align-bottom
+                button.btn.btn-primary(type="submit") 查詢進度
                 
+block js

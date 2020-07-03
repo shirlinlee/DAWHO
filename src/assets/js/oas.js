@@ -1,7 +1,7 @@
 import mode from './modules/mode';
 // import Vue from 'vue';
 new Vue({
-    el: '#appSubstitute',
+    el: '#appOas',
     data: {
         financial: [
             { from: '薪資所得', status: true },
@@ -14,7 +14,7 @@ new Vue({
     mounted: function () {
         mode();
         this.$nextTick(() => {
-            //自動跳下一格
+            //自動跳下一格 
             $(".seperate-input .form-control").keyup(function () {
                 if (this.value.length == this.maxLength) {
                     var $next = $(this).next('.form-control');

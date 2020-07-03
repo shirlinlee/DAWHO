@@ -91,6 +91,7 @@ img {
 .f14 { font-size: 0.875rem !important; }
 .f20 { font-size: 1.125rem !important; }
 
+.text-white{ color: #fff;}
 .text-underline{ text-decoration: underline; }
 .txt-note{color: #818181;}
 .text-danger {color: #ff6767; }
@@ -476,32 +477,31 @@ img {
 /* 補件狀態 */
 .status{
     &-image{
-        max-width: 192px;
+        max-width: 375px;
         margin:  0 auto;
     }
     &-title {
-        padding: 24px 0 0 ;
         font-size: 1.5rem;
         font-weight: bold;
         line-height: 1.5;
         text-align: center;
-        color: #111111;
+        color: #fff;
     }
     &-content{
-        padding: 24px 0 0 ;
+        padding-top: 16px;
         font-size: 1rem;
         font-weight: normal;
         line-height: 1.5;
         text-align: center;
-        color: #111111;
+        color: #fff;
         .ul-list{
-            padding: 1rem 0;
+            padding: 8px 0;
             li {
-                margin-bottom: .5rem;
+                margin-bottom: 8px;
             }
         }
         .link {
-            color: #c38b47;
+            color: #f5c790;
         }
     }
 }

@@ -1,22 +1,23 @@
 extends ../../includes/_layout_oas.pug
 
 block title
-    title 開戶進度查詢
+    title 你已經是大戶囉
 
 block scss
     
 
+block main
+    #appOas.sub-content
+        .view-992.just-content-between
+            .status
+                .status-image
+                    img(src=assets + "/images/oas/steps/step-11@3x.png", alt="你已經是大戶囉")
+                .status-title 恭喜大大，已經是大戶囉
+                .status-content 登入體驗更多優惠！
+            
+            .bottom-area.center.align-bottom
+                button.btn.btn-primary(type="submit") 手刀登入大戶
+
+
 block js
     
-
-block main
-    .view
-        .status
-            .status-image
-                img(src=assets + "/images/substitute/steps/step-7@2x.png", alt="")
-            .status-title 你已經是大戶囉
-            .status-content 
-                | 快去登入體驗！
-        
-        .center.align-bottom
-            button.btn.btn-primary(type="submit") 前往登入

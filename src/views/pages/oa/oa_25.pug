@@ -1,7 +1,7 @@
 extends ../../includes/_layout_open.pug
 
 block title
-    title 開戶進度查詢
+    title 信用卡驗證
 
 block scss
 
@@ -13,9 +13,9 @@ block main
         .open-progress
             .progress-line(style="width:35%")
         
-        .flex-title.view-992
-            h1 信用卡驗證
-            a(href="javascript:void(0)",@click="openModal('#collapesBank')",data-toggle="modal", data-target="#collapesBank") 查看合作銀行
+        .flex-title.view-992 
+            h1.main-title 信用卡驗證 
+            a.main-title-link.mt-2.mb-1(href="javascript:void(0)",@click="openModal('#collapesBank')",data-toggle="modal", data-target="#collapesBank") 查看可驗證銀行
 
         .view
 

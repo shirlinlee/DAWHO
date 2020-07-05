@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="208" height="63" viewBox="0 0 208 63">
+    <defs>
+        <linearGradient id="prefix__c" x1="95.1%" x2="6.658%" y1="52.492%" y2="46.835%">
+            <stop offset="0%" stop-color="#DDAC6E"/>
+            <stop offset="52.396%" stop-color="#FFE4BC"/>
+            <stop offset="84.635%" stop-color="#F0C996"/>
+            <stop offset="100%" stop-color="#E0B16F"/>
+        </linearGradient>
+        <linearGradient id="prefix__f" x1="4.175%" x2="92.898%" y1="48.241%" y2="53.371%">
+            <stop offset="0%" stop-color="#883907"/>
+            <stop offset="50.377%" stop-color="#ED963D"/>
+            <stop offset="100%" stop-color="#883907"/>
+        </linearGradient>
+        <filter id="prefix__b" width="106.5%" height="123.6%" x="-3.2%" y="-10%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.285241168 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+        </filter>
+        <filter id="prefix__d" width="106.5%" height="123.6%" x="-3.2%" y="-10%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation=".5"/>
+            <feOffset dx="-1" dy="-3" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" result="shadowMatrixInner1" values="0 0 0 0 0.370103034 0 0 0 0 0.208835914 0 0 0 0 0.0147180837 0 0 0 0.712822334 0"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner2"/>
+            <feGaussianBlur in="shadowSpreadInner2" result="shadowBlurInner2" stdDeviation=".5"/>
+            <feOffset dx="1" dy="3" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner2"/>
+            <feColorMatrix in="shadowInnerInner2" result="shadowMatrixInner2" values="0 0 0 0 1 0 0 0 0 0.914373024 0 0 0 0 0.789824695 0 0 0 0.735822771 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"/>
+                <feMergeNode in="shadowMatrixInner2"/>
+            </feMerge>
+        </filter>
+        <radialGradient id="prefix__e" cx="0%" cy="46.508%" r="364.51%" fx="0%" fy="46.508%" gradientTransform="scale(.275 1) rotate(7.878 0 .465)">
+            <stop offset="0%" stop-color="#86531A"/>
+            <stop offset="40.46%" stop-color="#AF9474"/>
+            <stop offset="46.431%" stop-color="#FFE7CB"/>
+            <stop offset="77.564%" stop-color="#A67945"/>
+            <stop offset="95.008%" stop-color="#936B29"/>
+            <stop offset="100%" stop-color="#D1AC6A"/>
+        </radialGradient>
+        <rect id="prefix__a" width="200" height="55" x="0" y="0" rx="27"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(4 3)">
+        <mask id="prefix__g" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__a"/>
+        <use fill="url(#prefix__c)" xlink:href="#prefix__a"/>
+        <use fill="#000" filter="url(#prefix__d)" xlink:href="#prefix__a"/>
+        <rect width="198" height="53" x="1" y="1" stroke="url(#prefix__e)" stroke-linejoin="square" stroke-width="2" rx="26.5"/>
+        <text fill="url(#prefix__f)" font-family="MicrosoftJhengHeiBold, Microsoft JhengHei" font-size="20" font-weight="bold" mask="url(#prefix__g)">
+            <tspan x="60" y="36">去發紅包</tspan>
+        </text>
+    </g>
+</svg>

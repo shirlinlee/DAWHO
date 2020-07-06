@@ -79,9 +79,10 @@
                 content: '';
                 position: absolute;
                 bottom: 0;
-                left: 0;
+                left: calc(50% - 136px);
                 right: 0;
                 height: 1px;
+                width: 263px;
                 background: linear-gradient(to right, #f7dba7 1%, #ab8347 12%, #b1895c 24%, #ffdeb7 54%, #a2794b 74%, #f4dab7 100%);;
             }
         }
@@ -91,7 +92,7 @@
             line-height: normal;
             letter-spacing: 5px;
             text-align: center;
-            color: #f7e7cf;
+            color: #fee1b7;
         }
     }
     .intro-steps-button{
@@ -119,12 +120,18 @@
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-            &:hover {
+            &.btn-step-marble{
                 width: 100%;
-                background-image: url($assets + '/images/open/btn/btn-marble@3x.png');
+                background: url($assets + '/images/open/btn/btn-marble@3x.png') no-repeat center center;
                 background-size: contain;
                 border: none;
             }
+            // &:hover {
+            //     width: 100%;
+            //     background-image: url($assets + '/images/open/btn/btn-marble@3x.png');
+            //     background-size: contain;
+            //     border: none;
+            // }
         }
     }
     &.intro-steps_1 {
@@ -283,6 +290,12 @@
                 left: 55px;
                 right: 5em;
                 text-align: left;
+            }
+            .pc-break{
+                display: block;
+                @include maxW-768{
+                    display: inline-block;
+                }
             }
         }
     }   
@@ -825,14 +838,15 @@
 
 /* 編輯 */
 .editable-info-wrap{
-    padding: 0 5rem 1.6rem;
-    margin-bottom: 1.5rem;
+    max-width: 814px;
+    margin: 0 auto 1.5rem;
+    padding: 0 0 1.6rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     @include maxW-768 {
         padding: 0 0 1.6rem;
     }
     &:last-child {
-        margin: 0;
+        margin: 0 auto 0;
         padding: 0;
         border-bottom: none;
     }

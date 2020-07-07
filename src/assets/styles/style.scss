@@ -215,6 +215,25 @@ p {
     margin-right: auto;
 }
 
+// 灰色底按鈕
+.btn_grey {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+    max-width: 263px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, #b2b2b2, #818181);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .hr_black {
     opacity: 0.5;
     margin: 0;
@@ -408,9 +427,39 @@ select {
 .fake_bg {
     background-repeat: no-repeat;
     background-size: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 100px);
+}
+
+.remind {
+    position: absolute;
+    z-index: 30;
+    line-height: 36px;
+    height: 36px;
+    max-height: 36px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: left;
+    padding: 0 16px;
+    display: inline-block;
+    p {
+        display: inline-block;
+    }
+    a {
+        color: #fee1b7;
+        font-weight: bold;
+        padding: 0 8px;
+        text-decoration: underline;
+    }
+    .close {
+        position: absolute;
+        right: 11px;
+        top: 4px;
+    }
 }

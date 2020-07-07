@@ -1,0 +1,42 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title cw_1-4
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/re-index.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+
+include ../includes/components.pug
+block main
+    div#env_index
+        h1.header
+                .back 紅包
+        .remind
+            p.f_white
+                | 你有
+                font 1
+                | 個待領取紅包
+            a.f_gold 去領取
+            img(src=assets+"/images/icon/close.svg").close
+
+        .kv
+            img(src=assets+"/images/re/index.png")
+            .btn_area
+                img(src=assets+"/images/re/btn_01.svg").btn
+                a.f_gold(href="#") 紅包紀錄
+
+        .W100
+            +notice('red', true)
+                ul
+                    li 	1. 每包紅包領取期限為24小時。
+                    li 	2. 紅包的每日/每月限額與非約定轉帳共用額度，紅包建立後且未領取仍會佔用額度。
+
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+    script(src= assets + '/js/re-index.bundle.js' defer)
+
+

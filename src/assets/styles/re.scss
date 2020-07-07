@@ -5,12 +5,17 @@ body {
     .red_kv {
         .swiper-slide {
             padding: 0;
+            background: #000;
+            > img {
+                opacity: 0.6;
+            }
         }
         .text {
             width: 100%;
             position: absolute;
             top: 50%;
             left: 50%;
+            z-index: 4;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
@@ -23,6 +28,11 @@ body {
                 vertical-align: top;
                 margin: 0 2px;
             }
+        }
+    }
+    .swiper-container-horizontal {
+        > .swiper-pagination-bullets {
+            margin-bottom: 12px;
         }
     }
     .content {
@@ -40,13 +50,12 @@ body {
                     border-radius: 3px;
                     border: solid 1px #aaaaaa;
                     padding: 0 8px;
-                    &[type='radio'] {
-                        color: #f0eeee;
-                        width: calc(50% - 7.5px);
-                        height: 40px;
-                        border-radius: 4px;
-                        border: solid 1px #f0eeee;
-                        background-color: #f0eeee;
+                    &[type='radio']:checked {
+                        & + label {
+                            color: #976324;
+                            border-color: #d5c1aa;
+                            background-color: #fff6eb;
+                        }
                     }
                     &::placeholder {
                         /* Edge */
@@ -54,12 +63,27 @@ body {
                         font-size: 16px;
                     }
                 }
+                label {
+                    font-size: 14px;
+                    color: #818181;
+                    width: calc(50% - 7.5px);
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 4px;
+                    border: solid 1px #aaaaaa;
+                    background-color: #f0eeee;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;
+                }
             }
             &.radio_wrap {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                input {
+                label {
                     margin: 0;
                 }
             }

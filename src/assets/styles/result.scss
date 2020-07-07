@@ -1,4 +1,12 @@
+@import 'library/_mediaQuery';
 @import 'library/_styleSetting';
+
+body {
+    background: url($assets + '/images/page-marblebg.png') no-repeat;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
 
 #appCardless {
     > header {
@@ -78,7 +86,7 @@
                 }
                 &.oval {
                     width: 57px;
-                    margin-left: -31px;
+                    margin-left: -30px;
                     margin-top: -33px;
                     animation: oval 5s linear infinite;
                     -webkit-animation: oval 5s linear infinite;
@@ -158,6 +166,9 @@
         .erial {
             font-size: 30px;
             display: -webkit-inline-box;
+            @include maxW-320 {
+                font-size: 25px;
+            }
             font {
                 padding: 0 6px;
             }
@@ -180,6 +191,9 @@
                 );
                 border-image-slice: 1;
                 background-color: #111111;
+                @include maxW-320 {
+                    width: 25px;
+                }
                 span {
                     background: -webkit-linear-gradient(
                         #f2c67a,
@@ -214,8 +228,8 @@
             justify-content: center;
             text-align: left;
             padding: 16px 8px;
-            height: 56px;
-            &:nth-child(even) {
+            // height: 56px;
+            &:nth-child(odd) {
                 background-color: rgba(0, 0, 0, 0.03);
             }
             p:nth-of-type(1) {
@@ -264,7 +278,7 @@
     }
     .btn_gold_light {
         &:before {
-            background-color: #fff;
+            background-color: #f8f8f8;
         }
         span {
             color: #c38b47;

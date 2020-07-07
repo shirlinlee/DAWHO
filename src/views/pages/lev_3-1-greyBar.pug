@@ -10,27 +10,27 @@ block scss
 block main
     div#appDiscount
         h1.header 等級
-        img.badge(src=assets +'/images/badge/dada.png', width="100", alt="", v-if="status1" )
-        img.badge(src=assets +'/images/badge/dahu_black.png', width="100", alt="", v-else)
+        img.badge(src=assets +'/images/badge/dada_black.png', width="100", alt="", v-if="status1" )
+        img.badge(src=assets +'/images/badge/dahu.png', width="100", alt="", v-else)
 
         h2.f18
-            span(v-if="status1") 目前等級
-            span(v-else) 其他等級
+            span(v-if="status1") 其他等級
+            span(v-else) 目前等級
 
 
         .swiper-container
             .swiper-wrapper
                 .swiper-slide
-                    .bg_white.achieve
+                    .bg_white.other
                         br
-                    span.line
+                    span.line.grey
                         font
 
                 .swiper-slide
-                    .bg_white.miss
+                    .bg_white.current
                         br
 
-                    span.line
+                    span.line.grey
 
         .btn_wrapper
             a.btn_gold(href="#") 升級攻略

@@ -23,18 +23,22 @@ block main
                 .swiper-slide
                     .bg_white
                         //- 「未達成」in_progress、「已達成」done
-                        h6.f_b.in_progress 攻略ㄧ
+                        h6.f_b.done 攻略ㄧ
                         hr.hr_grey
                         p.f14 每月平均財富超過
                             font 10萬
                             | 元
+
+                        //-  06017更新
                         .proportion
-                            span(v-for="index in 6", :class="'deposit_0'+index")
+                            img.done(src=assets +"/images/gold_bar.png", alt="")
+                            span(style='width:100%; background-color: #fecc87')
                             .proportion_tag
-                                //- 若資產達成率為90%，則百分比帶90%
-                                font.line(style='left: 90%')
-                                font.percent(style='width: 90%')
-                                font.price 80,395
+                                //- 若資產達成率為100%，則百分比帶100%
+                                font.line(style='left: 100%')
+                                font.percent(style='width: 100%')
+                                font.price 130,395
+
 
                         p.f12.f_grey_03.time
                             font 2020-03-11
@@ -67,7 +71,7 @@ block main
                                 a(href="#") 立即申購
 
                         hr.hr_grey
-                        p.cheer 🙄還差一點就快達到每月目標了～
+                        p.cheer 🎉 持續維持到月底，下月還能享有同樣優惠喔
 
 
                 .swiper-slide

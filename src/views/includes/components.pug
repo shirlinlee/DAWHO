@@ -33,6 +33,8 @@ mixin notice(content,isLight)
                 +notice-20()
             else if content == 26
                 +notice-26()
+            else if content == 'red'
+                +notice-red()
             else
                 p(class=(isLight)?'light':'') #{content}
 mixin notice-15()
@@ -77,3 +79,9 @@ mixin notice-26()
         li 2. 如欲重新開啟，請攜帶本行晶片金融卡，至本行設置之ATM進行關閉無卡提款服務。
         li 3. 使用無卡提款，如輸入無卡提款密碼錯誤連續達五次，即關閉無卡提款功能，須至本行ATM使用晶片金融卡重新啟用該功能。
         li 4. 申請無卡提款之晶片金融卡或帳號如掛失或註銷，已開通之無卡提款功能亦隨同失效，須攜帶晶片金融卡至本行ATM重新啟用該功能。
+
+
+mixin notice-red()
+    ul
+        li 	1. 每包紅包領取期限為24小時。
+        li 	2. 紅包的每日/每月限額與非約定轉帳共用額度，紅包建立後且未領取仍會佔用額度。

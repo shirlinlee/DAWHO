@@ -1,0 +1,92 @@
+body {
+}
+#re {
+    padding-top: 44px;
+    .red_kv {
+        .swiper-slide {
+            padding: 0;
+        }
+        .text {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            img,
+            h5 {
+                display: inline-block;
+                line-height: 27px;
+                vertical-align: top;
+                margin: 0 2px;
+            }
+        }
+    }
+    .content {
+        text-align: left;
+        padding: 16px 16px 0;
+        > p.f16 {
+            margin-bottom: 8px;
+        }
+        div {
+            &.W100 {
+                margin-bottom: 16px;
+                input {
+                    height: 42px;
+                    line-height: 42px;
+                    border-radius: 3px;
+                    border: solid 1px #aaaaaa;
+                    padding: 0 8px;
+                    &[type='radio'] {
+                        color: #f0eeee;
+                        width: calc(50% - 7.5px);
+                        height: 40px;
+                        border-radius: 4px;
+                        border: solid 1px #f0eeee;
+                        background-color: #f0eeee;
+                    }
+                    &::placeholder {
+                        /* Edge */
+                        color: #818181;
+                        font-size: 16px;
+                    }
+                }
+            }
+            &.radio_wrap {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                input {
+                    margin: 0;
+                }
+            }
+            span {
+                display: block;
+                margin-top: 8px;
+                color: #818181;
+                font-size: 14px;
+            }
+        }
+        .price_area {
+            text-align: center;
+            margin: 49px 0 32px;
+            line-height: 1.4;
+            p {
+                margin-bottom: 4px;
+            }
+            h5 {
+                margin-bottom: 16px;
+                font-weight: bold;
+            }
+            h6 {
+                margin-bottom: 24px;
+            }
+        }
+        .cw-notice {
+            margin-bottom: 32px;
+        }
+    }
+}

@@ -9,14 +9,14 @@ block js
 block main
     #appOpen
         .view
-            //- button.btn.btn-primary(@click="openModal('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
+            button.btn.btn-primary(@click="openModal('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
          
 
         //- lightbox
         .modal-backdrop.fade.show
         .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
-            .modal-dialog
-                .modal-content.minWidth
+            .modal-dialog.minWidth 
+                .modal-content
                     .modal-header
                         h5.modal-title 大標
                         button.close(@click.prevent="closeModal('#staticBackdrop')",type="button",data-dismiss="modal") 關閉

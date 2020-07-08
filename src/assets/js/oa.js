@@ -15,10 +15,7 @@ $(document).ready(function(e) {
         });
     } 
     //tooltip
-    let eevent = 'click';
-    if (isMobile) {
-        eevent = 'touchstart';
-    }
+    let eevent = isMobile ? 'touchstart' : 'click';
     $('.tooltip').on(eevent, function () {
         $(this).toggleClass('active')
     });
@@ -34,6 +31,7 @@ $(document).ready(function(e) {
 new Vue({
     el: '#appOpen',
     data: {
+        birthDate: null,//oa-7
         bankObj: [//oa_20
             { bankCode: '004', bankName: '台灣銀行' },
             { bankCode: '005', bankName: '土地銀行' },
@@ -55,18 +53,24 @@ new Vue({
             { from: '薪資所得', status: true, input: false },
             { from: '租金收入', status: false, input: false },
             { from: '退休金', status: true, input: false },
-            { from: '營業收入', status: true, input: false },
+            { from: '營業收入', status: false, input: false },
+            { from: '經營收入', status: true, input: false },
+            { from: '投資收益', status: true, input: false },
             { from: '利息收入', status: false, input: false },
+            { from: '不動產買賣', status: false, input: false },
+            { from: '繼承贈與', status: false, input: false },
+            { from: '理財投資', status: false, input: false },
             { from: '其他', status: false, input: true }
         ],
         creditCardNum: null,//oa_23
+        expiredDate: null, //oa-24
         currentNum: 0,// oa_27
         otherCardSelect: 1 
     },
     mounted: function () {
         mode();
         this.$nextTick(() => {
-            //自動跳下一格//oa-36
+            //自動跳下一格//9//36/24/25
             $(".seperate-input .form-control").keyup(function () {
                 if (this.value.length == this.maxLength) {
                     var $next = $(this).next('.form-control');
@@ -76,6 +80,7 @@ new Vue({
                         $(this).blur();
                 }
             });
+
         });
     },
     computed: {
@@ -84,7 +89,6 @@ new Vue({
         },
         filterBank() {
             const vm = this;
-            
             let result = this.bankObj.filter((bank) => {
                 return bank.bankCode.match(vm.bankNameInput) || bank.bankName.match(vm.bankNameInput)
             })
@@ -128,11 +132,12 @@ new Vue({
                 $('.modal-backdrop').removeClass('show');
             }
         },
-        ccFormat() { //oa_23
+        ccFormat() { //oa_24
             console.log(this.creditCardNum)
             if (this.creditCardNum == null || this.creditCardNum == '' || this.creditCardNum == 'undefined') return;
             var v = this.creditCardNum.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
             var matches = v.match(/\d{4,16}/g);
+
             var match = matches && matches[0] || ''
             var creditCardArray = []
             for (let i = 0, len = match.length; i < len; i += 4) {
@@ -146,7 +151,17 @@ new Vue({
                 return this.creditCardNum
             }
         },
-        triggerChange(){
+        dateFormat() {
+            let x = this.birthDate.replace(/\D/g, '').match(/(\d{0,4})(\d{0,2})(\d{0,2})/);
+            console.log(x[2], x[3])
+            this.birthDate = !x[2] ? x[1] : x[1] + '/' + x[2] + (x[3] ? '/' + x[3] : '');
+        },
+        expiredDateFormate() {
+            let x = this.expiredDate.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})/);
+            console.log(x[1], x[2], x[0])
+            this.expiredDate = !x[2] ? x[1] : x[1] + '/' + x[2] + (x[3] ? '/' + x[3] : '');
+        },
+        triggerChange(){ 
             this.currentNum ++;
             if (this.currentNum > 2) this.currentNum = 1 
             if (this.currentNum === 1) $(this.$refs.fileLabel).attr("for", "step-1")

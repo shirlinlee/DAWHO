@@ -32,8 +32,10 @@ block main
                 .form-group
                     input.form-control(id="", type="text", value="中正路一號" ,aria-describedby="idHelp") 
                     
-                .form-group.pb-0.invalid-error
-                    label.form-label(for="") 戶籍電話 (選填)
+                .form-group.pb-0
+                    label.form-label(for="") 
+                        | 戶籍電話 
+                        span.form-note (選填)
                     input.form-control(id="", type="tel", value="02-23183752", aria-describedby="telHelp") 
                     small.form-text.text-danger.f13 required
                 

@@ -4,7 +4,7 @@ block title
     title 開戶進度查詢
 
 block scss
-block js
+
  
 block main
     #appOpen
@@ -15,8 +15,8 @@ block main
         //- lightbox
         .modal-backdrop.fade.show
         .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
-            .modal-dialog
-                .modal-content.minWidth
+            .modal-dialog.minWidth 
+                .modal-content
                     .modal-header
                         h5.modal-title 大標
                         button.close(@click.prevent="closeModal('#staticBackdrop')",type="button",data-dismiss="modal") 關閉
@@ -67,4 +67,5 @@ block main
                     .modal-footer.center
                         //button.btn.btn-secondary(type="button") 按鈕
                         button.btn.btn-primary(type="button") 按鈕
-    
+
+block js

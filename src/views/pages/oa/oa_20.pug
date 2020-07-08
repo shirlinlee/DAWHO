@@ -16,12 +16,13 @@ block main
             form
                 .form-group
                     label.form-label(for="bankName") 銀行名稱
-                    input.form-control.arrow-down(v-model="bankNameInput", @click="openModal('#searchBankModal')" ,id="bankName", type="text", placeholder="請選擇", autocomplete="off") 
-                    //- small.form-text.text-danger.f13 required
+                    input.form-control.arrow-down(v-model="bankNameInput", @click="openModal('#searchBankModal')" , readonly ,id="bankName", type="text", placeholder="請選擇", autocomplete="off") 
+                    //- readonly prevent foucs
+                    small.form-text.text-danger.f13 必填
                 .form-group.pb-0
                     label.form-label(for="bankNumber") 存款帳號
                     input.form-control(id="bankNumber", type="text", placeholder="請輸入選擇銀行的存款帳號", aria-describedby="") 
-                    //- small.form-text.text-danger.f13 required
+                    small.form-text.text-danger.f13 必填
 
     
                 hr.bg-grey.mt-2.mb-24
@@ -38,12 +39,12 @@ block main
         .modal-backdrop.fade
         .modal.fade#searchBankModal(tabindex="-1",role="dialog", aria-hidden="true")
             .modal-dialog
-                .modal-content.minWidth
+                .modal-content528.maxH340
                     .modal-header
                         #search-bank-input
                             span.icon.searchBank(v-if="bankNameInput.length === 0") 
                             span.icon.clearBank(v-else, @click.prevent="bankNameInput = ''")
-                            input.form-control#search-bank(v-model="bankNameInput", type="text", placeholder="搜尋銀行代碼") 
+                            input.form-control#search-bank(ref="bankInput", v-model="bankNameInput", type="text", placeholder="搜尋銀行代碼") 
                         button.close(@click.prevent="closeModal('#searchBankModal')",type="button",data-dismiss="modal") 關閉
                     .modal-body-box
                         .modal-body
@@ -58,6 +59,5 @@ block main
                                         img(src=assets + "/images/open/modal/no-result.svg", alt="no-result")
                                     .bankEmpty_text 搜尋的銀行目前不在合作夥伴內，試試看其他家銀行吧！
 
-                    .modal-footer
-                        
+                 
     

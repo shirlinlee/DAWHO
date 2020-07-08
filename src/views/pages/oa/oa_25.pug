@@ -27,31 +27,27 @@ block main
                         .txt 拍照掃瞄
                     div 
                         label.ttl(for="frmCCNum") 信用卡卡號
-                        input.creditCardInput(v-model="creditCardNum", @input="ccFormat", name="cardnumber", id="frmCCNum", required , autocomplete="cc-number")
-                        //- .form-box
-                        //-     .form-group
-                        //-         input.form-control(id="frmCCNum",required, maxlength="4", autocomplete="cc-number") 
-                        //-     span.line
-                        //-     .form-group
-                        //-         input.form-control(id="frmCCNum", required, maxlength="4", autocomplete="cc-number")
-                        //-     span.line
-                        //-     .form-group
-                        //-         input.form-control(id="frmCCNum", required, maxlength="4", autocomplete="cc-number")
-                        //-     span.line
-                        //-     .form-group
-                        //-         input.form-control(id="frmCCNum", required, maxlength="4", autocomplete="cc-number") 
+                        //- input.creditCardInput(v-model="creditCardNum", @input="ccFormat", name="cardnumber", id="frmCCNum", required , autocomplete="cc-number")
+                        .form-box.seperate-input
+                            input.form-control(id="frmCCNum", type="tel", required, pattern="[0-9]*", maxlength="4", autocomplete="cc-number") 
+                            input.form-control(id="frmCCNum", type="tel", required, pattern="[0-9]*", maxlength="4", autocomplete="cc-number")
+                            input.form-control(id="frmCCNum", type="tel", required, pattern="[0-9]*", maxlength="4", autocomplete="cc-number")
+                            input.form-control(id="frmCCNum", type="tel", required, pattern="[0-9]*", maxlength="4", autocomplete="cc-number") 
+                            span.line.line-1
+                            span.line.line-2
+                            span.line.line-3
                     
                     .d-flex.align-center.justify-between
                         div 
                             label.ttl(for="frmCCExp") 有效期限
                             .form-box.width6
-                                input.form-control(name="cc-exp", id="frmCCExp" ,required ,placeholder="MM-YY", autocomplete="cc-exp") 
+                                input.form-control(v-model="expiredDate", @input="expiredDateFormate" , name="cc-exp", id="frmCCExp" ,required, pattern="[0-9]*" ,maxlength="5",placeholder="MM / YY", autocomplete="cc-exp") 
                                 
                         div 
-                            label.ttl(for="frmCCCVC") CVS
+                            label.ttl(for="frmCCCVC") 後3碼
                              .form-box.width6
                                 .form-group
-                                    input.form-control(name="cvs", id="frmCCCVC", required, autocomplete="cc-csc", maxlength="3", placeholder="_ _ _") 
+                                    input.form-control(name="cvs", id="frmCCCVC", required, pattern="[0-9]*", autocomplete="cc-csc", maxlength="3", placeholder="_ _ _") 
 
 
             .center

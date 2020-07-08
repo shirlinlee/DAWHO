@@ -4,7 +4,7 @@ block title
     title RWD 彈窗容器
 
 block scss
-block js
+
  
 block main
     #appOpen
@@ -14,10 +14,11 @@ block main
         //- lightbox
         .modal-backdrop.fade.show
         .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
-            .modal-dialog
-                .modal-content.minWidth
+            .modal-dialog.minWidth 
+                .modal-content
                     .modal-header
                     .modal-body-box
                         .modal-body
                     .modal-footer.center
-                      
+
+block js

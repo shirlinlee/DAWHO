@@ -26,23 +26,7 @@ html
         });
         $('a').attr('target','_blank');
       });
-    script(type='text/javascript').
-      var width = screen.width;
-      var meta = document.createElement("meta");
-      var head = document.getElementsByTagName("head")[0];
-      if (width >= 1024) {
-      meta.setAttribute("name", "viewport");
-      meta.setAttribute("content", "width=1024");
-      head.appendChild(meta);
-      } else if (width < 1024 && width >= 768) { // iPad in portrait mode
-      meta.setAttribute("name", "viewport");
-      meta.setAttribute("content", "width=960");
-      head.appendChild(meta);
-      } else if (width <767) { // anything smaller than 700px in width
-      meta.setAttribute("name", "viewport");
-      meta.setAttribute("content", "width=640; maximum-scale=1");
-      head.appendChild(meta);
-      };
+
     // ============================== script close ==============================
     style(type='text/css').
       * { margin: 0; padding: 0; border: 0;}

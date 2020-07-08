@@ -69,7 +69,7 @@ block main
                         span.text
                             | {{item.from}}    
                             span.other(v-if="item.input", @click.stop="") 
-                                input(type="text", placeholder="請輸入...")
+                                input(type="text", placeholder="請輸入...", maxlength="10") 
                 .mt-1.mb-1
                     hr.bg-grey
 

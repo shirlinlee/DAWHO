@@ -18,7 +18,8 @@ window.onload = function () {
                 settings: {
                     centerMode: true,
                     centerPadding: '80px',
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    dots: true
                 }
             }
         ]

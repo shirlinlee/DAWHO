@@ -14,10 +14,11 @@ block main
         .view-992
             h1.main-title.mt-2 基本資訊
             form
-                .form-group.invalid-error
+                //- .invalid-error
+                .form-group
                     label.form-label(for="") 中文姓名
                     input.form-control(id="", type="text", placeholder="小美", aria-describedby="idHelp") 
-                    small.form-text.text-danger.f13 required
+                    //-small.form-text.text-danger.f13 required
                 .form-group
                     label.form-label(for="") 中文姓名
                     input.form-control(id="", type="text", placeholder="小美", aria-describedby="idHelp") 
@@ -28,7 +29,7 @@ block main
                         | 拼音相同，非前述資料，將無法申辦國外匯兌等業務。
                 .form-group
                     label.form-label(for="") 身分證字號
-                    input.form-control(id="", type="tel", placeholder="A123456789", aria-describedby="telHelp") 
+                    input.form-control(id="", type="text", placeholder="A123456789", aria-describedby="telHelp") 
                     //- small.form-text.text-danger.f13 required
                 .form-group
                     label.form-label(for="") 出生日期

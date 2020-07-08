@@ -41,7 +41,7 @@ block main
                         input.sr-only#step-2(ref="fileInput", type="file", name="file", accept=".jpg,.jpeg,.png", :class="{'disabled': currentNum === 1 }")
                     span.id-card-upload_note 上傳健保卡、駕照、護照
 
-                select#step-1(style="opacity: 0", name="uploadCardOther", ref="fileSelect", v-model="otherCardSelect", :class="{'disabled': currentNum === 2 }")
+                select#step-1(style="opacity: 0;font-size:16px;", name="uploadCardOther", ref="fileSelect", v-model="otherCardSelect", :class="{'disabled': currentNum === 2 }")
                     option(value="1") 健保卡
                     option(value="2") 駕照 
                     option(value="3") 護照

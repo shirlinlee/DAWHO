@@ -6,8 +6,8 @@ $(document).ready(function () {
         spaceBetween: 12,
         centeredSlides: true,
         navigation: {
-            nextEl: '.card-arrow-prev',
-            prevEl: '.card-arrow-next',
+            nextEl: '.card-arrow-next',
+            prevEl: '.card-arrow-prev',
         },
         pagination: {
             el: '.swiper-pagination',

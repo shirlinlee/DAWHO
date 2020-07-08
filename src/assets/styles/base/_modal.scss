@@ -48,10 +48,16 @@
             border-bottom-right-radius: 0px;
             border-bottom-left-radius: 0px;
         }
-        &.minWidth {
-            min-width: 792px;
+        &.minWidth528 {
+            min-width: 528px;
             @include maxW-768 {
                 min-width: 100%;
+            }
+        }
+        &.maxH340{
+            max-height: 340px;
+            @include maxW-768 {
+                max-height: initial;
             }
         }
     }
@@ -64,13 +70,22 @@
         pointer-events: none;
         opacity: 0;
         border-radius: 10px;
+        max-width: 564px;
         @include maxW-992 {
             width: 100%;
             margin: 0;
         }
         @include maxW-768 {
+             max-width: 100%;
            top: 10%;
            bottom: 0;
+        }
+        &.minWidth {
+            max-width: 792px;
+            min-width: 792px;
+            @include maxW-768 {
+                min-width: 100%;
+            }
         }
     }
     &-body-box {

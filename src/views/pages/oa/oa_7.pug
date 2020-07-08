@@ -7,9 +7,9 @@ block scss
 
 block js
 
-block main
+block main 
     #appOpen 
-        .open-progress
+        .open-progress 
             .progress-line(style="width:20%")
         .view-992
             h1.main-title.mt-2.mb-2 開始前，請先讓我們了解你
@@ -20,8 +20,9 @@ block main
                     //small.form-text.text-danger.f13 required
                 .form-group
                     label.form-label(for="") 生日
-                    input.form-control(id="", type="tel", placeholder="例：1998/09/05", aria-describedby="telHelp") 
+                    input.form-control(id="", v-model="birthDate", @input="dateFormat", type="tel", placeholder="例：1998/09/05", aria-describedby="telHelp") 
                     //small.form-text.text-danger.f13 required
+
                 .form-group.mt-2
                     p 是否有美國國籍或其他地區稅務居民身份?
                     p.f14.txt-note
@@ -41,11 +42,11 @@ block main
                     
 
 
-        //- lightbox
+        //- lightbox 
         .modal-backdrop.fade
         .modal.fade#paymentIdentity(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#paymentIdentity')")
-            .modal-dialog
-                .modal-content.minWidth
+            .modal-dialog.minWidth 
+                .modal-content
                     .modal-header
                         h5.modal-title 大標
                         button.close(@click.prevent="closeModal('#paymentIdentity')",type="button",data-dismiss="modal") 關閉

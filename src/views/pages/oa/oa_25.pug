@@ -5,7 +5,6 @@ block title
 
 block scss
 
-block js
 
 block main
 
@@ -28,7 +27,7 @@ block main
                     div 
                         label.ttl(for="frmCCNum") 信用卡卡號
                         //- input.creditCardInput(v-model="creditCardNum", @input="ccFormat", name="cardnumber", id="frmCCNum", required , autocomplete="cc-number")
-                        .form-box.seperate-input
+                        .form-box.seperate-input.insert-shadow
                             input.form-control(id="frmCCNum", type="tel", required, pattern="[0-9]*", maxlength="4", autocomplete="cc-number") 
                             input.form-control(id="frmCCNum", type="tel", required, pattern="[0-9]*", maxlength="4", autocomplete="cc-number")
                             input.form-control(id="frmCCNum", type="tel", required, pattern="[0-9]*", maxlength="4", autocomplete="cc-number")
@@ -41,13 +40,13 @@ block main
                         div 
                             label.ttl(for="frmCCExp") 有效期限
                             .form-box.width6
-                                input.form-control(v-model="expiredDate", @input="expiredDateFormate" , name="cc-exp", id="frmCCExp" ,required, pattern="[0-9]*" ,maxlength="5",placeholder="MM / YY", autocomplete="cc-exp") 
+                                input.form-control.shadow(v-model="expiredDate", @input="expiredDateFormate" , name="cc-exp", id="frmCCExp" ,required, pattern="[0-9]*" ,maxlength="5",placeholder="MM / YY", autocomplete="cc-exp") 
                                 
                         div 
                             label.ttl(for="frmCCCVC") 後3碼
                              .form-box.width6
                                 .form-group
-                                    input.form-control(name="cvs", id="frmCCCVC", required, pattern="[0-9]*", autocomplete="cc-csc", maxlength="3", placeholder="_ _ _") 
+                                    input.form-control.shadow(name="cvs", id="frmCCCVC", required, pattern="[0-9]*", autocomplete="cc-csc", maxlength="3", placeholder="_ _ _") 
 
 
             .center
@@ -79,3 +78,5 @@ block main
                                     li 華泰銀行
                                     li 星展銀行
                     .modal-footer
+
+block js

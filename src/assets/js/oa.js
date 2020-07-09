@@ -19,7 +19,13 @@ $(document).ready(function(e) {
     $('.tooltip').on(eevent, function () {
         $(this).toggleClass('active')
     });
-
+    //戶籍電話 oa-32
+    $(".tel-group input").focus(function () {
+        $(this).parent('.tel-group').addClass('addBorder');
+    });
+    $(".tel-group input").blur(function () {
+        $(this).parent('.tel-group').removeClass('addBorder');
+    });
 
     $(window).resize(function () {
     });

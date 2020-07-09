@@ -36,7 +36,10 @@ block main
                     label.form-label(for="") 
                         | 戶籍電話 
                         span.form-note (選填)
-                    input.form-control(id="", type="tel", value="02-23183752", aria-describedby="telHelp") 
+                    //- 區域電話欄位
+                    div.tel-group
+                        input.form-control.areaCode(id="", type="tel", value="02", pattern="[0-9]*", maxlength="2") 
+                        input.form-control.number(id="", type="tel", pattern="[0-9]*", value="23183752")  
                     small.form-text.text-danger.f13 required
                 
                 .mt-24.mb-24
@@ -67,8 +70,11 @@ block main
                     input.styled-radio(id="tel2",type="radio", name="radio-group-2")
                     label.styled-label(for="tel2") 使用其他電話號碼
                 .form-group
-                    input.form-control(id="", type="tel", value="02-23183752", aria-describedby="telHelp") 
+                    //- 區域電話欄位
+                    div.tel-group
+                        input.form-control.areaCode(id="", type="tel", value="02", pattern="[0-9]*", maxlength="2") 
+                        input.form-control.number(id="", type="tel", pattern="[0-9]*", value="23183752")  
 
-            .bottom-area.center.align-bottom
+            .bottom-area.center.align-bottom 
                 button.btn.btn-primary.disabled(type="submit") 下一步
                     

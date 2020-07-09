@@ -8,34 +8,62 @@ block scss
 block main
 
     #appOpen
-
         .view-992
+            //- 手機版顯示 .mb-show-block
+            .mb-show-block
+                .upload-card-box
+                    h1.main-title.mb-1 確認證件裁切範圍
+                    p.mb-2 請手動將紅框線對準證件的四角
+                    .upload-photo-bg
+                        .photo
+                            //- img#uploaded-id-card(src=assets + "/images/open/idCard/nopic.png", alt="")
+                .upload-card-tool    
+                    .docs-buttons
+                        .btn-group 
+                            button.btn.btn-rotate.btn-rotate_left(type="button", data-method="rotate", data-option="-45", title="Rotate Left")
+                            button.btn.btn-rotate.btn-rotate_right(type="button", data-method="rotate", data-option="-45", title="Rotate Right")
+                        .btn-group
+                            label.btn-upload(for="inputImage", title="Upload image file")
+                                input.sr-only#inputImage(type="file", name="file", accept=".jpg,.jpeg,.png")
+                                span 重新上傳
 
-            .upload-card-box
-                h1.main-title.mb-1 確認證件裁切範圍
-                p.mb-2 請手動將紅框線對準證件的四角
-                
-                .upload-photo-bg
-                    .photo
-                        //- img#uploaded-id-card(src=assets + "/images/open/idCard/nopic.png", alt="")
-                  
-            .upload-card-tool    
-                .docs-buttons
-                    .btn-group
-                        button.btn.btn-rotate.btn-rotate_left(type="button", data-method="rotate", data-option="-45", title="Rotate Left")
-                        button.btn.btn-rotate.btn-rotate_right(type="button", data-method="rotate", data-option="-45", title="Rotate Right")
-                    .btn-group
-                        label.btn-upload(for="inputImage", title="Upload image file")
-                            input.sr-only#inputImage(type="file", name="file", accept=".jpg,.jpeg,.png")
-                            span 重新上傳
+                .center.d-flex.flex-column.mt-2
+                    button.btn.btn-primary(type="button") 確認
 
-          
-          
 
-            .center.d-flex.flex-column.mt-2
-                button.btn.btn-primary(type="button") 確認
         
-      
+        //- lightbox
+        //- 桌機版顯示 .pc-show-block
+        .pc-show-block
+            .modal-backdrop.fade.show
+            .modal.fade.show#upload-card-modal(tabindex="-1",role="dialog", aria-hidden="true")
+                .modal-dialog
+                    .modal-content.invalid-error
+                        .modal-header
+                            h5.modal-title 確認證件裁切範圍
+                            button.close(@click.prevent="closeModal('#upload-card-modal')",type="button",data-dismiss="modal") 關閉
+                        .modal-body-box
+                            .modal-body
+                                p.mb-2 請手動將紅框線對準證件的四角
+                                .upload-card-box
+                                    .upload-photo-bg
+                                        .photo
+                                            //- img#uploaded-id-card(src=assets + "/images/open/idCard/nopic.png", alt="")
+                                    
+                                .upload-card-tool    
+                                    .docs-buttons
+                                        .btn-group
+                                            button.btn.btn-rotate.btn-rotate_left(type="button", data-method="rotate", data-option="-45", title="Rotate Left")
+                                            button.btn.btn-rotate.btn-rotate_right(type="button", data-method="rotate", data-option="-45", title="Rotate Right")
+                                        .btn-group
+                                            label.btn-upload(for="inputImage", title="Upload image file")
+                                                input.sr-only#inputImage(type="file", name="file", accept=".jpg,.jpeg,.png")
+                                                span 重新上傳
+
+                        .modal-footer.column
+                            button.btn.btn-primary(type="button") 確認
+                            a.btn.text-center.text-underline.mt-1(href="") 重新上傳
+        
 
 block js
     script(src = public +'/lib/js/cropper.js' defer)

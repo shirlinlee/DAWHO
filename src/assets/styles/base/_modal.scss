@@ -54,10 +54,10 @@
                 min-width: 100%;
             }
         }
-        &.maxH340{
-            max-height: 340px;
+        &.minH340{
+            min-height: 340px;
             @include maxW-768 {
-                max-height: initial;
+                min-height: initial;
             }
         }
     }
@@ -105,7 +105,6 @@
     }
     &-footer {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: flex-end;
         padding: .75rem .75rem 2rem;
@@ -161,6 +160,8 @@
     height: 100vh;
     background-color: #000;
     visibility: hidden;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     &.fade {
         opacity: 0;
         visibility: hidden;

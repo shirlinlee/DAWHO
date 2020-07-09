@@ -38,7 +38,7 @@ block main
         .modal-backdrop.fade.show
         .modal.fade.show#searchBankModal(tabindex="-1",role="dialog", aria-hidden="true")
             .modal-dialog
-                .modal-content
+                .modal-content.minWidth528
                     .modal-header
                         #search-bank-input
                             span.icon.searchBank(v-if="bankNameInput.length === 0") 
@@ -48,12 +48,13 @@ block main
                     .modal-body-box
                         .modal-body
                             .bank-list
-                                ul.bank-list-ul
-                                    li.bank-list-li(v-for="(bank,i) in filterBank", :key="i",
-                                     @click="bankNameInput = bank.bankName") 
-                                        span.code {{bank.bankCode}}
-                                        span.name {{bank.bankName}}
-                                .bankEmpty(v-show="bankEmpty")
+                                //- ul.bank-list-ul
+                                //-     li.bank-list-li(v-for="(bank,i) in filterBank", :key="i",
+                                //-      @click="bankNameInput = bank.bankName") 
+                                //-         span.code {{bank.bankCode}}
+                                //-         span.name {{bank.bankName}}
+                                //- (v-show="bankEmpty")
+                                .bankEmpty
                                     .bankEmpty_photo
                                         img(src=assets + "/images/open/modal/no-result.svg", alt="no-result")
                                     .bankEmpty_text 搜尋的銀行目前不在合作夥伴內，試試看其他家銀行吧！

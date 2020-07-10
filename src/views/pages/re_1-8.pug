@@ -1,0 +1,44 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title cw_1-4
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/re.css')
+
+
+include ../includes/components.pug
+block main
+    div#Friends
+        h1.header
+                .back DAWHO好友
+
+        .content
+            h6.f16 發送對象
+            a.add_friend.f_gold.f14(href="#") 匯入好友
+            ul
+                li
+                    p 艾力克斯
+                    p 0912 345 678
+                    a 設為常用
+                li
+                    p 張曉涵
+                    p 0912 345 678
+                    a 設為常用
+                li
+                    p 艾力克斯
+                    p 0912 345 678
+                    a 設為常用
+
+
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+    script(src= assets + '/js/re.bundle.js' defer)
+
+

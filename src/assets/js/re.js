@@ -1,8 +1,24 @@
 import mode from './modules/mode';
 // import Vue from 'vue';
-new Vue({
-    el: '#appDiscount',
-    data: {},
+var vm = new Vue({
+    el: '#re',
+    data: {
+        amount: '',
+        quantity: '',
+        price: '',
+        amount_error: false,
+        quantity_error: false,
+        price_error: false,
+    },
+    watch: {
+        amount: (val) => {
+            vm.price = Number(val) * Number(vm.quantity);
+        },
+        quantity: (val) => {
+            vm.price = Number(val) * Number(vm.amount);
+            // if (Number(val) > 20) vm.quantity_error = true;
+        },
+    },
     mounted: function () {
         mode();
         this.$nextTick(() => {
@@ -19,6 +35,8 @@ new Vue({
                     clickable: true,
                 },
             });
+
+            $('');
         });
     },
 });

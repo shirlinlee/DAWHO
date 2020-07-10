@@ -1,6 +1,13 @@
-body {
+.header {
+    background: #fff;
+    color: #111;
+    font-size: 20px;
 }
 #re {
+    background: url($assets + '/images/page-marblebg.png') no-repeat;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
     padding-top: 44px;
     .red_kv {
         .swiper-slide {
@@ -112,5 +119,47 @@ body {
         .cw-notice {
             margin-bottom: 32px;
         }
+    }
+    .error {
+        color: #ff6767;
+        span {
+            color: #ff6767 !important;
+        }
+        input {
+            border-color: #ff6767 !important;
+        }
+    }
+}
+
+#Friends {
+    padding-top: 44px;
+    text-align: center;
+    background: url($assets + '/images/page-marblebg.png') no-repeat;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    padding-top: 44px;
+    img {
+        margin: 64px auto 32px;
+    }
+
+    .btn_gold {
+        color: #784f1d;
+        max-width: 180px;
+    }
+    .btn_gold_light {
+        max-width: 180px;
+
+        &::before {
+            background: #f8f8f8;
+        }
+        span {
+            color: #c38b47;
+        }
+    }
+    li {
+        background-color: #fff;
+        height: 75px;
+        padding: 13px 16px;
     }
 }

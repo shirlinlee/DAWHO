@@ -16,22 +16,26 @@ block main
         h1.header
                 .back DAWHO好友
 
-        .content
-            h6.f16 發送對象
-            a.add_friend.f_gold.f14(href="#") 匯入好友
+        .content.receive
+            .receive_th
+                h6.f16 發送對象
+                a.add_friend.f_gold.f14(href="#") 匯入好友
             ul
                 li
-                    p 艾力克斯
+                    p.name 艾力克斯
                     p 0912 345 678
-                    a 設為常用
+                    a.regular 設為常用
                 li
-                    p 張曉涵
+                    p.name 張曉涵
                     p 0912 345 678
-                    a 設為常用
+                    a.added 已新增
                 li
-                    p 艾力克斯
+                    p.name 艾力克斯
                     p 0912 345 678
-                    a 設為常用
+
+            p.f_grey_03.f14.t_left 每次最多發送給50位好友，還可新增47位
+
+            a.btn_gold 確認發送
 
 
 

@@ -133,6 +133,7 @@
 
 #Friends {
     padding-top: 44px;
+    min-height: 100vh;
     text-align: center;
     background: url($assets + '/images/page-marblebg.png') no-repeat;
     background-position: center;
@@ -157,9 +158,63 @@
             color: #c38b47;
         }
     }
+    .receive {
+        padding: 24px 16px;
+        .receive_th {
+            display: inline-block;
+            width: 100%;
+            font-weight: bold;
+            h6 {
+                display: inline-block;
+                float: left;
+            }
+            .add_friend {
+                display: inline-block;
+                float: right;
+                text-decoration: none;
+                background-position: left center;
+                background-image: url($assets + '/images/icon/add-friend.svg');
+                background-size: 17px;
+                background-repeat: no-repeat;
+                padding-left: 22px;
+            }
+        }
+        > .f_grey_03 {
+            padding-top: 4px;
+        }
+        .btn_gold {
+            margin-top: 32px;
+            max-width: 263px;
+        }
+    }
+    ul {
+        margin: 8px 0;
+    }
     li {
         background-color: #fff;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
         height: 75px;
         padding: 13px 16px;
+        margin-bottom: 12px;
+        font-weight: bold;
+        position: relative;
+        text-align: left;
+        a {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        .regular {
+            color: #c38b47;
+            text-decoration: underline;
+        }
+        .added {
+            color: #818181;
+            cursor: default;
+        }
+        .name {
+            margin-bottom: 6px;
+        }
     }
 }

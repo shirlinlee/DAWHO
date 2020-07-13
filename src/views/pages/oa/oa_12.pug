@@ -3,18 +3,20 @@ extends ../../includes/_layout_open.pug
 block title
     title 開戶進度查詢
 
+    link(rel='stylesheet', href=public+'/lib/styles/jquery.fancybox.min.css')
 block scss
-block js
  
 block main
     #appOpen
         .view
-            button.btn.btn-primary(@click="openModal('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
-         
+            //- button.btn.btn-primary(@click="openModal('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
+            //a.btn.btn-primary.iframe.fancybox.initOpen(data-fancybox ,data-type="iframe" , href="javascript:;", data-src=public + "/pdf/foreignerTax.pdf") PDF
+            a.btn.btn-primary.iframe.fancybox.initOpen(data-fancybox ,data-type="iframe", data-src=public+'/pdf/web/viewer.html?file=foreignerTax.pdf' ,href="javascript:;") PDF
+              
 
         //- lightbox
-        .modal-backdrop.fade.show
-        .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
+        .modal-backdrop.fade
+        .modal.fade#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
             .modal-dialog.minWidth 
                 .modal-content
                     .modal-header
@@ -69,4 +71,8 @@ block main
                     .modal-footer.center
                         //button.btn.btn-secondary(type="button") 按鈕
                         button.btn.btn-primary(type="button") 按鈕
-    
+
+
+block js 
+    script(src=public+'/lib/js/jquery.fancybox.min.js' defer)
+    script(src=assets + '/js/fancyLight.bundle.js' defer) 

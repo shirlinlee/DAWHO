@@ -1351,13 +1351,22 @@
             background-size: 100% auto;
         }
         .card-sldier-item_photo {
+            position: relative;
             width: 100%;
-            // max-width: 280px;
             min-height: 262px;
             margin: 0 auto;
             background-repeat: no-repeat;
             background-position: center;
             background-size: auto 90%;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 75%;
+                transform: translate(-50%, -50%) rotate(-35deg);
+                box-shadow: 1px 1px 26px -8px rgba(0, 0, 0, 0.4);
+                border-radius: 10px;
+            }
         }
         .card-sldier-container{
             padding: 16px 16px 68px;

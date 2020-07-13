@@ -17,7 +17,9 @@ block main
         .swiper-container#choose-card-slider
             .swiper-wrapper
                 .swiper-slide  
-                    .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/creditCard/debit-01.png)")
+                    //- (style="background-image: url(" +assets+ "/images/open/creditCard/debit-01.png)")
+                    .card-sldier-item_photo
+                        img(src=assets+ "/images/open/creditCard/debit-01.png", alt="DAWHO現金回饋信用卡")
                     .card-sldier-container
                         .card-sldier-item_title DAWHO現金回饋信用卡
                         .card-sldier-item_content
@@ -25,7 +27,8 @@ block main
                         .card-sldier-item_btn
                             button.btn.btn-primary(type="button") 選擇此卡片
                 .swiper-slide  
-                    .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/creditCard/debit-02.png)")
+                    .card-sldier-item_photo
+                        img(src=assets+ "/images/open/creditCard/debit-02.png", alt="永豐SPORT卡")
                     .card-sldier-container
                         .card-sldier-item_title 永豐SPORT卡
                         .card-sldier-item_content
@@ -33,15 +36,17 @@ block main
                         .card-sldier-item_btn
                             button.btn.btn-primary(type="button") 選擇此卡片
                 .swiper-slide  
-                    .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/creditCard/debit-03.png)")
+                    .card-sldier-item_photo
+                        img(src=assets+ "/images/open/creditCard/debit-03.png", alt="永豐現金回饋卡")
                     .card-sldier-container
                         .card-sldier-item_title 永豐現金回饋卡
                         .card-sldier-item_content
-                            p 選擇後不能更換卡別喔！ 
+                            p 選擇後不能更換卡別喔！
                         .card-sldier-item_btn
                             button.btn.btn-primary(type="button") 選擇此卡片
                 .swiper-slide  
-                    .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/creditCard/debit-01.png)")
+                    .card-sldier-item_photo
+                        img(src=assets+ "/images/open/creditCard/debit-01.png", alt="DAWHO現金回饋信用卡")
                     .card-sldier-container
                         .card-sldier-item_title DAWHO現金回饋信用卡
                         .card-sldier-item_content

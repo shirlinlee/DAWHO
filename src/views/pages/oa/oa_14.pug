@@ -1,20 +1,22 @@
 extends ../../includes/_layout_open.pug
 
 block title
-    title 開戶進度查詢
+    title 數位存款帳戶約定條款
 
+    link(rel='stylesheet', href=public+'/lib/styles/jquery.fancybox.min.css')
 block scss
 
 block main
     .view-992
         #appOpen  
             .bg-marble
-            //- button.btn.btn-primary(@click="openModal('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
-         
+                //- button.btn.btn-primary(@click="openModal('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
+                div.pt-2.text-center
+                    a.btn.btn-primary.iframe.fancybox.initOpen(data-fancybox ,data-type="iframe", data-src=public+'/pdf/web/viewer.html?file=digitalSavingAccountRules.pdf' ,href="javascript:;") PDF
 
             //- lightbox
-            .modal-backdrop.fade.show
-            .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
+            .modal-backdrop.fade
+            .modal.fade#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
                 .modal-dialog.minWidth 
                     .modal-content
                         .modal-header
@@ -68,5 +70,6 @@ block main
                             //button.btn.btn-secondary(type="button") 按鈕
                             button.btn.btn-primary(type="button") 按鈕
                             
-block js
- 
+block js 
+    script(src=public+'/lib/js/jquery.fancybox.min.js' defer)
+    script(src=assets + '/js/fancyLight.bundle.js' defer) 

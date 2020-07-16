@@ -36,6 +36,100 @@ $(document).ready(function(e) {
     $(window).resize(function () {
         detectFixedBtn();
     });
+
+
+
+
+
+
+
+
+
+    Date.prototype.toShortDateString = function () {
+        return this.getFullYear() + "/" + (this.getMonth() + 1) + "/" + this.getDate();
+    }
+    //#region CUSTOM FUNCTIONS FOR DATEPICKERS
+    function isTextSelected(input) {
+        if (typeof input.selectionStart == "number" && input.selectionStart != input.value.length && input.selectionStart != input.selectionEnd) {
+            return true;
+        } else if (typeof document.selection != "undefined") {
+            input.focus();
+            return document.selection.createRange().text == input.value;
+        }
+        return false;
+    }
+    function isNumber(e) {
+        var allowedKeys = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105];
+        if ($.inArray(e.keyCode, allowedKeys) != -1 && !e.originalEvent.shiftKey) {
+            return true;
+        }
+        return false;
+    }
+    function isBackspace(keyCode) {
+        var allowedKeys = [8];
+        if ($.inArray(keyCode, allowedKeys) != -1) {
+            return true;
+        }
+        return false;
+    }
+    function isAllowedKey(keyCode) {
+        var allowedKeys = [9, 13, 16, 37, 38, 39, 40];//191,111];
+        if ($.inArray(keyCode, allowedKeys) != -1) {
+            return true;
+        }
+        return false;
+    }
+    //#endregion
+    $.fn.extend({
+        allowMMDDYYYY: function (validate) {
+            $(this).keydown(function (e) {
+                var that = this;
+                if (!isNumber(e) && !isBackspace(e.keyCode) && !isAllowedKey(e.keyCode)) {
+                    e.preventDefault();
+                } else if ($(that).val().length == 10 && !isBackspace(e.keyCode) && !isAllowedKey(e.keyCode)) {// && !isTextSelected(e.target) && isNumber(e.keyCode)) {
+                    if (!isTextSelected(e.target) && isNumber(e))
+                        e.preventDefault();
+                }
+            });
+            $(this).keyup(function (e) {
+                var that = this;
+                var value = $(that).val();
+                if (e.keyCode != 8 && !isAllowedKey(e.keyCode)) {
+                    switch (value.length) {
+                        case 4:
+                            $(that).val(value + "/");
+                            break;
+                        case 5:
+                            if (value.indexOf("/") == -1) {
+                                $(that).val(value.substr(0, 4) + "/" + value.substr(4, 1));
+                            }
+                            break;
+                        case 6:
+                            if (value.substr(0, 5).indexOf("/") == -1) {
+                                $(that).val(value.substr(0, 4) + "/" + value.substr(4, 2));
+                            }
+                            break;
+                        case 7:
+                            if (e.target.selectionStart == value.length) {
+                                if (e.target.selectionStart != 1) {
+                                    $(that).val(value + "/");
+                                }
+                            }
+                            break;
+                    }
+                }
+            });
+        }
+    });
+    //#endregion
+    $("input[data-role='datepicker']").each(function (i, o) {
+        var jqueryElement = $(o);
+        jqueryElement.allowMMDDYYYY(function () {});
+    });
+    //https://stackoverflow.com/questions/44137998/auto-slash-for-date-input-using-javascript
+
+        
+
 });
 
 //fixed btn
@@ -186,15 +280,24 @@ new Vue({
                 return this.creditCardNum
             }
         },
-        dateFormat() {
-            let x = this.birthDate.replace(/\D/g, '').match(/(\d{0,4})(\d{0,2})(\d{0,2})/);
-            console.log(x[2], x[3])
-            this.birthDate = !x[2] ? x[1] : x[1] + '/' + x[2] + (x[3] ? '/' + x[3] : '');
-        },
-        expiredDateFormate() {
-            let x = this.expiredDate.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})/);
-            console.log(x[1], x[2], x[0])
-            this.expiredDate = !x[2] ? x[1] : x[1] + '/' + x[2] + (x[3] ? '/' + x[3] : '');
+        expiredDateFormate(e) {
+                let value = this.expiredDate
+            console.log('e.key', e.key)
+                
+            if (e.key != 'Backspace' ) { //BackSpace
+                switch (this.expiredDate.length) {
+                    case 2:
+                        this.expiredDate = value + "/"
+                        break;
+                }
+            } 
+
+          
+            //let x = this.expiredDate.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})/);
+            // console.log(x[1], x[2], x[0])
+
+
+            //this.expiredDate = !x[2] ? x[1] : x[1] + '/' + x[2] + (x[3] ? '/' + x[3] : '');
         },
         triggerChange(){ 
             this.currentNum ++;

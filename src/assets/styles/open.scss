@@ -40,16 +40,13 @@
     }
 }
 
-/* 高度小於600, button fixed bottom */
-.sub-footer{
-    // @include maxW-device-768{  
-    //     margin-bottom: 94px;
-    // }
-}
+
 
 /* fixed btn */
-.btn-fixed{
-    padding-bottom: 88px;
+.btn-fixed{ 
+    @include maxW-device-768{  
+        padding-bottom: 80px;
+    }
     .bg-marble{
         @include maxW-device-768{  
             padding-bottom: 32px;
@@ -82,17 +79,16 @@
     max-width: 944px;
     margin: 0 auto;
     padding: 32px 0;
-    min-height: calc(100vh - 126px - 80px);
+    min-height: 608px;
+    height: calc(100vh - 126px - 80px);
     background-color: #000;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     @include maxW-1279(){
-        min-height: calc(100vh - 56px - 80px);
+        height: calc(100vh - 56px - 80px);
     }
-    @include maxW-768 {
-        height: calc(100vh - 56px);
-    }
+   
     .intro-steps-title{
         min-height: 500px;
         @include maxW-768 {
@@ -889,6 +885,16 @@
             color: #818181;
         }
     }
+
+    /*firefox*/
+    .seperate-input{
+        .form-control{
+            max-width: calc(25% - 10px);
+        }
+    }
+
+
+
 }
 
 .bank-list-wrap {

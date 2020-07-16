@@ -41,8 +41,8 @@ block main
                             div
                                 label.ttl(for="frmCCExp") 有效期限
                                 .form-box.width6
-                                    input.form-control.shadow(v-model="expiredDate", @input="expiredDateFormate" , name="cc-exp", id="frmCCExp" ,required, pattern="[0-9]*" ,maxlength="5",placeholder="MM / YY", autocomplete="cc-exp") 
-                            
+                                    input.form-control.shadow(v-model="expiredDate", @keyup="expiredDateFormate" , name="cc-exp", id="frmCCExp" ,required, pattern="[0-9]*" ,maxlength="5",placeholder="MM / YY", autocomplete="cc-exp") 
+                              
                             div
                                 label.ttl(for="frmCCCVC") 後3碼
                                 .form-box.width6

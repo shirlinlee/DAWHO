@@ -33,7 +33,7 @@ block main
                         small.form-text.text-danger.f13 required
                     .form-group
                         label.form-label(for="") 出生日期
-                        input.form-control(id="", type="tel", value="1994/01/01", aria-describedby="telHelp") 
+                        input.form-control(id="", data-role="datepicker", type="text", pattern="[0-9]*", value="1994/01/01", placeholder="例：1998/09/05") 
                         small.form-text.text-danger.f13 required
                     .form-group.form-wrap.d-flex.flex-wrap.justify-between
                         .w100
@@ -43,7 +43,7 @@ block main
                                 select.custom-select(name="")
                                     option(value="") 補發
                                     option(value="") 新辦
-                        .w50-M
+                        .w50-M 
                             .form-group
                                 select.custom-select(name="")
                                     option(value="") 基隆市

@@ -4,7 +4,6 @@
 
 body {
     width: 100%;
-    min-height: 608px;
     color: #111111;
     background: #fff;
     font-size: 16px;
@@ -226,11 +225,7 @@ img {
 }
 
 .sub-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
+  
     height: 126px;
     font-size: 0.875rem;
     color: #fff;
@@ -259,16 +254,26 @@ img {
     }
 }
 
+.bg-marble{
+
+}
 
 .sub-content {
     // height: calc(100vh - 48px - 80px);
-    min-height: 608px;
-    padding-bottom: 126px;
+    // min-height: 608px;
+    // padding-bottom: 126px;
+    // @include maxW-1279(){
+    //     padding-bottom: 80px;
+    // }
+    // @include maxW-768 {
+    //     padding-bottom: 0;
+    // }
+    min-height: calc(100vh - 126px - 80px);
     @include maxW-1279(){
-        padding-bottom: 80px;
+        min-height: calc(100vh - 56px - 80px);
     }
-    @include maxW-768 {
-        padding-bottom: 0;
+    @include maxW-device-768 {
+        min-height: 608px;
     }
     .view-992 {
         position: relative;
@@ -385,6 +390,10 @@ img {
         outline: none;
         border: 1px solid #c38b47;
     }
+    /* firebox required red */
+    &:required {
+        box-shadow: none;
+    }
 }
 .form-disabled{
     .form-control{
@@ -490,7 +499,9 @@ img {
     flex-direction: row;
     justify-content: space-between;
     & > .form-control {
-        flex: 1 1 48px;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 48px;
+            flex: 1 1 48px;
         padding:.75rem .75rem;
         height: 56px;
         margin: 0 5px;
@@ -764,6 +775,7 @@ hr {
 }
 .styled-radio:checked + label {
     color: #c38b47;
+    font-weight: bold;
 }
 .styled-radio:checked + label:after {
     opacity: 1;

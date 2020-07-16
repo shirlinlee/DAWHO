@@ -1,14 +1,14 @@
 extends ../../includes/_layout_open.pug
 
 block title
-    title 開戶進度查詢
+    title 開始前，請先讓我們了解你
 
 block scss
 
-block main  
+block main   
     .view-992
         #appOpen  
-            .bg-marble
+            .bg-marble 
                 .open-progress 
                     .progress-line(style="width:20%")
                 .view-992
@@ -18,9 +18,9 @@ block main
                             label.form-label(for="") 身分證字號
                             input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="idHelp") 
                             small.form-text.text-danger.f13 錯誤訊息
-                        .form-group
+                        .form-group 
                             label.form-label(for="") 生日
-                            input.form-control(id="", v-model="birthDate", @input="dateFormat", type="tel", placeholder="例：1998/09/05", aria-describedby="telHelp") 
+                            input.form-control(id="", data-role="datepicker", type="text", pattern="[0-9]*", placeholder="例：1998/09/05") 
                             small.form-text.text-danger.f13 錯誤訊息
 
                         .form-group.mt-2
@@ -100,6 +100,3 @@ block main
 
 
 block js
-
-//- birth input auto slash
-//- https://stackoverflow.com/questions/44137998/auto-slash-for-date-input-using-javascript

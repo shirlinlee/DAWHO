@@ -14,18 +14,23 @@ $(document).ready(function () {
             clickable: true,
         },
         breakpoints: {
-            640: {
+            480: {
                 slidesPerView: 1.1,
                 spaceBetween: 12,
-                centeredSlides: true,
+                centeredSlides: true
             },
-            768: {
-                slidesPerView: 1,
+            500: {//768
+                slidesPerView: 'auto',
                 spaceBetween: 12,
-                centeredSlides: true,
+                centeredSlides: false,
+            },
+            992: {
+                slidesPerView: 'auto',
+                spaceBetween: 12,
+                centeredSlides: false,
             },
             1024: {
-                slidesPerView: 3,
+                slidesPerView: 'auto',
                 spaceBetween: 12,
                 centeredSlides: false,
             },

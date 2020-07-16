@@ -1,7 +1,7 @@
 import mode from './modules/mode';
 //import { IgnorePlugin } from 'webpack';
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-const media = window.matchMedia("(max-width: 768px)");
+const deviceMedia = window.matchMedia("(max-device-width: 768px)");
 let detectResize = false;
 
 
@@ -14,6 +14,11 @@ $(document).ready(function(e) {
             minimumResultsForSearch: Infinity
         });
     } 
+    //select all oa-9
+    $('#selectAll').click(function (event) {
+        $('input[type="checkbox"]').prop('checked', this.checked)
+    });
+ 
     //tooltip
     let eevent = isMobile ? 'touchstart' : 'click';
     $('.tooltip').on(eevent, function () {
@@ -27,10 +32,23 @@ $(document).ready(function(e) {
         $(this).parent('.tel-group').removeClass('addBorder');
     });
 
+    detectFixedBtn();
     $(window).resize(function () {
+        detectFixedBtn();
     });
 });
 
+//fixed btn
+function detectFixedBtn() {
+    let bottomBtn = $('.bottom-area').length;
+    if (bottomBtn < 1) return false;
+    console.log(bottomBtn)
+    if (deviceMedia) {
+        $('body').addClass('btn-fixed')
+    } else {
+        $('body').removeClass('btn-fixed')
+    }
+}
 
 
 
@@ -71,7 +89,9 @@ new Vue({
         creditCardNum: null,//oa_23
         expiredDate: null, //oa-24
         currentNum: 0,// oa_27
-        otherCardSelect: 1 
+        otherCardSelect: 1,
+        currentAddress: 'currentAddress1',//oa-32
+        currentTel: 'currentTel2'//oa-32
     },
     mounted: function () {
         mode();
@@ -107,6 +127,15 @@ new Vue({
         }
     },
     methods: {
+        pickBank(openID) {
+            this.bankNameInput = '';
+            this.openModal(openID);
+        },
+        selectedBank(bank, closeID) {
+            this.bankNameInput = bank;
+            this.closeModal(closeID);
+
+        },
         toggleBubble(i) {
             this.financial[i].status = !this.financial[i].status
         },
@@ -169,7 +198,7 @@ new Vue({
         },
         triggerChange(){ 
             this.currentNum ++;
-            if (this.currentNum > 2) this.currentNum = 1 
+            if (this.currentNum > 2) this.currentNum = 0 
             if (this.currentNum === 1) $(this.$refs.fileLabel).attr("for", "step-1")
             if (this.currentNum === 2) $(this.$refs.fileLabel).attr("for", "step-2")
         }

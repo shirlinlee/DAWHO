@@ -8,68 +8,69 @@ block scss
 
 block main
 
-    #appOpen
-        .open-progress
-            .progress-line(style="width:55%")
-        
-        .view-992
-            h1.main-title 證件上傳方式
+    .view-992
+        #appOpen  
+            .bg-marble
+                .open-progress
+                    .progress-line(style="width:55%")
+                
+                h1.main-title.pb-24 證件上傳方式
 
-            .id-card
-                .id-card-display.id-card-display-right
-                    h2.sub-ttl.right
-                        span.icn 
-                            img(src=assets + "/images/open/icon/correc@3x.png", alt="right")
-                        span.txt 正確拍攝方式
+                .id-card
+                    .id-card-display.id-card-display-right
+                        h2.sub-ttl.right
+                            span.icn 
+                                img(src=assets + "/images/open/icon/correc@3x.png", alt="right")
+                            span.txt 正確拍攝方式
 
-                    ol.list-style-decimal.bg-primary
-                        li 請將證件擺正並「立」於桌面
-                        li 手機轉請使用「橫向」拍攝以避免反光，並確認照片清晰
-                        li 拍攝後，請將紅框對準證件的四角進行裁切
+                        ol.list-style-decimal.bg-primary
+                            li 請將證件擺正並「立」於桌面
+                            li 手機轉請使用「橫向」拍攝以避免反光，並確認照片清晰
+                            li 拍攝後，請將紅框對準證件的四角進行裁切
 
-                    .id-card-photo
-                        .photo-box.mb-1
-                            img(src=assets + "/images/open/idCard/sdk.png", alt="")
-                        .note 第二證件可使用健保卡、駕照或護照
-                        
+                        .id-card-photo
+                            .photo-box.mb-1
+                                img(src=assets + "/images/open/idCard/sdk.png", alt="")
+                            .note 第二證件可使用健保卡、駕照或護照
+                            
 
-                hr.bg-grey.mb-2.mt-2
+                    hr.bg-grey.mb-24.mt-24
 
-                .id-card-display.id-card-display-wrong
-                    h2.sub-ttl.wrong
-                        span.icn 
-                            img(src=assets + "/images/open/icon/fail@3x.png", alt="wrong")
-                        span.txt 錯誤拍攝方式
-                    p 若健保卡照片已磨損或無大頭照，請以其他有清晰大頭照證件上傳（例如：駕照、護照等）。上傳影像須為<b>完整彩色清晰</b>影像。
-                        
-                    .id-card-photo
-                        .id-card-photo-item
-                            .photo
-                                img(src=assets + "/images/open/idCard/blur-pic.png", alt="照片模糊")
-                            .text 
-                                img(src=assets + "/images/open/icon/errorexample@3x.png", alt="errorexample")
-                                | 照片模糊
-                        .id-card-photo-item
-                            .photo
-                                img(src=assets + "/images/open/idCard/nopic.png", alt="無照片")
-                            .text 
-                                img(src=assets + "/images/open/icon/errorexample@3x.png", alt="errorexample")
-                                | 無照片
-                        .id-card-photo-item
-                            .photo
-                                img(src=assets + "/images/open/idCard/saturation-pic.png", alt="黑白照片")
-                            .text 
-                                img(src=assets + "/images/open/icon/errorexample@3x.png", alt="errorexample")
-                                | 黑白照片
-                        .id-card-photo-item
-                            .photo
-                                img(src=assets + "/images/open/idCard/nocomplete-pic.png", alt="影像不完整")
-                            .text 
-                                img(src=assets + "/images/open/icon/errorexample@3x.png", alt="errorexample")
-                                | 影像不完整
+                    .id-card-display.id-card-display-wrong
+                        h2.sub-ttl.wrong
+                            span.icn 
+                                img(src=assets + "/images/open/icon/fail@3x.png", alt="wrong")
+                            span.txt 錯誤拍攝方式
+                        p 若健保卡照片已磨損或無大頭照，請以其他有清晰大頭照證件上傳（例如：駕照、護照等）。上傳影像須為<b>完整彩色清晰</b>影像。
+                            
+                        .id-card-photo
+                            .id-card-photo-item
+                                .photo.text-center
+                                    img(src=assets + "/images/open/idCard/blur-pic.png", alt="照片模糊")
+                                .text 
+                                    img(src=assets + "/images/open/icon/errorexample@3x.png", alt="errorexample")
+                                    | 照片模糊
+                            .id-card-photo-item
+                                .photo.text-center
+                                    img(src=assets + "/images/open/idCard/nopic.png", alt="無照片")
+                                .text 
+                                    img(src=assets + "/images/open/icon/errorexample@3x.png", alt="errorexample")
+                                    | 無照片
+                            .id-card-photo-item
+                                .photo.text-center
+                                    img(src=assets + "/images/open/idCard/saturation-pic.png", alt="黑白照片")
+                                .text 
+                                    img(src=assets + "/images/open/icon/errorexample@3x.png", alt="errorexample")
+                                    | 黑白照片
+                            .id-card-photo-item
+                                .photo.text-center
+                                    img(src=assets + "/images/open/idCard/nocomplete-pic.png", alt="影像不完整")
+                                .text 
+                                    img(src=assets + "/images/open/icon/errorexample@3x.png", alt="errorexample")
+                                    | 影像不完整
 
-            .bottom-area.center.mt-2
-                button.btn.btn-primary(type="button") 我瞭解了
-        
+                .center.mt-2
+                    button.btn.btn-primary(type="button") 我瞭解了
+            
 
 block js   

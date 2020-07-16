@@ -7,18 +7,19 @@ block scss
 
  
 block main
-    #appOpen
-        .view
+    .view-992
+        #appOpen  
+            .bg-marble
            
 
-        //- lightbox
-        .modal-backdrop.fade.show
-        .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
-            .modal-dialog.minWidth 
-                .modal-content
-                    .modal-header
-                    .modal-body-box
-                        .modal-body
-                    .modal-footer.center
+            //- lightbox
+            .modal-backdrop.fade.show
+            .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
+                .modal-dialog.minWidth 
+                    .modal-content
+                        .modal-header
+                        .modal-body-box
+                            .modal-body
+                        .modal-footer.center
 
 block js

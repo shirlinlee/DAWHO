@@ -7,48 +7,48 @@ block scss
 
 block main
 
-    #appOpen
-        .open-progress
-            .progress-line(style="width:60%")
-        
-        .view-992
-            h1.main-title.mb-24 上傳雙證件
-            a.id-card-upload_mobileUse.text-underline(href="") 使用手機上傳雙證件
-            .id-card-upload_ttl 身分證
-            .id-card-upload 
-                .id-card-display.id-card-display-front
-                    label.btn-card-upload(for="idCardFront", title="Upload image file")
-                        input.sr-only#idCardFront(type="file", name="file", accept=".jpg,.jpeg,.png")
-                    span.id-card-upload_note 上傳身分證正面
-                .id-card-display.id-card-display-Back
-                    label.btn-card-upload(for="idCardBack", title="Upload image file")
-                        input.sr-only#idCardBack(type="file", name="file", accept=".jpg,.jpeg,.png")
-                    span.id-card-upload_note 上傳身分證反面
+    .view-992
+        #appOpen  
+            .bg-marble
+                .open-progress
+                    .progress-line(style="width:60%")
                 
-            .id-card-upload_ttl 第二證件
-            .id-card-upload
-                //- 桌機出現 
-                .id-card-display.id-card-display-other.id-card-display-pc
-                    label.btn-card-upload(for="idCardOther-pc", title="Upload image file")
-                        input.sr-only#idCardOther-pc(type="file", name="file", accept=".jpg,.jpeg,.png")
-                    span.id-card-upload_note 上傳健保卡、駕照、護照
-                //- 手機出現
-                //- first trigger select, second trigger open file  
-                .id-card-display.id-card-display-other.id-card-display-mb
-                    label.btn-card-upload(ref="fileLabel", for="step-1", title="Upload image file", @click="triggerChange")
-                        input.sr-only#step-2(ref="fileInput", type="file", name="file", accept=".jpg,.jpeg,.png", :class="{'disabled': currentNum === 1 }")
-                    span.id-card-upload_note 上傳健保卡、駕照、護照
+                
+                h1.main-title.pb-24 上傳雙證件
+                a.id-card-upload_mobileUse.text-underline(href="") 使用手機上傳雙證件
+                .id-card-upload_ttl 身分證
+                .id-card-upload 
+                    .id-card-display.id-card-display-front
+                        label.btn-card-upload(for="idCardFront", title="Upload image file")
+                            input.sr-only#idCardFront(type="file", name="file", accept=".jpg,.jpeg,.png")
+                        span.id-card-upload_note 上傳身分證正面
+                    .id-card-display.id-card-display-Back
+                        label.btn-card-upload(for="idCardBack", title="Upload image file")
+                            input.sr-only#idCardBack(type="file", name="file", accept=".jpg,.jpeg,.png")
+                        span.id-card-upload_note 上傳身分證反面
+                    
+                .id-card-upload_ttl 第二證件
+                .id-card-upload.mb-0
+                    //- 桌機出現 
+                    .id-card-display.id-card-display-other.id-card-display-pc.mb-0
+                        label.btn-card-upload(for="idCardOther-pc", title="Upload image file")
+                            input.sr-only#idCardOther-pc(type="file", name="file", accept=".jpg,.jpeg,.png")
+                        span.id-card-upload_note 上傳健保卡、駕照、護照
+                    //- 手機出現
+                    //- first trigger select, second trigger open file  
+                    .id-card-display.id-card-display-other.id-card-display-mb.mb-0
+                        label.btn-card-upload(ref="fileLabel", for="step-1", title="Upload image file", @click="triggerChange")
+                            input.sr-only#step-2(ref="fileInput", type="file", name="file", accept=".jpg,.jpeg,.png", :class="{'disabled': currentNum === 1 }")
+                        span.id-card-upload_note 上傳健保卡、駕照、護照
 
-                select#step-1(style="opacity: 0;font-size:16px;", name="uploadCardOther", ref="fileSelect", v-model="otherCardSelect", :class="{'disabled': currentNum === 2 }")
-                    option(value="1") 健保卡
-                    option(value="2") 駕照 
-                    option(value="3") 護照
+                    select#step-1(style="opacity: 0;font-size:16px;height: 0;",name="uploadCardOther", ref="fileSelect", v-model="otherCardSelect", :class="{'disabled': currentNum === 2 }")
+                        option(value="1") 健保卡
+                        option(value="2") 駕照 
+                        option(value="3") 護照
 
-
-
-            .bottom-area.center
-                button.btn.btn-primary.disabled(type="button") 下一步
-        
+                .align-bottom.center
+                    button.btn.btn-primary.disabled(type="button") 下一步
+            
 
 
 block js

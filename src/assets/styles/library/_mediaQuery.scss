@@ -55,3 +55,10 @@
         @content;
     }
 }
+
+//608px + footer 126px
+@mixin maxH-608() {
+    @media screen and (max-height: 608px) {   
+        @content;
+    }
+}

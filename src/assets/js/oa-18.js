@@ -2,7 +2,7 @@
 $(document).ready(function () { 
 
     let cardSwiper = new Swiper('#card-slider-slick', {
-        slidesPerView: 1.1,
+        slidesPerView: 1.1, 
         spaceBetween: 12,
         centeredSlides: true,
         navigation: {
@@ -17,12 +17,12 @@ $(document).ready(function () {
             640: {
                 slidesPerView: 1.1,
                 spaceBetween: 12,
-                centeredSlides: true,
+                centeredSlides: false,
             },
             768: {
-                slidesPerView: 1,
+                slidesPerView: 3,
                 spaceBetween: 12,
-                centeredSlides: true,
+                centeredSlides: false,
             },
             1024: {
                 slidesPerView: 3,

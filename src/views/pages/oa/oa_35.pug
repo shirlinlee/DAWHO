@@ -5,34 +5,36 @@ block title
 
 block scss
 
-block js
 
 block main
-    #appOpen 
-        .open-progress
-            .progress-line(style="width:90%")
-        .view-992
-            h1.main-title.mb-1 設定代號與密碼
-            p.f14.mb-2 數位帳戶審核成功後，請用現在設定的網路銀行使用者代號及密碼登入；若為本行卡友，將同步更新
-            form
-                .form-group
-                    label.form-label(for="") 設定代號
-                    input.form-control(id="", type="text", placeholder="請輸入 6-20 位英數字") 
-                .form-group.pb-0
-                    label.form-label(for="") 再次輸入代號
-                    input.form-control(id="", type="text", placeholder="請輸入 6-20 位英數字") 
-            
-            
-                hr.bg-grey.mt-24.mb-24
+    .view-992
+        #appOpen  
+            .bg-marble
+                .open-progress
+                    .progress-line(style="width:90%")
 
-                .form-group
-                    label.form-label(for="") 設定密碼
-                    input.form-control(id="", type="password", placeholder="請輸入 6-20 位英數字") 
-                .form-group.pb-0
-                    label.form-label(for="") 請再次輸入密碼
-                    input.form-control(id="", type="password", placeholder="請輸入 6-20 位英數字") 
-            
+                h1.main-title.pb-1 設定代號與密碼
+                p.mb-2 數位帳戶審核成功後，請用現在設定的網路銀行使用者代號及密碼登入；若為本行卡友，將同步更新
+                form
+                    .form-group
+                        label.form-label(for="") 設定代號
+                        input.form-control(id="", type="text", placeholder="請輸入 6-20 位英數字") 
+                    .form-group.pb-0
+                        label.form-label(for="") 再次輸入代號
+                        input.form-control(id="", type="text", placeholder="請輸入 6-20 位英數字") 
+                
+                
+                    hr.bg-grey.mt-24.mb-24
 
-            .bottom-area.center.align-bottom
-                button.btn.btn-primary.disabled(type="submit") 下一步
-                    
+                    .form-group
+                        label.form-label(for="") 設定密碼
+                        input.form-control(id="", type="password", placeholder="請輸入 6-20 位英數字") 
+                    .form-group.pb-0
+                        label.form-label(for="") 請再次輸入密碼
+                        input.form-control(id="", type="password", placeholder="請輸入 6-20 位英數字") 
+                
+
+                .bottom-area.center.align-bottom
+                    button.btn.btn-primary.disabled(type="submit") 下一步
+                        
+block js

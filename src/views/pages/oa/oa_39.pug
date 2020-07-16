@@ -7,59 +7,60 @@ block scss
 
 include ../../includes/components.pug
 block main
-    #appOpen 
-        .open-progress
-            .progress-line(style="width:100%")
-    .view-992.apply-all-done
-        .apply-all-done_bg
-            h1.main-title 已完成大戶申請
-        p.text-center.mt-24.mb-1.main-title-des 謝謝你申請大戶，目前正在審核中
-        p.text-center.txt-note.apply-details Email：256458@sasa.com
+    .view-992
+        #appOpen  
+            .bg-marble
+                .progress-line(style="width:100%")
+                .apply-all-done
+                    .apply-all-done_bg
+                        h1.main-title 已完成大戶申請
+                    p.text-center.mt-24.mb-1.main-title-des 謝謝你申請大戶，目前正在審核中
+                    p.text-center.txt-note.apply-details Email：256458@sasa.com
 
-        +notice(15)
+                    +notice(15)
 
-        hr.bg-grey
-        h2.sub-title.text-center 繼續申辦信用卡
-        p.sub-title-des.text-center 更多優惠、更便利的生活
+                    hr.bg-grey
+                    h2.sub-title.text-center 繼續申辦信用卡
+                    p.sub-title-des.text-center 更多優惠、更便利的生活
 
-        #continue-choose-card-slider
-            .swiper-slide  
-                .card-sldier-other_photo
-                    img(src= assets + "/images/open/creditCard/credit-01@3x.png", alt="")
-                .card-sldier-txt-container
-                    p.get-txt 現金回饋最高
-                    h3.card-title DAWHO 現金回饋信用卡
-                .card-sldier_btn
-                    button.btn.btn-primary(type="button") 立即申辦
-            .swiper-slide  
-                .card-sldier-other_photo
-                    img(src= assets + "/images/open/creditCard/credit-02@3x.png", alt="")
-                .card-sldier-txt-container
-                    p.get-txt 回饋無上限
-                    h3.card-title 幣倍卡
-                .card-sldier_btn
-                    button.btn.btn-primary(type="button") 立即申辦
-            .swiper-slide  
-                .card-sldier-other_photo
-                    img(src= assets + "/images/open/creditCard/credit-03@3x.png", alt="")
-                .card-sldier-txt-container
-                    p.get-txt 虛擬卡號無實體卡
-                    h3.card-title 財富無限/世界虛擬卡
-                .card-sldier_btn
-                    button.btn.btn-primary(type="button") 立即申辦
-            .swiper-slide  
-                .card-sldier-other_photo
-                    img(src= assets + "/images/open/creditCard/credit-03@3x.png", alt="")
-                .card-sldier-txt-container
-                    p.get-txt 虛擬卡號無實體卡
-                    h3.card-title 財富無限/世界虛擬卡
-                .card-sldier_btn
-                    button.btn.btn-primary(type="button") 立即申辦
-            
-        .rules-box.text-center      
-            p.f14 謹慎理財 信用至上
-            p.f12 24小時服務專線：(02)2528-7776 / 0800-058-888 (限市話) 郵政信箱：100臺北重南郵局第88號信箱
-            p.f12 循環信用利率年息2.74%~15%(基準日2015/8/3)，預借現金手續費：預借現金金額X3.5%+指定金額(NT$100/3.5美元/350日圓/3歐元)，其他費用請上永豐銀行網站查詢
+                    #continue-choose-card-slider
+                        .swiper-slide  
+                            .card-sldier-other_photo
+                                img(src= assets + "/images/open/creditCard/credit-01@3x.png", alt="")
+                            .card-sldier-txt-container
+                                p.get-txt 現金回饋最高
+                                h3.card-title DAWHO 現金回饋信用卡
+                            .card-sldier_btn
+                                button.btn.btn-primary(type="button") 立即申辦
+                        .swiper-slide  
+                            .card-sldier-other_photo
+                                img(src= assets + "/images/open/creditCard/credit-02@3x.png", alt="")
+                            .card-sldier-txt-container
+                                p.get-txt 回饋無上限
+                                h3.card-title 幣倍卡
+                            .card-sldier_btn
+                                button.btn.btn-primary(type="button") 立即申辦
+                        .swiper-slide  
+                            .card-sldier-other_photo
+                                img(src= assets + "/images/open/creditCard/credit-03@3x.png", alt="")
+                            .card-sldier-txt-container
+                                p.get-txt 虛擬卡號無實體卡
+                                h3.card-title 財富無限/世界虛擬卡
+                            .card-sldier_btn
+                                button.btn.btn-primary(type="button") 立即申辦
+                        .swiper-slide  
+                            .card-sldier-other_photo
+                                img(src= assets + "/images/open/creditCard/credit-03@3x.png", alt="")
+                            .card-sldier-txt-container
+                                p.get-txt 虛擬卡號無實體卡
+                                h3.card-title 財富無限/世界虛擬卡
+                            .card-sldier_btn
+                                button.btn.btn-primary(type="button") 立即申辦
+                        
+                    .rules-box.text-center      
+                        p.f14 謹慎理財 信用至上
+                        p.f12 24小時服務專線：(02)2528-7776 / 0800-058-888 (限市話) 郵政信箱：100臺北重南郵局第88號信箱
+                        p.f12 循環信用利率年息2.74%~15%(基準日2015/8/3)，預借現金手續費：預借現金金額X3.5%+指定金額(NT$100/3.5美元/350日圓/3歐元)，其他費用請上永豐銀行網站查詢
 
                     
 block js

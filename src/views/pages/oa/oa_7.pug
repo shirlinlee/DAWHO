@@ -5,95 +5,101 @@ block title
 
 block scss
 
+block main  
+    .view-992
+        #appOpen  
+            .bg-marble
+                .open-progress 
+                    .progress-line(style="width:20%")
+                .view-992
+                    h1.main-title 開始前，請先讓我們了解你
+                    form
+                        .form-group.invalid-error
+                            label.form-label(for="") 身分證字號
+                            input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="idHelp") 
+                            small.form-text.text-danger.f13 錯誤訊息
+                        .form-group
+                            label.form-label(for="") 生日
+                            input.form-control(id="", v-model="birthDate", @input="dateFormat", type="tel", placeholder="例：1998/09/05", aria-describedby="telHelp") 
+                            small.form-text.text-danger.f13 錯誤訊息
+
+                        .form-group.mt-2
+                            p 是否有美國國籍或其他地區稅務居民身份?
+                            p.f14.txt-note
+                                | 什麼是稅務身份?  
+                                span.info.img(@click="openModal('#paymentIdentity')") 
+                                    img(src=assets + "/images/open/icon/info@2x.png", alt="info")
+                        .form-radio.form-group
+                            input.styled-radio(id="defaultRadio1",type="radio", name="radio-group", checked="checked")
+                            label.styled-label(for="defaultRadio1") 是
+                        .form-radio.form-group
+                            input.styled-radio(id="defaultRadio2",type="radio", name="radio-group")
+                            label.styled-label(for="defaultRadio2") 否
+
+
+                    .bottom-area.center.align-bottom
+                        button.btn.btn-primary.disabled(type="submit") 下一步
+                            
+
+
+                //- lightbox 
+                .modal-backdrop.fade
+                .modal.fade#paymentIdentity(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#paymentIdentity')")
+                    .modal-dialog.minWidth 
+                        .modal-content
+                            .modal-header
+                                h5.modal-title 大標
+                                button.close(@click.prevent="closeModal('#paymentIdentity')",type="button",data-dismiss="modal") 關閉
+                            .modal-body-box
+                                .modal-body
+                                    p.modal-sub-title 段落文字
+                                    h6.sub-title 小標
+                                    ul.list-style-cjk
+                                        li 大章節使用此種樣式
+                                        li 大章節使用此種樣式
+                                        li 
+                                            span.txt-heghtlight 重點文字
+                                            |文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                                            a.text-underline(href="") 文字連結
+                                    ul.list-style-decimal 
+                                        li 細項說明使用此種樣式
+                                            ul
+                                                li (1). 小列點 使用此種樣式
+                                                li 
+                                                    | (2). 小列點 使用此種樣式，
+                                                    span.txt-heghtlight 重點文字
+                                                    | 使用此種樣式，
+                                                    a.text-underline(href="") 文字連結 
+                                                    | 此種樣式
+                                        li 細項說明使用此種樣式
+                                        li 細項說明使用此種樣式
+
+                                    .table-wrapper
+                                        table.table.table-strip.table-no-border
+                                            tr
+                                                th 表格第一列 標題
+                                                th 表格第二列 標題
+                                                th 表格第三列 標題
+                                            tr
+                                                td 第一列內文
+                                                td 第二列內文
+                                                td 第三列內文
+                                            tr
+                                                td 第一列內文
+                                                td 第二列內文第二列內文第二列內文第二列內文第二列內文
+                                                td 第三列內文
+                                            tr
+                                                td 第一列內文
+                                                td 第二列內文第二列內文第二列內文第二列內文
+                                                td 第三列內文
+                                        
+
+                            .modal-footer.center
+                                //button.btn.btn-secondary(type="button") 按鈕
+                                button.btn.btn-primary(type="button") 按鈕
+
+
 block js
 
-block main 
-    #appOpen 
-        .open-progress 
-            .progress-line(style="width:20%")
-        .view-992
-            h1.main-title.mt-2.mb-2 開始前，請先讓我們了解你
-            form
-                .form-group
-                    label.form-label(for="") 身分證字號
-                    input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="idHelp") 
-                    //small.form-text.text-danger.f13 required
-                .form-group
-                    label.form-label(for="") 生日
-                    input.form-control(id="", v-model="birthDate", @input="dateFormat", type="tel", placeholder="例：1998/09/05", aria-describedby="telHelp") 
-                    //small.form-text.text-danger.f13 required
-
-                .form-group.mt-2
-                    p 是否有美國國籍或其他地區稅務居民身份?
-                    p.f14.txt-note
-                        | 什麼是稅務身份?  
-                        span.info.img(@click="openModal('#paymentIdentity')") 
-                            img(src=assets + "/images/open/icon/info@2x.png", alt="info")
-                .form-radio.form-group
-                    input.styled-radio(id="defaultRadio1",type="radio", name="radio-group", checked="checked")
-                    label.styled-label(for="defaultRadio1") 是
-                .form-radio.form-group
-                    input.styled-radio(id="defaultRadio2",type="radio", name="radio-group")
-                    label.styled-label(for="defaultRadio2") 否
-
-
-            .bottom-area.center.align-bottom
-                button.btn.btn-primary.disabled(type="submit") 下一步
-                    
-
-
-        //- lightbox 
-        .modal-backdrop.fade
-        .modal.fade#paymentIdentity(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#paymentIdentity')")
-            .modal-dialog.minWidth 
-                .modal-content
-                    .modal-header
-                        h5.modal-title 大標
-                        button.close(@click.prevent="closeModal('#paymentIdentity')",type="button",data-dismiss="modal") 關閉
-                    .modal-body-box
-                        .modal-body
-                            p.modal-sub-title 段落文字
-                            h6.sub-title 小標
-                            ul.list-style-cjk
-                                li 大章節使用此種樣式
-                                li 大章節使用此種樣式
-                                li 
-                                    span.txt-heghtlight 重點文字
-                                    |文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
-                                    a.text-underline(href="") 文字連結
-                            ul.list-style-decimal 
-                                li 細項說明使用此種樣式
-                                    ul
-                                        li (1). 小列點 使用此種樣式
-                                        li 
-                                            | (2). 小列點 使用此種樣式，
-                                            span.txt-heghtlight 重點文字
-                                            | 使用此種樣式，
-                                            a.text-underline(href="") 文字連結 
-                                            | 此種樣式
-                                li 細項說明使用此種樣式
-                                li 細項說明使用此種樣式
-
-                            .table-wrapper
-                                table.table.table-strip.table-no-border
-                                    tr
-                                        th 表格第一列 標題
-                                        th 表格第二列 標題
-                                        th 表格第三列 標題
-                                    tr
-                                        td 第一列內文
-                                        td 第二列內文
-                                        td 第三列內文
-                                    tr
-                                        td 第一列內文
-                                        td 第二列內文第二列內文第二列內文第二列內文第二列內文
-                                        td 第三列內文
-                                    tr
-                                        td 第一列內文
-                                        td 第二列內文第二列內文第二列內文第二列內文
-                                        td 第三列內文
-                                
-
-                    .modal-footer.center
-                        //button.btn.btn-secondary(type="button") 按鈕
-                        button.btn.btn-primary(type="button") 按鈕
+//- birth input auto slash
+//- https://stackoverflow.com/questions/44137998/auto-slash-for-date-input-using-javascript

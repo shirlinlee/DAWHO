@@ -5,23 +5,22 @@ block title
 
 block scss
 
-block js
-    script(src=assets + '/js/open.bundle.js' defer)
-
 block main
+    .view-992
+        #appOpen  
+            .bg-marble
+                .open-progress
+                    .progress-line(style="width:20%")
 
-    #appOpen
-        .open-progress
-            .progress-line(style="width:20%")
-
-        .view-992
-            h1.main-title.mt-2.mb-2 請輸入行動電話
-            form
-                //- 驗證錯誤.form-group + .invalid-error
-                .form-group
-                    input.form-control(id="", type="tel", placeholder="請輸入行動電話", aria-describedby="telHelp") 
-                    small.txt-note.f14 行動電話號碼須為 10 碼
-            
-            .center.align-bottom
-                button.btn.btn-primary.disabled(type="submit") 發送驗證碼
-                
+                .view-992
+                    h1.main-title 請輸入行動電話
+                    form
+                        //- 驗證錯誤.form-group + .invalid-error
+                        .form-group
+                            input.form-control(id="", type="tel", placeholder="請輸入行動電話", aria-describedby="telHelp") 
+                            small.txt-note.f14 行動電話號碼須為 10 碼
+                    
+                    .center.align-bottom
+                        button.btn.btn-primary.disabled(type="submit") 發送驗證碼
+                        
+block js

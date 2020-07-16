@@ -7,65 +7,66 @@ block scss
 
  
 block main
-    #appOpen
-        .view
+    .view-992
+        #appOpen  
+            .bg-marble
             //- button.btn.btn-primary(@click="openModal('#staticBackdrop')" type="button",data-toggle="modal", data-target="#staticBackdrop") open modal
          
 
-        //- lightbox
-        .modal-backdrop.fade.show
-        .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
-            .modal-dialog.minWidth 
-                .modal-content
-                    .modal-header
-                        h5.modal-title 大標
-                        button.close(@click.prevent="closeModal('#staticBackdrop')",type="button",data-dismiss="modal") 關閉
-                    .modal-body-box
-                        .modal-body
-                            p.modal-sub-title 段落文字
-                            h6.sub-title 小標
-                            ul.list-style-cjk
-                                li 大章節使用此種樣式
-                                li 大章節使用此種樣式
-                                li 
-                                    span.txt-heghtlight 重點文字
-                                    |文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
-                                    a.text-underline(href="") 文字連結
-                            ul.list-style-decimal 
-                                li 細項說明使用此種樣式
-                                    ul
-                                        li (1). 小列點 使用此種樣式
-                                        li 
-                                            | (2). 小列點 使用此種樣式，
-                                            span.txt-heghtlight 重點文字
-                                            | 使用此種樣式，
-                                            a.text-underline(href="") 文字連結 
-                                            | 此種樣式
-                                li 細項說明使用此種樣式
-                                li 細項說明使用此種樣式
+            //- lightbox
+            .modal-backdrop.fade.show
+            .modal.fade.show#staticBackdrop(tabindex="-1",role="dialog", aria-hidden="true", @click.self="outsideClose('#staticBackdrop')")
+                .modal-dialog.minWidth 
+                    .modal-content
+                        .modal-header
+                            h5.modal-title 大標
+                            button.close(@click.prevent="closeModal('#staticBackdrop')",type="button",data-dismiss="modal") 關閉
+                        .modal-body-box
+                            .modal-body
+                                p.modal-sub-title 段落文字
+                                h6.sub-title 小標
+                                ul.list-style-cjk
+                                    li 大章節使用此種樣式
+                                    li 大章節使用此種樣式
+                                    li 
+                                        span.txt-heghtlight 重點文字
+                                        |文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                                        a.text-underline(href="") 文字連結
+                                ul.list-style-decimal 
+                                    li 細項說明使用此種樣式
+                                        ul
+                                            li (1). 小列點 使用此種樣式
+                                            li 
+                                                | (2). 小列點 使用此種樣式，
+                                                span.txt-heghtlight 重點文字
+                                                | 使用此種樣式，
+                                                a.text-underline(href="") 文字連結 
+                                                | 此種樣式
+                                    li 細項說明使用此種樣式
+                                    li 細項說明使用此種樣式
 
-                            .table-wrapper
-                                table.table.table-strip.table-no-border
-                                    tr
-                                        th 表格第一列 標題
-                                        th 表格第二列 標題
-                                        th 表格第三列 標題
-                                    tr
-                                        td 第一列內文
-                                        td 第二列內文
-                                        td 第三列內文
-                                    tr
-                                        td 第一列內文
-                                        td 第二列內文第二列內文第二列內文第二列內文第二列內文
-                                        td 第三列內文
-                                    tr
-                                        td 第一列內文
-                                        td 第二列內文第二列內文第二列內文第二列內文
-                                        td 第三列內文
-                                
+                                .table-wrapper
+                                    table.table.table-strip.table-no-border
+                                        tr
+                                            th 表格第一列 標題
+                                            th 表格第二列 標題
+                                            th 表格第三列 標題
+                                        tr
+                                            td 第一列內文
+                                            td 第二列內文
+                                            td 第三列內文
+                                        tr
+                                            td 第一列內文
+                                            td 第二列內文第二列內文第二列內文第二列內文第二列內文
+                                            td 第三列內文
+                                        tr
+                                            td 第一列內文
+                                            td 第二列內文第二列內文第二列內文第二列內文
+                                            td 第三列內文
+                                    
 
-                    .modal-footer.center
-                        //button.btn.btn-secondary(type="button") 按鈕
-                        button.btn.btn-primary(type="button") 按鈕
+                        .modal-footer.center
+                            //button.btn.btn-secondary(type="button") 按鈕
+                            button.btn.btn-primary(type="button") 按鈕
 
 block js

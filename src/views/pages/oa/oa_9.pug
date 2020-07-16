@@ -1,43 +1,45 @@
 extends ../../includes/_layout_open.pug
 
 block title
-    title 開戶進度查詢
+    title 請輸入驗證碼
 
 block scss
     
-
-block js
-
+ 
 block main
-    #appOpen
-        .open-progress
-            .progress-line(style="width:15%")
-    #oaIdentify
-        .view-992
-            h1.main-title.mt-2.text-center 請輸入驗證碼
-            p.mt-1.text-center 驗證碼已發送 至 0956 ... 888
-            form(style="max-width:350px;margin:0 auto")
-                .form-group.seperate-input 
-                    input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1")
-                    input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
-                    input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
-                    input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
-                    input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
-                    input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
-                p.text-black.text-center(v-if="!countFinish") 
-                    | 驗證碼將在 
-                    span#timer
-                    |  失效
-                p.btn-reSend.text-underline.f16.text-center.txt-heghtlight(v-if="countFinish", @click.prevent="reSend", :class="{ 'disabled': total == 0 }") 重新發送驗證碼
-                p.text-center.f14.mt-1.mb-2.text-danger 
-                    | 每日驗證碼發送上限為
-                    span 5
-                    | 次，剩餘
-                    span {{ total }}
-                    | 次
-            .center.align-bottom
-                button.btn.btn-primary.disabled(type="submit") 送出
+    .view-992
+        .bg-marble
+            .open-progress
+                .progress-line(style="width:15%")
+
+            #oaIdentify
+                h1.main-title.text-center.pb-1 請輸入驗證碼
+                p.text-center 
+                    | 驗證碼已發送至0956
+                    span.text-dots
+                    | 888
+                form(style="max-width:350px;margin:0 auto")
+                    .form-group.seperate-input.pb-0
+                        input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1")
+                        input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
+                        input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
+                        input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
+                        input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
+                        input.form-control(id="", type="text", pattern="[0-9]*", maxlength="1") 
+                    p.text-black.text-bold.text-center(v-if="!countFinish") 
+                        | 驗證碼將在 
+                        span#timer
+                        |  失效
+                    p.btn-reSend.text-bold.text-underline.f16.text-center.txt-heghtlight(v-if="countFinish", @click.prevent="reSend", :class="{ 'disabled': total == 0 }") 重新發送驗證碼
+                    p.text-center.f14.mt-1.text-danger 
+                        | 每日驗證碼發送上限為
+                        span 5
+                        | 次，剩餘
+                        span {{ total }}
+                        | 次
+                .center.align-bottom
+                    button.btn.btn-primary.disabled(type="submit") 送出
                 
-                
+                    
 block js
     script(src=assets + '/js/oa-9.bundle.js' defer)

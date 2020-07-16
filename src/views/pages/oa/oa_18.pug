@@ -7,57 +7,59 @@ block title
 block scss
 
 block main 
-    #appOpen
-        .open-progress
-            .progress-line(style="width:40%")
+    .view-992
+        #appOpen  
+            .bg-marble
+                .open-progress 
+                    .progress-line(style="width:40%")
  
-        .view-992
-            h1.main-title.mt-2.mb-2 選擇身份驗證方式
-            .swiper-container.card-sldier#card-slider-slick
-                .card-sldier-inner.swiper-wrapper
-                    .card-sldier-item.swiper-slide  
-                        .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/slider-card/bankbook.svg)")
-                        .card-sldier-container
-                            .card-sldier-item_title
-                                .main-ttl 銀行帳戶驗證
-                                .ttl-tag 快速驗證
-                            .card-sldier-item_content
-                                ul.content-ul  
-                                    li.content-list.check 轉帳限額單筆１萬、單日３萬、單月５萬
-                                    li.content-list.fail 無法使用數位銀行驗證，如Richart, O-bank等
-                                    li.content-list.check 他行留存的行動電話需與本行留存的相同才能進行驗證
-                            .card-sldier-item_btn
-                                button.btn.btn-primary(type="button") 選擇
+        
+                h1.main-title.pb-2 選擇身份驗證方式
+                .swiper-container.card-sldier#card-slider-slick
+                    .card-sldier-inner.swiper-wrapper
+                        .card-sldier-item.swiper-slide  
+                            .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/slider-card/bankbook.svg)")
+                            .card-sldier-container
+                                .card-sldier-item_title
+                                    .main-ttl 銀行帳戶驗證
+                                    .ttl-tag 快速驗證
+                                .card-sldier-item_content
+                                    ul.content-ul  
+                                        li.content-list.check 轉帳限額單筆１萬、單日３萬、單月５萬
+                                        li.content-list.fail 無法使用數位銀行驗證，如Richart, O-bank等
+                                        li.content-list.check 他行留存的行動電話需與本行留存的相同才能進行驗證
+                                .card-sldier-item_btn
+                                    button.btn.btn-primary(type="button") 選擇
 
-                    .card-sldier-item.swiper-slide   
-                        .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/slider-card/creditcard.svg)")
-                        .card-sldier-container
-                            .card-sldier-item_title
-                                .main-ttl 信用卡驗證
-                                .ttl-tag 快速驗證
-                            .card-sldier-item_content
-                                ul.content-ul
-                                    li.content-list.check 無法轉帳給他人，需開戶後前往臨櫃開通
-                                    li.content-list.check 信用卡需持卡半年以上
-                            .card-sldier-item_btn
-                                button.btn.btn-primary(type="button") 選擇
+                        .card-sldier-item.swiper-slide   
+                            .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/slider-card/creditcard.svg)")
+                            .card-sldier-container
+                                .card-sldier-item_title
+                                    .main-ttl 信用卡驗證
+                                    .ttl-tag 快速驗證
+                                .card-sldier-item_content
+                                    ul.content-ul
+                                        li.content-list.fail 無法轉帳給他人，需開戶後前往臨櫃開通
+                                        li.content-list.check 信用卡需持卡半年以上
+                                .card-sldier-item_btn
+                                    button.btn.btn-primary(type="button") 選擇
+ 
+                        .card-sldier-item.swiper-slide  
+                            .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/slider-card/bank@3x.png)")
+                            .card-sldier-container
+                                .card-sldier-item_title
+                                    .main-ttl 臨櫃驗證
+                                    .ttl-tag 快速驗證
+                                .card-sldier-item_content
+                                    ul.content-ul
+                                        li.content-list.check 轉帳限額單筆5萬、單日10萬、單月20萬
+                                        li.content-list.notes 線上申請完成後，30日內須帶雙證件前往鄰近永豐銀行分行進行驗證
+                                .card-sldier-item_btn
+                                    button.btn.btn-primary(type="button") 選擇
 
-                    .card-sldier-item.swiper-slide  
-                        .card-sldier-item_photo(style="background-image: url(" +assets+ "/images/open/slider-card/bank@3x.png)")
-                        .card-sldier-container
-                            .card-sldier-item_title
-                                .main-ttl 臨櫃驗證
-                                .ttl-tag 快速驗證
-                            .card-sldier-item_content
-                                ul.content-ul
-                                    li.content-list.check 轉帳限額單筆5萬、單日10萬、單月20萬
-                                    li.content-list.notes 線上申請完成後，30日內須帶雙證件前往鄰近永豐銀行分行進行驗證
-                            .card-sldier-item_btn
-                                button.btn.btn-primary(type="button") 選擇
-
-                .swiper-pagination
-                .swiper-button-prev.card-arrow-prev
-                .swiper-button-next.card-arrow-next 
+                    .swiper-pagination
+                    .swiper-button-prev.card-arrow-prev
+                    .swiper-button-next.card-arrow-next 
 
 
 block js

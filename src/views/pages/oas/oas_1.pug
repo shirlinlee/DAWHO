@@ -5,22 +5,23 @@ block title
 
 block scss
 
-
-block main
-    #appOas.sub-content.white-stone-bg
-        .view-992
-            h1.main-title.mb-2 你是哪位大戶呢？
-            form
-                //- 欄位錯誤請加此class: .form-group(.invalid-error)
-                .form-group
-                    label.form-label(for="") 身分證字號
-                    input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="emailHelp") 
-                    //- small.form-text.text-danger required
-                .form-group.pb-0
-                    label.form-label(for="") 行動電話
-                    input.form-control(id="", type="tel", placeholder="請輸入行動電話", aria-describedby="emailHelp") 
-                    //- small.form-text.text-danger required
-            .bottom-area.center.align-bottom
-                button.btn.btn-primary(type="submit") 查詢進度
+block main 
+    .view-992
+        .bg-marble
+            #appOas.sub-content.white-stone-bg
                 
+                h1.main-title.mb-2 你是哪位大戶呢？
+                form
+                    //- 欄位錯誤請加此class: .form-group(.invalid-error)
+                    .form-group
+                        label.form-label(for="") 身分證字號
+                        input.form-control(id="", type="text", placeholder="請輸入身分證字號", aria-describedby="emailHelp") 
+                        //- small.form-text.text-danger required
+                    .form-group.pb-0
+                        label.form-label(for="") 行動電話
+                        input.form-control(id="", type="tel", placeholder="請輸入行動電話", aria-describedby="emailHelp") 
+                        //- small.form-text.text-danger required
+                .bottom-area.center.align-bottom
+                    button.btn.btn-primary.disabled(type="submit") 查詢進度
+                        
 block js

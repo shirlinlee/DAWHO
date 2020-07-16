@@ -6,58 +6,60 @@ block title
 block scss
 
 block main
-    #appOpen 
-        .open-progress
-            .progress-line(style="width:40%")
-        .view-992
-            h1.main-title.mt-2 銀行帳戶驗證
-            p.f14.mb-2 無法使用數位帳戶進行驗證(如Richart,O-bank)
-            form
-                .form-group
-                    label.form-label(for="bankName") 銀行名稱
-                    input.form-control.arrow-down(v-model="bankNameInput", @click="openModal('#searchBankModal')" ,id="bankName", type="text", placeholder="請選擇", autocomplete="off") 
-                    //- small.form-text.text-danger.f13 required
-                .form-group.pb-0
-                    label.form-label(for="bankNumber") 存款帳號
-                    input.form-control(id="bankNumber", type="text", placeholder="請輸入選擇銀行的存款帳號", aria-describedby="") 
-                    //- small.form-text.text-danger.f13 required
+    .view-992
+        #appOpen  
+            .bg-marble
+                .open-progress
+                    .progress-line(style="width:40%")
 
-    
-                hr.bg-grey.mt-2.mb-24
+                h1.main-title.pb-1 銀行帳戶驗證
+                p.mb-2 無法使用數位帳戶進行驗證(如Richart,O-bank)
+                form
+                    .form-group
+                        label.form-label(for="bankName") 銀行名稱
+                        input.form-control.arrow-down(v-model="bankNameInput", @click="pickBank('#searchBankModal')",readonly ,id="bankName", type="text", placeholder="請選擇", autocomplete="off") 
+                        small.form-text.text-danger.f13 required
+                    .form-group.pb-0
+                        label.form-label(for="bankNumber") 存款帳號
+                        input.form-control(id="bankNumber", type="text", pattern="[0-9]*", placeholder="請輸入選擇銀行的存款帳號", aria-describedby="") 
+                        small.form-text.text-danger.f13 required
 
-                .form-check.form-group.mb-48.pb-0
-                    input.styled-checkbox(id="defaultCheck1",type="checkbox", checked="checked")
-                    label.styled-label(for="defaultCheck1") 同意開啟金融卡非約定轉帳功能
-            .bottom-area.center
-                button.btn.btn-primary.disabled(type="submit") 驗證帳戶
         
+                    hr.bg-grey.mt-2.mb-24
+
+                    .form-check.form-group.mb-48.pb-0
+                        input.styled-checkbox(id="defaultCheck1",type="checkbox", checked="checked")
+                        label.styled-label(for="defaultCheck1") 同意開啟金融卡非約定轉帳功能
+                .center
+                    button.btn.btn-primary.disabled(type="submit") 驗證帳戶
+            
 
 
-        //- lightbox
-        .modal-backdrop.fade.show
-        .modal.fade.show#searchBankModal(tabindex="-1",role="dialog", aria-hidden="true")
-            .modal-dialog
-                .modal-content.minWidth528
-                    .modal-header
-                        #search-bank-input
-                            span.icon.searchBank(v-if="bankNameInput.length === 0") 
-                            span.icon.clearBank(v-else, @click.prevent="bankNameInput = ''")
-                            input.form-control#search-bank(v-model="bankNameInput", type="text", placeholder="搜尋銀行代碼") 
-                        button.close(@click.prevent="closeModal('#searchBankModal')",type="button",data-dismiss="modal") 關閉
-                    .modal-body-box
-                        .modal-body
-                            .bank-list
-                                ul.bank-list-ul
-                                    li.bank-list-li(v-for="(bank,i) in filterBank", :key="i",
-                                     @click="bankNameInput = bank.bankName") 
-                                        span.code {{bank.bankCode}}
-                                        span.name {{bank.bankName}}
-                                .bankEmpty(v-show="bankEmpty")
-                                    .bankEmpty_photo
-                                        img(src=assets + "/images/open/modal/no-result.svg", alt="no-result")
-                                    .bankEmpty_text 搜尋的銀行目前不在合作夥伴內，試試看其他家銀行吧！
+            //- lightbox
+            .modal-backdrop.fade.show
+            .modal.fade.show#searchBankModal(tabindex="-1",role="dialog", aria-hidden="true")
+                .modal-dialog
+                    .modal-content.minWidth528
+                        .modal-header
+                            #search-bank-input
+                                span.icon.searchBank(v-if="bankNameInput.length === 0") 
+                                span.icon.clearBank(v-else, @click.prevent="bankNameInput = ''")
+                                input.form-control#search-bank(v-model="bankNameInput", type="text", placeholder="搜尋銀行代碼") 
+                            button.close(@click.prevent="closeModal('#searchBankModal')",type="button",data-dismiss="modal") 關閉
+                        .modal-body-box
+                            .modal-body
+                                .bank-list
+                                    ul.bank-list-ul
+                                        li.bank-list-li(v-for="(bank,i) in filterBank", :key="i",
+                                        @click="selectedBank(bank.bankName, '#searchBankModal')") 
+                                            span.code {{bank.bankCode}}
+                                            span.name {{bank.bankName}}
+                                    .bankEmpty(v-show="bankEmpty")
+                                        .bankEmpty_photo
+                                            img(src=assets + "/images/open/modal/no-result.svg", alt="no-result")
+                                        .bankEmpty_text 搜尋的銀行目前不在合作夥伴內，試試看其他家銀行吧！
 
-                    .modal-footer
-                        
+                        .modal-footer
+                            
     
 block js 

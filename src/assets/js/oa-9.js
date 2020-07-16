@@ -20,14 +20,31 @@ new Vue({
         const vm = this;
         this.$nextTick(() => {
             countDown = setInterval(vm.startTimer, 1000)
-            //自動跳下一格//oa-9
+            //oa-9
             $(".seperate-input .form-control").keyup(function () {
+                //自動跳下一格
                 if (this.value.length == this.maxLength) {
-                    var $next = $(this).next('.form-control');
-                    if ($next.length)
+                    var _next = $(this).next('.form-control');
+                    if (_next.length) {
                         $(this).next('.form-control').focus();
-                    else
+                    } else {
                         $(this).blur();
+                    }
+                    if (_next.length == 0) {
+                        $(this).focus();
+                    }
+                }
+                //自動清除
+                var _prev = $(this).prev('.form-control');
+                if (this.value.length == 0) {
+                    if (_prev.length) {
+                        $(this).prev('.form-control').focus();
+                    } else {
+                        $(this).blur();
+                    }
+                    if (_prev.length == 0) {
+                        $(this).focus();
+                    }
                 }
             });
         });

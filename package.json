@@ -26,12 +26,24 @@
     "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^8.0.2", 
     "shx": "^0.3.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-fix-style-only-entries": "^0.4.0",
     "webpack-merge": "^4.2.2",
     "webpack-shell-plugin": "^0.5.0"
-  }
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "postcss-loader": "^3.0.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ]
 }

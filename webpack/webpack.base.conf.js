@@ -14,7 +14,7 @@ const PAGES_FILES = glob.sync(`${PAGES_DIR}**/*.pug`).map((page) => {
 }); 
 
 const STYLES_DIR = `${PATHS.src}/${PATHS.assets}/styles`;
-const STYLES_FILES = glob
+const STYLES_FILES = glob 
     .sync(`${STYLES_DIR}/*.scss`)
     .reduce(function (obj, el) {
         obj[path.parse(el).name] = el;
@@ -49,11 +49,11 @@ var config = {
                 },
             },
             {
-                test: /\.(scss|sass)$/,
+                test: /\.(scss|sass)$/,// 副檔名規則
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
-                        loader: 'css-loader',
+                        loader: 'css-loader', 
                         options: {
                             url: false, // bundle ignore css url()
                         },
@@ -65,6 +65,14 @@ var config = {
                                 outputStyle: 'expanded', // min css
                             },
                         },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            config: {
+                                path: 'postcss.config.js'
+                            }
+                        }
                     },
                 ],
             },

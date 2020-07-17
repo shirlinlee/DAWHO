@@ -7,16 +7,18 @@ block scss
     
 
 block main
-    #appOas.sub-content
-        .view-992.just-content-between
-            .status
-                .status-image
-                    img(src=assets + "/images/oas/steps/step-11@3x.png", alt="你已經是大戶囉")
-                .status-title 恭喜大大，已經是大戶囉
-                .status-content 登入體驗更多優惠！
-            
-            .bottom-area.center.align-bottom
-                button.btn.btn-primary(type="submit") 手刀登入大戶
+    .view-992
+        #appOas
+            .bg-gradient
+                .just-content-between-wrapper
+                    .status
+                        .status-image
+                            img(src=assets + "/images/oas/steps/step-11@3x.png", alt="你已經是大戶囉")
+                        .status-title 恭喜大大，已經是大戶囉
+                        .status-content 登入體驗更多優惠！
+                    
+                    .center.align-bottom
+                        button.btn.btn-primary(type="submit") 手刀登入大戶
 
 
 block js

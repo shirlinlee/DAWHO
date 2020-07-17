@@ -439,7 +439,7 @@ img {
         height: calc(1.75em + .75rem + 0px);
     }
     .number {
-        padding: .375rem .75rem .375rem 1.5rem;
+        padding: .375rem .75rem .375rem 1.2rem;
         width: calc(100% - 70px);
         border-radius: 0 3px 3px 0;
         border-width: 0px;
@@ -560,7 +560,7 @@ img {
     background-image: linear-gradient(to bottom, #f2cb91, #c29557);
 }
 .disabled {
-    color: #fff !important;
+    color: #e3e3e3 !important;
     background-image: linear-gradient(to bottom, #b2b2b2, #818181);
     pointer-events: none;
     cursor: not-allowed;
@@ -623,9 +623,12 @@ img {
         text-align: center;
         color: #fff;
         .ul-list{
-            padding: 8px 0;
+            padding: 8px 0 0;
             li {
                 margin-bottom: 8px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
             }
         }
         .link {

@@ -42,29 +42,26 @@
 
 
 
-/* fixed btn */
-.btn-fixed{ 
-    @include maxW-device-768{  
-        padding-bottom: 80px;
-    }
-    .bg-marble{
-        @include maxW-device-768{  
-            padding-bottom: 32px;
-        }
-    }
-}
-.bottom-area{
-    @include maxW-device-768{  
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 3;
+.bottom-area-box{
+    @include maxW-device-768{ 
+        &.fixed {
+            height: calc(40px + 48px + 32px);
+            &.btns-box{
+                height: calc(40px + 48px + 32px + 25px + 16px);
+            }
+            .bottom-area{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                z-index: 3;
+                width: 100%;
+                background: #fff;
+                padding: 16px 0 32px !important;
+                margin: 0 auto !important;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+            }
 
-        width: 100%;
-        background: #fff;
-        padding: 16px 0 32px !important;
-        margin: 0 auto !important;
-        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+        }
     }
 }
 

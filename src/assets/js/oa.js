@@ -36,12 +36,13 @@ $(document).ready(function(e) {
     $(window).resize(function () {
         detectFixedBtn();
     });
+    scrollFixedBtn();
+    $(window).scroll(function () {
+        scrollFixedBtn();
+    });
 
 
-
-
-
-
+   
 
 
 
@@ -141,6 +142,16 @@ function detectFixedBtn() {
         $('body').addClass('btn-fixed')
     } else {
         $('body').removeClass('btn-fixed')
+    }
+}
+//scroll fixed
+function scrollFixedBtn() {
+    let bottomBtn = $('.bottom-area').length;
+    if (bottomBtn < 1) return false;
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+        $('.bottom-area-box').removeClass('fixed')
+    } else {
+        $('.bottom-area-box').addClass('fixed')
     }
 }
 
@@ -281,9 +292,7 @@ new Vue({
             }
         },
         expiredDateFormate(e) {
-                let value = this.expiredDate
-            console.log('e.key', e.key)
-                
+            let value = this.expiredDate
             if (e.key != 'Backspace' ) { //BackSpace
                 switch (this.expiredDate.length) {
                     case 2:
@@ -291,12 +300,8 @@ new Vue({
                         break;
                 }
             } 
-
-          
             //let x = this.expiredDate.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})/);
             // console.log(x[1], x[2], x[0])
-
-
             //this.expiredDate = !x[2] ? x[1] : x[1] + '/' + x[2] + (x[3] ? '/' + x[3] : '');
         },
         triggerChange(){ 

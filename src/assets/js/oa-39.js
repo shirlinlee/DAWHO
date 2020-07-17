@@ -9,7 +9,7 @@ window.onload = function () {
     $('#continue-choose-card-slider').slick({
         //dots: true,
         centerMode: true,
-        centerPadding: '4%',
+        centerPadding: '2%',
         slidesToShow: 3,
         infinite: true,
         responsive: [

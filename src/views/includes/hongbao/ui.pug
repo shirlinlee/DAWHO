@@ -78,3 +78,37 @@ mixin _contentGrab()
                 button.submit
                     span 搶紅包！
             p.next_time.mt-16 下次領
+
+//- status: success, fail, already
+mixin _contentReceive(status)
+    div#appHongbaoContent.info
+        div.hongbaoReceive
+            .card
+                .card-totem
+                    p 我吃土，你發財！
+                .card-package
+                    .card-package-up
+                        .card-package-up-left
+                        .card-package-up-center
+                            if status == 'success' || status == 'already'
+                                .card-package-up-center-success.mt-24
+                                    if status == 'success'
+                                        p.name 恭喜搶到 吳民 的紅包！
+                                    else if status == 'already'
+                                        p.name 你已領過 吳民 的紅包！
+                                    p.price 新臺幣 50
+                            else
+                                .card-package-up-center-fail.mt-24
+                                    p.fail-big  好可惜...
+                                    p.fail-des 吳民 的紅包已被搶完了
+                        .card-package-up-right
+                    .card-package-down
+                        .card-package-down-left
+                        .card-package-down-center
+                        .card-package-down-right
+            if status == 'success'
+                p.des 紅包已自動入帳至DAWHO囉！
+                button.btnDefault.mb-16.mt-32 跟朋友分享！
+            else
+                button.btnDefault.mb-16.mt-32 前往紅包紀錄
+

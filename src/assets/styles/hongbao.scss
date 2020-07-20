@@ -404,6 +404,115 @@ body {
             }
         }
 
+        // 領取紅包
+        div.hongbaoReceive {
+            .card {
+                &-totem {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        font-size: 28px;
+                        font-weight: bold;
+                        color: #ffcd9a;
+                        position: absolute;
+                        top: 103px;
+                    }
+                    width: 100%;
+                    height: 220px;
+                    background-size: 100%;
+                    background-image: url($assets + '/images/hongbao/pattern2/1/6.png');
+                }
+                &-package {
+                    &-up,
+                    &-down {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    &-up-center,
+                    &-down-center {
+                        width: calc(100% - 42.5px);
+                    }
+                    &-up-left,
+                    &-up-right,
+                    &-down-left,
+                    &-down-right {
+                        min-width: 42.5px;
+                    }
+
+                    &-up {
+                        &-left {
+                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_01.png');
+                        }
+                        &-right {
+                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_02.png');
+                        }
+                        &-center {
+                            background-color: #fdfcfa;
+                            &-success {
+                                p.name {
+                                    font-size: 16px;
+                                    line-height: 1.5;
+                                    color: #111111;
+                                }
+                                p.price {
+                                    margin-top: 12px;
+                                    font-size: 24px;
+                                    font-weight: bold;
+                                    line-height: 1.88;
+                                    color: #c38b47;
+                                }
+                            }
+                            &-fail{
+                                p.fail-big{
+                                    font-size: 20px;
+                                    line-height: 1.2;
+                                    color: #111111;
+                                }
+                                p.fail-des{
+                                    margin-top: 12px;
+                                    font-size: 16px;
+                                    line-height: 1.5;
+                                    color: #111111;
+                                }
+                            }
+                        }
+                        &-left,
+                        &-right {
+                            min-width: 42.5px;
+                            background-size: 100%;
+                        }
+                    }
+
+                    &-down {
+                        &-center {
+                            height: 42.5px;
+                            background-size: 2px;
+                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_03.png');
+                            background-repeat: repeat-x;
+                            background-position: left bottom;
+                        }
+                        &-left,
+                        &-right {
+                            min-width: 42.5px;
+                            background-size: 100%;
+                        }
+                        &-left {
+                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_04.png');
+                        }
+                        &-right {
+                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_05.png');
+                        }
+                    }
+                }
+            }
+            p.des{
+                margin-top: 4px;
+                font-size: 14px;
+                color: #818181;
+            }
+        }
+
         div.contentBtn {
             margin-bottom: 32px;
         }

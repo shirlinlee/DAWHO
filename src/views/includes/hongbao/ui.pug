@@ -1,0 +1,80 @@
+mixin _header(text, color)
+    header(class=color)
+        img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+        p.title #{text}
+
+mixin _contentInfo()
+    div#appHongbaoContent
+        div.hongbaoInfo
+            p.infoTitle 我吃土，你發財！
+            div.infoForm
+                div.row
+                    div.col.A
+                        p 發放方式
+                    div.col.B
+                        p 隨機分配
+                div.row
+                    div.col.A
+                        p 總金額
+                    div.col.B
+                        p 新臺幣 5,000
+                div.row
+                    div.col.A
+                        p 紅包數量
+                    div.col.B
+                        p 5
+            hr.divide
+            p.infoPwdTitle 簡訊動態密碼
+            p.infoPwdWords 已發送至0988***652，請至手機上確認
+            div.infoPwdForm
+                div.row
+                    div.col.A
+                        input.disable(placeholder='請輸入簡訊動態密碼')
+                    div.col.B
+                        p 重新發送
+            p.warning 簡訊驗證碼輸入錯誤
+        div.contentBtn.mt-32
+            button.btnDefault.disable 去發紅包
+
+mixin _contentSend()
+    div#appHongbaoContent.info
+        div.hongbaoSend
+            .containerSend
+                //- img.bg(src=assets+"/images/hongbao/pattern/1/6.png" alt="")
+                .pattern
+                    .top
+                        p 我吃土，你發財！
+                    .middle
+                        .l
+
+                        .c
+                            .a.mt-24
+                                p.left 總金額
+                                p.center 紅包數量
+                                p.right 5
+                            .b
+                                p.left.fw-30 5,000
+                                p.center 每包金額
+                                p.right.fw-16 隨機
+                        .r
+
+                    .bottom
+                        .l
+
+                        .c
+
+                        .r
+
+        div.contentBtn.mt-12
+            button.btnDefault.mb-16 發送紅包連結給大家
+            button.btnSolid 發送給指定DAWHO好友
+
+mixin _contentGrab()
+    div#appHongbaoContent.grab
+        div.hongbaoGrab.mt-32
+            .container
+                p.name 來搶 吳民 的紅包！
+                p.title 我吃土，你發財！
+                button.submit
+                    span 搶紅包！
+            p.next_time.mt-16 下次領

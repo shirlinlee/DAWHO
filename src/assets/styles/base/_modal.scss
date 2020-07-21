@@ -13,7 +13,7 @@
         opacity: 1;
         visibility: visible;
         .modal-dialog{
-            animation: showUp .4s linear forwards;
+            animation: showUp .5s linear forwards;
             @include  maxW-768 {
                 animation: showUp_M .4s linear forwards;
             }
@@ -66,7 +66,7 @@
     }
     &-dialog {
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
         //width: 992px;
         margin: .5rem;
@@ -79,9 +79,8 @@
             margin: 0;
         }
         @include maxW-768 {
-             max-width: 100%;
-           top: 10%;
-           bottom: 0;
+            max-width: 100%;
+            top: 20%;
         }
         &.minWidth {
             max-width: 792px;
@@ -149,9 +148,14 @@
         top: 50%;
         opacity: 1;
     }
-}
+} 
 @keyframes showUp_M {
+    60%{
+        top: 20%;
+        opacity: 0;
+    }
     100% {
+        top: 10%;
         bottom: 0%;
         opacity: 1;
     }

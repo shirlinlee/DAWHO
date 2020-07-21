@@ -1,26 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="201" height="55" viewBox="0 0 201 55">
     <defs>
-        <linearGradient id="prefix__a" x1="22.833%" x2="87.934%" y1="47.662%" y2="52.256%">
+        <linearGradient id="28encmx34a" x1="22.833%" x2="87.934%" y1="47.662%" y2="52.256%">
             <stop offset="0%"/>
             <stop offset="48.886%" stop-color="#2E2E2E"/>
             <stop offset="100%"/>
         </linearGradient>
-        <linearGradient id="prefix__b" x1="0%" x2="76.022%" y1="46.219%" y2="53.781%">
+        <linearGradient id="jvbjlo40ib" x1="0%" x2="76.022%" y1="46.219%" y2="53.781%">
             <stop offset="0%" stop-color="#F2C67A"/>
             <stop offset="50.377%" stop-color="#FFE3BC"/>
             <stop offset="100%" stop-color="#E9A85B"/>
         </linearGradient>
-        <filter id="prefix__c" width="113.4%" height="149.1%" x="-6.7%" y="-24.5%" filterUnits="objectBoundingBox">
-            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
-            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.231889205 0"/>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
     </defs>
-    <g fill="url(#prefix__a)" fill-rule="evenodd" stroke="url(#prefix__b)" filter="url(#prefix__c)">
-        <rect width="199" height="54" x="1" y=".5" rx="26.5"/>
-    </g>
+    <rect width="198" height="53" x="1.5" y="1" fill="url(#28encmx34a)" fill-rule="evenodd" stroke="url(#jvbjlo40ib)" stroke-width="2" rx="26.5"/>
 </svg>

@@ -1,4 +1,24 @@
 import mode from './modules/mode';
+
+
+$(document).ready(function () {
+    scrollFixedBtn();
+    $(window).scroll(function () {
+        scrollFixedBtn();
+    });
+});
+
+//scroll fixed
+function scrollFixedBtn() {
+    let bottomBtn = $('.bottom-area').length;
+    if (bottomBtn < 1) return false;
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+        $('.bottom-area-box').removeClass('fixed')
+    } else {
+        $('.bottom-area-box').addClass('fixed')
+    }
+}
+
 // import Vue from 'vue';
 new Vue({
     el: '#appOas',
@@ -34,6 +54,8 @@ new Vue({
         }
     }
 });
+
+
 
 
 

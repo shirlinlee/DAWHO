@@ -45,7 +45,7 @@ block main
                                 span.icon.searchBank(v-if="bankNameInput.length === 0") 
                                 span.icon.clearBank(v-else, @click.prevent="bankNameInput = ''")
                                 input.form-control#search-bank(v-model="bankNameInput", type="text", placeholder="搜尋銀行代碼") 
-                            button.close(@click.prevent="closeModal('#searchBankModal')",type="button",data-dismiss="modal") 關閉
+                            button.close(@click.prevent="closeBankModal('#searchBankModal')",type="button",data-dismiss="modal") 關閉
                         .modal-body-box
                             .modal-body
                                 .bank-list

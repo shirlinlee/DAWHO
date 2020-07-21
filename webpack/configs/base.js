@@ -1,6 +1,6 @@
 const BASE = {
     dev: '',
-    prod: '/oa',
+    prod: '/oas',
 };
 
 module.exports = BASE;

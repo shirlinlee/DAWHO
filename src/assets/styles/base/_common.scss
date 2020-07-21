@@ -924,7 +924,28 @@ table,table.table {
         background: #000;
         opacity: .7;
     }
+
+    .fancybox-slide--iframe .fancybox-content {
+        @include maxW-768 {
+            animation: showUp_M .4s linear forwards;
+           
+        }
+    }
+
 }
+
+@keyframes showUp_M {
+    60%{
+        top: 30%;
+        opacity: 0;
+    }
+    100% {
+        top: 10%;
+        bottom: 0%;
+        opacity: 1;
+    }
+}
+
 
 // .fancybox-slide{
 //     max-width: 792px;
@@ -973,8 +994,9 @@ table,table.table {
     border-radius: 10px;
     @include maxW-768 {
         max-width: 100%;
-        top: 10%;
-        bottom: 0;
+        top: 30%;
+        // bottom: 0;
+        opacity: 0;
         max-height: inherit;
         transform: translate(-50%, 0%);
     }

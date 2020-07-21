@@ -1,7 +1,7 @@
 import mode from './modules/mode';
 //import { IgnorePlugin } from 'webpack';
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-const deviceMedia = window.matchMedia("(max-device-width: 768px)");
+const deviceMedia = window.matchMedia("(max-device-width: 767px)");
 let detectResize = false;
 
 
@@ -145,7 +145,7 @@ function detectFixedBtn() {
     }
 }
 //scroll fixed
-function scrollFixedBtn() {
+function scrollFixedBtn() { 
     let bottomBtn = $('.bottom-area').length;
     if (bottomBtn < 1) return false;
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
@@ -177,6 +177,7 @@ new Vue({
             { bankCode: '021', bankName: '花旗銀行' }
         ],
         bankNameInput: '',//oa_20
+        currentBankNameInput: '',
         bankEmpty: false,
         financial: [
             { from: '薪資所得', status: true, input: false },
@@ -238,8 +239,12 @@ new Vue({
         },
         selectedBank(bank, closeID) {
             this.bankNameInput = bank;
+            this.currentBankNameInput = this.bankNameInput;
             this.closeModal(closeID);
-
+        },
+        closeBankModal(closeID) {
+            this.bankNameInput = this.currentBankNameInput;
+            this.closeModal(closeID);
         },
         toggleBubble(i) {
             this.financial[i].status = !this.financial[i].status
@@ -309,7 +314,7 @@ new Vue({
             if (this.currentNum > 2) this.currentNum = 0 
             if (this.currentNum === 1) $(this.$refs.fileLabel).attr("for", "step-1")
             if (this.currentNum === 2) $(this.$refs.fileLabel).attr("for", "step-2")
-        }
+        } 
     },
     filters: {
         ccFormat: function (value) {

@@ -4,19 +4,19 @@ block title
     title 開戶進度查詢
 
 block scss
-
+ 
 block main
     .view-992
         #appOpen  
             .bg-marble
                 .open-progress
                     .progress-line(style="width:40%")
-                
+              
                 h1.main-title.pb-1 銀行帳戶驗證
                 p.mb-2 無法使用數位帳戶進行驗證(如Richart,O-bank)
                 form
                     .form-group
-                        label.form-label(for="bankName") 銀行名稱
+                        label.form-label(for="bankName") 銀行名稱 
                         input.form-control.arrow-down(v-model="bankNameInput", @click="pickBank('#searchBankModal')" , readonly ,id="bankName", type="text", placeholder="請選擇", autocomplete="off") 
                         //- readonly prevent foucs
                         small.form-text.text-danger.f13 必填
@@ -46,7 +46,7 @@ block main
                                 span.icon.searchBank(v-if="bankNameInput.length === 0") 
                                 span.icon.clearBank(v-else, @click.prevent="bankNameInput = ''")
                                 input.form-control#search-bank(ref="bankInput", v-model="bankNameInput", type="text", placeholder="搜尋銀行代碼") 
-                            button.close(@click.prevent="closeModal('#searchBankModal')",type="button",data-dismiss="modal") 關閉
+                            button.close(@click.prevent="closeBankModal('#searchBankModal')",type="button",data-dismiss="modal") 關閉
                         .modal-body-box
                             .modal-body
                                 .bank-list
@@ -59,7 +59,7 @@ block main
                                         .bankEmpty_photo
                                             img(src=assets + "/images/open/modal/no-result.svg", alt="no-result")
                                         .bankEmpty_text 搜尋的銀行目前不在合作夥伴內，試試看其他家銀行吧！
-
+ 
                         
     
 block js 

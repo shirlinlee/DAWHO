@@ -22,19 +22,19 @@
 }
 
 @mixin maxW-768() {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         @content;
     }
 }
 
 @mixin minW-768() {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 767px) {
         @content;
     }
 }
 
 @mixin maxW-device-768() {
-    @media screen and (max-device-width: 768px) {
+    @media screen and (max-device-width: 767px) {
         @content;
     }
 }

@@ -486,7 +486,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 /* oa-39 */
 #continue-choose-card-slider {
-    padding: 24px 0 32px;
+    padding: 14px 0 32px;
     @include maxW-768 {
         width: calc(100% + 40px);
         margin: 0 -20px;
@@ -552,15 +552,15 @@ $slick-opacity-not-active: 0.25 !default;
     
         /*card*/
         .card-sldier-other_photo{
+            padding-top: 10px;
             transform: scale(0.7);
             transform-origin: center 100%;
-            border-radius: 20px;
-             @include maxW-768 {
-                 padding-top: 10px;
-             }
+            border-radius: 10px;
+           
             img {
-                border-radius: 20px;
+                border-radius: 10px;
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+               
             }
         }
         /*button*/

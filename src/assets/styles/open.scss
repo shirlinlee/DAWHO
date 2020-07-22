@@ -559,7 +559,7 @@
     margin: 0 auto;
     flex-direction: column;
     @include maxW-768 {
-        padding: 0 16px;
+        padding: 0;
         flex-direction: column;
     }
     .step-front-words{
@@ -1359,6 +1359,9 @@
     display: flex;
     flex-flow: row wrap;
     margin-bottom: 10px;
+    @include maxW-768{
+        flex-flow: column wrap;
+    }
     &_ttl{
         margin: 0 0 8px;
         font-size: 16px;
@@ -1402,7 +1405,7 @@
         @include maxW-768{
             max-width: 327px;
             width: 100%;
-            margin: 0 auto 16px auto;
+            margin: 0 auto 16px;
         }
         .btn-card-upload{
             position: absolute;
@@ -1450,11 +1453,11 @@
         border-radius: 10px;
         box-shadow: 0 0 15px 0 rgba(167, 167, 167, 0.48);
         &:nth-child(odd) {
-            background: url($assets + '/images/open/creditCard/open-odd.svg') no-repeat center center;
+            background: #fff url($assets + '/images/open/creditCard/open-odd.svg') no-repeat center center;
             background-size: 100% auto;
         }
         &:nth-child(even) {
-            background: url($assets + '/images/open/creditCard/open-even.svg') no-repeat center center;
+            background: #fff url($assets + '/images/open/creditCard/open-even.svg') no-repeat center center;
             background-size: 100% auto;
         }
         .card-sldier-item_photo {
@@ -1543,6 +1546,7 @@
     }
     .main-title{
         position: absolute;
+        padding: 0;
         bottom: 32px;
         left: 50%;
         transform: translate(-50%, 0%);

@@ -403,7 +403,6 @@ body {
                 color: #c38b47;
             }
         }
-
         // 領取紅包
         div.hongbaoReceive {
             .card {
@@ -411,12 +410,16 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    position: relative;
                     p {
                         font-size: 28px;
                         font-weight: bold;
                         color: #ffcd9a;
                         position: absolute;
-                        top: 103px;
+                        top: 55%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
                     }
                     width: 100%;
                     height: 220px;
@@ -463,13 +466,13 @@ body {
                                     color: #c38b47;
                                 }
                             }
-                            &-fail{
-                                p.fail-big{
+                            &-fail {
+                                p.fail-big {
                                     font-size: 20px;
                                     line-height: 1.2;
                                     color: #111111;
                                 }
-                                p.fail-des{
+                                p.fail-des {
                                     margin-top: 12px;
                                     font-size: 16px;
                                     line-height: 1.5;
@@ -506,13 +509,124 @@ body {
                     }
                 }
             }
-            p.des{
+            p.des {
                 margin-top: 4px;
                 font-size: 14px;
                 color: #818181;
             }
         }
+        // 紅包細節
+        div.hongbaoDetail {
+            nav.navbar {
+                position: fixed;
+                z-index: 2;
+                left: 0;
+                top: 46px;
+                width: 100%;
+            }
 
+            ul.menu {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            li.item {
+                width: 100%;
+                height: 57px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                position: relative;
+                border-bottom: 1px solid #2f2f2f;
+                p {
+                    line-height: 1;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #b2b2b2;
+                    position: absolute;
+                    bottom: 7px;
+                }
+                &.active {
+                    border-bottom: 2px solid #fed28f;
+                    p {
+                        font-weight: bold;
+                        color: #fed28f;
+                    }
+                }
+            }
+
+            div.container {
+                margin-top: 57px;
+                padding-top: 16px;
+                div.record {
+                    margin-bottom: 12px;
+                    padding: 8px;
+                    border-radius: 4px;
+                    background-image: linear-gradient(
+                        238deg,
+                        #4c4c51 100%,
+                        #383838 5%
+                    );
+                    &-up {
+                        position: relative;
+                        img.bg{
+                            width: 100%;
+                        }
+                        div.money {
+                            position: absolute;
+                            width: 100%;
+                            top: 55%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;
+                            p.title {
+                                text-shadow: 0 2px 2px rgba(102, 0, 0, 0.85);
+                                font-size: 28px;
+                                font-weight: bold;
+                                color: #ffcd9a;
+                            }
+                            .total {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-top: 8px;
+                                &-left {
+                                    width: 21px;
+                                    height: 1px;
+                                    background-image: linear-gradient(
+                                        to left,
+                                        #fee1b7,
+                                        rgba(240, 211, 149, 0) 100%
+                                    );
+                                }
+                                &-center {
+                                    margin-left: 4px;
+                                    margin-right: 4px;
+                                    font-size: 12px;
+                                    color: #fee1b7;
+                                }
+                                &-right {
+                                    width: 21px;
+                                    height: 1px;
+                                    background-image: linear-gradient(
+                                        to left,
+                                        rgba(240, 211, 149, 0),
+                                        #fee1b7 100%
+                                    );
+                                }
+                            }
+                            p.price {
+                                margin-top: 2px;
+                                font-size: 12px;
+                                color: #fee1b7;
+                            }
+                        }
+                    }
+                    &-content {
+                    }
+                }
+            }
+        }
         div.contentBtn {
             margin-bottom: 32px;
         }

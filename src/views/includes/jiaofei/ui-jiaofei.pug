@@ -1,0 +1,57 @@
+mixin _header(text, color)
+    header(class=color)
+        img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+        p.title #{text}
+
+//- 繳費到達頁
+//- pm_1-1
+mixin _jiaofeiArrive()
+    div#appJiaofeiContent
+        div.jiaofeiArrive.mt-32.mb-24
+            div.pay_type
+                img.icon(src=assets+"/images/jiaofei/tel.svg", alt="")
+                div.info
+                    p.title 電信費
+                    p.des 中華電信、台灣大哥大、遠傳電信、...
+                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+            div.pay_type
+                img.icon(src=assets+"/images/jiaofei/creditcard.svg", alt="")
+                div.info
+                    p.title 他行信用卡費
+                    p.des 各家銀行都可繳
+                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+            div.pay_type
+                img.icon(src=assets+"/images/jiaofei/life.svg", alt="")
+                div.info
+                    p.title 公用事業費
+                    p.des 台灣電力電費、台灣自來水費、瓦斯...
+                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+            div.pay_type
+                img.icon(src=assets+"/images/jiaofei/tax.svg", alt="")
+                div.info
+                    p.title 規費與稅款
+                    p.des 健保費、國民年金、牌照稅、營所稅...
+                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+            div.pay_type
+                img.icon(src=assets+"/images/jiaofei/traffic.svg", alt="")
+                div.info
+                    p.title 交通與停車
+                    p.des 汽機車燃料費、eTag儲值、路邊停車...
+                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+            div.pay_type
+                img.icon(src=assets+"/images/jiaofei/loan.svg", alt="")
+                div.info
+                    p.title 貸款
+                    p.des 永豐信貸還款、永豐車貸還款、他行...
+                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+            div.pay_type
+                img.icon(src=assets+"/images/jiaofei/others.svg", alt="")
+                div.info
+                    p.title 其他費用
+                    p.des 社區管理費、公/工協會費、學雜費、...
+                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+
+mixin _jiaofeiSearch()
+    div#appJiaofeiContent
+        div.jiaofeiSearch
+            p jiaofeiSearch

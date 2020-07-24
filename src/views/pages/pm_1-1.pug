@@ -1,0 +1,27 @@
+
+extends ../includes/hongbao/_layout.pug
+
+block title
+    title pm_1-1
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    style(type='text/css').
+        body{
+            background-image: linear-gradient(to bottom, #36363b 15%, #1f1f23);
+        }
+    div#appJiaofei
+        +_header("繳費", 'black')
+        +_jiaofeiArrive()
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/jiaofei.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+
+

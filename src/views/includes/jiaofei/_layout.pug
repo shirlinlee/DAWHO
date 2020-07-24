@@ -1,0 +1,19 @@
+//- layout.pug
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, maximum-scale=1")
+        meta(name="format-detection" content="telephone=no")
+        link(rel='icon' type="image/x-icon" href='/favicon.ico')
+
+        block title
+
+        include ../styles.pug
+        block scss
+
+        include ../scripts.pug
+        block js
+
+    body
+        include ../main.pug

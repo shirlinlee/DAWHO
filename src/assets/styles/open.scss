@@ -7,7 +7,7 @@
 @import 'plugins/_cropper';
 @import 'base/_components';
  
-
+ 
 #appOpen {
     width: 100%;
     overflow: hidden;
@@ -21,7 +21,7 @@
 }
 .bg-marble{
     position: relative;
-    max-width: 944px;
+    max-width: 944px; 
     min-height: calc(100vh - 126px - 80px);
     padding: 0 72px;
     margin: 0 auto;
@@ -32,11 +32,10 @@
         min-height: calc(100vh - 56px - 80px);
     }
     @include maxW-768 {
-         padding: 0 16px;
+        padding: 0 16px;
     }
-    @include maxW-device-768 {
+    @include maxH-800 {
         min-height: 608px;
-        
     }
 }
 
@@ -82,7 +81,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    @include maxW-1279(){
+    @include maxW-1279(){ 
         height: calc(100vh - 56px - 80px);
     }
    
@@ -942,6 +941,10 @@
                     @include maxW-768 {
                         width: calc(50% - 8px);
                         margin: 0 4px 7px;
+                    }
+                    .photo {
+                        max-width: 111px;
+                        margin: 0 auto;
                     }
                     .text{
                         margin: 16px auto 0;

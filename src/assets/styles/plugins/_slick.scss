@@ -486,11 +486,11 @@ $slick-opacity-not-active: 0.25 !default;
 
 /* oa-39 */
 #continue-choose-card-slider {
-    padding: 14px 0 32px;
+    padding: 10px 0 32px;
     @include maxW-768 {
-        width: calc(100% + 40px);
-        margin: 0 -20px;
-        padding: 14px 0 24px;
+        width: calc(100% + 80vw);
+        margin: 0 -40vw;
+        padding: 10px 0 24px;
     }
     .slick-list{
        z-index: 2;
@@ -529,7 +529,7 @@ $slick-opacity-not-active: 0.25 !default;
         background: url($assets + '/images/open/icon/slick-prev_b@3x.png') no-repeat center center;
         background-size: 100% auto;
         @include maxW-768 {
-            left: 0;
+            left: calc(50% - 50vw);
             background: url($assets + '/images/open/icon/arrow-left@3x.png') no-repeat center center;
             background-size: 20px auto;
         }
@@ -539,7 +539,7 @@ $slick-opacity-not-active: 0.25 !default;
         background: url($assets + '/images/open/icon/slick-next_b@3x.png') no-repeat center center;
         background-size: 100% auto;
         @include maxW-768 {
-            right: 0;
+            right: calc(50% - 50vw);
             background: url($assets + '/images/open/icon/arrow-right@3x.png') no-repeat center center;
             background-size: 20px auto;
         }
@@ -552,38 +552,56 @@ $slick-opacity-not-active: 0.25 !default;
     
         /*card*/
         .card-sldier-other_photo{
-            padding-top: 10px;
+            padding-top: 30px;
             transform: scale(0.7);
             transform-origin: center 100%;
             border-radius: 10px;
-           
+            transition: all .3s ease;
+            @include maxW-768 {
+                padding-top: 6vw;
+            }
             img {
                 border-radius: 10px;
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-               
+                @include maxW-768 {
+                    border-radius: 18px;
+                }
+                @include maxW-480{
+                    border-radius: 10px;
+                }
             }
         }
         /*button*/
         .card-sldier_btn, .get-txt, .card-title{
-            @include maxW-768 {opacity: 0;}
+            @include maxW-768 {
+                opacity: 0;
+            }
         }
        
-        /* active .slick-active*/
+        /* active .slick-active
+        swiper-slide slick-slide slick-current slick-active slick-center
+        */
         &.slick-center{
             .card-sldier-other_photo{
-                animation: photoScale .3s linear forwards;
-                @include maxW-768 {
-                    transform: none;
-                }
+                animation: photoScale .3s .1s ease forwards;
+                // @include maxW-768 {
+                //     transform: none;
+                // }
             }
             .card-sldier_btn,.get-txt, .card-title {
-                @include maxW-768 {opacity: 1;}
+                @include maxW-768 {
+                    animation: textShow .5s .1s ease forwards;
+                }
             }
         }
       
     }
     /* 兩個slide */
-    &.only-two{
+    &.only-two-slider{
+        @include maxW-768 { 
+            width: calc(100% + 40px);
+            margin: 0 -20px;
+        }
         .slick-track {
             display: flex;
             flex-flow: row nowrap;
@@ -596,7 +614,7 @@ $slick-opacity-not-active: 0.25 !default;
             }
             .card-sldier-other_photo{
                 //transform: initial;
-                transform: scale(1);
+                transform: scale(1.1);
                 @include maxW-768 { 
                     transform: scale(0.7);
                 }
@@ -610,12 +628,9 @@ $slick-opacity-not-active: 0.25 !default;
             /*.slick-active*/
             &.slick-center{
                 .card-sldier-other_photo{
-                    //transform: initial;
-                    transform: scale(1);
-                    @include maxW-768 { 
-                        animation: photoScale .3s linear forwards;
-                        // transform: scale(1);
-                    }
+                    // @include maxW-768 { 
+                    //     animation: photoScale .3s .1s ease forwards;
+                    // }
                 }
             }
 
@@ -626,7 +641,15 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 @keyframes photoScale {
+    0%{
+        transform: scale(0.7);
+    }
     100% {
-         transform: scale(1);
+        transform: scale(1.1);
+    }
+}
+@keyframes textShow {
+    100% {
+        opacity: 1;
     }
 }

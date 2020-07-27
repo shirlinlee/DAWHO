@@ -63,7 +63,7 @@ block main
                             label.form-label(for="") 
                                 | 公司地址
                                 span.form-note  (選填)
-                        .w50-M 
+                        .w50-M
                             .form-group
                                 select.custom-select(name="")
                                     option(value="") 台北市
@@ -93,7 +93,16 @@ block main
                             span.text
                                 | {{item.from}}    
                                 span.other(v-if="item.input", @click.stop="") 
-                                    input(v-model="otherReason", @input="typing = true",type="text", placeholder="請輸入...", maxlength="10") 
+                                    input(v-model="otherReason", @input="typing = true",type="text", placeholder="請輸入...", size="8", maxlength="10") 
+                        br
+                        p.f14 錯誤樣式展開
+                        //- 錯誤樣式
+                        .bubble.active.invalid-error
+                            span.icon 
+                            span.text 其他
+                                span.other
+                                    input( type="text", placeholder="請輸入...", size="8", maxlength="10") 
+                        
                     .mt-1.mb-1
                         hr.bg-grey
 

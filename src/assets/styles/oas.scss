@@ -22,9 +22,12 @@
         @include maxW-1279 {
              min-height: calc(100vh - 56px - 80px);
         }
-        @include maxW-device-768 {
+        @include maxH-800(){
             min-height: 608px;
         }
+        // @include maxW-device-768 {
+        //     min-height: 608px;
+        // }
     }
 
     .btn-primary{
@@ -48,30 +51,35 @@
     @include maxW-768 {
          padding: 0 16px;
     }
-    @include maxW-device-768 {
-        min-height: 608px;
+    // @include maxW-device-768 {
+    //     min-height: 608px;
         
+    // }
+    @include maxH-800(){
+        min-height: 608px;
     }
 }
 
 .bg-gradient{
     position: relative;
     max-width: 944px;
-    min-height: calc(100vh - 126px - 80px);
+    // min-height: calc(100vh - 126px - 80px);
     padding: 0 72px;
     margin: 0 auto;
     overflow: hidden;
     background-image: radial-gradient(circle at 9% 7%, #48453c, #000000 91%);
     @include maxW-1279(){
-        min-height: calc(100vh - 56px - 80px);
+        // min-height: calc(100vh - 56px - 80px);
     }
     @include maxW-768 {
          padding: 0 16px;
     }
-    @include maxW-device-768 {
-        min-height: 608px;
-        
+    @include maxH-800(){
+        // min-height: 608px;
     }
+    // @include maxW-device-768 {
+    //     min-height: 608px;
+    // }
 }
 
 
@@ -86,6 +94,9 @@
     // overflow: hidden;
     // min-height: initial;
     background: #fff;
+    @include maxW-768 {
+        background-image: radial-gradient(circle at 9% 7%, #48453c, #000000 91%);
+    }
     &.white-stone-bg{
         background: url($assets + '/images/oas/bg/whitestone.png') no-repeat center center;
         background-size: cover;

@@ -37,6 +37,7 @@ new Vue({
             { name: '', html: '31', ps: '' },
             { name: '', html: '32', ps: '' },
             { name: '', html: '33', ps: '1.chips其他允許用戶自行編輯，上限10個中文字。<br>2.點chips觀看動態效果。' },
+            { name: '', html: '33-1', ps: 'chip 錯誤樣式' },
             { name: '', html: '34', ps: '' },
             { name: '', html: '35', ps: '' },
             { name: '', html: '36', ps: '隱碼 輸入欄type＝password 不是數字鍵盤' },

@@ -32,10 +32,10 @@ $(document).ready(function(e) {
         $(this).parent('.tel-group').removeClass('addBorder');
     });
 
-    detectFixedBtn();
-    $(window).resize(function () {
-        detectFixedBtn();
-    });
+    // detectFixedBtn();
+    // $(window).resize(function () {
+    //     detectFixedBtn();
+    // });
     scrollFixedBtn();
     $(window).scroll(function () {
         scrollFixedBtn();
@@ -136,7 +136,7 @@ $(document).ready(function(e) {
 //fixed btn
 function detectFixedBtn() {
     let bottomBtn = $('.bottom-area').length;
-    if (bottomBtn < 1) return false;
+    if (bottomBtn < 1) return false; 
     console.log(bottomBtn)
     if (deviceMedia) {
         $('body').addClass('btn-fixed')
@@ -176,6 +176,8 @@ new Vue({
             { bankCode: '017', bankName: '兆豐商銀' },
             { bankCode: '021', bankName: '花旗銀行' }
         ],
+        typing: false,
+        otherReason: '',
         bankNameInput: '',//oa_20
         currentBankNameInput: '',
         bankEmpty: false,

@@ -238,10 +238,7 @@ img {
     @include maxW-1279(){
         height: 80px;
     }
-    @include maxH-608 {
-        position: relative;
-    }
-    @include maxW-768 {
+    @include maxW-device-768 {
         position: relative;
     }
     p {
@@ -260,22 +257,14 @@ img {
 }
 
 .sub-content {
-    // height: calc(100vh - 48px - 80px);
-    // min-height: 608px;
-    // padding-bottom: 126px;
-    // @include maxW-1279(){
-    //     padding-bottom: 80px;
-    // }
-    // @include maxW-768 {
-    //     padding-bottom: 0;
-    // }
+    
     min-height: calc(100vh - 126px - 80px);
     @include maxW-1279(){
         min-height: calc(100vh - 56px - 80px);
     }
-    @include maxW-device-768 {
-        min-height: 608px;
-    }
+    // @include maxW-device-768 {
+    //     min-height: 608px;
+    // }
     .view-992 {
         position: relative;
         max-width: 992px;
@@ -815,6 +804,21 @@ hr {
     .other{
         display: none;
     }
+    input {
+        min-width: 4em;
+        margin-left: 10px;
+        font-size: 16px;
+        line-height: 19px;
+        border: none;
+        background: transparent;
+        color: #976324;
+        &::placeholder {
+            color: #976324;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
     &.active {
         border: 1px solid #d5c1aa;
         background: #fff6eb;
@@ -826,14 +830,26 @@ hr {
         }
         .other{
             display: inline-block;
+        }
+    }
+    &.active.invalid-error {
+        border: solid 1px #ff6767;
+        background-color: #fbe4e4;
+        .icon {
+            width: 24px;
+            height: 24px;
+            background: url($assets + '/images/open/icon/chipchece-error.svg') no-repeat center center;
+            background-size: 100% auto;
+        }
+        .text {
+            color: #ff6767;
+        }
+        .other{
+            display: inline-block;
             input {
-                font-size: 16px;
-                line-height: 19px;
-                border: none;
-                background: transparent;
-                color: #976324;
+                color: #ff6767;
                 &::placeholder {
-                    color: #976324;
+                    color: #ff6767;
                 }
                 &:focus {
                     outline: none;

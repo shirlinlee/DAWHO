@@ -161,6 +161,16 @@
     }
 }
 
+
+@keyframes darkShowUp_M {
+    60%{
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
 .modal-backdrop {
     position: fixed;
     top: 0;
@@ -225,9 +235,13 @@
 
 .modal-dark {
     &.show {
-        .modal-dark-dialog {
+        .modal-dark-dialog { 
             top: 50%;
             transform: translate(-50%, -50%);
+            @include  maxW-768 {
+                top: 60%;
+                animation: darkShowUp_M .4s linear forwards;
+            }
         }
     }
     &-dialog{

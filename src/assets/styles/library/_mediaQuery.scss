@@ -21,6 +21,12 @@
     }
 }
 
+@mixin maxW-480() {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
 @mixin maxW-768() {
     @media screen and (max-width: 767px) {
         @content;
@@ -50,8 +56,8 @@
     }
 }
 
-@mixin maxH-600() {
-    @media screen and (max-device-height: 600px) {   
+@mixin maxH-800() {
+    @media screen and (max-device-height: 800px) {   
         @content;
     }
 }

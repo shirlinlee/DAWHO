@@ -20,6 +20,9 @@ mixin check(id,label,isChecked)
         input(id='check_'+id,type='checkbox', checked=isChecked)
         label(for='check_'+id) #{label}
 
+mixin input(value,placeholder,enable)
+    input.cw-input(type="text", class=(enable ? '' : 'disable'), value=value, placeholder=placeholder)
+
 mixin notice(content,isLight)
     div.cw-notice
         .cw-notice-title

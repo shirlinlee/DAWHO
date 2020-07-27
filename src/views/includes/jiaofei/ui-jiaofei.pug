@@ -1,3 +1,4 @@
+include ../components.pug
 mixin _header(text, color)
     header(class=color)
         img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
@@ -9,49 +10,81 @@ mixin _jiaofeiArrive()
     div#appJiaofeiContent
         div.jiaofeiArrive.mt-32.mb-24
             div.pay_type
-                img.icon(src=assets+"/images/jiaofei/tel.svg", alt="")
+                img.icon(src=assets+"/images/jiaofei/tel.svg" alt="")
                 div.info
                     p.title 電信費
                     p.des 中華電信、台灣大哥大、遠傳電信、...
-                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+                img.goto(src=assets+"/images/jiaofei/right.svg" alt="")
             div.pay_type
-                img.icon(src=assets+"/images/jiaofei/creditcard.svg", alt="")
+                img.icon(src=assets+"/images/jiaofei/creditcard.svg" alt="")
                 div.info
                     p.title 他行信用卡費
                     p.des 各家銀行都可繳
-                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+                img.goto(src=assets+"/images/jiaofei/right.svg" alt="")
             div.pay_type
-                img.icon(src=assets+"/images/jiaofei/life.svg", alt="")
+                img.icon(src=assets+"/images/jiaofei/life.svg" alt="")
                 div.info
                     p.title 公用事業費
                     p.des 台灣電力電費、台灣自來水費、瓦斯...
-                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+                img.goto(src=assets+"/images/jiaofei/right.svg" alt="")
             div.pay_type
-                img.icon(src=assets+"/images/jiaofei/tax.svg", alt="")
+                img.icon(src=assets+"/images/jiaofei/tax.svg" alt="")
                 div.info
                     p.title 規費與稅款
                     p.des 健保費、國民年金、牌照稅、營所稅...
-                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+                img.goto(src=assets+"/images/jiaofei/right.svg" alt="")
             div.pay_type
-                img.icon(src=assets+"/images/jiaofei/traffic.svg", alt="")
+                img.icon(src=assets+"/images/jiaofei/traffic.svg" alt="")
                 div.info
                     p.title 交通與停車
                     p.des 汽機車燃料費、eTag儲值、路邊停車...
-                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+                img.goto(src=assets+"/images/jiaofei/right.svg" alt="")
             div.pay_type
-                img.icon(src=assets+"/images/jiaofei/loan.svg", alt="")
+                img.icon(src=assets+"/images/jiaofei/loan.svg" alt="")
                 div.info
                     p.title 貸款
                     p.des 永豐信貸還款、永豐車貸還款、他行...
-                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+                img.goto(src=assets+"/images/jiaofei/right.svg" alt="")
             div.pay_type
-                img.icon(src=assets+"/images/jiaofei/others.svg", alt="")
+                img.icon(src=assets+"/images/jiaofei/others.svg" alt="")
                 div.info
                     p.title 其他費用
                     p.des 社區管理費、公/工協會費、學雜費、...
-                img.goto(src=assets+"/images/jiaofei/right.svg", alt="")
+                img.goto(src=assets+"/images/jiaofei/right.svg" alt="")
 
+//- 電信費繳費查詢頁
+//- pm_1-2
 mixin _jiaofeiSearch()
     div#appJiaofeiContent
         div.jiaofeiSearch
-            p jiaofeiSearch
+            div.formSearch.mt-24.mb-32
+                div.item.mb-16
+                    div.item-info.mb-8
+                        div.name
+                            p 身份證字號
+                    +input('H2356●●●●●','請輸入電信號碼',true)
+                div#item-select.item.mb-16
+                    div.item-info.mb-8
+                        div.name
+                            p 電信公司
+                    +dropdown(['遠傳電信','中華電信'],"請選擇電信公司")
+                div#item-tel.item.mb-16(hidden)
+                    div.item-info.mb-8
+                        div.name
+                            p 電信號碼
+                            img(@click="drawerTel = true", src=assets+"/images/jiaofei/light.svg" alt="")
+                        div.detail(v-on:click="drawerCommon = true")
+                            img(@click="drawerCommon = true", src=assets+"/images/jiaofei/add-go.svg" alt="")
+                            p 常用號碼
+                    +input('','請輸入電信號碼',true)
+                div#item-mobile.item.mb-16(hidden)
+                    div.item-info.mb-8
+                        div.name
+                            p 行動電話
+                        div.detail(v-on:click="drawerCommon = true")
+                            img(src=assets+"/images/jiaofei/add-go.svg" alt="")
+                            p 常用號碼
+                    +input('1234568910','請輸入行動電話',false)
+                    p.notice 行動電話格式錯誤
+
+            button.btnDefault.disable 確認

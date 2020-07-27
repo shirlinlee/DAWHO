@@ -7,6 +7,7 @@ new Vue({
         drawerTel: false,
         drawerCommon: false,
         drawerCommonCreate: false,
+        numTel: '',
     },
     mounted: function () {
         this.$nextTick(() => {

@@ -13,7 +13,42 @@ include ../includes/components.pug
 block main
     div#appJiaofei
         +_header("電信費繳費", 'white')
-        +_jiaofeiSearch()
+        div#appJiaofeiContent
+            div.jiaofeiSearch
+                div.formSearch.mt-24.mb-32
+                    div.item.mb-16
+                        div.item-info.mb-8
+                            div.name
+                                p 身份證字號
+                        input.jf-input(type="text", value='H2356●●●●●', placeholder='請輸入電信號碼')
+                    div#item-select.item.mb-16
+                        div.item-info.mb-8
+                            div.name
+                                p 電信公司
+                        select.cw-dropdown(required)
+                            option(value="" selected disabled) 請選擇電信公司
+                            option(value="中華電信") 中華電信
+                            option(value="遠傳電信") 遠傳電信
+                    div#item-tel.item.mb-16(hidden)
+                        div.item-info.mb-8
+                            div.name
+                                p 電信號碼
+                                img(@click="drawerTel = true", src=assets+"/images/jiaofei/light.svg" alt="")
+                            div.detail(v-on:click="drawerCommon = true")
+                                img(@click="drawerCommon = true", src=assets+"/images/jiaofei/add-go.svg" alt="")
+                                p 常用號碼
+                        input.jf-input(type="text", v-model="numTel", placeholder='請輸入電信號碼')
+                    div#item-mobile.item.mb-16(hidden)
+                        div.item-info.mb-8
+                            div.name
+                                p 行動電話
+                            div.detail(v-on:click="drawerCommon = true")
+                                img(src=assets+"/images/jiaofei/add-go.svg" alt="")
+                                p 常用號碼
+                        input.jf-input(type="text", class=('disable'), value='1234568910', placeholder='請輸入行動電話')
+                        p.notice 行動電話格式錯誤
+
+                button.btnDefault(:class=("{ 'disable' : numTel==''}")) 確認
 
         .drawer(class='', :class=("{ 'show' : drawerTel}"), data-drawer='電信號碼')
             .drawer-container
@@ -210,10 +245,10 @@ block main
                 div.drawer-content
                     div.create-type.mb-16
                         p.title.mb-8 電信號碼
-                        +input('0922123456','請輸入電信號碼',true)
+                        input.jf-input(type="text", value='0922123456', placeholder='請輸入電信號碼')
                     div.create-type.mb-16
                         p.title.mb-8 號碼名稱
-                        +input('','請輸入此電信號碼名稱',true)
+                        input.jf-input(type="text", value='', placeholder='請輸入此電信號碼名稱')
 
                 a.btn_gold.btn_grey(href="javascript:void(0)") 確認
 

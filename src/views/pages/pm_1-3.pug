@@ -1,0 +1,170 @@
+
+extends ../includes/hongbao/_layout.pug
+
+block title
+    title pm_1-2
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        .drawer(class='show', :class=("{ 'show' : drawerTel}"), data-drawer='電信號碼')
+            .drawer-container
+                div.drawer-head.mb-32
+                    h5.f20.f_b 電信號碼
+                    a.f_gold.f_b(@click="drawerTel = false", href="javascript:void(0)") 關閉
+                div.drawer-content
+                    div.telecom
+                        h5.tel-name 一般電信業務
+                        ul.tel-list
+                            li
+                                p.type.f_b 項目
+                                p.value.f_b 電信號碼格式範例
+                            li
+                                p.type 市內電話
+                                p.value 0223445858 &nbsp;&nbsp;
+                                    |
+                                    span.gold 需含區域碼
+                            li
+                                p.type 行動電話
+                                p.value 0932123456
+                            li
+                                p.type 呼叫器
+                                p.value 0959123456
+                            li
+                                p.type 傳訊王
+                                p.value PB2123456
+                    div.telecom
+                        h5.tel-name 國際電信業務
+                        ul.tel-list
+                            li
+                                p.type.f_b 項目
+                                p.value.f_b 電信號碼格式範例
+                            li
+                                p.type 傳真式電報交換業務
+                                p.value 0161234 &nbsp;&nbsp;
+                                    |
+                                    span.gold 原帳號前加01
+                            li
+                                p.type 電報交換業務
+                                p.value 0110003 &nbsp;&nbsp;
+                                    |
+                                    span.gold 原帳號前加01
+                            li
+                                p.type 電話商務卡
+                                p.value GI23456、G234567
+                            li
+                                p.type 數據業務
+                                p.value DX123ab
+                            li
+                                p.type 衛星電話業務
+                                p.value S2345YA
+                            li
+                                p.type 主機代管業務
+                                p.value CL6234567
+                    div.telecom
+                        h5.tel-name 網路服務業務
+                        ul.tel-list
+                            li
+                                p.type.f_b 項目
+                                p.value.f_b 電信號碼格式範例
+                            li
+                                p.type HiNet
+                                p.value
+                                    | HN12345678 &nbsp;&nbsp;
+                                    span.gold 非使用者識別碼
+                            li
+                                p.type 智慧型網路
+                                p.value
+                                    | 0800012345、02031234
+                                    br
+                                    | 020112345、0991123456
+                                    br
+                                    | 020412345、0114123456
+                    div.telecom
+                        h5.tel-name 其他業務
+                        ul.tel-list
+                            li
+                                p.type.f_b 項目
+                                p.value.f_b 電信號碼格式範例
+                            li
+                                p.type 市話專線
+                                p.value
+                                    | 223A12345、223D12345
+                                    br
+                                    | 223E12345
+                                    br
+                                    span.gold 帳單營運處代號+專線號碼
+                            li
+                                p.type 傳真存轉
+                                p.value FX123456
+                            li
+                                p.type 高速數據
+                                p.value FR123456、FR1234567
+                            li
+                                p.type 超高速數據
+                                p.value AT123456、AT12345678
+                            li
+                                p.type 公路監理
+                                p.value N1234
+                            li
+                                p.type 分封交換
+                                p.value H123456、H1234567
+                            li
+                                p.type 證券交易
+                                p.value H123456
+                            li
+                                p.type 數據業務設備代管
+                                p.value CL9123456
+                            li
+                                p.type 電傳視訊
+                                p.value VD123456
+                            li
+                                p.type 電子文件
+                                p.value ED123456
+                            li
+                                p.type 公眾信息
+                                p.value AHA1234
+                            li
+                                p.type 光纖網路業務
+                                p.value
+                                    | AHA223Y123456
+                                    br
+                                    | 223YD123456
+                                    br
+                                    | 223YE123456
+                                    br
+                                    | 223YV1234561234
+                            li
+                                p.type 資訊通信服務
+                                p.value
+                                    span.gold 帳單營運處代號 + FTTB
+                                    br
+                                    span.gold 用戶號碼
+                            li
+                                p.type 綠能業務
+                                p.value
+                                    | NM12345678
+                                    br
+                                    | UT12345678
+                            li
+                                p.type 總機服務
+                                p.value EN12345678
+                            li
+                                p.type 客戶服務
+                                p.value
+                                    | PX12345678、CN1234A
+                                    br
+                                    | CC12345678
+                a.btn_gold(@click="drawerTel = false", href="javascript:void(0)") 知道了
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/jiaofei.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+
+

@@ -1,0 +1,65 @@
+
+extends ../includes/hongbao/_layout.pug
+
+block title
+    title pm_2-1-1
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        +_header("他行信用卡繳費", 'white')
+        div#appJiaofeiContent
+            div.jiaofeiProcess.mt-24
+                div.process-container.mb-24
+                    p.process-title.mb-8 身分證字號
+                    input.jf-input(type="text" value='H2356●●●●●' placeholder='請輸入身分證字號')
+                hr
+                div.process-container.mb-24
+                    div.process-credit.mt-24
+                        div.process-credit-info.mb-8
+                            p.credit-info-title 繳費對象
+                            div.create-num(v-on:click="drawerProcessCommonCreate = true")
+                                img(src=assets+"/images/jiaofei/add-go.svg")
+                                p 常用信用卡
+                        select.cw-dropdown.mb-16(required)
+                            option(value="" disabled) 請選擇銀行代碼
+                            option(value="004" selected) 004 台灣銀行
+                            option(value="005") 005 土地銀行
+                            option(value="006") 006 合作金庫
+                            option(value="007") 007 第一銀行
+                            option(value="008") 008 華南銀行
+                            option(value="009") 009 彰化銀行
+                            option(value="011") 011 上海商銀
+                        input.jf-input(type="text" value='123456789111213' placeholder='請輸入信用卡卡號或銷帳編號')
+                        p.credit-success.mt-8
+                            | 銷帳編號為 26660 +11碼身份證數字，身分證字號英文，請根據&nbsp;
+                            span 身分證代碼表
+                            | &nbsp;轉換為數字
+                    p.process-title.mt-16.mb-8 繳費金額
+                    input.jf-input(type="text",:class="{disable: creditMoney=='0'}", v-model="creditMoney", placeholder='請輸入繳費金額')
+                    p.hint-zero(v-if="creditMoney=='0'") 繳費金額不能為０
+                hr
+                div.process-container.mt-24.mb-32
+                    p.process-title.mb-8 扣款帳號
+                    div.process-account
+                        p.process-account-name.mb-8
+                            | 營業部活期存款
+                            span (807)0016893949394934
+                        p.process-account-price 帳戶餘額 37,400 元
+
+                button.btnDefault.disable 確認
+                +notice('process-credit')
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
+    script(src= assets + '/js/jiaofei.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+
+

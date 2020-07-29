@@ -13,6 +13,7 @@ new Vue({
         ccNumber: '',
         ccName: '',
         ccProcessName: '',
+        creditMoney: '',
     },
     methods: {
         clickNumListLi(v) {

@@ -211,31 +211,46 @@ block main
                         p 新增常用號碼
                     ul.num-list
                         li
-                            div.num-content
-                                p.name 嘉義老家市話
-                                p.num 052311234
-                            img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(1)", :class=("{ 'focus' : numListLi == 1}"))
+                                div.num-content
+                                    p.name 嘉義老家市話
+                                    p.num 052311234
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
                         li
-                            div.num-content
-                                p.name 媽媽手機
-                                p.num 0933132456
-                            img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-container(v-on:click="clickNumListLi(2)", :class=("{ 'focus' : numListLi == 2}"))
+                                div.num-content
+                                    p.name 媽媽手機
+                                    p.num 0933132456
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
                         li
-                            div.num-content
-                                p.name HiNet
-                                p.num 052311234
-                            img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
-                        li.focus
-                            div.num-content
-                                p.name 我的手機
-                                p.num 0919568988
-                            img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(3)", :class=("{ 'focus' : numListLi == 3}"))
+                                div.num-content
+                                    p.name HiNet
+                                    p.num 052311234
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
                         li
-                            div.num-content
-                                p.name 台北家
-                                p.num 052311234
-                            img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
-                a.btn_gold(href="javascript:void(0)") 確認
+                            .num-list-container(v-on:click="clickNumListLi(4)", :class=("{ 'focus' : numListLi == 4}"))
+                                div.num-content
+                                    p.name 我的手機
+                                    p.num 0919568988
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(5)", :class=("{ 'focus' : numListLi == 5}"))
+                                div.num-content
+                                    p.name 台北家
+                                    p.num 052311234
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
 
         .drawer(class='', :class=("{ 'show' : drawerCommonCreate}"),data-drawer='新增常用號碼')
             .drawer-container
@@ -245,15 +260,16 @@ block main
                 div.drawer-content
                     div.create-type.mb-16
                         p.title.mb-8 電信號碼
-                        input.jf-input(type="text", value='0922123456', placeholder='請輸入電信號碼')
+                        input.jf-input(type="text", v-model="ccNumber", placeholder='請輸入電信號碼')
                     div.create-type.mb-16
                         p.title.mb-8 號碼名稱
-                        input.jf-input(type="text", value='', placeholder='請輸入此電信號碼名稱')
-
-                a.btn_gold.btn_grey(href="javascript:void(0)") 確認
+                        input.jf-input(type="text", v-model="ccName", placeholder='請輸入此電信號碼名稱')
+                a.btn_gold(:class=("{ 'btn_grey' : !(ccNumber!=''&& ccName !='' )}"), href="javascript:void(0)") 確認
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
     script(src= assets + '/js/jiaofei.bundle.js' defer)
     script(src= assets + '/js/components.bundle.js' defer)
 

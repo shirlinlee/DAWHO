@@ -6,8 +6,23 @@ new Vue({
     data: {
         drawerTel: false,
         drawerCommon: false,
-        drawerCommonCreate: false,
+        drawerCommonCreate: true,
         numTel: '',
+        numListLi: -1,
+        ccNumber: '',
+        ccName: '',
+    },
+    methods: {
+        clickNumListLi(v) {
+            if (this.numListLi == v) {
+                this.numListLi = -1;
+            } else {
+                this.numListLi = v;
+            }
+        },
+        openEnv() {
+            this.isENVOpen = true;
+        },
     },
     mounted: function () {
         this.$nextTick(() => {
@@ -24,6 +39,31 @@ new Vue({
                         break;
                     default:
                 }
+            });
+
+            var numListContainer = $('.num-list-container');
+            numListContainer
+                .hammer()
+                .bind('swipeleft', function (e) {
+                    numListContainer.removeClass('swipeleft');
+                    $(this).addClass('swipeleft');
+                    setTimeout(() => {
+                        $(this)
+                            .siblings('.num-list-delete')
+                            .addClass('swipeleft');
+                    }, 300);
+                })
+                .bind('swiperight', function (e) {
+                    setTimeout(() => {
+                        $(this)
+                            .siblings('.num-list-delete')
+                            .removeClass('swipeleft');
+                    }, 0);
+                    $(this).removeClass('swipeleft');
+                });
+            var numListDelete = $('.num-list-delete');
+            numListDelete.on('click', function () {
+                $(this).parent().hide();
             });
         });
     },

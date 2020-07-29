@@ -385,40 +385,72 @@ body {
     }
     ul.num-list {
         li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px;
+            border: solid 1px white;
             &:nth-child(odd) {
-                background-color: rgba(0, 0, 0, 0.03);
+                border: solid 1px #f7f7f7;
             }
-            &.focus {
-                background-color: #3d3d3d;
+            position: relative;
+            div.num-list-container {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px;
+                background-color: white;
+                transition: all 0.3s;
+                &.bg-grey {
+                    background-color: #f7f7f7;
+                }
+                &.swipeleft {
+                    margin-left: -48px;
+                }
+                &.focus {
+                    background-color: #3d3d3d;
+                    div.num-content {
+                        p.name {
+                            color: #fee1b7;
+                        }
+                        p.num {
+                            color: #fee1b7;
+                        }
+                    }
+                }
                 div.num-content {
                     p.name {
-                        color: #fee1b7;
+                        font-size: 14px;
+                        font-weight: bold;
+                        line-height: 1.5;
+                        color: #111111;
+                        margin-bottom: 4px;
                     }
                     p.num {
-                        color: #fee1b7;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: #818181;
                     }
                 }
-            }
-            div.num-content {
-                p.name {
-                    font-size: 14px;
-                    font-weight: bold;
-                    line-height: 1.5;
-                    color: #111111;
-                    margin-bottom: 4px;
-                }
-                p.num {
-                    font-size: 14px;
-                    line-height: 1.5;
-                    color: #818181;
+                img.num-icon {
+                    width: 20px;
                 }
             }
-            img.num-icon {
-                width: 20px;
+            div.num-list-delete {
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: #db3d3d;
+                color: #fff;
+                height: 100%;
+                width: 48px;
+                z-index: -1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &.swipeleft {
+                    z-index: 2;
+                }
+                p {
+                    font-size: 14px;
+                }
             }
         }
     }

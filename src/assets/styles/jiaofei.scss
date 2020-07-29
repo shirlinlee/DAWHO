@@ -205,6 +205,123 @@ body {
             }
         }
 
+        // 繳費流程
+        div.jiaofeiProcess {
+            div.process-container {
+                text-align: left;
+                .mr-16 {
+                    margin-right: 16px;
+                }
+
+                ul.process-info {
+                    li {
+                        padding: 16px 8px;
+                        display: flex;
+                        align-items: center;
+                        &:nth-child(odd) {
+                            background-color: #eeeeee;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        color: #111111;
+                        &.info-type {
+                            margin-right: 16px;
+                            width: 102px;
+                            font-weight: bold;
+                        }
+                        &.info-value {
+                        }
+                    }
+                }
+                p.process-title {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #111111;
+                }
+
+                ul.process-bill {
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-radius: 3px;
+                        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+                        background-color: white;
+                        margin-bottom: 12px;
+                        padding: 20px 16px;
+                        .bill-type {
+                            display: flex;
+                            width: 100%;
+                            input.jf-cb[type='checkbox']:checked
+                                ~ div.bill-type-content
+                                > p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: #c38b47;
+                            }
+                            p.check {
+                                width: 24px;
+                                margin-right: 8px;
+                            }
+                            div.bill-type-content {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+                                margin-left: 14px;
+                                div.bill-name {
+                                    flex-basis: 75%;
+                                }
+                                div.bill-value {
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.process-account {
+                    p.process-account-name {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        color: #111111;
+                        span {
+                            margin-left: 8px;
+                        }
+                    }
+                    p.process-account-price {
+                        font-size: 14px;
+                        color: #818181;
+                        &.warn {
+                            color: #ff6767;
+                        }
+                    }
+                }
+
+                div.process-bill-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p.bill-info-name {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        color: #111111;
+                    }
+                    p.bill-info-value {
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 1.5;
+                        color: #c38b47;
+                    }
+                }
+            }
+            hr {
+                height: 1px;
+                background-color: #e3e3e3;
+                border: 0;
+            }
+        }
+
         div.contentBtn {
             margin-bottom: 32px;
         }
@@ -220,7 +337,7 @@ body {
         background-image: linear-gradient(to bottom, #f2cb91, #c29557);
         padding: 10px 16px 9px 16px;
         border: 0;
-        width: 260px;
+        width: 263px;
         &.disable {
             color: #e3e3e3;
             background-image: linear-gradient(to bottom, #b2b2b2, #818181);
@@ -383,6 +500,7 @@ body {
             color: #c38b47;
         }
     }
+
     ul.num-list {
         li {
             border: solid 1px white;
@@ -462,5 +580,73 @@ body {
             line-height: 1.5;
             color: #111111;
         }
+    }
+
+    // checkbox
+    /* Basic styles */
+    input.jf-cb[type='checkbox'] {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+    label.jf-cb {
+        position: relative;
+        display: inline-block;
+        padding-right: 21px;
+        height: 18px;
+        line-height: 1.5;
+        cursor: pointer;
+    }
+    label.jf-cb::before,
+    label.jf-cb::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 18px;
+        height: 18px;
+    }
+    label.jf-cb::before {
+        content: ' ';
+        border: 1px solid #aaaaaa;
+        border-radius: 20%;
+    }
+
+    input.jf-cb[type='checkbox'] + label.jf-cb::before {
+        border-radius: 50%;
+    }
+    input.jf-cb[type='checkbox'] + label.jf-cb::after {
+        content: ' ';
+        top: 3.5px;
+        left: 3.5px;
+        width: 12px;
+        height: 12px;
+        background-color: #c38b47;
+        border-radius: 50%;
+    }
+    /* :checked */
+    input.jf-cb[type='checkbox']:checked + label.jf-cb::before {
+        background: #fff;
+        border-color: #fff;
+        border: 1px solid #aaaaaa;
+    }
+    input.jf-cb[type='checkbox'] + label.jf-cb::after {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    input.jf-cb[type='checkbox']:checked + label.jf-cb::after {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+    /* Transition */
+    label.jf-cb::before,
+    label.jf-cb::after {
+        -webkit-transition: 0.25s all ease;
+        -o-transition: 0.25s all ease;
+        transition: 0.25s all ease;
     }
 }

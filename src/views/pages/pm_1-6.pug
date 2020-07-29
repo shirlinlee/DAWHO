@@ -1,0 +1,72 @@
+
+extends ../includes/hongbao/_layout.pug
+
+block title
+    title pm_1-6
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        +_header("電信費繳費", 'white')
+        div#appJiaofeiContent
+            div.jiaofeiProcess.mt-32
+                div.process-container.mb-32
+                    ul.process-info
+                        li
+                            p.info-type 身分證字號
+                            p.info-value H23456••••
+                        li
+                            p.info-type 電信公司
+                            p.info-value 中華電信
+                        li
+                            p.info-type 電信號碼
+                            p.info-value 0932123456
+                hr
+                div.process-container.mt-24.mb-32
+                    p.process-title.mb-16 應繳帳單
+                    ul.process-bill
+                        li
+                            div.bill-type
+                                input(class='jf-cb', id='bill-1', type='checkbox')
+                                label(class='jf-cb', for='bill-1')
+                                div.bill-type-content
+                                    p.bill-name 2020年4月行動電話費
+                                    p.bill-value 2,000元
+                        li
+                            div.bill-type
+                                input(class='jf-cb', id='bill-2', type='checkbox')
+                                label(class='jf-cb', for='bill-2')
+                                div.bill-type-content
+                                    p.bill-name 2020年5月行動電話費
+                                    p.bill-value 1,000元
+                        li
+                            div.bill-type
+                                input(class='jf-cb', id='bill-3', type='checkbox')
+                                label(class='jf-cb', for='bill-3')
+                                div.bill-type-content
+                                    p.bill-name 2020年6月行動電話費
+                                    p.bill-value 1,000元
+                hr
+                div.process-container.mt-24.mb-32
+                    p.process-title.mb-8 扣款帳號
+                    div.process-account
+                        p.process-account-name.mb-8
+                            | 營業部活期存款
+                            span (807)0016893949394934
+                        p.process-account-price 帳戶餘額 37,400 元
+
+                button.btnDefault.mb-32() 下一步
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
+    script(src= assets + '/js/jiaofei.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+
+

@@ -1,7 +1,8 @@
 include ../components.pug
-mixin _header(text, color)
+mixin _header(text, color, hideLeft)
     header(class=color)
-        img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+        if !hideLeft
+            img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
         p.title #{text}
 
 //- 繳費到達頁

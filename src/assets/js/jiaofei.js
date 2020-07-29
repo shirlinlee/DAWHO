@@ -6,11 +6,13 @@ new Vue({
     data: {
         drawerTel: false,
         drawerCommon: false,
-        drawerCommonCreate: true,
+        drawerCommonCreate: false,
+        drawerProcessCommonCreate: false,
         numTel: '',
         numListLi: -1,
         ccNumber: '',
         ccName: '',
+        ccProcessName: '',
     },
     methods: {
         clickNumListLi(v) {

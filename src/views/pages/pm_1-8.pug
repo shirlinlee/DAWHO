@@ -1,0 +1,86 @@
+
+extends ../includes/hongbao/_layout.pug
+
+block title
+    title pm_1-8
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        +_header("繳費", 'star', true)
+        div#appJiaofeiContent
+            div.jiaofeiProcess
+                div.process-status.mb-24
+                    div.process-status-board
+                        img(src=assets+"/images/jiaofei/success.svg" alt="")
+                        p 繳費成功
+                    div.process-status-info.mt-24
+                        h5.mb-16 4月 行動電話費
+                        h1 新臺幣 2,000 元
+                hr
+                div.process-container.mt-24.mb-24
+                    ul.process-info
+                        li
+                            p.info-type 交易序號
+                            p.info-value 2213e54g
+                        li
+                            p.info-type 身分證字號
+                            p.info-value H23456••••
+                        li
+                            p.info-type 電信公司
+                            p.info-value 中華電信
+                hr
+                div.process-container.mt-24.mb-24
+                    ul.process-info
+                        li
+                            p.info-type 電信號碼
+                            p.info-value 0932123456
+                hr
+                div.process-container.mt-24.mb-24
+                    div.create-num.mb-8(v-on:click="drawerProcessCommonCreate = true")
+                        img(src=assets+"/images/jiaofei/add-go.svg")
+                        p 新增常用號碼
+                    ul.process-info
+                        li
+                            p.info-type 扣款帳號
+                            p.info-value
+                                | 營業部活期存款
+                                br
+                                | (807) 0016893949394934
+
+                        li
+                            p.info-type 交易時間
+                            p.info-value 2020/05/09 10:06:56
+
+                button.btnDefault.mb-16() 繼續繳費
+                div.backIndex.mb-32
+                    p 回首頁
+                    img(src=assets+"/images/jiaofei/arrow-right.svg", alt="")
+
+        .drawer(class='', :class=("{ 'show' : drawerProcessCommonCreate}"),data-drawer='新增常用號碼')
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 新增常用號碼
+                    a.f_gold.f_b(@click="drawerProcessCommonCreate = false", href="javascript:void(0)") 取消
+                div.drawer-content
+                    div.create-type.mb-16
+                        div.create-type-static
+                            p.static-title.title 電信號碼
+                            p.static-number 0932123456
+                    div.create-type.mb-16
+                        p.title.mb-8 號碼名稱
+                        input.jf-input(type="text", v-model="ccProcessName", placeholder='請輸入此電信號碼名稱')
+                a.btn_gold(:class=("{ 'btn_grey' : !(ccProcessName!='')}"), href="javascript:void(0)") 確認
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
+    script(src= assets + '/js/jiaofei.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+
+

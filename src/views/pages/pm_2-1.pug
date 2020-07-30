@@ -23,7 +23,7 @@ block main
                     div.process-credit.mt-24
                         div.process-credit-info.mb-8
                             p.credit-info-title 繳費對象
-                            div.create-num(v-on:click="drawerProcessCommonCreate = true")
+                            div.create-num(v-on:click="drawerCreditCommon = true")
                                 img(src=assets+"/images/jiaofei/add-go.svg")
                                 p 常用信用卡
                         select.cw-dropdown.mb-16(required)
@@ -35,7 +35,6 @@ block main
                             option(value="008") 008 華南銀行
                             option(value="009") 009 彰化銀行
                             option(value="011") 011 上海商銀
-
                         input.jf-input(type="text" value='' placeholder='請輸入信用卡卡號或銷帳編號')
                     p.process-title.mt-16.mb-8 繳費金額
                     input.jf-input(type="text",:class="{disable: creditMoney=='0'}", v-model="creditMoney", placeholder='請輸入繳費金額')
@@ -51,8 +50,202 @@ block main
 
                 button.btnDefault.disable 確認
                 +notice('process-credit')
+        .drawer(class='', :class=("{ 'show' : drawerCreditCommon}"))
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 常用信用卡
+                    a.f_gold.f_b(@click="drawerCreditCommon = false", href="javascript:void(0)") 取消
+                div.drawer-content
+                    div.create-num.mb-8(v-on:click="drawerCreditCommonCreate = true")
+                        img(src=assets+"/images/jiaofei/add-go.svg")
+                        p 新增常用信用卡
+                    ul.num-list
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(1)", :class=("{ 'focus' : numListLi == 1}"))
+                                div.num-content
+                                    p.name 我的黑卡
+                                    p.num (004)1234567890111213
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container(v-on:click="clickNumListLi(2)", :class=("{ 'focus' : numListLi == 2}"))
+                                div.num-content
+                                    p.name 小寶台新
+                                    p.num (812)001689394933433
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(3)", :class=("{ 'focus' : numListLi == 3}"))
+                                div.num-content
+                                    p.name 大寶國泰
+                                    p.num (006)001689394933444
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container(v-on:click="clickNumListLi(4)", :class=("{ 'focus' : numListLi == 4}"))
+                                div.num-content
+                                    p.name 中國信託
+                                    p.num (005)0016893949394934
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(5)", :class=("{ 'focus' : numListLi == 5}"))
+                                div.num-content
+                                    p.name 上海商銀
+                                    p.num (011)1234567890111213
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container(v-on:click="clickNumListLi(6)", :class=("{ 'focus' : numListLi == 6}"))
+                                div.num-content
+                                    p.name 土地銀行
+                                    p.num (013)001689394933456
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
+
+        .drawer(class='', :class=("{ 'show' : drawerCreditCommonCreate}"))
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 新增常用信用卡
+                    a.f_gold.f_b(@click="drawerCreditCommonCreate = false", href="javascript:void(0)") 取消
+                div.drawer-content
+                    div.create-type.mb-16
+                        p.title.mb-8 銀行代碼
+                        select.cw-dropdown.mb-16(required)
+                            option(value="" disabled) 請選擇銀行代碼
+                            option(value="004" selected) 004 台灣銀行
+                            option(value="005") 005 土地銀行
+                            option(value="006") 006 合作金庫
+                            option(value="007") 007 第一銀行
+                            option(value="008") 008 華南銀行
+                            option(value="009") 009 彰化銀行
+                            option(value="011") 011 上海商銀
+                    div.create-type.mb-16
+                        p.title.mb-8 信用卡卡號
+                        input.jf-input.jf-credit-number(type="text", v-model="ccCreditNumber", placeholder='請輸入信用卡卡號')
+                    div.create-type.mb-16
+                        p.title.mb-8 卡片名稱
+                        input.jf-input(type="text", v-model="ccCreditName", placeholder='請輸入卡片名稱')
+                a.btn_gold(@click="drawerCreditCommonCreate = false", :class=("{ 'btn_grey' : !(ccCreditName!=''&&ccCreditNumber.length>=25)}"), href="javascript:void(0)") 確認
+
+        .drawer(class='', :class=("{ 'show' : drawerCreditIDCard}"))
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 身分證字號代碼
+                    a.f_gold.f_b(@click="drawerCreditIDCard = false", href="javascript:void(0)") 關閉
+                div.drawer-content
+                    ul.id-char-list
+                        li
+                            p.left
+                                span.char A
+                                span.city 臺北市
+                                span.code 10
+                            p.right
+                                span.char B
+                                span.city 臺中市
+                                span.code 11
+                        li
+                            p.left
+                                span.char C
+                                span.city 基隆市
+                                span.code 12
+                            p.right
+                                span.char D
+                                span.city 臺南市
+                                span.code 13
+                        li
+                            p.left
+                                span.char E
+                                span.city 高雄市
+                                span.code 14
+                            p.right
+                                span.char F
+                                span.city 新北市
+                                span.code 15
+                        li
+                            p.left
+                                span.char G
+                                span.city 宜蘭縣
+                                span.code 16
+                            p.right
+                                span.char H
+                                span.city 桃園市
+                                span.code 17
+                        li
+                            p.left
+                                span.char I
+                                span.city 嘉義市
+                                span.code 34
+                            p.right
+                                span.char J
+                                span.city 新竹縣
+                                span.code 18
+                        li
+                            p.left
+                                span.char K
+                                span.city 苗栗縣
+                                span.code 19
+                            p.right
+                                span.char M
+                                span.city 南投縣
+                                span.code 21
+                        li
+                            p.left
+                                span.char N
+                                span.city 彰化縣
+                                span.code 22
+                            p.right
+                                span.char O
+                                span.city 新竹市
+                                span.code 35
+                        li
+                            p.left
+                                span.char P
+                                span.city 雲林縣
+                                span.code 23
+                            p.right
+                                span.char Q
+                                span.city 嘉義縣
+                                span.code 24
+                        li
+                            p.left
+                                span.char T
+                                span.city 屏東縣
+                                span.code 27
+                            p.right
+                                span.char U
+                                span.city 花蓮縣
+                                span.code 28
+                        li
+                            p.left
+                                span.char V
+                                span.city 臺東縣
+                                span.code 29
+                            p.right
+                                span.char W
+                                span.city 金門縣
+                                span.code 32
+                        li
+                            p.left
+                                span.char X
+                                span.city 澎湖縣
+                                span.code 30
+                            p.right
+                                span.char Z
+                                span.city 連江縣
+                                span.code 33
+                a.btn_gold(@click="drawerCreditIDCard = false", :class=(""), href="javascript:void(0)") 知道了
+
 
 block js
+    script(src= public + '/lib/js/cleave.min.js' defer)
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
     script(src= public + '/lib/js/hammer.min.js' defer)
     script(src= public + '/lib/js/jquery.hammer.js' defer)

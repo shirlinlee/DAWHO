@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="28" viewBox="0 0 72 28">
+    <defs>
+        <radialGradient id="oluw2pa69a" cx="0%" cy="24.969%" r="260.17%" fx="0%" fy="24.969%" gradientTransform="matrix(.38165 .19202 -.07468 .98139 .019 .005)">
+            <stop offset="0%" stop-color="#ECD5B5"/>
+            <stop offset="20.217%" stop-color="#F0CA97"/>
+            <stop offset="49.401%" stop-color="#BE8B47"/>
+            <stop offset="76.987%" stop-color="#DDB886"/>
+            <stop offset="100%" stop-color="#D1AC6A"/>
+        </radialGradient>
+        <linearGradient id="u4no65nqrb" x1="95.1%" x2="6.658%" y1="54.984%" y2="43.671%">
+            <stop offset="0%" stop-color="#FFD5A2"/>
+            <stop offset="52.396%" stop-color="#FFF2E1"/>
+            <stop offset="100%" stop-color="#E9BB82"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <rect width="71" height="27" x=".5" y=".5" fill="url(#u4no65nqrb)" stroke="url(#oluw2pa69a)" rx="13.5"/>
+        <text fill="#8D704D" font-family="MicrosoftJhengHeiBold, Microsoft JhengHei" font-size="14" font-weight="bold">
+            <tspan x="8" y="20">前往試算</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <linearGradient id="zxe466eusa" x1="100%" x2="0%" y1="94.074%" y2="26.242%">
+            <stop offset="0%" stop-color="#A16B28"/>
+            <stop offset="100%" stop-color="#F2CB91"/>
+        </linearGradient>
+        <filter id="0estzzoo2b" width="177.2%" height="172.3%" x="-33.1%" y="-25.8%" filterUnits="objectBoundingBox">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.660750679 0 0 0 0 0.446941269 0 0 0 0 0.138105454 0 0 0 0.604867788 0"/>
+        </filter>
+        <path id="g811eigj6c" d="M20.292 10l9.083 6.575v12.8l-4.065-.001v-7.353c0-1.023-.839-1.852-1.875-1.852h-6.247c-1.036 0-1.875.829-1.875 1.852l-.001 7.353-4.062.001V16.527L20.267 10h.025zm3.038 12.124l-.001 7.25h-6.037v-7.25h6.038z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="url(#zxe466eusa)" d="M40 20c0 11.046-8.954 20-20 20C8.955 40 0 31.046 0 20S8.955 0 20 0c11.046 0 20 8.954 20 20"/>
+        <g fill-rule="nonzero">
+            <use fill="#000" filter="url(#0estzzoo2b)" xlink:href="#g811eigj6c"/>
+            <use fill="#FFF" xlink:href="#g811eigj6c"/>
+        </g>
+    </g>
+</svg>

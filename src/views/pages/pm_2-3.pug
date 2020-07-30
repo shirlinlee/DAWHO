@@ -1,0 +1,84 @@
+
+extends ../includes/hongbao/_layout.pug
+
+block title
+    title pm_2-3
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        .drawer(class='show', :class=("{ 'show' : drawerCreditCommon}"),data-drawer='常用號碼')
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 常用信用卡
+                    a.f_gold.f_b(@click="drawerCreditCommon = false", href="javascript:void(0)") 取消
+                div.drawer-content
+                    div.create-num.mb-8(v-on:click="drawerCreditCommonCreate = true")
+                        img(src=assets+"/images/jiaofei/add-go.svg")
+                        p 新增常用信用卡
+                    ul.num-list
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(1)", :class=("{ 'focus' : numListLi == 1}"))
+                                div.num-content
+                                    p.name 我的黑卡
+                                    p.num (004)1234567890111213
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container(v-on:click="clickNumListLi(2)", :class=("{ 'focus' : numListLi == 2}"))
+                                div.num-content
+                                    p.name 小寶台新
+                                    p.num (812)001689394933433
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(3)", :class=("{ 'focus' : numListLi == 3}"))
+                                div.num-content
+                                    p.name 大寶國泰
+                                    p.num (006)001689394933444
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container(v-on:click="clickNumListLi(4)", :class=("{ 'focus' : numListLi == 4}"))
+                                div.num-content
+                                    p.name 中國信託
+                                    p.num (005)0016893949394934
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(5)", :class=("{ 'focus' : numListLi == 5}"))
+                                div.num-content
+                                    p.name 上海商銀
+                                    p.num (011)1234567890111213
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container(v-on:click="clickNumListLi(6)", :class=("{ 'focus' : numListLi == 6}"))
+                                div.num-content
+                                    p.name 土地銀行
+                                    p.num (013)001689394933456
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
+
+
+block js
+    script(src= public + '/lib/js/cleave.min.js' defer)
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
+    script(src= assets + '/js/jiaofei.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+
+

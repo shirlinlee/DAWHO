@@ -8,19 +8,27 @@ new Vue({
         drawerCommon: false,
         drawerCommonCreate: false,
         drawerProcessCommonCreate: false,
+        drawerCreditCommon: false,
+        drawerCreditCommonCreate: false,
+        drawerCreditIDCard: false,
         numTel: '',
         numListLi: -1,
         ccNumber: '',
         ccName: '',
         ccProcessName: '',
+        ccCreditNumber: '1234 － 5678 － 9011 － 1213',
+        ccCreditName: '我的金卡',
         creditMoney: '',
     },
     methods: {
         clickNumListLi(v) {
-            if (this.numListLi == v) {
-                this.numListLi = -1;
-            } else {
-                this.numListLi = v;
+            // $('.num-list li .num-list-container.swipeleft').index('.num-list li .num-list-container')
+            if ($('.num-list li .num-list-container.swipeleft').length == 0) {
+                if (this.numListLi == v) {
+                    this.numListLi = -1;
+                } else {
+                    this.numListLi = v;
+                }
             }
         },
         openEnv() {
@@ -49,6 +57,10 @@ new Vue({
                 .hammer()
                 .bind('swipeleft', function (e) {
                     numListContainer.removeClass('swipeleft');
+                    numListContainer
+                        .siblings('.num-list-delete')
+                        .removeClass('swipeleft');
+
                     $(this).addClass('swipeleft');
                     setTimeout(() => {
                         $(this)
@@ -64,9 +76,16 @@ new Vue({
                     }, 0);
                     $(this).removeClass('swipeleft');
                 });
+
             var numListDelete = $('.num-list-delete');
             numListDelete.on('click', function () {
                 $(this).parent().hide();
+            });
+
+            // 信用卡卡號
+            var cleave = new Cleave('.jf-credit-number', {
+                delimiter: ' － ',
+                blocks: [4, 4, 4, 4],
             });
         });
     },

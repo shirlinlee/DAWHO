@@ -693,6 +693,36 @@ body {
         }
     }
 
+    ul.id-char-list {
+        li {
+            padding: 16px;
+            display: flex;
+            &:nth-child(odd) {
+                background-color: #eeeeee;
+            }
+            p {
+                font-size: 14px;
+                line-height: 1.29;
+                color: #000000;
+            }
+            p.left {
+                flex-basis: 57%;
+            }
+            p.right {
+            }
+            span.char {
+            }
+            span.city {
+                margin-left: 8px;
+            }
+            span.code {
+                margin-left: 16px;
+                font-size: 14px;
+                font-weight: bold;
+                color: #c38b47;
+            }
+        }
+    }
     div.create-type {
         p.title {
             font-size: 16px;

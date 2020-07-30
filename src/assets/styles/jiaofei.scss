@@ -88,6 +88,12 @@ body {
             border: solid 1px #ff6767;
         }
     }
+    input.jf-input.bank-code {
+        margin-bottom: 16px;
+        background: #fff url($assets + '/images/jiaofei/dropdown.svg') no-repeat
+            99% center;
+        background-size: 16px auto;
+    }
 
     .mb-8 {
         margin-bottom: 8px;
@@ -743,6 +749,7 @@ body {
             }
         }
     }
+
     div.create-type {
         p.title {
             font-size: 16px;
@@ -766,6 +773,42 @@ body {
         }
     }
 
+    div.search-input {
+        position: relative;
+        span.bank-code-search-icon {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            right: 10px;
+            top: 14px;
+            cursor: pointer;
+            background: url($assets + '/images/jiaofei/search.svg') no-repeat
+                center center;
+            background-size: 16px auto;
+            &.close{
+                background: url($assets + '/images/jiaofei/input-close.svg') no-repeat
+                center center;
+            }
+        }
+        input.jf-input.bank-code-search {
+        }
+    }
+    ul.bank-code-list {
+        li {
+            border-bottom: 1px #e3e3e3 solid;
+            p {
+                padding: 13px 0;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.5;
+                color: #111111;
+                span {
+                    font-weight: normal;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
     // checkbox
     /* Basic styles */
     input.jf-cb[type='checkbox'] {
@@ -773,6 +816,7 @@ body {
         opacity: 0;
         z-index: -1;
     }
+
     label.jf-cb {
         position: relative;
         display: inline-block;

@@ -12,6 +12,8 @@ new Vue({
         drawerCreditCommonCreate: false,
         drawerCreditIDCard: false,
         drawerCreditCommonCreate2: false,
+        drawerBankCode: false,
+        drawerCommonBankCode: false,
         numTel: '',
         numListLi: -1,
         ccNumber: '',
@@ -20,6 +22,11 @@ new Vue({
         ccCreditNumber: '1234 － 5678 － 9011 － 1213',
         ccCreditName: '我的金卡',
         creditMoney: '',
+        searchValue: '',
+        searchCommonValue: '',
+        valueBank: '',
+        valueCommonBank: '004 台灣分行',
+        BankList: [],
     },
     methods: {
         clickNumListLi(v) {
@@ -37,6 +44,7 @@ new Vue({
         },
     },
     mounted: function () {
+        this.BankList = _htmlBankList;
         this.$nextTick(() => {
             // 電信公司 - 選擇
             $('#item-select > select').on('change', function (e) {

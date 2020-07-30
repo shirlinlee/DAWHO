@@ -92,6 +92,9 @@ body {
     .mb-8 {
         margin-bottom: 8px;
     }
+    .mb-12 {
+        margin-bottom: 12px;
+    }
     .mb-16 {
         margin-bottom: 16px;
     }
@@ -221,6 +224,11 @@ body {
 
         // 繳費流程
         div.jiaofeiProcess {
+            div.credit-confirm {
+                padding: 16px;
+                border-radius: 2px;
+                background-color: #fff;
+            }
             div.process-status {
                 div.process-status-board {
                     background: url($assets + '/images/cw_header.png') no-repeat;
@@ -378,6 +386,18 @@ body {
                         font-weight: bold;
                         line-height: 1.5;
                         color: #c38b47;
+                    }
+                }
+
+                div.process-credit-bill-info {
+                    display: flex;
+                    p.gold-bold {
+                        font-weight: bold;
+                        color: #c38b47;
+                    }
+                    p.bill-credit-info-name {
+                        flex-basis: 30%;
+                        margin-right: 16px;
                     }
                 }
 

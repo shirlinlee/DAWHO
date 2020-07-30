@@ -50,7 +50,7 @@ block main
 
                 button.btnDefault(:class=("{ 'disable' : numTel==''}")) 確認
 
-        .drawer(class='', :class=("{ 'show' : drawerTel}"), data-drawer='電信號碼')
+        .drawer(class='', :class=("{ 'show' : drawerTel}"), )
             .drawer-container
                 div.drawer-head.mb-32
                     h5.f20.f_b 電信號碼
@@ -200,7 +200,7 @@ block main
                                     | CC12345678
                 a.btn_gold(@click="drawerTel = false", href="javascript:void(0)") 知道了
 
-        .drawer(class='', :class=("{ 'show' : drawerCommon}"),data-drawer='常用號碼')
+        .drawer(class='', :class=("{ 'show' : drawerCommon}"),)
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 常用號碼
@@ -252,7 +252,7 @@ block main
                                 p 刪除
                 a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
 
-        .drawer(class='', :class=("{ 'show' : drawerCommonCreate}"),data-drawer='新增常用號碼')
+        .drawer(class='', :class=("{ 'show' : drawerCommonCreate}"),)
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用號碼

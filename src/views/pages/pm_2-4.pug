@@ -2,7 +2,7 @@
 extends ../includes/hongbao/_layout.pug
 
 block title
-    title pm_2-1-1
+    title pm_2-4
 
 block scss
     link(rel='stylesheet' href= assets + '/styles/components.css')
@@ -12,7 +12,7 @@ include ../includes/jiaofei/ui-jiaofei.pug
 include ../includes/components.pug
 block main
     div#appJiaofei
-        .drawer(class='show', :class=("{ 'show' : drawerCreditIDCard}"),data-drawer='新增常用號碼')
+        .drawer(class='show', :class=("{ 'show' : drawerCreditIDCard}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 身分證字號代碼

@@ -54,7 +54,7 @@ block main
 
                 button.btnDefault.disable 確認
                 +notice('process-credit')
-        .drawer(class='', :class=("{ 'show' : drawerCreditCommon}"),data-drawer='常用號碼')
+        .drawer(class='', :class=("{ 'show' : drawerCreditCommon}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 常用信用卡
@@ -114,7 +114,7 @@ block main
                                 p 刪除
                 a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
 
-        .drawer(class='', :class=("{ 'show' : drawerCreditCommonCreate}"),data-drawer='新增常用號碼')
+        .drawer(class='', :class=("{ 'show' : drawerCreditCommonCreate}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用信用卡
@@ -139,7 +139,7 @@ block main
                         input.jf-input(type="text", v-model="ccCreditName", placeholder='請輸入卡片名稱')
                 a.btn_gold(@click="drawerCreditCommonCreate = false", :class=("{ 'btn_grey' : !(ccCreditName!=''&&ccCreditNumber.length>=25)}"), href="javascript:void(0)") 確認
 
-        .drawer(class='', :class=("{ 'show' : drawerCreditIDCard}"),data-drawer='新增常用號碼')
+        .drawer(class='', :class=("{ 'show' : drawerCreditIDCard}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 身分證字號代碼

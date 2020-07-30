@@ -2,7 +2,7 @@
 extends ../includes/hongbao/_layout.pug
 
 block title
-    title pm_1-8
+    title pm_2-6
 
 block scss
     link(rel='stylesheet' href= assets + '/styles/components.css')
@@ -20,8 +20,8 @@ block main
                         img(src=assets+"/images/jiaofei/success.svg" alt="")
                         p 繳費成功
                     div.process-status-info.mt-24
-                        h5.mb-16 4月 行動電話費
-                        h1 新臺幣 2,000 元
+                        h5.mb-16 信用卡卡費
+                        h1 新臺幣 1,020 元
                 hr
                 div.process-container.mt-24.mb-24
                     ul.process-info
@@ -31,20 +31,22 @@ block main
                         li
                             p.info-type 身分證字號
                             p.info-value H23456••••
-                        li
-                            p.info-type 電信公司
-                            p.info-value 中華電信
+
                 hr
                 div.process-container.mt-24.mb-24
+                    div.create-num.mb-8(v-on:click="drawerCreditCommonCreate2 = true")
+                        img(src=assets+"/images/jiaofei/add-go.svg")
+                        p(style=('font-weight: 400')) 新增常用信用卡
                     ul.process-info
                         li
-                            p.info-type 電信號碼
-                            p.info-value 0932123456
+                            p.info-type 繳款對象
+                            p.info-value 台灣銀行
+                        li
+                            p.info-type 信用卡號
+                            p.info-value 1234 5678 9011 1213
                 hr
                 div.process-container.mt-24.mb-24
-                    div.create-num.mb-8(v-on:click="drawerProcessCommonCreate = true")
-                        img(src=assets+"/images/jiaofei/add-go.svg")
-                        p 新增常用號碼
+
                     ul.process-info
                         li
                             p.info-type 扣款帳號
@@ -62,20 +64,24 @@ block main
                     p 回首頁
                     img(src=assets+"/images/jiaofei/arrow-right.svg", alt="")
 
-        .drawer(class='', :class=("{ 'show' : drawerProcessCommonCreate}"))
+        .drawer(class='', :class=("{ 'show' : drawerCreditCommonCreate2}"))
             .drawer-container
                 div.drawer-head.mb-24
-                    h5.f20.f_b 新增常用號碼
-                    a.f_gold.f_b(@click="drawerProcessCommonCreate = false", href="javascript:void(0)") 取消
+                    h5.f20.f_b 新增常用信用卡
+                    a.f_gold.f_b(@click="drawerCreditCommonCreate2 = false", href="javascript:void(0)") 取消
                 div.drawer-content
                     div.create-type.mb-16
                         div.create-type-static
-                            p.static-title.title 電信號碼
-                            p.static-number 0932123456
+                            p.static-title.title 銀行代碼
+                            p.static-number 004 台灣銀行
                     div.create-type.mb-16
-                        p.title.mb-8 號碼名稱
-                        input.jf-input(type="text", v-model="ccProcessName", placeholder='請輸入此電信號碼名稱')
-                a.btn_gold(:class=("{ 'btn_grey' : !(ccProcessName!='')}"), href="javascript:void(0)") 確認
+                        div.create-type-static
+                            p.static-title.title 信用卡卡號
+                            p.static-number 1234567890111213
+                    div.create-type.mb-16
+                        p.title.mb-8 卡片名稱
+                        input.jf-input(type="text", v-model="ccCreditName", placeholder='請輸入卡片名稱')
+                a.btn_gold(:class=("{ 'btn_grey' : !(ccCreditName!='')}"), href="javascript:void(0)") 確認
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
     script(src= public + '/lib/js/hammer.min.js' defer)

@@ -11,6 +11,7 @@ new Vue({
         drawerCreditCommon: false,
         drawerCreditCommonCreate: false,
         drawerCreditIDCard: false,
+        drawerCreditCommonCreate2: false,
         numTel: '',
         numListLi: -1,
         ccNumber: '',

@@ -10,7 +10,7 @@ block scss
 
 include ../includes/components.pug
 block main
-    div#appLoad
+    div#appLoan
         header
             img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
             p.title 貸款
@@ -23,6 +23,29 @@ block main
             h4.f24.f_b.t_left 如何使用無卡提款？
             ul
                 li
+                    +account-style('normal', '光復分行 470001', '127-055-0000751-9')
+                    .W100
+                        p.f12 本金餘額
+                        p.f18.f_b 2,040,000
+                        +semi-dashboard(15)
+                    .status.normal 請於 2020/03/14 前完成繳納
+
+                li
+                    +account-style('late', '光復分行 470001', '127-055-0000751-9')
+                    .W100
+                        p.f12 本金餘額
+                        p.f18.f_b 2,040,000
+                        +semi-dashboard(75)
+                    .status.late 請於 2020/03/14 前完成繳納
+
+                li
+                    +account-style('normal', '光復分行 470001', '127-055-0000751-9')
+                    .W100
+                        p.f12 本金餘額
+                        p.f18.f_b 2,040,000
+                        +semi-dashboard(75)
+                    .status.normal 請於 2020/03/14 前完成繳納
+
 
 
 block js

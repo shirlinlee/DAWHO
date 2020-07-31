@@ -1,0 +1,193 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title ci_1-1
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/myloan.css')
+
+include ../includes/components.pug
+block main
+    div#appLoan
+        header.transparent
+            img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+            p.title 貸款內容
+
+        .select_account
+            +account-style('credit','光復分行 470001', '127-055-0000751-9')
+
+        .account_content
+            h4.f24.t_left
+                | 我的信貸
+                span.info 貸款資訊
+            span.f14.f_black.left 本金餘額
+            h6.f24.f_gold.f_b 2,040,000
+            span.f14.f_grey_03
+                | 到期日
+                font 2054/10/14
+
+            .progress_bar
+                .bar(style="width: 5%")
+                span.f_grey_03
+                    | 已還款
+                    font 5%
+
+            p.f14.t_right
+                | 初貸本金
+                font 1,500,000
+
+            .total
+                p.f16
+                    | 待繳金額總計
+                    font 18,077
+                    | 元
+                span.warning.f14
+                    | 已遲繳，違約金額
+                    font 452
+                    | 元，請儘速繳納
+
+            .all_loan
+                .tab(:class="listType")
+                    .t1(@click="listHandler('willPay')") 待繳
+                    .t2(@click="listHandler('paid')") 已繳
+
+                ul.list
+                    li
+                        .summary
+                            .date_status
+                                font 2020/03/14
+                                p.tag
+                            .price
+                                font 7,525
+                                | 元
+
+                            img(src=assets+"/images/icon/arrow-right.svg", alt="").arrow
+
+                        .detail
+                            .th
+                                p.t_left 應繳日期
+                                p.t_right 2020/03/14
+                            .td
+                                p.t_left 應還本金
+                                p.t_right 5,789 元
+                            .td
+                                p.t_left 應繳利息
+                                p.t_right 1736 元
+                            .td
+                                p.t_left 違約金/遲延息
+                                p.t_right 0 元
+                            .td
+                                p.t_left 緩繳息
+                                p.t_right 0 元
+
+                            div.f12.f_grey_03.t_left 利息計算期間：2020/01/14 - 2020/02/14
+
+                    li
+                        .summary
+                            .date_status
+                                font 2020/02/14
+                                p.tag
+                                    font 彈性繳款
+                                    font 遲繳
+
+                            .price
+                                font 3,638
+                                | 元
+
+                            img(src=assets+"/images/icon/arrow-right.svg", alt="").arrow
+
+                        .detail
+                            .th
+                                p.t_left 應繳日期
+                                p.t_right 2020/03/14
+                            .td
+                                p.t_left 應還本金
+                                p.t_right 5,789 元
+                            .td
+                                p.t_left 應繳利息
+                                p.t_right 1736 元
+                            .td
+                                p.t_left 違約金/遲延息
+                                p.t_right 0 元
+                            .td
+                                p.t_left 緩繳息
+                                p.t_right 0 元
+
+                            div.f12.f_grey_03.t_left 利息計算期間：2020/01/14 - 2020/02/14
+
+                    li
+                        .summary
+                            .date_status
+                                font 2020/01/14
+                                p.tag
+                            .price
+                                font 7,638
+                                | 元
+
+                            img(src=assets+"/images/icon/arrow-right.svg", alt="").arrow
+
+                        .detail
+                            .th
+                                p.t_left 應繳日期
+                                p.t_right 2020/03/14
+                            .td
+                                p.t_left 應還本金
+                                p.t_right 5,789 元
+                            .td
+                                p.t_left 應繳利息
+                                p.t_right 1736 元
+                            .td
+                                p.t_left 違約金/遲延息
+                                p.t_right 0 元
+                            .td
+                                p.t_left 緩繳息
+                                p.t_right 0 元
+
+                            div.f12.f_grey_03.t_left 利息計算期間：2020/01/14 - 2020/02/14
+
+                    li
+                        .summary
+                            .date_status
+                                font 2019/12/14
+                                p.tag
+                            .price
+                                font 3,638
+                                | 元
+
+                            img(src=assets+"/images/icon/arrow-right.svg", alt="").arrow
+
+                        .detail
+                            .th
+                                p.t_left 應繳日期
+                                p.t_right 2020/03/14
+                            .td
+                                p.t_left 應還本金
+                                p.t_right 5,789 元
+                            .td
+                                p.t_left 應繳利息
+                                p.t_right 1736 元
+                            .td
+                                p.t_left 違約金/遲延息
+                                p.t_right 0 元
+                            .td
+                                p.t_left 緩繳息
+                                p.t_right 0 元
+
+                            div.f12.f_grey_03.t_left 利息計算期間：2020/01/14 - 2020/02/14
+
+
+
+
+
+
+
+
+
+
+block js
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src= assets + '/js/myloan.bundle.js' defer)
+

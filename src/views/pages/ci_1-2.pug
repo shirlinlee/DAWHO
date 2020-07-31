@@ -1,0 +1,66 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title ci_1-1
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/loan.css')
+
+include ../includes/components.pug
+block main
+    div#appLoan
+        header.black
+            img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+            p.title 貸款
+
+        .kv
+            h4.f24.f_b 你的專屬額度
+            p.f16.f_white DAWHO替你實現DA夢想
+
+        .swiper-container
+            .strateg.swiper-wrapper
+                .swiper-slide
+                    .bg_white
+                        img(src=assets+"/images/icon/28-gold.svg", alt="")
+                        p.f14 信貸
+                        .result
+                            p.f16.f_black 試算結果
+                            h6.f24.f_gold 80 萬
+                            span.f12.f_grey_03
+                                | 試算時間
+                                font 2020/06/30
+                            h5.f16.f_black 利率1.66%起，一天內快速撥款！
+
+                            a.btn_gold(href="") 立即申辦
+
+
+
+                .swiper-slide
+                    .bg_white
+                        img(src=assets+"/images/icon/29-gold.svg", alt="")
+                        p.f14 房貸
+                        .result
+                            p.f16.f_black 試算結果
+                            h6.f24.f_gold 120 萬
+                            span.f12.f_grey_03
+                                | 試算時間
+                                font 2020/06/30
+                            h5.f16.f_black 利率1.44%起，一天內快速撥款！
+
+                            a.btn_gold(href="") 立即申辦
+
+
+            .swiper-pagination
+
+
+
+
+
+
+block js
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src= assets + '/js/loan.bundle.js' defer)
+

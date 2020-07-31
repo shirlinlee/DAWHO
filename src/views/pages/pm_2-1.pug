@@ -1,5 +1,5 @@
 
-extends ../includes/hongbao/_layout.pug
+extends ../includes/jiaofei/_layout.pug
 
 block title
     title pm_2-1
@@ -262,67 +262,4 @@ block main
                 a.btn_gold(@click="valueCommonBank=''; drawerCommonBankCode = false", :class=(""), href="javascript:void(0)") 關閉
 
 
-    script(type="text/javascript").
-        var _htmlBankList = [
-            {
-                code: '004',
-                name: '台灣銀行',
-            },
-            {
-                code: '005',
-                name: '土地銀行',
-            },
-            {
-                code: '006',
-                name: '合作金庫',
-            },
-            {
-                code: '007',
-                name: '第一銀行',
-            },
-            {
-                code: '008',
-                name: '華南銀行',
-            },
-            {
-                code: '009',
-                name: '彰化銀行',
-            },
-            {
-                code: '010',
-                name: '華僑銀行',
-            },
-            {
-                code: '011',
-                name: '上海商銀',
-            },
-            {
-                code: '012',
-                name: '台北富邦',
-            },
-            {
-                code: '013',
-                name: '國泰世華',
-            },
-            {
-                code: '016',
-                name: '高雄銀行',
-            },
-            {
-                code: '017',
-                name: '兆豐商銀',
-            },
-            {
-                code: '021',
-                name: '花旗銀行',
-            },
-        ];
 block js
-    script(src= public + '/lib/js/cleave.min.js' defer)
-    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
-    script(src= public + '/lib/js/hammer.min.js' defer)
-    script(src= public + '/lib/js/jquery.hammer.js' defer)
-    script(src= assets + '/js/jiaofei.bundle.js' defer)
-    script(src= assets + '/js/components.bundle.js' defer)
-
-

@@ -1,5 +1,5 @@
 
-extends ../includes/hongbao/_layout.pug
+extends ../includes/jiaofei/_layout.pug
 
 block title
     title pm_2-8
@@ -31,10 +31,3 @@ block main
                         input.jf-input(type="text", v-model="ccCreditName", placeholder='請輸入卡片名稱')
                 a.btn_gold(:class=("{ 'btn_grey' : !(ccCreditName!='')}"), href="javascript:void(0)") 確認
 block js
-    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
-    script(src= public + '/lib/js/hammer.min.js' defer)
-    script(src= public + '/lib/js/jquery.hammer.js' defer)
-    script(src= assets + '/js/jiaofei.bundle.js' defer)
-    script(src= assets + '/js/components.bundle.js' defer)
-
-

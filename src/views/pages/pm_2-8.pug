@@ -1,0 +1,33 @@
+
+extends ../includes/jiaofei/_layout.pug
+
+block title
+    title pm_2-8
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        .drawer(class='show', :class=("{ 'show' : drawerCreditCommonCreate2}"))
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 新增常用信用卡
+                    a.f_gold.f_b(@click="drawerCreditCommonCreate2 = false", href="javascript:void(0)") 取消
+                div.drawer-content
+                    div.create-type.mb-16
+                        div.create-type-static
+                            p.static-title.title 銀行代碼
+                            p.static-number 004 台灣銀行
+                    div.create-type.mb-16
+                        div.create-type-static
+                            p.static-title.title 信用卡卡號
+                            p.static-number 1234567890111213
+                    div.create-type.mb-16
+                        p.title.mb-8 卡片名稱
+                        input.jf-input(type="text", v-model="ccCreditName", placeholder='請輸入卡片名稱')
+                a.btn_gold(:class=("{ 'btn_grey' : !(ccCreditName!='')}"), href="javascript:void(0)") 確認
+block js

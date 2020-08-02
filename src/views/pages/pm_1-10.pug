@@ -1,0 +1,31 @@
+
+extends ../includes/jiaofei/_layout.pug
+
+block title
+    title pm_1-10
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        .drawer(class='show', :class=("{ 'show' : drawerProcessCommonCreate}"))
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 新增常用號碼
+                    a.f_gold.f_b(@click="drawerProcessCommonCreate = false", href="javascript:void(0)") 取消
+                div.drawer-content
+                    div.create-type.mb-16
+                        div.create-type-static
+                            p.static-title.title 電信號碼
+                            p.static-number 0932123456
+                    div.create-type.mb-16
+                        p.title.mb-8 號碼名稱
+                        input.jf-input(type="text", v-model="ccProcessName", placeholder='請輸入此電信號碼名稱')
+                a.btn_gold(:class=("{ 'btn_grey' : !(ccProcessName!='')}"), href="javascript:void(0)") 確認
+block js
+
+

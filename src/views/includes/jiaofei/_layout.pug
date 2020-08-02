@@ -1,0 +1,82 @@
+//- layout.pug
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, maximum-scale=1")
+        meta(name="format-detection" content="telephone=no")
+        link(rel='icon' type="image/x-icon" href='/favicon.ico')
+
+        block title
+
+        include ../styles.pug
+        block scss
+
+        //- base scripts
+        block js
+        script(type="text/javascript").
+            var _htmlBankList = [
+                {
+                    code: '004',
+                    name: '台灣銀行',
+                },
+                {
+                    code: '005',
+                    name: '土地銀行',
+                },
+                {
+                    code: '006',
+                    name: '合作金庫',
+                },
+                {
+                    code: '007',
+                    name: '第一銀行',
+                },
+                {
+                    code: '008',
+                    name: '華南銀行',
+                },
+                {
+                    code: '009',
+                    name: '彰化銀行',
+                },
+                {
+                    code: '010',
+                    name: '華僑銀行',
+                },
+                {
+                    code: '011',
+                    name: '上海商銀',
+                },
+                {
+                    code: '012',
+                    name: '台北富邦',
+                },
+                {
+                    code: '013',
+                    name: '國泰世華',
+                },
+                {
+                    code: '016',
+                    name: '高雄銀行',
+                },
+                {
+                    code: '017',
+                    name: '兆豐商銀',
+                },
+                {
+                    code: '021',
+                    name: '花旗銀行',
+                },
+            ];
+        script(src= public +'/lib/js/vue@2.6.11.min.js' defer)
+        script(src= public + '/lib/js/cleave.min.js' defer)
+        script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+        script(src= public + '/lib/js/hammer.min.js' defer)
+        script(src= public + '/lib/js/jquery.hammer.js' defer)
+        script(src= assets + '/js/jiaofei.bundle.js' defer)
+        script(src= assets + '/js/components.bundle.js' defer)
+
+
+    body
+        include ../main.pug

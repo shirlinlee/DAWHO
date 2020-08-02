@@ -20,6 +20,9 @@ mixin check(id,label,isChecked)
         input(id='check_'+id,type='checkbox', checked=isChecked)
         label(for='check_'+id) #{label}
 
+mixin input(value,placeholder,enable)
+    input.cw-input(type="text", class=(enable ? '' : 'disable'), value=value, placeholder=placeholder)
+
 mixin notice(content,isLight)
     div.cw-notice
         .cw-notice-title
@@ -35,6 +38,8 @@ mixin notice(content,isLight)
                 +notice-26()
             else if content == 'red'
                 +notice-red()
+            else if content == 'process-credit'
+                +notice-process-credit()
             else
                 p(class=(isLight)?'light':'') #{content}
 mixin notice-15()
@@ -80,12 +85,12 @@ mixin notice-26()
         li 3. 使用無卡提款，如輸入無卡提款密碼錯誤連續達五次，即關閉無卡提款功能，須至本行ATM使用晶片金融卡重新啟用該功能。
         li 4. 申請無卡提款之晶片金融卡或帳號如掛失或註銷，已開通之無卡提款功能亦隨同失效，須攜帶晶片金融卡至本行ATM重新啟用該功能。
 
-
 mixin notice-red()
     ul
         li 	1. 每包紅包領取期限為24小時。
         li 	2. 紅包的每日/每月限額與非約定轉帳共用額度，紅包建立後且未領取仍會佔用額度。
 
+<<<<<<< HEAD
 
 mixin account-style(style, branch, account)
     div.account_item(class=style)
@@ -108,3 +113,15 @@ mixin semi-dashboard(percent)
             span.num #{percent}%
             span 已還款
 
+=======
+mixin notice-process-credit()
+    ul
+        li 1. 信用卡轉帳交易均為二十四小時即時扣帳，而入帳時間依轉入行規定。
+    br
+    p 繳費金額與限制：
+    br
+    ul
+        li 1. (依您的帳戶分別累計)
+        li a. 已約定轉帳限額將與電話銀行、ATM與網路ATM等自動化通路之約定轉帳限額合併通路計算。
+        li b. 單筆轉帳不得超過新臺幣200萬元，實際交易日累計不得超過新臺幣500萬元。提醒您!如欲調降約定帳號累計限額，請您至任一分行臨櫃辦理。
+>>>>>>> dev/junx

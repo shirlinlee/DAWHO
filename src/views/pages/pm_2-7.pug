@@ -1,0 +1,47 @@
+
+extends ../includes/jiaofei/_layout.pug
+
+block title
+    title pm_2-7
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        +_header("繳費", 'star', true)
+        div#appJiaofeiContent
+            div.jiaofeiProcess
+                div.process-status.mb-45
+                    div.process-status-board
+                        img(src=assets+"/images/jiaofei/fail.svg" alt="")
+                        p.fail 失敗
+                    div.process-process-status-fail.mt-24
+                        p 錯誤代碼：0701
+                        p 財金本項跨行業務暫停或停止營業
+
+                button.btnDefault.mb-16() 繼續繳費
+                div.backIndex.mb-32
+                    p 回首頁
+                    img(src=assets+"/images/jiaofei/arrow-right.svg", alt="")
+
+        .drawer(class='', :class=("{ 'show' : drawerProcessCommonCreate}"))
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 新增常用號碼
+                    a.f_gold.f_b(@click="drawerProcessCommonCreate = false", href="javascript:void(0)") 取消
+                div.drawer-content
+                    div.create-type.mb-16
+                        div.create-type-static
+                            p.static-title.title 電信號碼
+                            p.static-number 0932123456
+                    div.create-type.mb-16
+                        p.title.mb-8 號碼名稱
+                        input.jf-input(type="text", v-model="ccProcessName", placeholder='請輸入此電信號碼名稱')
+                a.btn_gold(:class=("{ 'btn_grey' : !(ccProcessName!='')}"), href="javascript:void(0)") 確認
+block js
+
+

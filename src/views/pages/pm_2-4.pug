@@ -1,0 +1,126 @@
+
+extends ../includes/jiaofei/_layout.pug
+
+block title
+    title pm_2-4
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        .drawer(class='show', :class=("{ 'show' : drawerCreditIDCard}"))
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 身分證字號代碼
+                    a.f_gold.f_b(@click="drawerCreditIDCard = false", href="javascript:void(0)") 關閉
+                div.drawer-content
+                    ul.id-char-list
+                        li
+                            p.left
+                                span.char A
+                                span.city 臺北市
+                                span.code 10
+                            p.right
+                                span.char B
+                                span.city 臺中市
+                                span.code 11
+                        li
+                            p.left
+                                span.char C
+                                span.city 基隆市
+                                span.code 12
+                            p.right
+                                span.char D
+                                span.city 臺南市
+                                span.code 13
+                        li
+                            p.left
+                                span.char E
+                                span.city 高雄市
+                                span.code 14
+                            p.right
+                                span.char F
+                                span.city 新北市
+                                span.code 15
+                        li
+                            p.left
+                                span.char G
+                                span.city 宜蘭縣
+                                span.code 16
+                            p.right
+                                span.char H
+                                span.city 桃園市
+                                span.code 17
+                        li
+                            p.left
+                                span.char I
+                                span.city 嘉義市
+                                span.code 34
+                            p.right
+                                span.char J
+                                span.city 新竹縣
+                                span.code 18
+                        li
+                            p.left
+                                span.char K
+                                span.city 苗栗縣
+                                span.code 19
+                            p.right
+                                span.char M
+                                span.city 南投縣
+                                span.code 21
+                        li
+                            p.left
+                                span.char N
+                                span.city 彰化縣
+                                span.code 22
+                            p.right
+                                span.char O
+                                span.city 新竹市
+                                span.code 35
+                        li
+                            p.left
+                                span.char P
+                                span.city 雲林縣
+                                span.code 23
+                            p.right
+                                span.char Q
+                                span.city 嘉義縣
+                                span.code 24
+                        li
+                            p.left
+                                span.char T
+                                span.city 屏東縣
+                                span.code 27
+                            p.right
+                                span.char U
+                                span.city 花蓮縣
+                                span.code 28
+                        li
+                            p.left
+                                span.char V
+                                span.city 臺東縣
+                                span.code 29
+                            p.right
+                                span.char W
+                                span.city 金門縣
+                                span.code 32
+                        li
+                            p.left
+                                span.char X
+                                span.city 澎湖縣
+                                span.code 30
+                            p.right
+                                span.char Z
+                                span.city 連江縣
+                                span.code 33
+                a.btn_gold(@click="drawerCreditIDCard = false", :class=(""), href="javascript:void(0)") 知道了
+
+
+block js
+
+

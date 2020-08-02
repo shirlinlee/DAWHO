@@ -1,0 +1,68 @@
+
+extends ../includes/jiaofei/_layout.pug
+
+block title
+    title pm_1-4
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        .drawer(class='show', :class=("{ 'show' : drawerCommon}"))
+            .drawer-container
+                div.drawer-head.mb-24
+                    h5.f20.f_b 常用號碼
+                    a.f_gold.f_b(@click="drawerCommon = false", href="javascript:void(0)") 取消
+                div.drawer-content
+                    div.create-num.mb-8(v-on:click="drawerCommonCreate = true")
+                        img(src=assets+"/images/jiaofei/person-add.svg")
+                        p 新增常用號碼
+                    ul.num-list
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(1)", :class=("{ 'focus' : numListLi == 1}"))
+                                div.num-content
+                                    p.name 嘉義老家市話
+                                    p.num 052311234
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container(v-on:click="clickNumListLi(2)", :class=("{ 'focus' : numListLi == 2}"))
+                                div.num-content
+                                    p.name 媽媽手機
+                                    p.num 0933132456
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(3)", :class=("{ 'focus' : numListLi == 3}"))
+                                div.num-content
+                                    p.name HiNet
+                                    p.num 052311234
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container(v-on:click="clickNumListLi(4)", :class=("{ 'focus' : numListLi == 4}"))
+                                div.num-content
+                                    p.name 我的手機
+                                    p.num 0919568988
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                        li
+                            .num-list-container.bg-grey(v-on:click="clickNumListLi(5)", :class=("{ 'focus' : numListLi == 5}"))
+                                div.num-content
+                                    p.name 台北家
+                                    p.num 052311234
+                                img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
+                            .num-list-delete
+                                p 刪除
+                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
+
+block js
+

@@ -1,0 +1,45 @@
+
+extends ../includes/jiaofei/_layout.pug
+
+block title
+    title pm_1-2-1
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/jiaofei.css')
+
+include ../includes/jiaofei/ui-jiaofei.pug
+include ../includes/components.pug
+block main
+    div#appJiaofei
+        +_header("電信費繳費", 'white')
+        div#appJiaofeiContent
+            div.jiaofeiSearch
+                div.formSearch.mt-24.mb-32
+                    div.item.mb-16
+                        div.item-info.mb-8
+                            div.name
+                                p 身份證字號
+                        input.jf-input(type="text", value='H2356●●●●●', placeholder='請輸入電信號碼')
+                    div#item-select.item.mb-16
+                        div.item-info.mb-8
+                            div.name
+                                p 電信公司
+                        select.cw-dropdown(required)
+                            option(value="" disabled) 請選擇電信公司
+                            option(value="中華電信") 中華電信
+                            option(value="遠傳電信") 遠傳電信
+                    div#item-tel.item.mb-16()
+                        div.item-info.mb-8
+                            div.name
+                                p 電信號碼
+                                img(@click="drawerTel = true", src=assets+"/images/jiaofei/light.svg" alt="")
+                            div.detail(v-on:click="drawerCommon = true")
+                                img(@click="drawerCommon = true", src=assets+"/images/jiaofei/add-go.svg" alt="")
+                                p 常用號碼
+                        input.jf-input(type="text", value="0932123456",placeholder='請輸入電信號碼')
+
+                button.btnDefault 確認
+
+block js
+

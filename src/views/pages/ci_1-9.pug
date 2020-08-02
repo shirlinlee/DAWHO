@@ -1,0 +1,54 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title ci_1-9
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet' href= assets + '/styles/myloan.css')
+
+block main
+    div#appLoan
+        .header.black
+            .close 貸款資訊
+
+        .main.normal
+            //- normal or mortgage
+            img.a1(src=assets+"/images/icon/28-gold.svg", alt="")
+            img.a2(src=assets+"/images/icon/29-gold.svg", alt="")
+            h4.f18.f_b 應繳利息分行 360001
+            p.f14 127-055-0000751-9
+
+        ul.detail_list
+            li.bg_grey
+                p.th 貸款種類
+                p.td 一般房貸
+            li
+                p.th 初貸金額
+                p.td 1,500,000
+            li
+                p.th 還本方式
+                p.td 平均攤還本息
+            li
+                p.th 貸款期數
+                p.td 36期
+            li.bg_grey
+                p.th 初貸日
+                p.td 2014/10/14
+            li.bg_grey
+                p.th 貸款日
+                p.td 2014/10/14
+            li.bg_grey
+                p.th 到期日
+                p.td 2034/10/14
+
+
+
+
+
+block js
+    script(src= public +'/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public +'/lib/js/tooltipster.bundle.js' defer)
+    script(src= assets + '/js/loan.bundle.js' defer)
+

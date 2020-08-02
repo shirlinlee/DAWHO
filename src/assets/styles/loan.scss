@@ -114,8 +114,9 @@ body {
                 &.normal {
                     color: #8a5a48;
                 }
-                &.late {
+                &.error {
                     color: #ff6767;
+                    background-color: #ffe8e8;
                 }
             }
         }

@@ -2,7 +2,7 @@
 extends ../includes/_layout.pug
 
 block title
-    title ci_1-1
+    title ci_1-7
 
 block scss
     link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
@@ -17,10 +17,10 @@ block main
             p.title 貸款內容
 
         .select_account
-            +account-style('credit','光復分行 470001', '127-055-0000751-9')
+            +account-style('credit','光復分行 470001', '127-055-0000751-9', 1)
 
         .account_content
-            h4.f24.t_left
+            h4.f24.t_left.f_b
                 | 我的信貸
                 span.info 貸款資訊
             span.f14.f_black.left 本金餘額

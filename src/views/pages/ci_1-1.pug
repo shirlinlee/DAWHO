@@ -20,7 +20,7 @@ block main
             img(src=assets+"/images/calculation_btn.svg", alt="")
 
         .myLoad
-            h4.f24.f_b.t_left 如何使用無卡提款？
+            h4.f24.f_b.t_left 我的貸款
             ul
                 li
                     +account-style('normal', '光復分行 470001', '127-055-0000751-9')
@@ -36,7 +36,7 @@ block main
                         p.f12 本金餘額
                         p.f18.f_b 2,040,000
                         +semi-dashboard(75)
-                    .status.error 請於 2020/03/14 前完成繳納
+                    .status.error 已遲繳，請儘速繳納
 
                 li
                     +account-style('normal', '光復分行 470001', '127-055-0000751-9')
@@ -48,7 +48,4 @@ block main
 
 
 
-block js
-    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
-    script(src= assets + '/js/loan.bundle.js' defer)
 

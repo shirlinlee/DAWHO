@@ -9,9 +9,10 @@ block scss
     link(rel='stylesheet' href= assets + '/styles/myloan.css')
 
 block main
-    div#appLoan
-        .header.black
-            .close 貸款資訊
+    div#appLoan.extend_bg
+        header.transparent
+            p.title.close 貸款資訊
+
 
         .main.normal
             //- normal or mortgage
@@ -26,7 +27,7 @@ block main
                 p.td 一般房貸
             li
                 p.th 初貸金額
-                p.td 1,500,000
+                p.td.f_b 1,500,000
             li
                 p.th 還本方式
                 p.td 平均攤還本息

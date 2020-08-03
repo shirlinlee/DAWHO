@@ -34,6 +34,13 @@ new Vue({
                 $(this).toggleClass('active');
                 $('.cw-notice-content').slideToggle();
             });
+
+            $('.select_account').on('click', function () {
+                $('.lb_wrapper').addClass('show');
+                $('body').on('click', '.lb_wrapper a.f_gold', function () {
+                    $('.lb_wrapper').removeClass('show');
+                });
+            });
         });
     },
     methods: {

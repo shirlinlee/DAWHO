@@ -40,6 +40,15 @@ block main
                 | 初貸本金
                 font 1,500,000
 
+            .total
+                p.f16
+                    | 待繳金額總計
+                    font 18,077
+                    | 元
+                span.warning.f14
+                    | 已遲繳，違約金額
+                    font 452
+                    | 元，請儘速繳納
 
             .all_loan
                 .tab(:class="listType")

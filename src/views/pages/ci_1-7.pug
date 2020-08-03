@@ -121,6 +121,10 @@ block main
 
 
                 ul.list(:style="{'display': (listType === 'paid')? 'block':'none'}")
+                    .W100.f12.t_right.f_grey_03
+                        .tooltip_btn
+                            | 更新時間：
+                            font 2020/03/10  9:00AM
                     div.empty
                         img(src=assets+"/images/icon/cw-empty.svg", alt="")
                         p.f14.f_grey_03 還沒有繳款紀錄

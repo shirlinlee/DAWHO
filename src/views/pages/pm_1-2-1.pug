@@ -31,13 +31,13 @@ block main
                             option(value="遠傳電信") 遠傳電信
                     div#item-tel.item.mb-16()
                         div.item-info.mb-8
-                            div.name
+                            div.name(v-on:click="switchDrawer('drawerTel', true)")
                                 p 電信號碼
-                                img(@click="drawerTel = true", src=assets+"/images/jiaofei/light.svg" alt="")
-                            div.detail(v-on:click="drawerCommon = true")
-                                img(@click="drawerCommon = true", src=assets+"/images/jiaofei/add-go.svg" alt="")
+                                img(src=assets+"/images/jiaofei/light.svg" alt="")
+                            div.detail(v-on:click="switchDrawer('drawerCommon', true)")
+                                img(src=assets+"/images/jiaofei/add-go.svg" alt="")
                                 p 常用號碼
-                        input.jf-input(type="text", value="0932123456",placeholder='請輸入電信號碼')
+                        input.jf-input(type="tel", value="0932123456",placeholder='請輸入電信號碼')
 
                 button.btnDefault 確認
 

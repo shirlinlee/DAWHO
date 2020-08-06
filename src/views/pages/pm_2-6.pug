@@ -34,7 +34,7 @@ block main
 
                 hr
                 div.process-container.mt-24.mb-24
-                    div.create-num.mb-8(v-on:click="drawerCreditCommonCreate2 = true")
+                    div.create-num.mb-8(v-on:click="switchDrawer('drawerCreditCommonCreate2', true)")
                         img(src=assets+"/images/jiaofei/add-go.svg")
                         p(style=('font-weight: 400')) 新增常用信用卡
                     ul.process-info
@@ -68,7 +68,7 @@ block main
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用信用卡
-                    a.f_gold.f_b(@click="drawerCreditCommonCreate2 = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerCreditCommonCreate2', false)", href="javascript:void(0)") 取消
                 div.drawer-content
                     div.create-type.mb-16
                         div.create-type-static

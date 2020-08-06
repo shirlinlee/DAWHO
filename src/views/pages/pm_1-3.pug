@@ -14,9 +14,9 @@ block main
     div#appJiaofei
         .drawer(class='show', :class=("{ 'show' : drawerTel}"))
             .drawer-container
-                div.drawer-head.mb-32
+                div.drawer-head.mb-16
                     h5.f20.f_b 電信號碼
-                    a.f_gold.f_b(@click="drawerTel = false", href="javascript:void(0)") 關閉
+                    a.f_gold.f_b(@click="switchDrawer('drawerTel', false)", href="javascript:void(0)") 關閉
                 div.drawer-content
                     div.telecom
                         h5.tel-name 一般電信業務
@@ -160,7 +160,7 @@ block main
                                     | PX12345678、CN1234A
                                     br
                                     | CC12345678
-                a.btn_gold(@click="drawerTel = false", href="javascript:void(0)") 知道了
+                a.btn_gold(@click="switchDrawer('drawerTel', false)", href="javascript:void(0)") 知道了
 
 block js
 

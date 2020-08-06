@@ -908,6 +908,9 @@ body {
         border: solid 1px #aaaaaa;
         background-color: white;
         // padding: 12px 9px;
+        &.focus {
+            border: 1px solid #c38b47;
+        }
         height: 42px;
         input.jf-creditCard-input {
             width: 25%;
@@ -916,6 +919,9 @@ body {
             line-height: 1.5;
             color: #111111;
             border: 0;
+            &:focus {
+                border: 0 !important;
+            }
         }
         span.jf-creditCard-line {
             width: 13px;

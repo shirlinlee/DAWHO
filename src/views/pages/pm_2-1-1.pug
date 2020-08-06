@@ -133,14 +133,14 @@ block main
                             option(value="011") 011 上海商銀
                     div.create-type.mb-16
                         p.title.mb-8 信用卡卡號
-                        div.jf-creditCard
-                            input.jf-creditCard-input#CN1(v-on:input='handlerCreditCN', value='1234' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="cc-number")
+                        div.jf-creditCard(:class=("{ 'focus' : jfCreditCard}"))
+                            input.jf-creditCard-input#CN1(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='1234' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="cc-number")
                             span.jf-creditCard-line
-                            input.jf-creditCard-input#CN2(v-on:input='handlerCreditCN', value='5678' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
+                            input.jf-creditCard-input#CN2(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='5678' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
                             span.jf-creditCard-line
-                            input.jf-creditCard-input#CN3(v-on:input='handlerCreditCN', value='9011' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
+                            input.jf-creditCard-input#CN3(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='9011' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
                             span.jf-creditCard-line
-                            input.jf-creditCard-input#CN4(v-on:input='handlerCreditCN', value='1213' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
+                            input.jf-creditCard-input#CN4(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='1213' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
                     div.create-type.mb-16
                         p.title.mb-8 卡片名稱
                         input.jf-input(type="text", v-model="ccCreditName", placeholder='請輸入卡片名稱')

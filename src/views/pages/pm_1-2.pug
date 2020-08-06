@@ -45,7 +45,7 @@ block main
                             div.detail(v-on:click="switchDrawer('drawerCommon', true)")
                                 img(src=assets+"/images/jiaofei/add-go.svg" alt="")
                                 p 常用號碼
-                        input.jf-input(type="text", class=('disable'), value='1234568910', placeholder='請輸入行動電話')
+                        input.jf-input(type="tel", class=('disable'), value='1234568910', placeholder='請輸入行動電話')
                         p.notice 行動電話格式錯誤
 
                 button.btnDefault(:class=("{ 'disable' : numTel==''}")) 確認

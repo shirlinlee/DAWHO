@@ -528,7 +528,7 @@ body {
             padding: 16px;
             position: absolute;
             width: 100%;
-            background-color: #fff;
+            background-color: #f9f9f9;
             bottom: 0;
             text-align: left;
             transform: translate(0, 105%);
@@ -802,7 +802,7 @@ body {
             height: 16px;
             position: absolute;
             right: 10px;
-            top: 28px;
+            top: 44px;
             cursor: pointer;
             background: url($assets + '/images/jiaofei/search.svg') no-repeat
                 center center;
@@ -907,7 +907,7 @@ body {
         border-radius: 3px;
         border: solid 1px #aaaaaa;
         background-color: white;
-        padding: 12px 9px;
+        // padding: 12px 9px;
         height: 42px;
         input.jf-creditCard-input {
             width: 25%;

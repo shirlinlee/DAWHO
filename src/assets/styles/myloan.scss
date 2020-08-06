@@ -196,11 +196,14 @@ body {
     }
     .list {
         // min-height: 200px;
-        li {
+        > li {
             position: relative;
-            &:nth-child(even) {
+            &.bg_grey {
                 background-color: rgba(0, 0, 0, 0.03);
             }
+            // &:nth-child(odd) {
+            //     background-color: rgba(0, 0, 0, 0.03);
+            // }
             &.open {
                 background-color: #3d3d3d;
                 .summary * {

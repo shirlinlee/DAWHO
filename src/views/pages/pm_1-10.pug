@@ -11,12 +11,17 @@ block scss
 include ../includes/jiaofei/ui-jiaofei.pug
 include ../includes/components.pug
 block main
+    style(type="text/css").
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
     div#appJiaofei
         .drawer(class='show', :class=("{ 'show' : drawerProcessCommonCreate}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用號碼
-                    a.f_gold.f_b(@click="drawerProcessCommonCreate = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerProcessCommonCreate', false)", href="javascript:void(0)") 取消
                 div.drawer-content
                     div.create-type.mb-16
                         div.create-type-static

@@ -14,11 +14,11 @@ block main
     div#appJiaofei
         .drawer(class='show', :class=("{ 'show' : drawerCreditCommon}"))
             .drawer-container
-                div.drawer-head.mb-24
+                div.drawer-head.mb-16
                     h5.f20.f_b 常用信用卡
-                    a.f_gold.f_b(@click="drawerCreditCommon = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerCreditCommon', false)", href="javascript:void(0)") 取消
                 div.drawer-content
-                    div.create-num.mb-8(v-on:click="drawerCreditCommonCreate = true")
+                    div.create-num.mb-8(v-on:click="switchDrawer('drawerCreditCommonCreate', true)")
                         img(src=assets+"/images/jiaofei/add-go.svg")
                         p 新增常用信用卡
                     ul.num-list
@@ -70,7 +70,7 @@ block main
                                 img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
                             .num-list-delete
                                 p 刪除
-                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
+                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? switchDrawer('drawerCommon', false) : switchDrawer('drawerCommon', true) ") 確認
 
 block js
 

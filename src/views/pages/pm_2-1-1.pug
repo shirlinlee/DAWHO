@@ -23,7 +23,7 @@ block main
                     div.process-credit.mt-24
                         div.process-credit-info.mb-8
                             p.credit-info-title 繳費對象
-                            div.create-num(v-on:click="drawerCreditCommon = true")
+                            div.create-num(v-on:click="switchDrawer('drawerCreditCommon', true)")
                                 img(src=assets+"/images/jiaofei/add-go.svg")
                                 p 常用信用卡
                         select.cw-dropdown.mb-16(required)
@@ -38,7 +38,7 @@ block main
                         input.jf-input(type="text" value='123456789111213' placeholder='請輸入信用卡卡號或銷帳編號')
                         p.credit-success.mt-8
                             | 銷帳編號為 26660 +11碼身份證數字，身分證字號英文，請根據&nbsp;
-                            span(v-on:click="drawerCreditIDCard = true") 身分證代碼表
+                            span(v-on:click="switchDrawer('drawerCreditIDCard', true)") 身分證代碼表
                             | &nbsp;轉換為數字
                     p.process-title.mt-16.mb-8 繳費金額
                     input.jf-input(type="text",:class="{disable: creditMoney=='0'}", v-model="creditMoney", placeholder='請輸入繳費金額')
@@ -58,9 +58,9 @@ block main
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 常用信用卡
-                    a.f_gold.f_b(@click="drawerCreditCommon = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerCreditCommon', false) ", href="javascript:void(0)") 取消
                 div.drawer-content
-                    div.create-num.mb-8(v-on:click="drawerCreditCommonCreate = true")
+                    div.create-num.mb-8(v-on:click="switchDrawer('drawerCreditCommonCreate', true)")
                         img(src=assets+"/images/jiaofei/add-go.svg")
                         p 新增常用信用卡
                     ul.num-list
@@ -112,13 +112,13 @@ block main
                                 img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
                             .num-list-delete
                                 p 刪除
-                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
+                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? switchDrawer('drawerCommon', false):switchDrawer('drawerCommon', true)") 確認
 
         .drawer(class='', :class=("{ 'show' : drawerCreditCommonCreate}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用信用卡
-                    a.f_gold.f_b(@click="drawerCreditCommonCreate = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerCreditCommonCreate', false)", href="javascript:void(0)") 取消
                 div.drawer-content
                     div.create-type.mb-16
                         p.title.mb-8 銀行代碼
@@ -133,17 +133,24 @@ block main
                             option(value="011") 011 上海商銀
                     div.create-type.mb-16
                         p.title.mb-8 信用卡卡號
-                        input.jf-input.jf-credit-number(type="text", v-model="ccCreditNumber", placeholder='請輸入信用卡卡號')
+                        div.jf-creditCard
+                            input.jf-creditCard-input#CN1(v-on:input='handlerCreditCN', value='1234' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="cc-number")
+                            span.jf-creditCard-line
+                            input.jf-creditCard-input#CN2(v-on:input='handlerCreditCN', value='5678' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
+                            span.jf-creditCard-line
+                            input.jf-creditCard-input#CN3(v-on:input='handlerCreditCN', value='9011' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
+                            span.jf-creditCard-line
+                            input.jf-creditCard-input#CN4(v-on:input='handlerCreditCN', value='1213' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
                     div.create-type.mb-16
                         p.title.mb-8 卡片名稱
                         input.jf-input(type="text", v-model="ccCreditName", placeholder='請輸入卡片名稱')
-                a.btn_gold(@click="drawerCreditCommonCreate = false", :class=("{ 'btn_grey' : !(ccCreditName!=''&&ccCreditNumber.length>=25)}"), href="javascript:void(0)") 確認
+                a.btn_gold(@click="switchDrawer('drawerCreditCommonCreate', false)", :class=("{ 'btn_grey' : !(ccCreditName!=''&&ccCreditNumber.length>=25)}"), href="javascript:void(0)") 確認
 
         .drawer(class='', :class=("{ 'show' : drawerCreditIDCard}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 身分證字號代碼
-                    a.f_gold.f_b(@click="drawerCreditIDCard = false", href="javascript:void(0)") 關閉
+                    a.f_gold.f_b(@click="switchDrawer('drawerCreditIDCard', false)", href="javascript:void(0)") 關閉
                 div.drawer-content
                     ul.id-char-list
                         li
@@ -245,7 +252,7 @@ block main
                                 span.char Z
                                 span.city 連江縣
                                 span.code 33
-                a.btn_gold(@click="drawerCreditIDCard = false", :class=(""), href="javascript:void(0)") 知道了
+                a.btn_gold(@click="switchDrawer('drawerCreditIDCard', false)", :class=(""), href="javascript:void(0)") 知道了
 
 
 block js

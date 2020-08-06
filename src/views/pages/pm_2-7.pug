@@ -18,7 +18,7 @@ block main
                 div.process-status.mb-45
                     div.process-status-board
                         img(src=assets+"/images/jiaofei/fail.svg" alt="")
-                        p.fail 失敗
+                        p.fail 繳費失敗
                     div.process-process-status-fail.mt-24
                         p 錯誤代碼：0701
                         p 財金本項跨行業務暫停或停止營業
@@ -32,7 +32,7 @@ block main
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用號碼
-                    a.f_gold.f_b(@click="drawerProcessCommonCreate = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerProcessCommonCreate', false)", href="javascript:void(0)") 取消
                 div.drawer-content
                     div.create-type.mb-16
                         div.create-type-static

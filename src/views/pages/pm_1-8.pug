@@ -36,15 +36,15 @@ block main
                             p.info-value 中華電信
                 hr
                 div.process-container.mt-24.mb-24
+                    div.create-num.mb-8(v-on:click="switchDrawer('drawerProcessCommonCreate', true)")
+                            img(src=assets+"/images/jiaofei/add-go.svg")
+                            p 新增常用號碼
                     ul.process-info
                         li
                             p.info-type 電信號碼
                             p.info-value 0932123456
                 hr
                 div.process-container.mt-24.mb-24
-                    div.create-num.mb-8(v-on:click="drawerProcessCommonCreate = true")
-                        img(src=assets+"/images/jiaofei/add-go.svg")
-                        p 新增常用號碼
                     ul.process-info
                         li
                             p.info-type 扣款帳號
@@ -66,7 +66,7 @@ block main
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用號碼
-                    a.f_gold.f_b(@click="drawerProcessCommonCreate = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerProcessCommonCreate', false)", href="javascript:void(0)") 取消
                 div.drawer-content
                     div.create-type.mb-16
                         div.create-type-static

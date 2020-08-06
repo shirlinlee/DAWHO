@@ -31,18 +31,18 @@ block main
                             option(value="遠傳電信") 遠傳電信
                     div#item-tel.item.mb-16(hidden)
                         div.item-info.mb-8
-                            div.name
+                            div.name(v-on:click="switchDrawer('drawerTel', true)")
                                 p 電信號碼
-                                img(@click="drawerTel = true", src=assets+"/images/jiaofei/light.svg" alt="")
-                            div.detail(v-on:click="drawerCommon = true")
-                                img(@click="drawerCommon = true", src=assets+"/images/jiaofei/add-go.svg" alt="")
+                                img(src=assets+"/images/jiaofei/light.svg" alt="")
+                            div.detail(v-on:click="switchDrawer('drawerCommon', true)")
+                                img(src=assets+"/images/jiaofei/add-go.svg" alt="")
                                 p 常用號碼
-                        input.jf-input(type="text", v-model="numTel", placeholder='請輸入電信號碼')
+                        input.jf-input(type="tel", v-model="numTel", placeholder='請輸入電信號碼')
                     div#item-mobile.item.mb-16(hidden)
                         div.item-info.mb-8
                             div.name
                                 p 行動電話
-                            div.detail(v-on:click="drawerCommon = true")
+                            div.detail(v-on:click="switchDrawer('drawerCommon', true)")
                                 img(src=assets+"/images/jiaofei/add-go.svg" alt="")
                                 p 常用號碼
                         input.jf-input(type="text", class=('disable'), value='1234568910', placeholder='請輸入行動電話')
@@ -54,7 +54,7 @@ block main
             .drawer-container
                 div.drawer-head.mb-32
                     h5.f20.f_b 電信號碼
-                    a.f_gold.f_b(@click="drawerTel = false", href="javascript:void(0)") 關閉
+                    a.f_gold.f_b(@click="switchDrawer('drawerTel', false)", href="javascript:void(0)") 關閉
                 div.drawer-content
                     div.telecom
                         h5.tel-name 一般電信業務
@@ -198,15 +198,15 @@ block main
                                     | PX12345678、CN1234A
                                     br
                                     | CC12345678
-                a.btn_gold(@click="drawerTel = false", href="javascript:void(0)") 知道了
+                a.btn_gold(@click="switchDrawer('drawerTel', false)", href="javascript:void(0)") 知道了
 
         .drawer(class='', :class=("{ 'show' : drawerCommon}"),)
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 常用號碼
-                    a.f_gold.f_b(@click="drawerCommon = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerCommon', false)", href="javascript:void(0)") 取消
                 div.drawer-content
-                    div.create-num.mb-8(v-on:click="drawerCommonCreate = true")
+                    div.create-num.mb-8(v-on:click="switchDrawer('drawerCommonCreate', true)")
                         img(src=assets+"/images/jiaofei/person-add.svg")
                         p 新增常用號碼
                     ul.num-list
@@ -250,13 +250,13 @@ block main
                                 img.num-icon(src=assets+"/images/jiaofei/pencil.svg")
                             .num-list-delete
                                 p 刪除
-                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
+                a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? switchDrawer('drawerCommon', false) : switchDrawer('drawerCommon', true) ") 確認
 
         .drawer(class='', :class=("{ 'show' : drawerCommonCreate}"),)
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用號碼
-                    a.f_gold.f_b(@click="drawerCommonCreate = false", href="javascript:void(0)") 取消
+                    a.f_gold.f_b(@click="switchDrawer('drawerCommonCreate', false)", href="javascript:void(0)") 取消
                 div.drawer-content
                     div.create-type.mb-16
                         p.title.mb-8 電信號碼

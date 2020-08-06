@@ -26,10 +26,30 @@
             valueCommonBank: '004 台灣分行',
             BankList: [],
         },
+        computed: {
+            filteredBankList() {
+                return this.BankList.filter(
+                    (item) =>
+                        (item.code + item.name).indexOf(
+                            this.searchValue
+                        ) > -1
+                );
+            },
+            filteredCommonBankList() {
+                return this.BankList.filter(
+                    (item) =>
+                        (item.code + item.name).indexOf(
+                            this.searchCommonValue
+                        ) > -1
+                );
+            },
+        },
         methods: {
             clickNumListLi(v) {
                 // $('.num-list li .num-list-container.swipeleft').index('.num-list li .num-list-container')
-                if ($('.num-list li .num-list-container.swipeleft').length == 0) {
+                if (
+                    $('.num-list li .num-list-container.swipeleft').length == 0
+                ) {
                     if (this.numListLi == v) {
                         this.numListLi = -1;
                     } else {
@@ -39,6 +59,30 @@
             },
             openEnv() {
                 this.isENVOpen = true;
+            },
+            switchDrawer(target, status) {
+                this[target] = status;
+            },
+            handlerCreditCN(event) {
+                const { id, value } = event.target;
+                if (value.length === 4) {
+                    var next = '';
+                    switch (id) {
+                        case 'CN1':
+                            next = 'CN2';
+                            break;
+                        case 'CN2':
+                            next = 'CN3';
+                            break;
+                        case 'CN3':
+                            next = 'CN4';
+                            break;
+                        case 'CN4':
+                            break;
+                    }
+                    const nextInput = document.getElementById(next);
+                    nextInput && nextInput.focus();
+                }
             },
         },
         mounted: function () {
@@ -99,4 +143,3 @@
         },
     });
 })(jQuery);
-

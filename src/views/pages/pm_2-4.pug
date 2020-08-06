@@ -14,9 +14,9 @@ block main
     div#appJiaofei
         .drawer(class='show', :class=("{ 'show' : drawerCreditIDCard}"))
             .drawer-container
-                div.drawer-head.mb-24
+                div.drawer-head.mb-16
                     h5.f20.f_b 身分證字號代碼
-                    a.f_gold.f_b(@click="drawerCreditIDCard = false", href="javascript:void(0)") 關閉
+                    a.f_gold.f_b(@click="switchDrawer('drawerCreditIDCard', false)", href="javascript:void(0)") 關閉
                 div.drawer-content
                     ul.id-char-list
                         li
@@ -118,7 +118,7 @@ block main
                                 span.char Z
                                 span.city 連江縣
                                 span.code 33
-                a.btn_gold(@click="drawerCreditIDCard = false", :class=(""), href="javascript:void(0)") 知道了
+                a.btn_gold(@click="switchDrawer('drawerCreditIDCard', false)", :class=(""), href="javascript:void(0)") 知道了
 
 
 block js

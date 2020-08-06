@@ -575,6 +575,28 @@ body {
             overflow: auto;
             width: auto;
             margin-bottom: 32px;
+            &.bank {
+                height: 366px;
+            }
+            div.empty {
+                margin-top: 40px;
+                text-align: center;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                p {
+                    margin-top: 24px;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #818181;
+                }
+            }
         }
         .btn_gold {
             text-align: center;
@@ -780,14 +802,14 @@ body {
             height: 16px;
             position: absolute;
             right: 10px;
-            top: 14px;
+            top: 28px;
             cursor: pointer;
             background: url($assets + '/images/jiaofei/search.svg') no-repeat
                 center center;
             background-size: 16px auto;
-            &.close{
-                background: url($assets + '/images/jiaofei/input-close.svg') no-repeat
-                center center;
+            &.close {
+                background: url($assets + '/images/jiaofei/input-close.svg')
+                    no-repeat center center;
             }
         }
         input.jf-input.bank-code-search {
@@ -876,5 +898,29 @@ body {
         -webkit-transition: 0.25s all ease;
         -o-transition: 0.25s all ease;
         transition: 0.25s all ease;
+    }
+
+    div.jf-creditCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        border: solid 1px #aaaaaa;
+        background-color: white;
+        padding: 12px 9px;
+        height: 42px;
+        input.jf-creditCard-input {
+            width: 25%;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #111111;
+            border: 0;
+        }
+        span.jf-creditCard-line {
+            width: 13px;
+            height: 1px;
+            background: #b2b2b2;
+        }
     }
 }

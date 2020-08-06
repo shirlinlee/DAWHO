@@ -474,3 +474,8 @@ select {
         top: 4px;
     }
 }
+
+// 所有輸入框 插入光標改金色
+input {
+    caret-color: #c38b47;
+}

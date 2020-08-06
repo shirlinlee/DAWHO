@@ -25,14 +25,13 @@
             valueBank: '',
             valueCommonBank: '004 台灣分行',
             BankList: [],
+            jfCreditCard: false,
         },
         computed: {
             filteredBankList() {
                 return this.BankList.filter(
                     (item) =>
-                        (item.code + item.name).indexOf(
-                            this.searchValue
-                        ) > -1
+                        (item.code + item.name).indexOf(this.searchValue) > -1
                 );
             },
             filteredCommonBankList() {
@@ -83,6 +82,12 @@
                     const nextInput = document.getElementById(next);
                     nextInput && nextInput.focus();
                 }
+            },
+            handlerCreditCNFocus(event) {
+                this.jfCreditCard = true;
+            },
+            handlerCreditCNFocusOut(event) {
+                this.jfCreditCard = false;
             },
         },
         mounted: function () {

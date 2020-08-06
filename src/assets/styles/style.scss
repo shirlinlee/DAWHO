@@ -414,6 +414,7 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+    border: 1px solid #c38b47 !important;
 }
 
 textarea,
@@ -422,6 +423,7 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    caret-color: #c38b47;
 }
 
 .fake_bg {
@@ -462,9 +464,4 @@ select {
         right: 11px;
         top: 4px;
     }
-}
-
-// 所有輸入框 插入光標改金色
-input {
-    caret-color: #c38b47;
 }

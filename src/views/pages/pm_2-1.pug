@@ -29,7 +29,7 @@ block main
                         input.jf-input.bank-code(type="text" readonly :value='valueBank' @click.prevent="switchDrawer('drawerBankCode', true)" placeholder='請選擇銀行代碼')
                         input.jf-input(type="text" value='' placeholder='請輸入信用卡卡號或銷帳編號')
                     p.process-title.mt-16.mb-8 繳費金額
-                    input.jf-input(type="text",:class="{disable: creditMoney=='0'}" v-model="creditMoney" placeholder='請輸入繳費金額')
+                    input.jf-input(type="tel",:class="{disable: creditMoney=='0'}" v-model="creditMoney" placeholder='請輸入繳費金額')
                     p.hint-zero(v-if="creditMoney=='0'") 繳費金額不能為０
                 hr
                 div.process-container.mt-24.mb-32
@@ -237,7 +237,7 @@ block main
         .drawer(class='', :class=("{ 'show' : drawerBankCode}"))
             .drawer-container
                 div.drawer-head.mb-24
-                    a.f_gold.f_b(@click="switchDrawer('drawerBankCode', false)" href="javascript:void(0)") 取消
+                    a.f_gold.f_b.mb-16(@click="switchDrawer('drawerBankCode', false)" href="javascript:void(0)") 取消
                     div.search-input.mt-16
                         span.bank-code-search-icon(:class=("{'close':searchValue!=''}"), @click="searchValue = ''")
                         input.jf-input.bank-code-search(type="text" v-model="searchValue" placeholder='搜尋銀行代碼')
@@ -259,7 +259,7 @@ block main
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b
-                    a.f_gold.f_b(@click="switchDrawer('drawerCommonBankCode', false)" href="javascript:void(0)") 取消
+                    a.f_gold.f_b.mb-16(@click="switchDrawer('drawerCommonBankCode', false)" href="javascript:void(0)") 取消
                     div.search-input.mt-16
                         span.bank-code-search-icon(:class=("{'close':searchCommonValue!=''}"), @click="searchCommonValue = ''")
                         input.jf-input.bank-code-search(type="text" v-model="searchCommonValue" placeholder='搜尋銀行代碼')

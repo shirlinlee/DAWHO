@@ -45,7 +45,7 @@ block main
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b
-                    a.f_gold.f_b(@click="switchDrawer('drawerCommonBankCode', false)" href="javascript:void(0)") 取消
+                    a.f_gold.f_b.mb-16(@click="switchDrawer('drawerCommonBankCode', false)" href="javascript:void(0)") 取消
                     div.search-input.mt-16
                         span.bank-code-search-icon(:class=("{'close':searchCommonValue!=''}"), @click="searchCommonValue = ''")
                         input.jf-input.bank-code-search(type="text" v-model="searchCommonValue" placeholder='搜尋銀行代碼')

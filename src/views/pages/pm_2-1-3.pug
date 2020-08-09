@@ -41,7 +41,7 @@ block main
                             span 身分證代碼表
                             | &nbsp;轉換為數字
                     p.process-title.mt-16.mb-8 繳費金額
-                    input.jf-input(type="text",:class="{disable: creditMoney=='0'}", v-model="creditMoney", placeholder='請輸入繳費金額')
+                    input.jf-input(type="tel",:class="{disable: creditMoney=='0'}", v-model="creditMoney", placeholder='請輸入繳費金額')
                     p.hint-zero(v-if="creditMoney=='0'") 繳費金額不能為０
                 hr
                 div.process-container.mt-24.mb-32

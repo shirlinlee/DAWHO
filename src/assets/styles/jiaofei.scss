@@ -298,7 +298,7 @@ body {
                         display: flex;
                         align-items: center;
                         &:nth-child(odd) {
-                            background-color: #eeeeee;
+                            background-color: #f2f2f2;
                         }
                     }
                     p {
@@ -334,7 +334,7 @@ body {
                         .bill-type {
                             display: flex;
                             width: 100%;
-                            input.jf-cb[type='checkbox']:checked
+                            input.jf-cb[type='radio']:checked
                                 ~ div.bill-type-content
                                 > p {
                                 font-size: 16px;
@@ -558,9 +558,12 @@ body {
             line-height: 30px;
             h5 {
                 float: left;
-                font-size: 20px;
+                font-size: 24px;
                 font-weight: bold;
                 color: #111111;
+                &.f20{
+                    font-size: 20px;
+                }
             }
             a {
                 float: right;
@@ -577,6 +580,7 @@ body {
             margin-bottom: 32px;
             &.bank {
                 height: 366px;
+                margin-bottom: 0px;
             }
             div.empty {
                 margin-top: 40px;
@@ -633,7 +637,7 @@ body {
                 align-items: center;
                 padding: 16px;
                 &:nth-child(odd) {
-                    background-color: #eeeeee;
+                    background-color: #f2f2f2;
                 }
                 p {
                     font-size: 14px;
@@ -665,7 +669,7 @@ body {
         p {
             font-size: 14px;
             font-weight: bold;
-            color: #c38b47;
+            color: #fed28f;
         }
     }
 
@@ -676,6 +680,11 @@ body {
                 border: solid 1px #f7f7f7;
             }
             position: relative;
+            &:nth-child(odd) {
+                div.num-list-container {
+                    background-color: #f2f2f2;
+                }
+            }
             div.num-list-container {
                 width: 100%;
                 display: flex;
@@ -684,8 +693,9 @@ body {
                 padding: 8px;
                 background-color: white;
                 transition: all 0.3s;
+
                 &.bg-grey {
-                    background-color: #f7f7f7;
+                    // background-color: #f2f2f2;
                 }
                 &.swipeleft {
                     margin-left: -48px;
@@ -746,7 +756,7 @@ body {
             padding: 16px;
             display: flex;
             &:nth-child(odd) {
-                background-color: #eeeeee;
+                background-color: #f2f2f2;
             }
             p {
                 font-size: 14px;
@@ -831,9 +841,9 @@ body {
             }
         }
     }
-    // checkbox
+    // radio
     /* Basic styles */
-    input.jf-cb[type='checkbox'] {
+    input.jf-cb[type='radio'] {
         position: absolute;
         opacity: 0;
         z-index: -1;
@@ -862,31 +872,31 @@ body {
         border-radius: 20%;
     }
 
-    input.jf-cb[type='checkbox'] + label.jf-cb::before {
+    input.jf-cb[type='radio'] + label.jf-cb::before {
         border-radius: 50%;
     }
-    input.jf-cb[type='checkbox'] + label.jf-cb::after {
+    input.jf-cb[type='radio'] + label.jf-cb::after {
         content: ' ';
-        top: 3.5px;
-        left: 3.5px;
+        top: 4px;
+        left: 4px;
         width: 12px;
         height: 12px;
         background-color: #c38b47;
         border-radius: 50%;
     }
     /* :checked */
-    input.jf-cb[type='checkbox']:checked + label.jf-cb::before {
+    input.jf-cb[type='radio']:checked + label.jf-cb::before {
         background: #fff;
         border-color: #fff;
         border: 1px solid #aaaaaa;
     }
-    input.jf-cb[type='checkbox'] + label.jf-cb::after {
+    input.jf-cb[type='radio'] + label.jf-cb::after {
         -webkit-transform: scale(0);
         -ms-transform: scale(0);
         -o-transform: scale(0);
         transform: scale(0);
     }
-    input.jf-cb[type='checkbox']:checked + label.jf-cb::after {
+    input.jf-cb[type='radio']:checked + label.jf-cb::after {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);

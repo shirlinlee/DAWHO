@@ -26,6 +26,7 @@
             valueCommonBank: '004 台灣分行',
             BankList: [],
             jfCreditCard: false,
+            checkedBill: false,
         },
         computed: {
             filteredBankList() {
@@ -135,7 +136,7 @@
 
                 var numListDelete = $('.num-list-delete');
                 numListDelete.on('click', function () {
-                    $(this).parent().hide();
+                    $(this).parent().remove();
                 });
 
                 // 信用卡卡號

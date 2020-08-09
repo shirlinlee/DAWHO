@@ -27,7 +27,7 @@ block main
                                 img(src=assets+"/images/jiaofei/add-go.svg")
                                 p 常用信用卡
                         input.jf-input.bank-code(type="text" readonly :value='valueBank' @click.prevent="switchDrawer('drawerBankCode', true)" placeholder='請選擇銀行代碼')
-                        input.jf-input(type="text" value='' placeholder='請輸入信用卡卡號或銷帳編號')
+                        input.jf-input(type="tel" value='' placeholder='請輸入信用卡卡號或銷帳編號')
                     p.process-title.mt-16.mb-8 繳費金額
                     input.jf-input(type="tel",:class="{disable: creditMoney=='0'}" v-model="creditMoney" placeholder='請輸入繳費金額')
                     p.hint-zero(v-if="creditMoney=='0'") 繳費金額不能為０
@@ -275,7 +275,6 @@ block main
                             p(@click="valueCommonBank = `${item.code} ${item.name}`;switchDrawer('drawerCommonBankCode', false)")
                                 span {{item.code}}
                                 | {{item.name}}
-                a.btn_gold(@click="valueCommonBank=''; switchDrawer('drawerCommonBankCode', false)", :class=(""), href="javascript:void(0)") 關閉
 
 
 block js

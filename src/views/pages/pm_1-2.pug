@@ -20,7 +20,7 @@ block main
                         div.item-info.mb-8
                             div.name
                                 p 身份證字號
-                        input.jf-input(type="text", value='H2356●●●●●', placeholder='請輸入電信號碼')
+                        input.jf-input(type="text", value='H23456 • • • • •', placeholder='請輸入電信號碼')
                     div#item-select.item.mb-16
                         div.item-info.mb-8
                             div.name
@@ -52,7 +52,7 @@ block main
 
         .drawer(class='', :class=("{ 'show' : drawerTel}"), )
             .drawer-container
-                div.drawer-head.mb-32
+                div.drawer-head.mb-16
                     h5.f20.f_b 電信號碼
                     a.f_gold.f_b(@click="switchDrawer('drawerTel', false)", href="javascript:void(0)") 關閉
                 div.drawer-content
@@ -260,7 +260,7 @@ block main
                 div.drawer-content
                     div.create-type.mb-16
                         p.title.mb-8 電信號碼
-                        input.jf-input(type="text", v-model="ccNumber", placeholder='請輸入電信號碼')
+                        input.jf-input(type="tel", v-model="ccNumber", placeholder='請輸入電信號碼')
                     div.create-type.mb-16
                         p.title.mb-8 號碼名稱
                         input.jf-input(type="text", v-model="ccName", placeholder='請輸入此電信號碼名稱')

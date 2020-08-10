@@ -536,6 +536,17 @@ body {
             -moz-transform: translate(0, 105%);
             -ms-transform: translate(0, 105%);
             -o-transform: translate(0, 105%);
+            &.bank {
+                padding-top: 21px;
+                padding-bottom: 10px;
+                .drawer-head > a {
+                    line-height: 1.5;
+                }
+                .drawer-head > .search-input > span {
+                    right: 9px;
+                    top: 33px;
+                }
+            }
         }
         &.show {
             opacity: 1;

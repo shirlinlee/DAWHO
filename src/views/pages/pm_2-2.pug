@@ -42,7 +42,7 @@ block main
                 a.btn_gold(@click="switchDrawer('drawerCreditCommonCreate', false)", :class=("{ 'btn_grey' : !(ccCreditName!=''&&ccCreditNumber.length>=25)}"), href="javascript:void(0)") 確認
 
         .drawer(class='', :class=("{ 'show' : drawerCommonBankCode}"))
-            .drawer-container
+            .drawer-container.bank
                 div.drawer-head.mb-24
                     h5.f20.f_b
                     a.f_gold.f_b.mb-16(@click="switchDrawer('drawerCommonBankCode', false)" href="javascript:void(0)") 取消

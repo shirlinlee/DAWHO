@@ -27,7 +27,7 @@ block main
                                 img(src=assets+"/images/jiaofei/add-go.svg")
                                 p.gold 常用信用卡
                         input.jf-input.bank-code(type="text" readonly :value='valueBank' @click.prevent="switchDrawer('drawerBankCode', true)" placeholder='請選擇銀行代碼')
-                        input.jf-input(type="text" value='123456789111213' placeholder='請輸入信用卡卡號或銷帳編號')
+                        input.jf-input(type="tel" value='123456789111213' placeholder='請輸入信用卡卡號或銷帳編號')
                         p.credit-success.mt-8
                             | 銷帳編號為 26660 +11碼身份證數字，身分證字號英文，請根據&nbsp;
                             span 身分證代碼表

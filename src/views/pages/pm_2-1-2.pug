@@ -44,24 +44,5 @@ block main
                 button.btnDefault.disable 確認
                 +notice('process-credit')
 
-        .drawer(class='', :class=("{ 'show' : drawerBankCode}"))
-            .drawer-container.bank
-                div.drawer-head.mb-24
-                    a.f_gold.f_b.mb-16(@click="switchDrawer('drawerBankCode', false)" href="javascript:void(0)") 取消
-                    div.search-input.mt-16
-                        span.bank-code-search-icon(:class=("{'close':searchValue!=''}"), @click="searchValue = ''")
-                        input.jf-input.bank-code-search(type="text" v-model="searchValue" placeholder='搜尋銀行代碼')
-                div.drawer-content.bank
-                    div.empty(v-if='filteredBankList.length==0')
-                        img(src=assets+"/images/jiaofei/no-result.svg")
-                        p
-                            | 搜尋的銀行目前不在合作夥伴內
-                            br
-                            | 試試看其他家銀行吧！
-                    ul.bank-code-list(v-if='filteredBankList.length>=1')
-                        li(v-for="(item, index) in filteredBankList")
-                            p(@click="valueBank = `${item.code} ${item.name}`;switchDrawer('drawerBankCode', false);")
-                                span {{item.code}}
-                                | {{item.name}}
 block js
 

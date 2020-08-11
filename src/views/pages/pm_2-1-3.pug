@@ -27,7 +27,7 @@ block main
                                 img(src=assets+"/images/jiaofei/add-go.svg")
                                 p.gold 常用信用卡
                         input.jf-input.bank-code(type="text" readonly :value='valueBank' @click.prevent="switchDrawer('drawerBankCode', true)" placeholder='請選擇銀行代碼')
-                        input.jf-input(type="text" value='123456789111213' placeholder='請輸入信用卡卡號或銷帳編號')
+                        input.jf-input(type="tel" value='123456789111213' placeholder='請輸入信用卡卡號或銷帳編號')
                         p.credit-success.mt-8
                             | 銷帳編號為 26660 +11碼身份證數字，身分證字號英文，請根據&nbsp;
                             span 身分證代碼表
@@ -47,25 +47,6 @@ block main
                 button.btnDefault.disable 確認
                 +notice('process-credit')
 
-        .drawer(class='', :class=("{ 'show' : drawerBankCode}"))
-            .drawer-container.bank
-                div.drawer-head.mb-24
-                    a.f_gold.f_b.mb-16(@click="switchDrawer('drawerBankCode', false)" href="javascript:void(0)") 取消
-                    div.search-input.mt-16
-                        span.bank-code-search-icon(:class=("{'close':searchValue!=''}"), @click="searchValue = ''")
-                        input.jf-input.bank-code-search(type="text" v-model="searchValue" placeholder='搜尋銀行代碼')
-                div.drawer-content.bank
-                    div.empty(v-if='filteredBankList.length==0')
-                        img(src=assets+"/images/jiaofei/no-result.svg")
-                        p
-                            | 搜尋的銀行目前不在合作夥伴內
-                            br
-                            | 試試看其他家銀行吧！
-                    ul.bank-code-list(v-if='filteredBankList.length>=1')
-                        li(v-for="(item, index) in filteredBankList")
-                            p(@click="valueBank = `${item.code} ${item.name}`;switchDrawer('drawerBankCode', false);")
-                                span {{item.code}}
-                                | {{item.name}}
 block js
 
 

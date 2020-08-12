@@ -30,23 +30,23 @@ block main
                 div.process-container.mt-24.mb-32
                     p.process-title.mb-16 應繳帳單
                     ul.process-bill
-                        li
+                        li(@click="$refs.bill1.click()")
                             div.bill-type
-                                input(class='jf-cb', id='bill-1', type='radio')
+                                input(class='jf-cb', id='bill-1', ref="bill1", name="bill", type='radio')
                                 label(class='jf-cb', for='bill-1')
                                 div.bill-type-content
                                     p.bill-name 2020年4月行動電話費
                                     p.bill-value 2,000元
-                        li
+                        li(@click="$refs.bill2.click()")
                             div.bill-type
-                                input(class='jf-cb', id='bill-2', type='radio')
+                                input(class='jf-cb', id='bill2', ref="bill2", name="bill", type='radio')
                                 label(class='jf-cb', for='bill-2')
                                 div.bill-type-content
                                     p.bill-name 2020年5月行動電話費
                                     p.bill-value 1,000元
-                        li
+                        li(@click="$refs.bill3.click()")
                             div.bill-type
-                                input(class='jf-cb', id='bill-3', type='radio')
+                                input(class='jf-cb', id='bill3', ref="bill3", name="bill", type='radio')
                                 label(class='jf-cb', for='bill-3')
                                 div.bill-type-content
                                     p.bill-name 2020年6月行動電話費

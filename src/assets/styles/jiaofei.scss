@@ -693,7 +693,7 @@ body {
 
     ul.num-list {
         li {
-            border: solid 1px white;
+            border: solid 1px #f9f9f9;
             &:nth-child(odd) {
                 border: solid 1px #f7f7f7;
             }
@@ -709,7 +709,7 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 padding: 8px;
-                background-color: white;
+                background-color: #f9f9f9;
                 transition: all 0.3s;
 
                 &.bg-grey {
@@ -941,13 +941,12 @@ body {
         }
         height: 42px;
         input.jf-creditCard-input {
-            width: 25%;
+            width: 28%;
             text-align: center;
             font-size: 16px;
             line-height: 1.5;
             color: #111111;
             border: 0;
-            padding: 0;
             &:focus {
                 border: 0 !important;
             }

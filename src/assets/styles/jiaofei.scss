@@ -940,8 +940,11 @@ body {
             border: 1px solid #c38b47;
         }
         height: 42px;
-        input.jf-creditCard-input {
+        div.jf-creditCard-CN {
             width: 25%;
+        }
+        input.jf-creditCard-input {
+            width: 100%;
             text-align: center;
             font-size: 16px;
             line-height: 1.5;
@@ -951,6 +954,12 @@ body {
                 border: 0 !important;
             }
         }
+        // input.jf-creditCard-input + *:after {
+        //     content: "";
+        //     width: 13px;
+        //     height: 1px;
+        //     background: #b2b2b2;
+        // }
         span.jf-creditCard-line {
             width: 13px;
             height: 1px;

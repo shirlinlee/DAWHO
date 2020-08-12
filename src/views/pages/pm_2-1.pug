@@ -102,7 +102,7 @@ block main
                                 p 刪除
                 a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
 
-        .drawer(class='', :class=("{ 'show' : drawerCreditCommonCreate}"))
+        .drawer(class='show', :class=("{ 'show' : drawerCreditCommonCreate}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用信用卡
@@ -114,13 +114,17 @@ block main
                     div.create-type.mb-16
                         p.title.mb-8 信用卡卡號
                         div.jf-creditCard(:class=("{ 'focus' : jfCreditCard}"))
-                            input.jf-creditCard-input#CN1(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='1234' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="cc-number")
+                            div.jf-creditCard-CN
+                                input.jf-creditCard-input#CN1(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='1234' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="cc-number")
                             span.jf-creditCard-line
-                            input.jf-creditCard-input#CN2(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='5678' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
+                            div.jf-creditCard-CN
+                                input.jf-creditCard-input#CN2(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='5678' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
                             span.jf-creditCard-line
-                            input.jf-creditCard-input#CN3(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='9011' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
+                            div.jf-creditCard-CN
+                                input.jf-creditCard-input#CN3(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='9011' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
                             span.jf-creditCard-line
-                            input.jf-creditCard-input#CN4(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='1213' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
+                            div.jf-creditCard-CN
+                                input.jf-creditCard-input#CN4(@focus='handlerCreditCNFocus', @focusout='handlerCreditCNFocusOut', @input='handlerCreditCN', value='1213' type="tel", maxlength="4", pattern="[0-9]{4}", autoComplete="off")
                     div.create-type.mb-16
                         p.title.mb-8 卡片名稱
                         input.jf-input(type="text" v-model="ccCreditName" placeholder='請輸入卡片名稱')

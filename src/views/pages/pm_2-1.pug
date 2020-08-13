@@ -102,7 +102,7 @@ block main
                                 p 刪除
                 a.btn_gold(:class=("{ 'btn_grey' : numListLi == -1}"), href="javascript:void(0)", @click="numListLi!=-1 ? drawerCommon = false:drawerCommon = true") 確認
 
-        .drawer(class='show', :class=("{ 'show' : drawerCreditCommonCreate}"))
+        .drawer(class='', :class=("{ 'show' : drawerCreditCommonCreate}"))
             .drawer-container
                 div.drawer-head.mb-24
                     h5.f20.f_b 新增常用信用卡

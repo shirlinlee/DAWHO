@@ -437,12 +437,16 @@ body {
                 color: #c38b47;
             }
         }
-        // 領取紅包
+        // 領取紅包x
         div.hongbaoReceive {
             .card {
                 position: relative;
                 width: 100%;
                 height: calc(100vw - 10px);
+                max-width: 450px;
+                max-height: 450px;
+                margin-left: auto;
+                margin-right: auto;
                 background-size: 100%;
                 background-image: url($assets + '/images/hongbao/pattern/1/6.png');
                 &-totem {
@@ -453,6 +457,15 @@ body {
                         font-size: 28px;
                         font-weight: bold;
                         color: #ffcd9a;
+                        position: absolute;
+                        top: 55%;
+                        left: 0;
+                        width: 100%;
+                        transform: translate(0, -50%);
+                        -webkit-transform: translate(0, -50%);
+                        -moz-transform: translate(0, -50%);
+                        -ms-transform: translate(0, -50%);
+                        -o-transform: translate(0, -50%);
                     }
                 }
                 &-package {
@@ -469,7 +482,7 @@ body {
                             color: #111111;
                         }
                         p.price {
-                            margin-top: 12px;
+                            margin-top: 9px;
                             font-size: 24px;
                             font-weight: bold;
                             line-height: 1.88;
@@ -489,12 +502,29 @@ body {
                             color: #111111;
                         }
                     }
+                    > div {
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                        left: 0;
+                        transform: translate(0, -50%);
+                        -webkit-transform: translate(0, -50%);
+                        -moz-transform: translate(0, -50%);
+                        -ms-transform: translate(0, -50%);
+                        -o-transform: translate(0, -50%);
+                    }
                 }
             }
             p.des {
                 margin-top: 4px;
                 font-size: 14px;
                 color: #818181;
+            }
+            a {
+                color: #c5985a;
+                line-height: 1.3;
+                font-size: 16px;
+                font-weight: bold;
             }
         }
         // 紅包細節

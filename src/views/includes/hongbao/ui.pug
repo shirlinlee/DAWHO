@@ -82,22 +82,24 @@ mixin _contentReceive(status)
                     p 我吃土，你發財！
                 .card-package
                     if status == 'success' || status == 'already'
-                        .card-package-up-center-success
+                        .card-package-success
                             if status == 'success'
                                 p.name 恭喜搶到 吳民 的紅包！
                             else if status == 'already'
                                 p.name 你已領過 吳民 的紅包！
                             p.price 新臺幣 50
                     else
-                        .card-package-up-center-fail
+                        .card-package-fail
                             p.fail-big  好可惜...
                             p.fail-des 吳民 的紅包已被搶完了
 
             if status == 'success'
-                p.des 紅包已自動入帳至DAWHO囉！
-                button.btnDefault.mb-16.mt-32 跟朋友分享！
+                //- p.des 紅包已自動入帳至DAWHO囉！
+                button.btnDefault.mb-16.mt-12 立即登入領取紅包
             else
-                button.btnDefault.mb-16.mt-32 前往紅包紀錄
+                button.btnDefault.mb-16.mt-12 登入查看紅包紀錄
+
+            a 了解更多
 
 mixin _contentDetail()
     div#appHongbaoContent

@@ -69,13 +69,13 @@ body {
     }
     #appHongbaoContent {
         padding: 0 16px;
+        position: relative;
         &.info {
-            padding: 0 7.5px;
+            padding: 0 7px;
         }
         &.grab {
             padding: 0 28px;
         }
-        position: relative;
         .mb-8 {
             margin-bottom: 8px;
         }
@@ -229,45 +229,58 @@ body {
                     width: 100%;
                 }
                 div.pattern {
+                    background-size: 100%;
+                    background-image: url($assets + '/images/hongbao/pattern/1/6.png');
+                    height: calc(100vw - 14px);
+                    max-width: 450px;
+                    max-height: 450px;
+                    margin: 0 auto;
+                    @include maxW-414() {
+                        max-width: 400px;
+                    }
+                    @include maxW-375() {
+                        max-width: 360px;
+                    }
+                    @include maxW-320() {
+                        max-width: 300px;
+                    }
+
                     .top {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        height: calc(62.5vw - 14px);
+                        max-height: 275px;
+                        position: relative;
                         p {
                             font-size: 28px;
                             font-weight: bold;
                             color: #ffcd9a;
                             position: absolute;
-                            top: 103px;
+                            top: 55%;
+                            left: 0;
+                            width: 100%;
+                            transform: translate(0, -50%);
+                            -webkit-transform: translate(0, -50%);
+                            -moz-transform: translate(0, -50%);
+                            -ms-transform: translate(0, -50%);
+                            -o-transform: translate(0, -50%);
                         }
                         width: 100%;
-                        height: 220px;
-                        background-size: 100%;
-                        background-image: url($assets + '/images/hongbao/pattern2/1/6.png');
-                    }
-
-                    .middle,
-                    .bottom {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    .c {
-                        width: calc(100% - 42.5px);
-                    }
-                    .l,
-                    .r {
-                        min-width: 42.5px;
                     }
 
                     .middle {
-                        .l {
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_01.png');
-                        }
-                        .r {
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_02.png');
-                        }
+                        align-items: center;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .middle {
+                        width: 89%;
+                        padding: 0 16px;
+                        margin: 0 auto;
+                        height: 33vw;
+                        max-height: 150px;
+                        position: relative;
                         .c {
-                            background-color: #fdfcfa;
+                            width: 100%;
                             .a,
                             .b {
                                 display: flex;
@@ -276,12 +289,12 @@ body {
                                 align-items: center;
                                 .center {
                                     position: absolute;
-                                    left: 50%;
+                                    left: 56%;
                                 }
                                 p {
                                     font-size: 14px;
                                     font-weight: bold;
-                                    line-height: 1.71;
+                                    line-height: 1.72;
                                     color: #111111;
                                     &.fw-16 {
                                         font-size: 16px;
@@ -292,33 +305,26 @@ body {
                                 }
                             }
                         }
-                        .l,
-                        .r {
-                            min-width: 42.5px;
-                            background-size: 100%;
-                        }
-                    }
-                    .bottom {
-                        .c {
-                            height: 42.5px;
-                            background-size: 2px;
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_03.png');
-                            background-repeat: repeat-x;
-                            background-position: left bottom;
-                        }
-                        .l,
-                        .r {
-                            min-width: 42.5px;
-                            background-size: 100%;
-                        }
-                        .l {
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_04.png');
-                        }
-                        .r {
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_05.png');
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 46%;
+                            display: block;
+                            width: 1px;
+                            height: 64px;
+                            background-color: #fed28f;
+                            transform: translate(50%, -50%);
+                            -webkit-transform: translate(50%, -50%);
+                            -moz-transform: translate(50%, -50%);
+                            -ms-transform: translate(50%, -50%);
+                            -o-transform: translate(50%, -50%);
                         }
                     }
                 }
+            }
+            p {
+                color: #656565;
             }
         }
         // 搶紅包
@@ -326,21 +332,40 @@ body {
             .container {
                 background-image: url($assets + '/images/hongbao/pattern2/1/5.png');
                 background-size: 100%;
-                width: 100%;
-                min-height: 320px;
-
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                width: 100%;
+                max-width: 450px;
+                height: calc(100vw - 56px);
+                max-height: 450px;
+                margin: 0 auto;
+                @include maxW-414() {
+                    max-width: 400px;
+                }
+                @include maxW-375() {
+                    max-width: 360px;
+                }
+                @include maxW-320() {
+                    max-width: 300px;
+                }
+                .txt {
+                    position: absolute;
+                    top: calc(50% - 44px);
+                    width: 100%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    -webkit-transform: translate(0, -50%);
+                    -moz-transform: translate(0, -50%);
+                    -ms-transform: translate(0, -50%);
+                    -o-transform: translate(0, -50%);
+                }
                 p.name {
                     font-size: 16px;
                     font-weight: bold;
                     color: white;
-
-                    position: absolute;
-                    top: 105px;
                 }
                 p.title {
                     font-size: 28px;
@@ -415,105 +440,53 @@ body {
         // 領取紅包
         div.hongbaoReceive {
             .card {
+                position: relative;
+                width: 100%;
+                height: calc(100vw - 10px);
+                background-size: 100%;
+                background-image: url($assets + '/images/hongbao/pattern/1/6.png');
                 &-totem {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    height: calc(62.5vw - 14px);
+                    max-height: 275px;
                     position: relative;
                     p {
                         font-size: 28px;
                         font-weight: bold;
                         color: #ffcd9a;
-                        position: absolute;
-                        top: 55%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 100%;
                     }
-                    width: 100%;
-                    height: 220px;
-                    background-size: 100%;
-                    background-image: url($assets + '/images/hongbao/pattern2/1/6.png');
                 }
                 &-package {
-                    &-up,
-                    &-down {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    &-up-center,
-                    &-down-center {
-                        width: calc(100% - 42.5px);
-                    }
-                    &-up-left,
-                    &-up-right,
-                    &-down-left,
-                    &-down-right {
-                        min-width: 42.5px;
-                    }
-
-                    &-up {
-                        &-left {
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_01.png');
+                    width: 89%;
+                    padding: 0 16px;
+                    margin: 0 auto;
+                    height: 33vw;
+                    max-height: 150px;
+                    position: relative;
+                    &-success {
+                        p.name {
+                            font-size: 16px;
+                            line-height: 1.5;
+                            color: #111111;
                         }
-                        &-right {
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_02.png');
-                        }
-                        &-center {
-                            background-color: #fdfcfa;
-                            &-success {
-                                p.name {
-                                    font-size: 16px;
-                                    line-height: 1.5;
-                                    color: #111111;
-                                }
-                                p.price {
-                                    margin-top: 12px;
-                                    font-size: 24px;
-                                    font-weight: bold;
-                                    line-height: 1.88;
-                                    color: #c38b47;
-                                }
-                            }
-                            &-fail {
-                                p.fail-big {
-                                    font-size: 20px;
-                                    line-height: 1.2;
-                                    color: #111111;
-                                }
-                                p.fail-des {
-                                    margin-top: 12px;
-                                    font-size: 16px;
-                                    line-height: 1.5;
-                                    color: #111111;
-                                }
-                            }
-                        }
-                        &-left,
-                        &-right {
-                            min-width: 42.5px;
-                            background-size: 100%;
+                        p.price {
+                            margin-top: 12px;
+                            font-size: 24px;
+                            font-weight: bold;
+                            line-height: 1.88;
+                            color: #c38b47;
                         }
                     }
-
-                    &-down {
-                        &-center {
-                            height: 42.5px;
-                            background-size: 2px;
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_03.png');
-                            background-repeat: repeat-x;
-                            background-position: left bottom;
+                    &-fail {
+                        p.fail-big {
+                            font-size: 20px;
+                            line-height: 1.2;
+                            color: #111111;
                         }
-                        &-left,
-                        &-right {
-                            min-width: 42.5px;
-                            background-size: 100%;
-                        }
-                        &-left {
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_04.png');
-                        }
-                        &-right {
-                            background-image: url($assets + '/images/hongbao/pattern2/border/style_red_05.png');
+                        p.fail-des {
+                            margin-top: 12px;
+                            font-size: 16px;
+                            line-height: 1.5;
+                            color: #111111;
                         }
                     }
                 }
@@ -578,7 +551,7 @@ body {
                     );
                     &-up {
                         position: relative;
-                        img.bg{
+                        img.bg {
                             width: 100%;
                         }
                         div.money {
@@ -639,34 +612,43 @@ body {
         div.contentBtn {
             margin-bottom: 32px;
         }
-        button.btnDefault {
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            color: #784f1d;
-            height: 40px;
-            border-radius: 3px;
-            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
-            background-image: linear-gradient(to bottom, #f2cb91, #c29557);
-            padding: 10px 16px 9px 16px;
-            border: 0;
-            width: 260px;
-            &.disable {
-                color: #e3e3e3;
-                background-image: linear-gradient(to bottom, #b2b2b2, #818181);
+        button {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            &.btnDefault {
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: #784f1d;
+                height: 40px;
+                border-radius: 3px;
+                box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+                background-image: linear-gradient(to bottom, #f2cb91, #c29557);
+                padding: 10px 16px 9px 16px;
+                border: 0;
+                width: 260px;
+                &.disable {
+                    color: #e3e3e3;
+                    background-image: linear-gradient(
+                        to bottom,
+                        #b2b2b2,
+                        #818181
+                    );
+                }
             }
-        }
-        button.btnSolid {
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            color: #c38b47;
-            background-color: rgba(255, 255, 255, 0);
-            height: 40px;
-            border-radius: 3px;
-            border: solid 1px rgba(174, 103, 0, 0.5);
-            padding: 10px 16px 9px 16px;
-            width: 260px;
+            &.btnSolid {
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: #c38b47;
+                background-color: rgba(255, 255, 255, 0);
+                height: 40px;
+                border-radius: 3px;
+                border: solid 1px rgba(174, 103, 0, 0.5);
+                padding: 10px 16px 9px 16px;
+                width: 260px;
+            }
         }
     }
 }

@@ -20,27 +20,56 @@ block main
             .receive_th
                 h6.f16 發送對象
                 a.add_friend.f_gold.f14(href="#") 匯入好友
-            ul
+            ul.receive-info
                 li
-                    p.name 艾力克斯
-                    p 0912 345 678
-                    a.regular 設為常用
+                    div.num-list-container.bg_white
+                        div.num-content
+                            p.name 艾力克斯
+                            p.num 052311234
+                        div.status
+                            a.regular 設為常用
+                    div.num-list-delete
+                        p 刪除
                 li
-                    p.name 張曉涵
-                    p 0912 345 678
-                    a.added 已新增
-                li
-                    p.name 艾力克斯
-                    p 0912 345 678
+                    div.num-list-container.bg_white
+                        div.num-content
+                            p.name 張曉涵
+                            p.num 052311234
+                        div.status
+                            span.added 已新增
 
-            p.f_grey_03.f14.t_left 每次最多發送給50位好友，還可新增47位
+                    div.num-list-delete
+                        p 刪除
+                li
+                    div.num-list-container.bg_white
+                        div.num-content
+                            p.name 張曉涵
+                            p.num 052311234
+                        div.status
 
-            a.btn_gold 確認發送
+                    div.num-list-delete
+                        p 刪除
+
+                li
+                    div.num-list-container.bg_white
+                        div.num-content
+                            p.name 艾力克斯
+                            p.num 052311234
+                        div.status
+                    div.num-list-delete
+                        p 刪除
+
+
+            .btn_area
+                p.f_grey_03.f14.t_left 每次最多發送給50位好友，還可新增47位
+                a.btn_gold 確認發送
 
 
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
     script(src= public +'/lib/js/swiper.min.js' defer)
     script(src= assets + '/js/components.bundle.js' defer)
     script(src= assets + '/js/re.bundle.js' defer)

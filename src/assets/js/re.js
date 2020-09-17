@@ -36,7 +36,30 @@ var vm = new Vue({
                 },
             });
 
-            $('');
+            var numListContainer = $('.num-list-container');
+            numListContainer
+                .hammer()
+                .bind('swipeleft', function (e) {
+                    numListContainer.removeClass('swipeleft');
+                    numListContainer
+                        .siblings('.num-list-delete')
+                        .removeClass('swipeleft');
+
+                    $(this).addClass('swipeleft');
+                    setTimeout(() => {
+                        $(this)
+                            .siblings('.num-list-delete')
+                            .addClass('swipeleft');
+                    }, 300);
+                })
+                .bind('swiperight', function (e) {
+                    setTimeout(() => {
+                        $(this)
+                            .siblings('.num-list-delete')
+                            .removeClass('swipeleft');
+                    }, 0);
+                    $(this).removeClass('swipeleft');
+                });
         });
     },
 });

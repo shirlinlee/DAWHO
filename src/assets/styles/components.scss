@@ -213,6 +213,116 @@ div.cw-notice {
     }
 }
 
+// 貸款: 帳戶
+.account_item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    > img {
+        margin-right: 8px;
+        width: 40px;
+        float: left;
+        &.a1 {
+        }
+        &.a2 {
+            display: none;
+        }
+    }
+    &.mortgage {
+        .a1 {
+            display: none;
+        }
+        .a2 {
+            display: block;
+        }
+    }
+    .text {
+        width: calc(100% - 48px);
+        text-align: left;
+        float: left;
+        position: relative;
+        padding-right: 30px;
+        height: 40px;
+        h3 {
+            color: #111111;
+            margin-bottom: 2px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+        span {
+            color: #818181;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+            -moz-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            -o-transform: translate(0, -50%);
+        }
+    }
+}
+
+.dashboard_item {
+    position: relative;
+    width: 44px;
+    // height: 31px;
+    text-align: center;
+    > div {
+        position: absolute;
+    }
+    .circle {
+        width: 44px;
+        height: 22px;
+        border-top-left-radius: 44px;
+        border-top-right-radius: 44px;
+        top: 0;
+        left: 0;
+        &.grey {
+            background-color: #d8d8d8;
+        }
+        &.gold {
+            background: linear-gradient(
+                58deg,
+                rgba(194, 149, 87, 1) 0%,
+                rgba(194, 149, 87, 1) 35%,
+                rgba(242, 203, 145, 1) 100%
+            );
+            transform-origin: center bottom;
+        }
+    }
+    .circle_s {
+        width: 38px;
+        height: 19px;
+        border-top-left-radius: 38px;
+        border-top-right-radius: 38px;
+        top: 3px;
+        left: 3px;
+        background-color: #fff;
+    }
+    .cube {
+        width: 44px;
+        height: 23px;
+        top: 21px;
+        background-color: #fff;
+    }
+    p {
+        font-size: 12px;
+        position: relative;
+        z-index: 1;
+        color: #818181;
+        padding-top: 5px;
+        span {
+            display: block;
+            &.num {
+                color: #111111;
+                padding-top: 4px;
+            }
+        }
+    }
+}
 // input
 input.cw-input {
     margin: 0 auto;

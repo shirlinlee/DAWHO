@@ -1,0 +1,51 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title ci_1-1
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/loan.css')
+
+include ../includes/components.pug
+block main
+    div#appLoan
+        header
+            img.back(src=assets+"/images/icon/arrow-left.svg" alt="")
+            p.title 貸款
+
+        .calc
+            p.f16 你的專屬額度
+            img(src=assets+"/images/calculation_btn.svg", alt="")
+
+        .myLoad
+            h4.f24.f_b.t_left 我的貸款
+            ul
+                li
+                    +account-style('normal', '光復分行 470001', '127-055-0000751-9')
+                    .W100
+                        p.f12 本金餘額
+                        p.f18.f_b 2,040,000
+                        +semi-dashboard(15)
+                    .status.normal 請於 2020/03/14 前完成繳納
+
+                li
+                    +account-style('mortgage', '光復分行 470001', '127-055-0000751-9')
+                    .W100
+                        p.f12 本金餘額
+                        p.f18.f_b 2,040,000
+                        +semi-dashboard(75)
+                    .status.error 已遲繳，請儘速繳納
+
+                li
+                    +account-style('normal', '光復分行 470001', '127-055-0000751-9')
+                    .W100
+                        p.f12 本金餘額
+                        p.f18.f_b 2,040,000
+                        +semi-dashboard(75)
+                    .status.normal 請於 2020/03/14 前完成繳納
+
+
+
+

@@ -90,6 +90,34 @@ mixin notice-red()
         li 	1. 每包紅包領取期限為24小時。
         li 	2. 紅包的每日/每月限額與非約定轉帳共用額度，紅包建立後且未領取仍會佔用額度。
 
+
+mixin account-style(style, branch, account, select_type)
+    div.account_item(class=style)
+        img.a1(src=assets+"/images/icon/28-gold.svg", alt="")
+        img.a2(src=assets+"/images/icon/29-gold.svg", alt="")
+        .text
+            h3.f16 #{branch}
+            span.f12 #{account}
+            if select_type == 1
+                img.arrow(src=assets+"/images/icon/cw-dropdown.svg", alt="")
+            else
+                img.arrow(src=assets+"/images/icon/arrow-right_gold.svg", alt="")
+
+
+
+
+
+mixin semi-dashboard(percent)
+    .dashboard_item
+        .grey.circle
+        .gold.circle(style=("transform: rotate("+(percent/100*180-180)+"deg)"))
+        .white.circle_s
+        .white.cube
+
+        p
+            span.num #{percent}%
+            span 已還款
+
 mixin notice-process-credit()
     ul
         li 1. 信用卡轉帳交易均為二十四小時即時扣帳，而入帳時間依轉入行規定。

@@ -50,32 +50,32 @@ block main
         .content
             p.f16.f_b 發放方式
             .W100.radio_wrap
-                input(type="radio", valeu="每包一樣", name="given_type", id="same", hidden, checked)
+                input(type="radio", valeu="每包一樣", name="given_type", id="same", hidden)
                 label.W50(for="same") 每包一樣
-                input(type="radio", valeu="隨機分配", name="given_type", id="random", hidden)
+                input(type="radio", valeu="隨機分配", name="given_type", id="random", hidden, checked)
                 label.W50(for="random") 隨機分配
 
             p.f16.f_b 每包金額
-            .W100
-                input.W100(type="number", placeholder="請輸入紅包金額", value="5000")
+            .W100.error
+                input.W100(type="number", placeholder="請輸入紅包金額", value="3000")
+                span 帳戶餘額不足
 
             p.f16.f_b 紅包數量
-            .W100
-                input.W100(type="number", placeholder="請輸入紅包數量", value="50")
-                span 每次發送上限20包
+            .W100.error
+                input.W100(type="number", placeholder="請輸入紅包數量", value="6000")
+                span 紅包數量不可超過紅包總金額
 
             .price_area
                 p.f_grey_03.f14 總金額
                 h5.f_black.f24
                     | 新臺幣&nbsp;
-                    font 250,000
+                    font 18,000,000
                 h6.f_grey_03.f14.error
                     | 總金額超過帳戶餘額
                     font 8,900
                     | 元
 
                 a.btn_grey(href="#") 下一步
-
 
 
             +notice('red', false)

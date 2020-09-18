@@ -1,0 +1,29 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title cw_1-4
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/re.css')
+
+
+include ../includes/components.pug
+block main
+    div#Send
+        h1.header
+            .close DAWHO好友
+
+        .content
+            img.sent_status(src=assets+"/images/sent-success.svg", alt="")
+            h6.f24.f_white 發送成功
+            a.btn_gold(href="#") 分享給好友
+            a.btn_gold_light(href="#")
+                span 查看紅包紀錄
+
+
+
+
+

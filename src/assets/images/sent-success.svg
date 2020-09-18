@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="270" viewBox="0 0 375 270">
+    <defs>
+        <linearGradient id="883epn2q0a" x1="0%" x2="76.022%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+        <linearGradient id="0lqhawgcdb" x1="45.5%" x2="52.342%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+        <linearGradient id="z0p1r0lhqc" x1="48.443%" x2="50.81%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+        <radialGradient id="1tbuhcvxtd" cx="59.305%" cy="59.994%" r="80.122%" fx="59.305%" fy="59.994%" gradientTransform="matrix(-.90042 .43503 -.37707 -.78046 1.353 .81)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="17.932%" stop-color="#B1895C"/>
+            <stop offset="28.494%" stop-color="#FFE5C7"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F6D2A8"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="0hthn0i07e" cx="54.571%" cy="57.754%" r="83.738%" fx="54.571%" fy="57.754%" gradientTransform="rotate(164.967 .54 .541) scale(1 .87441)">
+            <stop offset="0%" stop-color="#080603" stop-opacity="0"/>
+            <stop offset="10.741%" stop-color="#D3995D"/>
+            <stop offset="46.54%" stop-color="#9F8465"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <path fill="url(#883epn2q0a)" d="M45 0c24.853 0 45 20.147 45 45S69.853 90 45 90 0 69.853 0 45 20.147 0 45 0zm0 3.97C22.07 3.97 3.482 22.34 3.482 45S22.07 86.03 45 86.03 86.518 67.66 86.518 45 67.93 3.97 45 3.97z" transform="translate(0 -88) translate(0 88) translate(142 88)"/>
+                            <g>
+                                <path fill="url(#0lqhawgcdb)" d="M0.638 0.413H8.579V26.884H0.638z" transform="translate(0 -88) translate(0 88) translate(142 88) rotate(-45 65.974 -1.851)"/>
+                                <path fill="url(#z0p1r0lhqc)" d="M19.191 0.437L27.132 0.437 27.132 45.437 19.191 45.437z" transform="translate(0 -88) translate(0 88) translate(142 88) rotate(-45 65.974 -1.851) rotate(90 23.162 22.937)"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g stroke-width=".5" transform="translate(0 -88) translate(0 88) translate(63 10)">
+                    <circle cx="124.128" cy="124.128" r="52.5" stroke="url(#1tbuhcvxtd)" opacity=".8" transform="rotate(-180 124.128 124.128)"/>
+                    <circle cx="124.439" cy="124.439" r="60.538" stroke="url(#1tbuhcvxtd)" opacity=".7" transform="rotate(-180 124.44 124.44)"/>
+                    <circle cx="124.439" cy="124.439" r="68.386" stroke="url(#1tbuhcvxtd)" opacity=".5" transform="rotate(-180 124.44 124.44)"/>
+                    <circle cx="124.439" cy="124.439" r="77.354" stroke="url(#1tbuhcvxtd)" opacity=".3" transform="rotate(-180 124.44 124.44)"/>
+                    <circle cx="125" cy="125" r="88.004" stroke="url(#0hthn0i07e)" opacity=".55" transform="rotate(-180 125 125)"/>
+                    <circle cx="125" cy="123.879" r="99.215" stroke="url(#0hthn0i07e)" opacity=".5" transform="rotate(-180 125 123.879)"/>
+                    <circle cx="125" cy="125" r="111.547" stroke="url(#0hthn0i07e)" opacity=".4" transform="rotate(-180 125 125)"/>
+                    <circle cx="125" cy="125" r="125" stroke="url(#0hthn0i07e)" opacity=".1" transform="rotate(-180 125 125)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

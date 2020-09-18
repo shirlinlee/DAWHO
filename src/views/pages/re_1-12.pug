@@ -1,0 +1,34 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title cw_1-4
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/re.css')
+
+
+include ../includes/components.pug
+block main
+    div#Send
+        h1.header
+            .close DAWHO好友
+
+        .content
+            img.sent_status(src=assets+"/images/sent-fail.svg", alt="")
+            h6.f24.f_white 發送失敗
+            p.f14.f_white
+                | 錯誤代碼：E1234
+                br
+                | 帳戶餘額不足
+            a.btn_gold(href="#") 再發送一次
+            a.f_gold.f14.go_index
+                span 回首頁
+                img(src=assets+"/images/icon/arrow-right_gold.svg", alt="")
+
+
+
+
+

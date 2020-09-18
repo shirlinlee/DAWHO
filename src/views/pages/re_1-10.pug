@@ -1,0 +1,72 @@
+
+extends ../includes/_layout.pug
+
+block title
+    title re_1-10
+
+block scss
+    link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/re.css')
+
+
+include ../includes/components.pug
+block main
+    div#Friends
+        .lb_wrapper.show
+            .lb
+                div.head
+                    h5.f20.f_b 常用號碼
+                    a.f_gold.f_b(href="#") 取消
+
+                div.create-num.mb-8
+                    img(src=assets+"/images/jiaofei/person-add.svg")
+                    p 新增常用號碼
+
+                ul.receive-info
+                    li
+                        div.num-list-container.bg_grey
+                            div.num-content
+                                p.name 艾力克斯
+                                p.num 052311234
+                        div.num-list-delete
+                            p 刪除
+
+                    li
+                        div.num-list-container.bg_white
+                            div.num-content
+                                p.name 張曉涵
+                                p.num 052311234
+                        div.num-list-delete
+                            p 刪除
+
+                    li.active
+                        div.num-list-container.bg_grey
+                            div.num-content
+                                p.name 張曉涵
+                                p.num 052311234
+                        div.num-list-delete
+                            p 刪除
+                    li
+                        div.num-list-container.bg_grey
+                            div.num-content
+                                p.name 艾力克斯
+                                p.num 052311234
+                        div.num-list-delete
+                            p 刪除
+
+
+                .btn_area
+                    a.btn_gold(href="#") 確定
+
+
+
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
+    script(src= public +'/lib/js/swiper.min.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+    script(src= assets + '/js/re.bundle.js' defer)
+
+

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="270" viewBox="0 0 375 270">
+    <defs>
+        <linearGradient id="1dmzmf10tb" x1="81.3%" x2="9.167%" y1="21.848%" y2="76.474%">
+            <stop offset="0%" stop-color="#E2E2E2"/>
+            <stop offset="51.198%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#C5C5C5"/>
+        </linearGradient>
+        <linearGradient id="1p9582lvhc" x1="50.639%" x2="49.167%" y1="21.848%" y2="76.474%">
+            <stop offset="0%" stop-color="#E2E2E2"/>
+            <stop offset="51.198%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#C5C5C5"/>
+        </linearGradient>
+        <radialGradient id="exkm1m3ewa" cx="59.305%" cy="59.994%" r="80.122%" fx="59.305%" fy="59.994%" gradientTransform="matrix(-.90042 .43503 -.37707 -.78046 1.353 .81)">
+            <stop offset="0%" stop-color="#DFDFDF"/>
+            <stop offset="10.741%" stop-color="#CDCDCD"/>
+            <stop offset="17.932%" stop-color="#C6C6C6"/>
+            <stop offset="28.494%" stop-color="#FCFCFC"/>
+            <stop offset="40.204%" stop-color="#FFF"/>
+            <stop offset="48.145%" stop-color="#F7F7F7"/>
+            <stop offset="100%" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(0 -88) translate(0 88) translate(63 10)">
+                    <circle cx="124.128" cy="124.128" r="52.5" stroke="url(#exkm1m3ewa)" stroke-width=".5" opacity=".8" transform="rotate(-180 124.128 124.128)"/>
+                    <circle cx="124.439" cy="124.439" r="60.538" stroke="url(#exkm1m3ewa)" stroke-width=".5" opacity=".7" transform="rotate(-180 124.44 124.44)"/>
+                    <circle cx="124.439" cy="124.439" r="68.386" stroke="url(#exkm1m3ewa)" stroke-width=".5" opacity=".5" transform="rotate(-180 124.44 124.44)"/>
+                    <circle cx="124.439" cy="124.439" r="77.354" stroke="url(#exkm1m3ewa)" stroke-width=".5" opacity=".3" transform="rotate(-180 124.44 124.44)"/>
+                    <circle cx="125" cy="125" r="88.004" stroke="url(#exkm1m3ewa)" stroke-width=".5" opacity=".55" transform="rotate(-180 125 125)"/>
+                    <circle cx="125" cy="123.879" r="99.215" stroke="url(#exkm1m3ewa)" stroke-width=".5" opacity=".5" transform="rotate(-180 125 123.879)"/>
+                    <circle cx="125" cy="125" r="111.547" stroke="url(#exkm1m3ewa)" stroke-width=".5" opacity=".4" transform="rotate(-180 125 125)"/>
+                    <circle cx="125" cy="125" r="125" stroke="url(#exkm1m3ewa)" stroke-width=".5" opacity=".1" transform="rotate(-180 125 125)"/>
+                    <g>
+                        <g>
+                            <g>
+                                <path fill="url(#1dmzmf10tb)" d="M45 0c24.853 0 45 20.147 45 45S69.853 90 45 90 0 69.853 0 45 20.147 0 45 0zm0 3.97C22.07 3.97 3.482 22.34 3.482 45S22.07 86.03 45 86.03 86.518 67.66 86.518 45 67.93 3.97 45 3.97z" transform="translate(79 78)"/>
+                                <g fill="url(#1p9582lvhc)" transform="translate(79 78) rotate(-45 59.418 7.683)">
+                                    <g>
+                                        <path d="M20.579 1.293L27.007 1.293 27.007 46.293 20.579 46.293z" transform="rotate(90 23.793 23.793)"/>
+                                        <path d="M20.422 1.136L26.851 1.136 26.851 46.136 20.422 46.136z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+
+extends ../includes/hongbao/_layout.pug
+
+block title
+    title re_3-5
+
+block scss
+    link(rel='stylesheet' href= assets + '/styles/components.css')
+    link(rel='stylesheet' href= assets + '/styles/hongbao.css')
+
+include ../includes/hongbao/ui.pug
+include ../includes/components.pug
+block main
+    div#appHongbao
+        +_header("已發紅包", 'black')
+        div#appHongbaoContent
+            div.hongbaoDetail
+                p 3-5
+block js
+    script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= assets + '/js/hongbao.bundle.js' defer)
+    script(src= assets + '/js/components.bundle.js' defer)
+
+

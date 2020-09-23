@@ -29,12 +29,12 @@ mixin _contentInfo()
             div.infoPwdForm
                 div.row
                     div.col.A
-                        input.disable(placeholder='請輸入簡訊動態密碼')
+                        input(placeholder='請輸入簡訊動態密碼')
                     div.col.B
-                        p 重新發送
-            p.warning 簡訊驗證碼輸入錯誤
+                        p 118 秒
+            p.warning(hidden) 簡訊驗證碼輸入錯誤
         div.contentBtn.mt-32
-            button.btnDefault.disable 去發紅包
+            button.btnDefault 去發紅包
 
 mixin _contentSend()
     div#appHongbaoContent.info
@@ -53,7 +53,7 @@ mixin _contentSend()
                             .b
                                 p.left.fw-30 5,000
                                 p.center 每包金額
-                                p.right.fw-16 隨機
+                                p.right.fw-16 1,000
 
             p.f_grey.f14 請於紅包有效時間內提供連結給好友
 

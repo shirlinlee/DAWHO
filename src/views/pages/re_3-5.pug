@@ -15,7 +15,35 @@ block main
         +_header("已發紅包", 'black')
         div#appHongbaoContent
             div.hongbaoDetail
-                p 3-5
+                .containerSend.mt-12
+                    //- img.bg(src=assets+"/images/hongbao/pattern/1/6.png" alt="")
+                    .pattern.finish
+                        .top
+                            p 我吃土，你發財！
+                        .middle
+                            .c
+                                .a
+                                    p.left 總金額
+                                    p.center 紅包數量
+                                    p.right.fw-16 5
+                                .b
+                                    p.left.fw-30 2,000
+                                    p.center 每包金額
+                                    p.right.fw-16 1,000
+                p.cutoff 截止日期 2020-05-11 23:59:59
+                div.people
+                    p 已領取的好友
+                        span.count (3)
+                    div.friend.mt-8
+                        div.created
+                            div.name 王小明
+                            div.cost 新臺幣 80
+                        div.created
+                            div.name 許喬安
+                            div.cost 新臺幣 70
+                        div.created
+                            div.name 林小華
+                            div.cost 新臺幣 500
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
     script(src= assets + '/js/hongbao.bundle.js' defer)

@@ -732,6 +732,20 @@ body {
                         }
                     }
                 }
+
+                div.empty {
+                    font-size: 16px;
+                    line-height: 1.31;
+                    text-align: center;
+                    color: #ffffff;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                    .btnDefault {
+                        width: 180px;
+                    }
+                }
             }
         }
 
@@ -840,6 +854,10 @@ body {
                         width: 180px;
                         height: 40px;
                     }
+                    &.finish {
+                        background-image: url($assets + '/images/hongbao/pattern/1/8.png');
+                        height: calc(100vw + -21px);
+                    }
                 }
             }
 
@@ -862,6 +880,10 @@ body {
                             background-color: rgba(0, 0, 0, 0.03);
                         }
                     }
+                }
+                span.count {
+                    color: #818181;
+                    margin-left: 4px;
                 }
             }
         }
@@ -906,6 +928,100 @@ body {
                 padding: 10px 16px 9px 16px;
                 width: 260px;
             }
+        }
+    }
+}
+
+#appHongbaoGettingFull {
+    height: 100vh;
+    background-size: calc(100%);
+    background-image: url($assets + '/images/hongbao/pattern/1/5.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    > div.middle {
+        width: 100%;
+        position: absolute;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        left: 50%;
+        top: 36%;
+        p.name {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+        p.title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffcd9a;
+        }
+    }
+    > div.bottom {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: 0px;
+
+        button.submit {
+            width: 200px;
+            height: 55px;
+            border-radius: 27px;
+            box-shadow: 0 1px 4px 0 #490000,
+                inset -1px -3px 1px 1px rgba(94, 53, 4, 0.71),
+                inset 1px 3px 1px 1px rgba(255, 233, 201, 0.74);
+            border-style: solid;
+            border-width: 2px;
+            border-image-source: radial-gradient(
+                circle at 0 47%,
+                #86531a,
+                #af9474 40%,
+                #ffe7cb 46%,
+                #a67945 77%,
+                #936b29 94%,
+                #d1ac6a 99%
+            );
+            border-image-slice: 1;
+            background-image: linear-gradient(
+                    283deg,
+                    #ddac6e 94%,
+                    #ffe4bc 48%,
+                    #f0c996 20%,
+                    #e0b16f 7%
+                ),
+                radial-gradient(
+                    circle at 0 47%,
+                    #86531a,
+                    #af9474 40%,
+                    #ffe7cb 46%,
+                    #a67945 77%,
+                    #936b29 94%,
+                    #d1ac6a 99%
+                );
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+
+            span {
+                background-image: linear-gradient(
+                    100deg,
+                    #883907 6%,
+                    #ed963d 49%,
+                    #883907 92%
+                );
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        p.more {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.31;
+            color: #fed28f;
         }
     }
 }

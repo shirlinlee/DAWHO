@@ -23,7 +23,7 @@ var vm = new Vue({
         mode();
         this.$nextTick(() => {
             var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,
+                slidesPerView: 1.1,
                 centeredSlides: true,
                 loop: true,
                 navigation: {

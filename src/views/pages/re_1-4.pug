@@ -2,7 +2,7 @@
 extends ../includes/_layout.pug
 
 block title
-    title cw_1-4
+    title re_1-4
 
 block scss
     link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
@@ -50,9 +50,9 @@ block main
                 label.W50(for="random") 隨機分配
 
             p.f16.f_b 每包金額
-            .W100.error
-                input.W100(type="number", placeholder="請輸入紅包金額", value="3000")
-                span 帳戶餘額不足
+            .W100
+                input.W100(type="text", placeholder="請輸入總預算金額")
+                span
 
             p.f16.f_b 紅包數量
             .W100.error
@@ -63,7 +63,7 @@ block main
                 p.f_grey_03.f14 總金額
                 h5.f_black.f24
                     | 新臺幣&nbsp;
-                    font 18,000,000
+                    font 0
                 h6.f_grey_03.f14.error
                     | 總金額超過帳戶餘額
                     font 8,900
@@ -71,15 +71,13 @@ block main
 
                 a.btn_grey(href="#") 下一步
 
-
-            +notice('red', false)
-                ul
-                    li 	1. 每包紅包領取期限為24小時。
-                    li 	2. 紅包的每日/每月限額與非約定轉帳共用額度，紅包建立後且未領取仍會佔用額度。
+            +notice('red')
 
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
     script(src= public +'/lib/js/swiper.min.js' defer)
     script(src= assets + '/js/components.bundle.js' defer)
     script(src= assets + '/js/re.bundle.js' defer)

@@ -1,6 +1,5 @@
 (function ($) {
-    $('.cw-notice-title').on('click', function () {
-        console.log('123');
+    $('body').on('click', '.cw-notice-title', function () {
         $(this).toggleClass('active');
         $('.cw-notice-content').slideToggle();
     });

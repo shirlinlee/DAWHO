@@ -102,6 +102,22 @@ body {
         position: absolute;
         left: 0;
     }
+    .img_wrapper {
+        position: relative;
+        .infoTitle {
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 37px;
+            color: #ffcd9a;
+            text-shadow: 0 2px 2px rgba(102, 0, 0, 0.85);
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
     #appHongbaoContent {
         padding: 0 16px;
         position: relative;
@@ -137,23 +153,13 @@ body {
         }
         // 紅包資訊
         div.hongbaoInfo {
-            margin-top: 32px;
+            margin-top: -37px;
             border-radius: 3px;
             box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
             background-color: white;
             text-align: left;
             padding: 16px;
-            p.infoTitle {
-                font-size: 18px;
-                font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                color: #111111;
-            }
             div.infoForm {
-                margin-top: 16px;
                 div.row {
                     display: inline-block;
                     width: 100%;
@@ -173,6 +179,7 @@ body {
                         }
                         &.B {
                             width: calc(100% - 93px);
+                            padding: 0 16px;
                             p {
                                 font-size: 16px;
                                 line-height: 1.5;
@@ -187,7 +194,7 @@ body {
                 height: 1px;
                 background-color: #e4e4e4;
                 border: 0;
-                margin-top: 26px;
+                margin-top: 15px;
             }
             p.infoPwdTitle {
                 margin-top: 23.5px;
@@ -204,7 +211,7 @@ body {
             }
             div.infoPwdForm {
                 margin-top: 9px;
-                margin-bottom: 4px;
+                margin-bottom: 8px;
                 div.row {
                     display: flex;
                     justify-content: space-between;
@@ -240,7 +247,7 @@ body {
                             }
                         }
                         &.B {
-                            width: 100px;
+                            width: 108px;
                             p {
                                 font-size: 16px;
                                 font-weight: bold;

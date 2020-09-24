@@ -13,7 +13,9 @@ include ../includes/components.pug
 block main
     div#appHongbao
         +_header("確認紅包資訊", 'white')
-        img.base(src=assets+"/images/hongbao/pattern/1/3.png" alt="")
+        div.img_wrapper
+            img.base(src=assets+"/images/hongbao/pattern/1/3.png",alt="", width="100%")
+            h6.f28.infoTitle 來喔我吃土，你發財！
         +_contentInfo()
 
 block js

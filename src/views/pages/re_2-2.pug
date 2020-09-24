@@ -23,9 +23,14 @@ block main
             );
             background-image: linear-gradient(339deg, rgba(241, 220, 195, 0.55) 83%, #feeedd 49%);
         }
-    div#appHongbao.info
-        +_header("搶紅包", 'black')
-        +_contentGrab()
+    div#appHongbaoGettingFull
+        div.middle
+            p.name.mb-16 來搶 吳民 的紅包！
+            p.title 我吃土，你發財！
+        div.bottom
+            button.submit.mb-16
+                span 搶紅包！
+            p.more.mb-32 了解更多
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)

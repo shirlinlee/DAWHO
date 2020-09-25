@@ -2,7 +2,7 @@
 extends ../includes/_layout.pug
 
 block title
-    title cw_1-4
+    title re_1-3
 
 block scss
     link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
@@ -19,30 +19,24 @@ block main
             .swiper-wrapper
                 .swiper-slide
                     .text
-                        h5.f20.f_white 我吃土，你發財！
+                        h5.f24.f_white 我吃土，你發財！
                         img(src=assets+"/images/icon/edit.svg", alt="")
-                    img(src=assets+"/images/re/img_01.jpg", alt="", width="100%")
+                    img(src=assets+"/images/hongbao/pattern/1/2.png", alt="", width="100%")
                 .swiper-slide
                     .text
-                        h5.f20.f_white 我吃土，你發財！
+                        h5.f24.f_white 我吃土，你發財！
                         img(src=assets+"/images/icon/edit.svg", alt="")
-                    img(src=assets+"/images/re/img_01.jpg", alt="", width="100%")
+                    img(src=assets+"/images/hongbao/pattern/2/2.png", alt="", width="100%")
                 .swiper-slide
                     .text
-                        h5.f20.f_white 我吃土，你發財！
+                        h5.f24.f_white 我吃土，你發財！
                         img(src=assets+"/images/icon/edit.svg", alt="")
-                    img(src=assets+"/images/re/img_01.jpg", alt="", width="100%")
+                    img(src=assets+"/images/hongbao/pattern/3/2.png", alt="", width="100%")
                 .swiper-slide
                     .text
-                        h5.f20.f_white 我吃土，你發財！
+                        h5.f24.f_white 我吃土，你發財！
                         img(src=assets+"/images/icon/edit.svg", alt="")
-                    img(src=assets+"/images/re/img_01.jpg", alt="", width="100%")
-
-            .pagination
-                .swiper-button-prev
-                    img(src=assets+"/images/icon/arrow-left-black_style2.svg", alt="")
-                .swiper-button-next
-                    img(src=assets+"/images/icon/arrow-right-black_style2.svg", alt="")
+                    img(src=assets+"/images/hongbao/pattern/4/2.png", alt="", width="100%")
 
             .swiper-pagination.style2
 
@@ -55,14 +49,14 @@ block main
                 input(type="radio", valeu="隨機分配", name="given_type", id="random", hidden)
                 label.W50(for="random") 隨機分配
 
-            p.f16.f_b 每包金額
+            p.f16.f_b 紅包總金額
             .W100
-                input.W100(type="number", placeholder="請輸入紅包金額", value="5000")
+                input.W100(type="text", placeholder="請輸入紅包金額", value="5,000")
 
             p.f16.f_b 紅包數量
             .W100
                 input.W100(type="number", placeholder="請輸入紅包數量", value="50")
-                span 每次發送上限20包
+                span 每次發送上限50包
 
             .price_area
                 p.f_grey_03.f14 總金額
@@ -78,14 +72,13 @@ block main
 
 
 
-            +notice('red', false)
-                ul
-                    li 	1. 每包紅包領取期限為24小時。
-                    li 	2. 紅包的每日/每月限額與非約定轉帳共用額度，紅包建立後且未領取仍會佔用額度。
+            +notice('red')
 
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
+    script(src= public + '/lib/js/hammer.min.js' defer)
+    script(src= public + '/lib/js/jquery.hammer.js' defer)
     script(src= public +'/lib/js/swiper.min.js' defer)
     script(src= assets + '/js/components.bundle.js' defer)
     script(src= assets + '/js/re.bundle.js' defer)

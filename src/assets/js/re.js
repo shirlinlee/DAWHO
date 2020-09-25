@@ -22,8 +22,9 @@ var vm = new Vue({
     mounted: function () {
         mode();
         this.$nextTick(() => {
+            //  輪播
             var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,
+                slidesPerView: 1.13,
                 centeredSlides: true,
                 loop: true,
                 navigation: {
@@ -36,6 +37,7 @@ var vm = new Vue({
                 },
             });
 
+            // 刪除swipe init
             var numListContainer = $('.num-list-container');
             numListContainer
                 .hammer()
@@ -60,6 +62,19 @@ var vm = new Vue({
                     }, 0);
                     $(this).removeClass('swipeleft');
                 });
+
+            // 常用號碼打開燈箱+點擊功能
+            $('.receive-info').on('click', 'a.regular', function () {
+                $('.lb_wrapper').addClass('show');
+            });
+
+            $('.lb_wrapper').on('click', '.head a', function () {
+                $('.lb_wrapper').removeClass('show');
+            });
+
+            $('.receive-info').on('click', 'li', function () {
+                $(this).toggleClass('active');
+            });
         });
     },
 });

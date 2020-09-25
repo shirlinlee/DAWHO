@@ -1,0 +1,125 @@
+﻿doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=1')
+    title 紅包 re
+    // ============================== css start ==============================
+    // ============================== css close ==============================
+    // ============================== script start ==============================
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js')
+
+    script.
+      $(document).ready(function(){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+            $('.backtop').fadeIn();
+            } else {
+            $('.backtop').fadeOut();
+            }
+        });
+        $('.backtop').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        $('a').attr('target','_blank');
+      });
+
+    style(type='text/css').
+      * { margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+      a { color: #784f1d;text-decoration: none;}
+      body { background: #de0700; background: #dfdfdf; font-family: Arial, Helvetica, sans-serif; letter-spacing: -0.4px; }
+      h2, .backtop a { color: #cd9b1d;}
+      h2 {
+        padding: 0 0.5em;
+        width: 100%;
+        line-height: 2em;
+        background: #fff3e2;
+      }
+      .backtop a { color: #666; text-decoration: none;}
+      .backtop {text-align: center; padding: 5px 0;}
+      table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      color: #222;
+      font-size: 14px;
+      line-height: 2em;
+      background: #fff;
+      }
+      table th {
+      padding: 4px 4px;
+      color: #111;
+      font-weight: normal;
+      border: 1px #ddd solid;
+      /*border-right: 2px #aaa solid;*/
+      background: #eee;
+      text-align:left
+      }
+      table td {
+      padding: 4px 8px;
+      border: 1px #ddd solid;
+      }
+      table tr.even {
+      background: #d0fbff;
+      }
+      table tr.odd {
+      background: #f8f1e5;
+      }
+      table .blue {
+      background: #daeef3;
+      }
+      table .green {
+      background: #ebf1de;
+      }
+      table .center {
+      text-align: center;
+      }
+      table .line {
+      border-bottom: 3px #888 solid;
+      }
+      /*
+      table tr:hover {
+      color: #000;
+      background: #ffeec2;
+      }
+      */
+      table tbody.WebService {
+      background: #f2f2f2;
+      }
+      .newAdd {
+      color: #6633cc;
+      }
+      .font-bold{font-weight:bold}
+      /* tfoot td {
+      background: #f5fff5;
+      } */
+  body
+    #list
+      // ============================== header start ==============================
+      h2 2020 紅包列表
+      table.list
+        tbody
+
+            tr
+                th 編號
+                th HTML 檔名
+                th 補充
+            tr(v-for="(item, index) in re_lists", :key="index")
+                td.font-bold(width="50") {{item.html}}
+                td(width="90")
+                    a(target='_blank', :href="'re_' + item.html + '.html'") re_{{item.html}}
+                td(v-html="item.ps")
+
+
+
+      // ============================== content close ==============================
+      .backtop(style='text-align: center;')
+        a(href='#top') Back to Top
+
+block js
+    script(src= public +'/lib/js/vue@2.6.11.min.js' defer)
+    script(src=assets + '/js/re-list.bundle.js' defer)

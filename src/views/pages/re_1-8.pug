@@ -2,7 +2,7 @@
 extends ../includes/_layout.pug
 
 block title
-    title cw_1-4
+    title re_1-8
 
 block scss
     link(rel='stylesheet', href= public +'/lib/styles/swiper.min.css')
@@ -63,6 +63,52 @@ block main
             .btn_area
                 p.f_grey_03.f14.t_left 每次最多發送給50位好友，還可新增47位
                 a.btn_gold 確認發送
+
+        .lb_wrapper
+            .lb
+                div.head
+                    h5.f20.f_b 常用號碼
+                    a.f_gold.f_b(href="#") 取消
+
+                div.create-num.mb-8
+                    img(src=assets+"/images/jiaofei/person-add.svg")
+                    p 新增常用號碼
+
+                ul.receive-info
+                    li
+                        div.num-list-container.bg_grey
+                            div.num-content
+                                p.name 艾力克斯
+                                p.num 052311234
+                        div.num-list-delete
+                            p 刪除
+
+                    li
+                        div.num-list-container.bg_white
+                            div.num-content
+                                p.name 張曉涵
+                                p.num 052311234
+                        div.num-list-delete
+                            p 刪除
+
+                    li.active
+                        div.num-list-container.bg_grey
+                            div.num-content
+                                p.name 張曉涵
+                                p.num 052311234
+                        div.num-list-delete
+                            p 刪除
+                    li
+                        div.num-list-container.bg_grey
+                            div.num-content
+                                p.name 艾力克斯
+                                p.num 052311234
+                        div.num-list-delete
+                            p 刪除
+
+
+                .btn_area
+                    a.btn_gold(href="#") 確定
 
 
 

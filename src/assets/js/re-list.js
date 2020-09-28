@@ -3,7 +3,7 @@ import mode from './modules/mode';
 new Vue({
     el: '#list',
     data: {
-        cw_lists: [
+        re_lists: [
             { name: '', html: '1-2', ps: '點選X可關閉提醒' },
             { name: '', html: '1-3', ps: '' },
             { name: '', html: '1-4', ps: '' },

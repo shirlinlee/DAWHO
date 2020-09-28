@@ -64,6 +64,15 @@ var vm = new Vue({
                 });
 
             // 常用號碼打開燈箱+點擊功能
+            $('.swiper-slide').on('click', 'img', function () {
+                const $TEXT = $(this).parents('.text');
+                $TEXT.addClass('edit').find('input').focus();
+                $TEXT.find('input').blur(function () {
+                    $TEXT.removeClass('edit');
+                });
+            });
+
+            // 常用號碼打開燈箱+點擊功能
             $('.receive-info').on('click', 'a.regular', function () {
                 $('.lb_wrapper').addClass('show');
             });

@@ -36,12 +36,44 @@
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
             img,
+            input,
             h5 {
                 display: inline-block;
                 line-height: 27px;
                 vertical-align: top;
                 margin: 0 2px;
                 color: #ffcd9a;
+                -webkit-appearance: none;
+                background-color: transparent;
+                border: none;
+            }
+            .edit_area {
+                display: none;
+                width: 80%;
+                transform: translate(0, 29%);
+            }
+            input {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+            hr {
+                border: none;
+                border-top: 2px solid #ffcd9a;
+                margin: 5px 0;
+            }
+            span {
+                text-align: left;
+                display: block;
+            }
+            &.edit {
+                img,
+                h5 {
+                    display: none;
+                }
+                .edit_area {
+                    display: inline-block;
+                }
             }
         }
     }
@@ -63,6 +95,7 @@
                 input {
                     height: 42px;
                     line-height: 42px;
+                    font-size: 16px;
                     border-radius: 3px;
                     border: solid 1px #aaaaaa;
                     padding: 0 8px;

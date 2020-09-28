@@ -21,21 +21,37 @@ block main
                     .text
                         h5.f24.f_white 我吃土，你發財！
                         img(src=assets+"/images/icon/edit.svg", alt="")
+                        .edit_area
+                            input(type="text", value="我吃土，你發財！").f24.f_white
+                            hr
+                            span.f_white.f12 紅包名稱字數上限為10字
                     img(src=assets+"/images/hongbao/pattern/1/2.png", alt="", width="100%")
                 .swiper-slide
                     .text
                         h5.f24.f_white 我吃土，你發財！
                         img(src=assets+"/images/icon/edit.svg", alt="")
+                        .edit_area
+                            input(type="text", value="我吃土，你發財！").f24.f_white
+                            hr
+                            span.f_white.f12 紅包名稱字數上限為10字
                     img(src=assets+"/images/hongbao/pattern/2/2.png", alt="", width="100%")
                 .swiper-slide
                     .text
                         h5.f24.f_white 我吃土，你發財！
                         img(src=assets+"/images/icon/edit.svg", alt="")
+                        .edit_area
+                            input(type="text", value="我吃土，你發財！").f24.f_white
+                            hr
+                            span.f_white.f12 紅包名稱字數上限為10字
                     img(src=assets+"/images/hongbao/pattern/3/2.png", alt="", width="100%")
                 .swiper-slide
                     .text
                         h5.f24.f_white 我吃土，你發財！
                         img(src=assets+"/images/icon/edit.svg", alt="")
+                        .edit_area
+                            input(type="text", value="我吃土，你發財！").f24.f_white
+                            hr
+                            span.f_white.f12 紅包名稱字數上限為10字
                     img(src=assets+"/images/hongbao/pattern/4/2.png", alt="", width="100%")
 
             .swiper-pagination.style2
@@ -51,12 +67,12 @@ block main
 
             p.f16.f_b 每包金額
             .W100
-                input.W100(type="text", placeholder="請輸入總預算金額")
+                input.W100(type="tel", placeholder="請輸入總預算金額")
                 span
 
             p.f16.f_b 紅包數量
             .W100.error
-                input.W100(type="number", placeholder="請輸入紅包數量", value="6000")
+                input.W100(type="tel", placeholder="請輸入紅包數量", value="6000")
                 span 紅包數量不可超過紅包總金額
 
             .price_area

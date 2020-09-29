@@ -28,9 +28,12 @@ mixin _contentInfo()
             div.infoPwdForm
                 div.row
                     div.col.A
-                        input(placeholder='請輸入簡訊動態密碼')
+                        input(placeholder='請輸入簡訊動態密碼', type="tel")
                     div.col.B
-                        p 118 秒
+                        p.sec_area
+                            span.sec 30
+                            span &nbsp;秒
+                        a.resend 重新發送
             p.warning(hidden) 簡訊驗證碼輸入錯誤
         div.contentBtn.mt-32
             button.btnDefault 去發紅包

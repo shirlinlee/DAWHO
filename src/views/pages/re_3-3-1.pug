@@ -23,11 +23,11 @@ block main
                 nav.navbar
                     ul.menu
                         li.item(class=(status==='待領取') ? 'active' : '')
-                            p 待領取
+                            a 待領取
                         li.item(class=(status==='已發送') ? 'active' : '')
-                            p 已發送
+                            a 已發送
                         li.item(class=(status==='已領取') ? 'active' : '')
-                            p 已領取
+                            a 已領取
                 div.container
                     div.empty
                         img(src=assets+"/images/hongbao/dark.svg" alt="")

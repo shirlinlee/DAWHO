@@ -23,11 +23,13 @@ block main
                 nav.navbar
                     ul.menu
                         li.item(class=(status==='待領取') ? 'active' : '')
-                            p 待領取
+                            a(href="re_3-4.html") 待領取
                         li.item(class=(status==='已發送') ? 'active' : '')
-                            p 已發送
+                            a(href="re_3-1.html") 已發送
                         li.item(class=(status==='已領取') ? 'active' : '')
-                            p 已領取
+                            a(href="re_3-3.html") 已領取
+
+
                 div.container
                     div.record
                         div.record-up
@@ -67,10 +69,30 @@ block main
                                     span 23:59:59
                             div.right
                                 button.more 查看結果
+                    div.record
+                        div.record-up
+                            img.bg(src=assets+"/images/hongbao/pattern/1/4.png" alt="")
+                            div.money
+                                p.title 我吃土，你發財！
+                                div.total
+                                    div.total-left
+                                    div.total-center
+                                        p 總金額
+                                    div.total-right
+                                p.price 新臺幣 2,000
+                        div.record-content.mt-12
+                            div.left
+                                p.des 吳民 的紅包
+                                p.date 截止日期 2020-05-11
+                                    span 23:59:59
+                            div.right
+                                div.already
+                                    p.des 已領取
+                                    p.price 新臺幣 1,000
+
 
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
     script(src= assets + '/js/hongbao.bundle.js' defer)
     script(src= assets + '/js/components.bundle.js' defer)
-
 

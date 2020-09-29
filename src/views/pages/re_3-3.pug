@@ -21,13 +21,13 @@ block main
         div#appHongbaoContent
             div.hongbaoRecord
                 nav.navbar
-                    ul.menu
+                     ul.menu
                         li.item(class=(status==='待領取') ? 'active' : '')
-                            p 待領取
+                            a(href="re_3-4.html") 待領取
                         li.item(class=(status==='已發送') ? 'active' : '')
-                            p 已發送
+                            a(href="re_3-1.html") 已發送
                         li.item(class=(status==='已領取') ? 'active' : '')
-                            p 已領取
+                            a(href="re_3-3.html") 已領取
                 div.container
                     div.record
                         div.record-up

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="55" viewBox="0 0 200 55">
+    <defs>
+        <linearGradient id="uuk9nxexfb" x1="95.1%" x2="6.658%" y1="52.517%" y2="46.803%">
+            <stop offset="0%" stop-color="#DDAC6E"/>
+            <stop offset="52.396%" stop-color="#FFE4BC"/>
+            <stop offset="84.635%" stop-color="#F0C996"/>
+            <stop offset="100%" stop-color="#E0B16F"/>
+        </linearGradient>
+        <linearGradient id="1nmfbzvhoe" x1="4.175%" x2="92.898%" y1="48.241%" y2="53.371%">
+            <stop offset="0%" stop-color="#883907"/>
+            <stop offset="50.377%" stop-color="#ED963D"/>
+            <stop offset="100%" stop-color="#883907"/>
+        </linearGradient>
+        <radialGradient id="w92rtmfjgd" cx="0%" cy="46.508%" r="362.731%" fx="0%" fy="46.508%" gradientTransform="scale(.27637 1) rotate(7.916 0 .465)">
+            <stop offset="0%" stop-color="#86531A"/>
+            <stop offset="40.46%" stop-color="#AF9474"/>
+            <stop offset="46.431%" stop-color="#FFE7CB"/>
+            <stop offset="77.564%" stop-color="#A67945"/>
+            <stop offset="95.008%" stop-color="#936B29"/>
+            <stop offset="100%" stop-color="#D1AC6A"/>
+        </radialGradient>
+        <filter id="1dsw3ngvkc" width="102.5%" height="109.1%" x="-1.3%" y="-4.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation=".5"/>
+            <feOffset dx="-1" dy="-3" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" result="shadowMatrixInner1" values="0 0 0 0 0.370103034 0 0 0 0 0.208835914 0 0 0 0 0.0147180837 0 0 0 0.712822334 0"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner2"/>
+            <feGaussianBlur in="shadowSpreadInner2" result="shadowBlurInner2" stdDeviation=".5"/>
+            <feOffset dx="1" dy="3" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner2"/>
+            <feColorMatrix in="shadowInnerInner2" result="shadowMatrixInner2" values="0 0 0 0 1 0 0 0 0 0.914373024 0 0 0 0 0.789824695 0 0 0 0.735822771 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"/>
+                <feMergeNode in="shadowMatrixInner2"/>
+            </feMerge>
+        </filter>
+        <rect id="c42a8754qa" width="199.005" height="55" x="0" y="0" rx="27"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g transform="translate(-88 -654) translate(88 654)">
+                        <mask id="zq1mv18izf" fill="#fff">
+                            <use xlink:href="#c42a8754qa"/>
+                        </mask>
+                        <g>
+                            <use fill="url(#uuk9nxexfb)" xlink:href="#c42a8754qa"/>
+                            <use fill="#000" filter="url(#1dsw3ngvkc)" xlink:href="#c42a8754qa"/>
+                            <rect width="197.005" height="53" x="1" y="1" stroke="url(#w92rtmfjgd)" stroke-linejoin="square" stroke-width="2" rx="26.5"/>
+                        </g>
+                        <text fill="url(#1nmfbzvhoe)" font-family="MicrosoftJhengHeiBold, Microsoft JhengHei" font-size="20" font-weight="bold" mask="url(#zq1mv18izf)">
+                            <tspan x="59.502" y="36">搶紅包！</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

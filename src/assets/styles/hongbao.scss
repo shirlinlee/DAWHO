@@ -230,6 +230,7 @@ body {
                                 border-radius: 3px;
                                 border: solid 1px #aaaaaa;
                                 padding: 0 8px;
+                                font-size: 16px;
                                 &::placeholder,
                                 &:-ms-input-placeholder,
                                 &::-ms-input-placeholder {
@@ -736,6 +737,8 @@ body {
                                 font-size: 14px;
                                 color: #6b382f;
                                 white-space: nowrap;
+                                padding: 0;
+                                text-align: center;
                             }
                             > div.already {
                                 color: #f5c790;

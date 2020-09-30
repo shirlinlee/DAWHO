@@ -12,9 +12,11 @@
     });
 
     function pwdCountDown() {
+        var sec = Number($('.sec').attr('data-sec'));
         $('.resend').hide();
-        $('.sec_area').show();
-        var sec = 30;
+        $('.sec_area').show(function () {
+            $('.sec').html(sec);
+        });
         var Countdown = setInterval(function () {
             if (sec > 1) {
                 sec = sec - 1;

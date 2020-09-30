@@ -56,7 +56,11 @@
                 display: block;
                 text-align: center;
                 width: 100%;
-                border: none;
+                line-height: 1.17;
+                border: none !important;
+                &:focus {
+                    border: none !important;
+                }
             }
             hr {
                 border: none;

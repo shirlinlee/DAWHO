@@ -2,7 +2,7 @@
 extends ../includes/hongbao/_layout.pug
 
 block title
-    title re_3-1
+    title re_3-3
 
 block scss
     link(rel='stylesheet' href= assets + '/styles/components.css')
@@ -17,23 +17,22 @@ block main
         }
     div#appHongbao
         +_header("紅包紀錄", 'black')
-        - var status = '已發送'
+        - var status = '已領取'
         div#appHongbaoContent
             div.hongbaoRecord
                 nav.navbar
                     ul.menu
                         li.item(class=(status==='待領取') ? 'active' : '')
-                            a 待領取
+                            a(href="re_3-7.html") 待領取
                         li.item(class=(status==='已發送') ? 'active' : '')
-                            a 已發送
+                            a(href="re_3-6.html") 已發送
                         li.item(class=(status==='已領取') ? 'active' : '')
-                            a 已領取
+                            a(href="re_3-8.html") 已領取
                 div.container
                     div.empty
                         img(src=assets+"/images/hongbao/dark.svg" alt="")
-                        p.mt-24 還沒有發送紅包的紀錄哦！
-                        p 快去發紅包給好友吧！
-                        button.btnDefault.mt-32 去發紅包
+                        p.mt-24 還沒有領過紅包哦！
+
 block js
     script(src= public + '/lib/js/jquery-1.12.4.min.js' defer)
     script(src= assets + '/js/hongbao.bundle.js' defer)

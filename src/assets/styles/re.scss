@@ -274,6 +274,9 @@
             overflow-y: scroll;
         }
         li {
+            .bg_white {
+                background-color: #f9f9f9;
+            }
             height: 75px;
             margin-bottom: 12px;
             font-weight: bold;
@@ -407,6 +410,9 @@
             }
             .num {
                 font-weight: bold;
+            }
+            .bg_white {
+                background-color: #f9f9f9;
             }
         }
         li {

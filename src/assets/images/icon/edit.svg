@@ -1,3 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
-    <path fill="#C38B47" fill-rule="evenodd" d="M20.047 4.697l.327.316c.993.959 1.021 2.542.062 3.535L10.028 19.325l-4.306.534.383-4.323L16.512 4.76c.96-.993 2.542-1.021 3.535-.062zm-4.027 1.88l-9.016 9.339c.518 1.783 1.251 2.232 2.494 2.56l.1-.013 9.075-9.4-2.653-2.487zm1.146-1.187l-.515.532 2.654 2.487.477-.493c.61-.632.593-1.639-.04-2.25l-.326-.315c-.632-.61-1.64-.593-2.25.04z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="xioq55ep0a" x1="2.781%" x2="74.575%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#F2C67A"/>
+            <stop offset="50.377%" stop-color="#FFE3BC"/>
+            <stop offset="100%" stop-color="#E9A85B"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g fill="url(#xioq55ep0a)" fill-rule="nonzero" transform="translate(-297 -200)">
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <path d="M15.047.697l.327.316c.993.959 1.021 2.542.062 3.535L5.028 15.325l-4.306.534.383-4.323L11.512.76c.96-.993 2.542-1.021 3.535-.062zm-4.027 1.88l-9.016 9.339c.518 1.783 1.251 2.232 2.494 2.56l.1-.013 9.075-9.4-2.653-2.487zm1.146-1.187l-.515.532 2.654 2.487.477-.493c.61-.632.593-1.639-.04-2.25l-.326-.315c-.632-.61-1.64-.593-2.25.04z" transform="translate(27 112) translate(26 84) translate(244 4) translate(4 4)"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

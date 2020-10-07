@@ -46,6 +46,7 @@
                 -webkit-appearance: none;
                 background-color: transparent;
                 border: none;
+                font-weight: bold;
             }
             .edit_area {
                 display: none;
@@ -57,7 +58,6 @@
                 -o-transform: translate(0, 22%);
             }
             input {
-                font-weight: bold;
                 display: block;
                 text-align: center;
                 width: 100%;
@@ -309,9 +309,10 @@
                 }
                 .name {
                     margin-bottom: 6px;
+                    font-weight: bold;
                 }
                 .num {
-                    font-weight: bold;
+                    font-weight: normal;
                 }
                 .status {
                     position: absolute;
@@ -325,7 +326,7 @@
                     -o-transform: translate(0, -50%);
                     * {
                         font-size: 14px;
-                        font-weight: bold;
+                        font-weight: normal;
                     }
                     .regular {
                         color: #c38b47;
@@ -356,7 +357,7 @@
                     font-size: 14px;
                     line-height: 75px;
                     text-align: center;
-                    font-weight: bold;
+                    font-weight: normal;
                 }
             }
         }
@@ -431,11 +432,11 @@
                     justify-content: space-between;
                     .num {
                         color: #818181;
+                        font-weight: normal;
                     }
                     p {
                         line-height: 42px;
                         font-size: 14px;
-                        font-weight: normal;
                     }
                 }
             }
@@ -489,6 +490,8 @@
     }
     .sent_status {
         margin-top: 44px;
+        width: 100%;
+        max-width: 500px;
     }
     p {
         margin-top: 16px;

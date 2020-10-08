@@ -23,7 +23,7 @@ body {
         .btn_area {
             width: 55%;
             position: absolute;
-            bottom: 23vw;
+            bottom: 22vw;
             left: 50%;
             transform: translate(-50%, 0);
             -webkit-transform: translate(-50%, 0);
@@ -37,7 +37,8 @@ body {
                 &.f_gold {
                     color: #fed28f;
                     display: inline-block;
-                    margin-top: 11px;
+                    font-size: 14px;
+                    margin-top: 24px;
                     text-decoration: none;
                     padding-right: 20px;
                     background-image: url($assets + '/images/icon/arrow-right_gold.svg');
